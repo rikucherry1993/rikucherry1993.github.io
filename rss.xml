@@ -23,10 +23,34 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 07 May 2021 01:11:26 &#43;0900</lastBuildDate>
+        <lastBuildDate>Fri, 07 May 2021 01:24:32 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.github.io/rss.xml" />
         
+        
+            <item>
+                <title>Hello World</title>
+                <link>https://rikucherry1993.github.io/posts/hello-world/</link>
+                <guid isPermaLink="true">https://rikucherry1993.github.io/posts/hello-world/</guid>
+                <pubDate>Fri, 07 May 2021 00:25:43 &#43;0900</pubDate>
+                
+                    <author>rikucherry0522@gmail.com (rikucherry)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description></description>
+                
+                
+                
+                
+                
+                    
+                        
+                    
+                        
+                    
+                
+            </item>
         
     </channel>
 </rss>
