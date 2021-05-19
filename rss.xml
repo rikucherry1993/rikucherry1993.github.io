@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 20 May 2021 02:51:43 &#43;0900</lastBuildDate>
+        <lastBuildDate>Thu, 20 May 2021 03:05:54 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.github.io/rss.xml" />
         
@@ -335,8 +335,8 @@
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;NotificationReceiver&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;extends&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;BroadcastReceiver&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
           &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
           &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;onReceive&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;context&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Intent&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-              &lt;span class=&#34;c1&#34;&gt;//使用
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;              &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getAction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ACTION_DELETE_NOTIFICATION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+
+              &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;intent&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getAction&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ACTION_DELETE_NOTIFICATION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
                   &lt;span class=&#34;n&#34;&gt;resetTimer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
                   &lt;span class=&#34;n&#34;&gt;updateButton&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;();&lt;/span&gt;
               &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
