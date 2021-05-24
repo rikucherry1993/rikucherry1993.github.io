@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Mon, 24 May 2021 02:00:56 &#43;0900</lastBuildDate>
+        <lastBuildDate>Tue, 25 May 2021 00:22:32 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -311,7 +311,41 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">安卓应用开发</category>
+                                
+                            
+                        
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/android/">android</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/mobile-app/">mobile app</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/recyclerview/">RecyclerView</category>
+                                
+                            
                         
                     
                 
@@ -823,7 +857,47 @@
                 
                     
                         
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">安卓应用开发</category>
+                                
+                            
+                        
                     
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/android/">android</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/mobile-app/">mobile app</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/alarmmanager/">AlarmManager</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/countdowntimer/">CountDownTimer</category>
+                                
+                            
                         
                     
                 
