@@ -23,10 +23,125 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Tue, 25 May 2021 23:49:31 &#43;0900</lastBuildDate>
+        <lastBuildDate>Wed, 26 May 2021 00:03:45 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
+        
+            <item>
+                <title>《Java核心技术 卷1》读书笔记（1）更新中</title>
+                <link>https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+                <guid isPermaLink="true">https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+                <pubDate>Tue, 25 May 2021 12:24:22 &#43;0000</pubDate>
+                
+                    <author>rikucherry0522@gmail.com (rikucherry)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;h2 id=&#34;第5章-继承&#34;&gt;｜第5章 继承&lt;/h2&gt;
+&lt;h3 id=&#34;51-类超类和子类&#34;&gt;5.1 类、超类和子类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p156&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;名称对应&lt;/strong&gt;： 超类 - 子类； 基类 - 派生类（derived class）； 父类 - 孩子类&lt;/li&gt;
+&lt;li&gt;“超”和“子”来源于超集、子集的概念&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p158&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;super&lt;/code&gt;和&lt;code&gt;this&lt;/code&gt;并不类似。super不是一个对象的引用，不可赋值给对象变量，只是一个&lt;strong&gt;指示编译器调用超类方法的特殊关键字&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;super&lt;/code&gt;调用超类构造器的语句必须是&lt;strong&gt;子类构造器的第一条语句&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;this&lt;/code&gt;的两个含义：1.隐式参数的引用 2.调用该类的其他构造器&lt;br&gt;
+&lt;code&gt;super&lt;/code&gt;的两个含义：1.调用超类方法 2.调用超类的构造器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p159&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;数组保持类型相同的元素，但可以保持超/子类混合的元素。 比如`&amp;lt;超类&amp;gt;[]{&amp;lt;超类实例&amp;gt;，&amp;lt;子类实例&amp;gt;...}&lt;br&gt;
+注意：往子类数组里存储超类元素将引发ArrayStoreException异常。&lt;br&gt;
+遍历时可以：
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;  &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;(&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;超类&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;e&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;数组&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;e&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;方法&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;当e为超类实例时，调用超类方法；e为子类实例时，调用子类方法。&lt;strong&gt;一个对象变量可以指示多种实际类型&lt;/strong&gt;的现象即为&lt;strong&gt;多态&lt;/strong&gt;；&lt;strong&gt;在运行时能够判断对象的实际类型、自动选择适当方法&lt;/strong&gt;称为&lt;strong&gt;动态绑定（dynamic binding）&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p162&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;继承层次（inheritance hierarchy）&lt;/strong&gt;：由一个公共超类派生出来的所有类的集合&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;is-a&lt;/code&gt;原则=替换原则（substitution principle）:超类任何时候都可以用子类替换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p163&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;重载解析（overriding resolution）&lt;/strong&gt;：方法调用时编译器从若干候补方法中选定签名完全匹配的方法的过程。由于过程耗时，实际会在预先计算好的方法表中搜索&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;静态绑定（static binding）&lt;/strong&gt;：编译器处理调用private/static/final方法时使用的绑定&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p165&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;覆盖方法时子类方法的可见性不得低于超类方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p167&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;在继承链由上至下强制转换时，应使用&lt;code&gt;instanceof&lt;/code&gt;检查可行性。但应尽量少进行强制转换，而应考虑重新设计超类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/">《Java核心技术》</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/java/">Java</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/java-basic/">Java basic</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Android应用基础 嵌套的RecyclerView</title>
