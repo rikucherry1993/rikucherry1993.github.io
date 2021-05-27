@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 26 May 2021 00:03:45 &#43;0900</lastBuildDate>
+        <lastBuildDate>Thu, 27 May 2021 22:47:07 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -92,6 +92,123 @@
 &lt;li&gt;&lt;code&gt;p167&lt;/code&gt;
 &lt;ul&gt;
 &lt;li&gt;在继承链由上至下强制转换时，应使用&lt;code&gt;instanceof&lt;/code&gt;检查可行性。但应尽量少进行强制转换，而应考虑重新设计超类&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;52-object-所有类的超类&#34;&gt;5.2 Object: 所有类的超类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p176&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;equals使用规范&lt;/strong&gt;：1.自反性 2. 对称性 3.传递性 4.一致性（如果x,y引用的对象不变，反复比较x,y结果也应不变）5.对于任意非空引用x，x.equals(null)为false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p178&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;equals必须正确覆盖&lt;code&gt;Object&lt;/code&gt;类的&lt;code&gt;equals&lt;/code&gt;方法, 应该用@Override检测&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p179&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;散列码（哈希值）&lt;/strong&gt;：字符串的散列码由内容导出（容易相同），Object默认的散列码由对象的储存地址导出（基本不会相同）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Objects.hashCode&lt;/code&gt;方法是null安全的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p181&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;toString&lt;/code&gt;大多遵循&lt;code&gt;类名[字段1=字段值，字段2=字段值...]&lt;/code&gt;的格式&lt;/li&gt;
+&lt;li&gt;使用“+”连接字符串与对象会自动调用对象的&lt;code&gt;toString&lt;/code&gt;方法&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;53-泛型数组列表&#34;&gt;5.3 泛型数组列表&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p188&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;数组列表&lt;code&gt;ArrayList&lt;/code&gt;可以自动调节容量，也可以手动调用&lt;code&gt;ensureCapacity(int capacity)&lt;/code&gt;提前确保容量，还可以在初始化时指定容量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p190&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;快速访问数组列表元素技巧：
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;X&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;size&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;];&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//list is an ArrayList
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toArray&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//copy list elements to the Array
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;54-对象包装器与自动装箱&#34;&gt;5.4 对象包装器与自动装箱&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p192-193&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;包装器（wrapper）&lt;/strong&gt;: &lt;code&gt;Integer&lt;/code&gt;,&lt;code&gt;Boolean&lt;/code&gt;... 皆为不可变，不可继承（final），可为null&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自动装箱/拆箱&lt;/strong&gt;：（编译器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-Java&#34; data-lang=&#34;Java&#34;&gt;&lt;span class=&#34;c1&#34;&gt;//boxing
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;var&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ArrayList&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;gt;();&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// the same as list.add(Integer.valueOf(3));
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//unboxing
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;i&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;);&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;// the same as int n = list.get(i).intValue;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;//unboxing then boxing
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Integer&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;n&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;;&lt;/span&gt;
+&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;++&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;注意：Integer数组列表的效率远低于int[]数组，慎用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;同一性&lt;/strong&gt;： 用&lt;code&gt;==&lt;/code&gt;比较包装器对象通常会失败。注意：介于-128～127的short或int会被包装到固定的对象中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;55-参数数量可变的方法&#34;&gt;5.5 参数数量可变的方法&lt;/h3&gt;
+&lt;h3 id=&#34;56-枚举类&#34;&gt;5.6 枚举类&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p196&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;枚举类定义的是一个类，每个项是一个实例，不能构造新对象。&lt;/li&gt;
+&lt;li&gt;比较枚举类用&lt;code&gt;==&lt;/code&gt;不用&lt;code&gt;equals&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;p197&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;枚举可以拥有**私有&lt;em&gt;构造器&lt;/em&gt;，枚举类是&lt;code&gt;Enum&lt;/code&gt;类的子类&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;实用方法&lt;/strong&gt;：&lt;code&gt;toString&lt;/code&gt;(Enum to string), &lt;code&gt;Enum.valueOf(EnumClass, String)&lt;/code&gt;(String to Enum), &lt;code&gt;values()&lt;/code&gt;(Enum to array);&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;57-反射&#34;&gt;5.7 反射&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;p198&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;反射&lt;/strong&gt;：能够分析类能力的程序&lt;/li&gt;
+&lt;li&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
