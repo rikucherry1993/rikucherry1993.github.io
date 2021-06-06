@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 06 Jun 2021 12:52:14 &#43;0900</lastBuildDate>
+        <lastBuildDate>Sun, 06 Jun 2021 13:18:16 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -38,8 +38,7 @@
                 
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
-                    <description>&lt;p&gt;2021/5/30&lt;/p&gt;
-&lt;h3 id=&#34;targets&#34;&gt;Targets&lt;/h3&gt;
+                    <description>&lt;h3 id=&#34;targets&#34;&gt;Targets&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Build a pure flutter&amp;amp;Console application&lt;/li&gt;
 &lt;li&gt;Understand similarities and differences between Dart and other languages&lt;/li&gt;
