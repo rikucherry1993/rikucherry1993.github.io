@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 06 Jun 2021 18:51:21 &#43;0900</lastBuildDate>
+        <lastBuildDate>Sun, 06 Jun 2021 19:08:05 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -373,13 +373,7 @@
                                 
                                 
                                 
-                                    <category domain="https://rikucherry1993.me/tags/">Tags</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/tags/">Tags</category>
+                                    <category domain="https://rikucherry1993.me/tags/dart/">Dart</category>
                                 
                             
                         
@@ -658,13 +652,7 @@
                                 
                                 
                                 
-                                    <category domain="https://rikucherry1993.me/tags/">Tags</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/tags/">Tags</category>
+                                    <category domain="https://rikucherry1993.me/tags/dart/">Dart</category>
                                 
                             
                         
@@ -1220,6 +1208,12 @@
                                 
                                 
                                     <category domain="https://rikucherry1993.me/tags/recyclerview/">RecyclerView</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/kotlin/">kotlin</category>
                                 
                             
                         
