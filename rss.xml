@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Wed, 23 Jun 2021 00:27:17 &#43;0900</lastBuildDate>
+        <lastBuildDate>Wed, 23 Jun 2021 00:45:43 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -42,7 +42,7 @@
 &lt;ul&gt;
 &lt;li&gt;Dart is an OO language&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;3-1-1-ways-to-initiate-objects&#34;&gt;3-1-1 ways to initiate objects&lt;/h4&gt;
+&lt;h4 id=&#34;3-1-1-ways-to-initiate-objects&#34;&gt;3-1-1 Ways to initiate objects&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;literal&lt;/li&gt;
 &lt;/ul&gt;
@@ -549,7 +549,7 @@
 &lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dart&#34; data-lang=&#34;dart&#34;&gt;&lt;span class=&#34;err&#34;&gt;@&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;override&lt;/span&gt;
 &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;signOut&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;Performing admin-specific sign out steps&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;
-  &lt;span class=&#34;k&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;signOut&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//how to precautious don&amp;#39;t remove the super call??
+  &lt;span class=&#34;k&#34;&gt;super&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;signOut&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;();&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//how to be precautious at missing the super call??
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
@@ -643,7 +643,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;3-2-3-abstract-classes&#34;&gt;3-2-3 Abstract Classes&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Use &lt;code&gt;abstract&lt;/code&gt; keyword to prevent a class being instantiated.&lt;/li&gt;
+&lt;li&gt;Use &lt;code&gt;abstract&lt;/code&gt; keyword to prevent a class from being instantiated.&lt;/li&gt;
 &lt;li&gt;Abstract class is allowed to have constructors.&lt;/li&gt;
 &lt;li&gt;An abstract class &lt;strong&gt;cannot be instantiated directly&lt;/strong&gt;(with &lt;code&gt;new&lt;/code&gt;), but can be instantiated from its subclasses.&lt;/li&gt;
 &lt;li&gt;Abstract classes can have &lt;strong&gt;abstract methods&lt;/strong&gt;.&lt;/li&gt;
@@ -651,7 +651,7 @@
 &lt;/ul&gt;
 &lt;h4 id=&#34;3-2-4-interfaces&#34;&gt;3-2-4 Interfaces&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;In dart, any kind of classes can be implemented as an interface. Therefore there&#39;s no such a &lt;code&gt;Interface&lt;/code&gt; keyword.&lt;/li&gt;
+&lt;li&gt;In dart, any kinds of classes can be implemented as an interface. Therefore there&#39;s no such a &lt;code&gt;Interface&lt;/code&gt; keyword.&lt;/li&gt;
 &lt;li&gt;By &lt;code&gt;implementing&lt;/code&gt; a regular class, we are actually implementing the implicit interface --&lt;strong&gt;the overall class members without implementations&lt;/strong&gt;, of the class.
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -762,8 +762,8 @@
 &lt;/div&gt;&lt;h3 id=&#34;3-4-mixins&#34;&gt;3-4 Mixins&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dart does not support multiple inheritance.&lt;/li&gt;
-&lt;li&gt;Mixin type of class allow other classes to access it&#39;s members by using the &#39;with&#39; keyword, &lt;strong&gt;without building an &#39;is-a&#39; inheritance relationship&lt;/strong&gt; with that class.&lt;/li&gt;
-&lt;li&gt;Mixin type is like it allows copying of it&#39;s members.&lt;/li&gt;
+&lt;li&gt;Mixin type of class allows other classes to access it&#39;s members by using the &#39;with&#39; keyword, &lt;strong&gt;without building an &#39;is-a&#39; inheritance relationship&lt;/strong&gt; with that class.&lt;/li&gt;
+&lt;li&gt;Mixin type is like it allows copying of its members.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -923,9 +923,9 @@
 &lt;h3 id=&#34;3-7-data-classes&#34;&gt;3-7 Data Classes&lt;/h3&gt;
 &lt;h4 id=&#34;3-7-1-immutable-data-classes&#34;&gt;3-7-1 Immutable Data Classes&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;In many case, directly changing values of instance fields is not allowed.&lt;/li&gt;
+&lt;li&gt;In many cases, directly changing values of instance fields is not allowed.&lt;/li&gt;
 &lt;li&gt;Generating &lt;code&gt;copyWith&lt;/code&gt; method to make a copy of the original instance for safe updating.&lt;/li&gt;
-&lt;li&gt;Simply generate &lt;code&gt;DataClass&lt;/code&gt; or just &lt;code&gt;copyWith&lt;/code&gt; by pressing &lt;code&gt;cmd+.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Simply generate &lt;code&gt;DataClass&lt;/code&gt; or only &lt;code&gt;copyWith&lt;/code&gt; method by pressing &lt;code&gt;cmd + .&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
