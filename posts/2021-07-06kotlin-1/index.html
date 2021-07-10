@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
+    <meta charset="UTF-8" />
+
+    <meta name="generator" content="Hugo 0.83.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
+    
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <title>Android Basics: Kotlin(1) | Rikucherry&#39;s blog</title>
+
+    <link rel="stylesheet" href="/css/meme.min.67458afcd05e08dd4a7aea0c531137442ad8f76bbdf09b789831e6a1a023ee1c.css"/>
+
+    
+    
+        <script src="/js/meme.min.b32d2149f132ab5f1e68a888e5a3708edf136a28623e71318666ceca166681a9.js"></script>
+
+    
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&#43;Slab:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Sans&#43;SC:wght@100;400;500&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&#43;Slab:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Sans&#43;SC:wght@100;400;500&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
+
+    <meta name="author" content="rikucherry" /><meta name="description" content="1. Variables 1-1 &#39;val&#39; and &#39;var&#39; var is mutable, can be changed during execution val is immutable, cannot be changed once initialized 1 2 3 4 5 6 //OK var myName = &#34;Cherry&#34; myName = &#34;newName&#34; //NG val myName = &#34;Cherry&#34; myName……" />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Rikucherry&#39;s blog" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Rikucherry&#39;s blog" />
+    <meta name="msapplication-starturl" content="../../" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="../../icons/mstile-150x150.png" />
+    <link rel="manifest" href="/manifest.json" />
+
+    
+    
+
+    
+    <link rel="canonical" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/" />
+    
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "datePublished": "2021-07-06T08:03:00+09:00",
+        "dateModified": "2021-07-10T12:55:28+09:00",
+        "url": "https://rikucherry1993.me/posts/2021-07-06kotlin-1/",
+        "headline": "Android Basics: Kotlin(1)",
+        "description": "1. Variables 1-1 'val' and 'var' var is mutable, can be changed during execution val is immutable, cannot be changed once initialized 1 2 3 4 5 6 //OK var myName = \"Cherry\" myName = \"newName\" //NG val myName = \"Cherry\" myName……",
+        "inLanguage" : "zh-CN",
+        "articleSection": "posts",
+        "wordCount":  3175 ,
+        "image": "https://rikucherry1993.me/icons/apple-touch-icon.png",
+        "author": {
+            "@type": "Person",
+            "email": "rikucherry0522@gmail.com",
+            "image": "https://rikucherry1993.me/icons/apple-touch-icon.png",
+            "url": "https://rikucherry1993.me/",
+            "name": "rikucherry"
+        },
+        "license": "[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Rikucherry's blog",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rikucherry1993.me/icons/apple-touch-icon.png"
+            },
+            "url": "https://rikucherry1993.me/"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebSite",
+            "@id": "https://rikucherry1993.me/"
+        }
+    }
+</script>
+
+    
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:site" content="@-" />
+
+    
+
+
+
+<meta property="og:title" content="Android Basics: Kotlin(1)" />
+<meta property="og:description" content="1. Variables 1-1 &#39;val&#39; and &#39;var&#39; var is mutable, can be changed during execution val is immutable, cannot be changed once initialized 1 2 3 4 5 6 //OK var myName = &#34;Cherry&#34; myName = &#34;newName&#34; //NG val myName = &#34;Cherry&#34; myName……" />
+<meta property="og:url" content="https://rikucherry1993.me/posts/2021-07-06kotlin-1/" />
+<meta property="og:site_name" content="Rikucherry&#39;s blog" />
+<meta property="og:locale" content="zh" /><meta property="og:image" content="https://rikucherry1993.me/icons/apple-touch-icon.png" />
+    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="2021-07-06T08:03:00&#43;09:00" />
+    <meta property="article:modified_time" content="2021-07-10T12:55:28&#43;09:00" />
+    
+    <meta property="article:section" content="posts" />
+
+
+
+    
+    
+
+    
+</head>
+
+    <body>
+        <div class="container">
+            
+    <header class="header">
+        
+            <div class="header-wrapper">
+                <div class="header-inner single">
+                    
+    <div class="site-brand">
+        
+            <a href="/" class="brand">Rikucherry&#39;s blog</a>
+        
+    </div>
+
+                    <nav class="nav">
+    <ul class="menu" id="menu">
+        
+            
+        
+        
+        
+        
+            
+                <li class="menu-item"><a href="/posts/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon archive"><path d="M32 448c0 17.7 14.3 32 32 32h384c17.7 0 32-14.3 32-32V160H32v288zm160-212c0-6.6 5.4-12 12-12h104c6.6 0 12 5.4 12 12v8c0 6.6-5.4 12-12 12H204c-6.6 0-12-5.4-12-12v-8zM480 32H32C14.3 32 0 46.3 0 64v48c0 8.8 7.2 16 16 16h480c8.8 0 16-7.2 16-16V64c0-17.7-14.3-32-32-32z"/></svg><span class="menu-item-name">文章</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/categories/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon th"><path d="M149.333 56v80c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V56c0-13.255 10.745-24 24-24h101.333c13.255 0 24 10.745 24 24zm181.334 240v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm32-240v80c0 13.255 10.745 24 24 24H488c13.255 0 24-10.745 24-24V56c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24zm-32 80V56c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.256 0 24.001-10.745 24.001-24zm-205.334 56H24c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24zM0 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H24c-13.255 0-24 10.745-24 24zm386.667-56H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zm0 160H488c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H386.667c-13.255 0-24 10.745-24 24v80c0 13.255 10.745 24 24 24zM181.333 376v80c0 13.255 10.745 24 24 24h101.333c13.255 0 24-10.745 24-24v-80c0-13.255-10.745-24-24-24H205.333c-13.255 0-24 10.745-24 24z"/></svg><span class="menu-item-name">分类</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/tags/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" class="icon tags"><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg><span class="menu-item-name">标签</span></a>
+                </li>
+            
+        
+            
+                <li class="menu-item"><a href="/about/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon user-circle"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"/></svg><span class="menu-item-name">关于</span></a>
+                </li>
+            
+        
+            
+                
+                    
+                    
+                        <li class="menu-item">
+                            <a id="theme-switcher" href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-light"><path d="M193.2 104.5l48.8-97.5a18 18 0 0128 0l48.8 97.5 103.4 -34.5a18 18 0 0119.8 19.8l-34.5 103.4l97.5 48.8a18 18 0 010 28l-97.5 48.8 34.5 103.4a18 18 0 01-19.8 19.8l-103.4-34.5-48.8 97.5a18 18 0 01-28 0l-48.8-97.5l-103.4 34.5a18 18 0 01-19.8-19.8l34.5-103.4-97.5-48.8a18 18 0 010-28l97.5-48.8-34.5-103.4a18 18 0 0119.8-19.8zM256 128a128 128 0 10.01 0M256 160a96 96 0 10.01 0"/></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon theme-icon-dark"><path d="M27 412a256 256 0 10154-407a11.5 11.5 0 00-5 20a201.5 201.5 0 01-134 374a11.5 11.5 0 00-15 13"/></svg></a>
+                        </li>
+                    
+                
+            
+        
+            
+                
+            
+        
+    </ul>
+</nav>
+
+                    
+                </div>
+            </div>
+            
+    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
+    <label for="nav-toggle" class="nav-toggle"></label>
+    <label for="nav-toggle" class="nav-curtain"></label>
+
+
+        
+    </header>
+
+
+
+
+            
+            
+    <main class="main single" id="main">
+    <div class="main-inner">
+
+        
+
+        <article class="content post h-entry" data-align="justify" data-type="posts">
+
+            <h1 class="post-title p-name">Android Basics: Kotlin(1)</h1>
+
+            
+
+            
+                
+            
+
+            
+                
+
+<div class="post-meta">
+    
+        
+        <time datetime="2021-07-06T08:03:00&#43;09:00" class="post-meta-item published dt-published"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;2021.7.6</time>
+    
+    
+        
+        <time datetime="2021-07-10T12:55:28&#43;09:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.7.10</time>
+    
+    
+    
+        
+        
+        
+            
+                <span class="post-meta-item category"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>&nbsp;<a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" class="category-link p-category">技术学习</a>/<a href="/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" class="category-link p-category">安卓应用开发</a></span>
+            
+        
+    
+    
+        
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;3175</span>
+    
+    
+        
+        <span class="post-meta-item reading-time"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;7&nbsp;分钟</span>
+    
+    
+    
+</div>
+
+            
+
+            <nav class="contents">
+  <h2 id="contents" class="contents-title">Index</h2><ol class="toc">
+    <li><a id="contents:1-variables" href="#1-variables">1. Variables</a>
+      <ol>
+        <li><a id="contents:1-1-val-and-var" href="#1-1-val-and-var">1-1 'val' and 'var'</a></li>
+        <li><a id="contents:1-2-data-types" href="#1-2-data-types">1-2 Data Types</a>
+          <ol>
+            <li><a id="contents:integer-types" href="#integer-types">integer types</a></li>
+            <li><a id="contents:floating-point-number-types" href="#floating-point-number-types">Floating point number types</a></li>
+            <li><a id="contents:bool-char-and-string" href="#bool-char-and-string">Bool, Char and String</a></li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+    <li><a id="contents:2-operators" href="#2-operators">2. Operators</a>
+      <ol>
+        <li><a id="contents:2-1-arithmetic-operators" href="#2-1-arithmetic-operators">2-1 Arithmetic operators</a></li>
+        <li><a id="contents:2-2-comparison-operator" href="#2-2-comparison-operator">2-2 Comparison operator</a></li>
+        <li><a id="contents:2-3-increment-decrement" href="#2-3-increment-decrement">2-3 increment, decrement</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:3-control-flows" href="#3-control-flows">3. Control flows</a>
+      <ol>
+        <li><a id="contents:3-1-if-else-if-else-when" href="#3-1-if-else-if-else-when">3-1 if-else if-else, when</a></li>
+        <li><a id="contents:3-2-while" href="#3-2-while">3-2 while</a></li>
+        <li><a id="contents:3-3-for" href="#3-3-for">3-3 for</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:4-functions" href="#4-functions">4. Functions</a></li>
+    <li><a id="contents:5-nullable" href="#5-nullable">5. Nullable</a>
+      <ol>
+        <li><a id="contents:5-1-null-safe-operator" href="#5-1-null-safe-operator">5-1 Null-safe operator</a></li>
+        <li><a id="contents:5-2-elvis-operator" href="#5-2-elvis-operator">5-2 Elvis operator</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:6-oop-in-kotlin" href="#6-oop-in-kotlin">6. OOP in kotlin</a>
+      <ol>
+        <li><a id="contents:6-1-class" href="#6-1-class">6-1 Class</a></li>
+        <li><a id="contents:6-2-scope-and-shadowing" href="#6-2-scope-and-shadowing">6-2 Scope and shadowing</a></li>
+        <li><a id="contents:6-3-member-variables" href="#6-3-member-variables">6-3 Member variables</a></li>
+        <li><a id="contents:6-4-lateinit--getter-setter" href="#6-4-lateinit--getter-setter">6-4 Lateinit &amp; Getter Setter</a></li>
+        <li><a id="contents:6-5-data-class" href="#6-5-data-class">6-5 Data class</a></li>
+        <li><a id="contents:6-6-inheritance" href="#6-6-inheritance">6-6 Inheritance</a></li>
+        <li><a id="contents:6-7-interface" href="#6-7-interface">6-7 Interface</a></li>
+        <li><a id="contents:6-8-abstract-class" href="#6-8-abstract-class">6-8 Abstract class</a></li>
+        <li><a id="contents:6-9-type-casting" href="#6-9-type-casting">6-9 Type casting</a></li>
+      </ol>
+    </li>
+    <li><a id="contents:7-advanced" href="#7-advanced">7. Advanced</a>
+      <ol>
+        <li><a id="contents:7-1-arraylists" href="#7-1-arraylists">7-1 ArrayLists</a></li>
+        <li><a id="contents:7-2-lambda-expressions" href="#7-2-lambda-expressions">7-2 Lambda expressions</a></li>
+        <li><a id="contents:7-3-visibility-modifier" href="#7-3-visibility-modifier">7-3 Visibility modifier</a></li>
+        <li><a id="contents:7-4-nested-and-inner-class" href="#7-4-nested-and-inner-class">7-4 Nested and Inner class</a></li>
+        <li><a id="contents:7-5-safe-cast-and-unsafe-cast-operator" href="#7-5-safe-cast-and-unsafe-cast-operator">7-5 Safe cast and Unsafe cast operator</a></li>
+        <li><a id="contents:7-6-exception-handling" href="#7-6-exception-handling">7-6 Exception handling</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav><div class="post-body e-content">
+                <h2 id="1-variables"><a href="#1-variables" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-variables" class="headings">1. Variables</a></h2>
+<h3 id="1-1-val-and-var"><a href="#1-1-val-and-var" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-1-val-and-var" class="headings">1-1 'val' and 'var'</a></h3>
+<ul>
+<li><code>var</code> is mutable, can be changed during execution</li>
+<li><code>val</code> is immutable, cannot be changed once initialized</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="c1">//OK
+</span><span class="c1"></span><span class="k">var</span> <span class="py">myName</span> <span class="p">=</span> <span class="s2">&#34;Cherry&#34;</span>
+<span class="n">myName</span> <span class="p">=</span> <span class="s2">&#34;newName&#34;</span>
+<span class="c1">//NG
+</span><span class="c1"></span><span class="k">val</span> <span class="py">myName</span> <span class="p">=</span> <span class="s2">&#34;Cherry&#34;</span>
+<span class="n">myName</span> <span class="p">=</span> <span class="s2">&#34;newName&#34;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="1-2-data-types"><a href="#1-2-data-types" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:1-2-data-types" class="headings">1-2 Data Types</a></h3>
+<ul>
+<li>kotlin is a typed language</li>
+<li>no need to always state the type because of the <code>type inference</code></li>
+</ul>
+<h4 id="integer-types"><a href="#integer-types" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:integer-types" class="headings">integer types</a></h4>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">//Int requires 32 bit
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myInt</span> <span class="p">=</span> <span class="m">999999999</span>
+
+  <span class="c1">//explicit type declaration
+</span><span class="c1"></span>  <span class="c1">//8 bit
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myByte</span> <span class="p">:</span> <span class="n">Byte</span> <span class="p">=</span> <span class="m">99</span>
+  <span class="c1">//16 bit
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myShort</span> <span class="p">:</span> <span class="n">Short</span> <span class="p">=</span> <span class="m">9999</span>
+  <span class="c1">//64 bit
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myLong</span> <span class="p">:</span> <span class="n">Long</span> <span class="p">=</span> <span class="m">12</span><span class="n">_039_812_309_487_120_99</span>
+
+  <span class="c1">//no type annotation
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myInt</span> <span class="c1">//!error. must either have type annotation or be initialized 
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h4 id="floating-point-number-types"><a href="#floating-point-number-types" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:floating-point-number-types" class="headings">Floating point number types</a></h4>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">myFloat</span> <span class="p">:</span> <span class="n">Float</span> <span class="p">=</span> <span class="m">12.34F</span>
+  <span class="k">var</span> <span class="py">myDouble</span> <span class="p">=</span> <span class="m">123.34566</span> <span class="c1">//always assumes to be double
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h4 id="bool-char-and-string"><a href="#bool-char-and-string" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:bool-char-and-string" class="headings">Bool, Char and String</a></h4>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">//Boolean
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myBool</span> <span class="p">=</span> <span class="k">true</span>
+  <span class="n">myBool</span> <span class="p">=</span> <span class="k">false</span>
+  <span class="c1">//Char
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">myChar</span> <span class="p">=</span> <span class="sc">&#39;$&#39;</span> <span class="c1">//no more than 1 sign
+</span><span class="c1"></span>
+  <span class="c1">//String
+</span><span class="c1"></span>  <span class="k">val</span> <span class="py">myString</span> <span class="p">=</span> <span class="s2">&#34;Hello&#34;</span>
+  <span class="k">val</span> <span class="py">firstChar</span> <span class="p">=</span> <span class="n">myString</span><span class="p">[</span><span class="m">0</span><span class="p">]</span>
+  <span class="k">val</span> <span class="py">lastChar</span> <span class="p">=</span> <span class="n">myString</span><span class="p">[</span><span class="n">myString</span><span class="p">.</span><span class="n">length</span> <span class="p">-</span> <span class="m">1</span><span class="p">]</span>
+  <span class="c1">//String Interpolation
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$firstChar</span><span class="s2"> </span><span class="si">$lastChar</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">//H o
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h2 id="2-operators"><a href="#2-operators" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-operators" class="headings">2. Operators</a></h2>
+<h3 id="2-1-arithmetic-operators"><a href="#2-1-arithmetic-operators" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-1-arithmetic-operators" class="headings">2-1 Arithmetic operators</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">result</span> <span class="p">=</span> <span class="m">3</span> <span class="p">+</span> <span class="m">2</span>
+  <span class="c1">// Assignment operators
+</span><span class="c1"></span>  <span class="n">result</span> <span class="o">*=</span> <span class="m">2</span>
+  <span class="n">result</span> <span class="o">/=</span> <span class="m">2</span>
+  <span class="n">result</span> <span class="o">+=</span> <span class="m">2</span>
+  <span class="n">result</span> <span class="o">-=</span> <span class="m">2</span>
+  <span class="n">result</span> <span class="o">%=</span> <span class="m">2</span> <span class="c1">// get remainder
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="c1">//5
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h3 id="2-2-comparison-operator"><a href="#2-2-comparison-operator" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-2-comparison-operator" class="headings">2-2 Comparison operator</a></h3>
+<ul>
+<li>==, !-, &lt;=, &gt;=...</li>
+</ul>
+<h3 id="2-3-increment-decrement"><a href="#2-3-increment-decrement" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:2-3-increment-decrement" class="headings">2-3 increment, decrement</a></h3>
+<ul>
+<li>--, ++ (before use or after use)</li>
+</ul>
+<h2 id="3-control-flows"><a href="#3-control-flows" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-control-flows" class="headings">3. Control flows</a></h2>
+<h3 id="3-1-if-else-if-else-when"><a href="#3-1-if-else-if-else-when" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-1-if-else-if-else-when" class="headings">3-1 if-else if-else, when</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">if</span> <span class="p">(</span><span class="o">..</span><span class="p">.)</span> <span class="p">{</span>
+    <span class="o">..</span><span class="p">.</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="o">..</span><span class="p">.)</span> <span class="p">{</span>
+    <span class="o">..</span><span class="p">.</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">(</span><span class="o">..</span><span class="p">.)</span> <span class="p">{</span>
+    <span class="o">..</span><span class="p">.</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>when</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">season</span> <span class="p">=</span> <span class="m">3</span>
+  <span class="k">when</span> <span class="p">(</span><span class="n">season</span><span class="p">)</span> <span class="p">{</span>
+      <span class="m">1</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Spring&#34;</span><span class="p">)</span>
+      <span class="m">2</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Summer&#34;</span><span class="p">)</span>
+      <span class="m">3</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Autumn&#34;</span><span class="p">)</span>
+      <span class="m">4</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Winter&#34;</span><span class="p">)</span>
+      <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Invalid&#34;</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="c1">//with range
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">month</span> <span class="p">=</span> <span class="m">2</span>
+  <span class="k">when</span> <span class="p">(</span><span class="n">month</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">in</span> <span class="m">3.</span><span class="p">.</span><span class="m">5</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Spring&#34;</span><span class="p">)</span>
+    <span class="k">in</span> <span class="m">6.</span><span class="p">.</span><span class="m">8</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Summer&#34;</span><span class="p">)</span>
+    <span class="k">in</span> <span class="m">9.</span><span class="p">.</span><span class="m">11</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Autumn&#34;</span><span class="p">)</span>
+    <span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">12</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Winter&#34;</span><span class="p">)</span>
+    <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Invalid&#34;</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="c1">//with opposite range
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">age</span> <span class="p">=</span> <span class="m">18</span>
+  <span class="k">when</span> <span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="p">{</span>
+      <span class="o">!in</span> <span class="m">0.</span><span class="p">.</span><span class="m">17</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Adult&#34;</span><span class="p">)</span>
+      <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Kid&#34;</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="c1">//check type
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">number</span> <span class="p">:</span> <span class="n">Any</span> <span class="p">=</span> <span class="m">18.23</span>
+  <span class="k">when</span> <span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">is</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$number</span><span class="s2"> is a Int&#34;</span><span class="p">)</span>
+      <span class="k">is</span> <span class="n">Double</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$number</span><span class="s2"> is a double&#34;</span><span class="p">)</span>
+      <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$number</span><span class="s2"> is none of the above&#34;</span><span class="p">)</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="3-2-while"><a href="#3-2-while" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-2-while" class="headings">3-2 while</a></h3>
+<p>while</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">x</span> <span class="p">=</span> <span class="m">1</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$x</span><span class="s2">&#34;</span><span class="p">)</span>
+      <span class="n">x</span><span class="o">++</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>do-while</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">x</span> <span class="p">=</span> <span class="m">15</span>
+  <span class="k">do</span> <span class="p">{</span>
+      <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$x</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">//will be executed at least once
+</span><span class="c1"></span>      <span class="n">x</span><span class="o">++</span>
+  <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="m">10</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="3-3-for"><a href="#3-3-for" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-3-for" class="headings">3-3 for</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">for</span> <span class="p">(</span><span class="n">num</span> <span class="k">in</span> <span class="m">1.</span><span class="p">.</span><span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$num</span><span class="s2"> &#34;</span><span class="p">)</span> <span class="c1">//print 1~10
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">for</span> <span class="p">(</span><span class="n">num</span> <span class="k">in</span> <span class="m">1</span> <span class="n">until</span> <span class="m">10</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$num</span><span class="s2"> &#34;</span><span class="p">)</span> <span class="c1">//print 1~9 (excluding 10)
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">num</span> <span class="k">in</span> <span class="m">10</span> <span class="n">downTo</span> <span class="m">1</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$num</span><span class="s2"> &#34;</span><span class="p">)</span> <span class="c1">//print 10~1
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="k">for</span> <span class="p">(</span><span class="n">num</span> <span class="k">in</span> <span class="m">10</span> <span class="n">downTo</span> <span class="m">1</span> <span class="n">step</span> <span class="m">2</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$num</span><span class="s2"> &#34;</span><span class="p">)</span> <span class="c1">//10 8 6 4 2 
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h2 id="4-functions"><a href="#4-functions" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:4-functions" class="headings">4. Functions</a></h2>
+<ul>
+<li>Difference between argument and parameter?</li>
+<li>Difference between method and function?
+-- A method is a function within a class</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="py">result</span> <span class="p">=</span> <span class="n">avg</span><span class="p">(</span><span class="m">3.1</span><span class="p">,</span><span class="m">6.7</span><span class="p">)</span>
+    <span class="n">print</span><span class="p">(</span><span class="s2">&#34;result is: </span><span class="si">$result</span><span class="s2">&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">fun</span> <span class="nf">avg</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Double</span><span class="p">):</span> <span class="n">Double</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">)</span> <span class="p">/</span> <span class="m">2</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h2 id="5-nullable"><a href="#5-nullable" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:5-nullable" class="headings">5. Nullable</a></h2>
+<h3 id="5-1-null-safe-operator"><a href="#5-1-null-safe-operator" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:5-1-null-safe-operator" class="headings">5-1 Null-safe operator</a></h3>
+<ul>
+<li><code>?</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">nonNullString</span> <span class="p">=</span> <span class="s2">&#34;can not be null&#34;</span>
+  <span class="n">nonNullString</span> <span class="p">=</span> <span class="k">null</span> <span class="c1">//compile error
+</span><span class="c1"></span>
+  <span class="k">var</span> <span class="py">nullableString</span> <span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="s2">&#34;can not be null&#34;</span>
+  <span class="n">nullableString</span> <span class="p">=</span> <span class="k">null</span> <span class="c1">//OK
+</span><span class="c1"></span>
+  <span class="k">var</span> <span class="py">len</span> <span class="p">=</span> <span class="n">nullableString</span><span class="p">.</span><span class="n">length</span> <span class="c1">//compile error
+</span><span class="c1"></span>  <span class="k">var</span> <span class="py">len</span> <span class="p">=</span> <span class="n">nullableString</span><span class="o">?.</span><span class="n">length</span> <span class="c1">//OK. if null returns null
+</span><span class="c1"></span>
+  <span class="c1">//Can be executed only if nullableString is not null.
+</span><span class="c1"></span>  <span class="c1">//Comment out &#39;nullableString = null&#39; makes this work.
+</span><span class="c1"></span>  <span class="n">nullableString</span><span class="o">?.</span><span class="n">let</span> <span class="p">{</span><span class="n">println</span><span class="p">(</span><span class="k">it</span><span class="p">.</span><span class="n">length</span><span class="p">)}</span> <span class="c1">//compile error. 
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h3 id="5-2-elvis-operator"><a href="#5-2-elvis-operator" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:5-2-elvis-operator" class="headings">5-2 Elvis operator</a></h3>
+<ul>
+<li><code>?:</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">nullableString</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="s2">&#34;can be null&#34;</span>
+  <span class="c1">// if null, assign the default value
+</span><span class="c1"></span>  <span class="k">val</span> <span class="py">nonNullValue</span> <span class="p">=</span> <span class="n">nullableString</span> <span class="o">?:</span> <span class="s2">&#34;Default&#34;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li><code>!!</code> converts a nullable variable to a non-null variable
+(will throw an NPE if the nullable variable holds a null value)</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="n">nullableString</span><span class="o">!!</span><span class="p">.</span><span class="n">uppercase</span><span class="p">()</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>null save operator in a chain</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">wifeAge</span> <span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="n">user</span><span class="o">?.</span><span class="n">wife</span><span class="o">?.</span><span class="n">age</span> <span class="o">?:</span> <span class="s2">&#34;0&#34;</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h2 id="6-oop-in-kotlin"><a href="#6-oop-in-kotlin" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-oop-in-kotlin" class="headings">6. OOP in kotlin</a></h2>
+<h3 id="6-1-class"><a href="#6-1-class" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-1-class" class="headings">6-1 Class</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="py">phone1</span> <span class="p">=</span> <span class="n">MobilePhone</span><span class="p">(</span><span class="n">brand</span> <span class="p">=</span> <span class="s2">&#34;Samsung&#34;</span><span class="p">,</span> <span class="n">model</span> <span class="p">=</span> <span class="k">null</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">//osName has default value
+</span><span class="c1"></span><span class="k">class</span> <span class="nc">MobilePhone</span><span class="p">(</span><span class="n">osName</span> <span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;Android&#34;</span><span class="p">,</span> <span class="n">brand</span> <span class="p">:</span> <span class="n">String</span><span class="p">?,</span> <span class="n">model</span> <span class="p">:</span> <span class="n">String</span><span class="p">?)</span> <span class="p">{</span>
+  <span class="c1">//init blog
+</span><span class="c1"></span>    <span class="k">init</span> <span class="p">{</span>
+        <span class="n">println</span><span class="p">(</span><span class="s2">&#34;OS name: </span><span class="si">$osName</span><span class="s2">, brand: </span><span class="si">$brand</span><span class="s2">, model : </span><span class="si">$model</span><span class="s2">&#34;</span><span class="p">)</span> 
+        <span class="c1">//OS name: Android, brand: Samsung, model : null
+</span><span class="c1"></span>    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-2-scope-and-shadowing"><a href="#6-2-scope-and-shadowing" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-2-scope-and-shadowing" class="headings">6-2 Scope and shadowing</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">testScope</span><span class="p">(</span><span class="s2">&#34;test&#34;</span><span class="p">)</span>
+  <span class="p">}</span>
+
+  <span class="k">fun</span> <span class="nf">testScope</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//a = &#34;new value&#34; //parameter cannot be reassigned
+</span><span class="c1"></span>      <span class="k">var</span> <span class="py">a</span> <span class="p">=</span> <span class="s2">&#34;another value&#34;</span> <span class="c1">//OK.
+</span><span class="c1"></span>      <span class="c1">//using the same name as the parameter is allowed, which is called shadowing
+</span><span class="c1"></span>      <span class="c1">//but this will cause confusion, and the original parameter will never be able to be accessed
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-3-member-variables"><a href="#6-3-member-variables" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-3-member-variables" class="headings">6-3 Member variables</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">mrWong</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">firstName</span> <span class="p">=</span> <span class="s2">&#34;lao&#34;</span><span class="p">,</span> <span class="n">lastName</span> <span class="p">=</span> <span class="s2">&#34;Wong&#34;</span><span class="p">)</span>
+      <span class="n">mrWong</span><span class="p">.</span><span class="n">stateAge</span><span class="p">()</span> <span class="c1">//lao・Wong&#39;s age is null
+</span><span class="c1"></span>
+      <span class="k">var</span> <span class="py">mrZhang</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">firstName</span> <span class="p">=</span> <span class="s2">&#34;lao&#34;</span><span class="p">,</span> <span class="n">lastName</span> <span class="p">=</span> <span class="s2">&#34;Zhang&#34;</span><span class="p">,</span> <span class="n">age</span> <span class="p">=</span> <span class="m">50</span><span class="p">)</span>
+      <span class="n">mrZhang</span><span class="p">.</span><span class="n">stateAge</span><span class="p">()</span> <span class="c1">//lao・Zhang&#39;s age is 50
+</span><span class="c1"></span>
+      <span class="k">var</span> <span class="py">mrDoe</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="n">age</span> <span class="p">=</span> <span class="m">20</span><span class="p">)</span>
+      <span class="n">mrDoe</span><span class="p">.</span><span class="n">stateAge</span><span class="p">()</span> <span class="c1">//John・Doe&#39;s age is 20
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="cm">/*
+</span><span class="cm">    parameters in the constructor are visible to init block and other constructors
+</span><span class="cm">    but are not visible to normal methods.
+</span><span class="cm">  */</span>
+  <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="n">firstName</span> <span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;John&#34;</span><span class="p">,</span> <span class="n">lastName</span> <span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;Doe&#34;</span><span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//Member Variables - properties
+</span><span class="c1"></span>      <span class="c1">//Sometimes holds an value but not always (firstName &amp; lastName are necessary)
+</span><span class="c1"></span>      <span class="k">var</span> <span class="py">age</span> <span class="p">:</span> <span class="n">Int</span><span class="p">?</span> <span class="p">=</span> <span class="k">null</span>
+      <span class="k">var</span> <span class="py">firstName</span> <span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;John&#34;</span> <span class="c1">//accessible from methods
+</span><span class="c1"></span>      <span class="k">var</span> <span class="py">lastName</span> <span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;Doe&#34;</span>
+
+      <span class="k">init</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="n">firstName</span> <span class="p">=</span> <span class="n">firstName</span>
+          <span class="k">this</span><span class="p">.</span><span class="n">lastName</span> <span class="p">=</span> <span class="n">lastName</span>
+          <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Initialized a new Person instance with: &#34;</span> <span class="p">+</span>
+          <span class="s2">&#34;first name is </span><span class="si">$firstName</span><span class="s2">, last name is </span><span class="si">$lastName</span><span class="s2">&#34;</span><span class="p">)</span>
+      <span class="p">}</span>
+
+      <span class="c1">//Member constructor
+</span><span class="c1"></span>      <span class="c1">//this represents the primary constructor
+</span><span class="c1"></span>      <span class="k">constructor</span><span class="p">(</span><span class="n">firstName</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">lastName</span> <span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="k">this</span><span class="p">(</span><span class="n">firstName</span><span class="p">,</span> <span class="n">lastName</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">//this &#39;this&#39; is just a normal this..
+</span><span class="c1"></span>          <span class="k">this</span><span class="p">.</span><span class="n">firstName</span> <span class="p">=</span> <span class="n">firstName</span>
+          <span class="k">this</span><span class="p">.</span><span class="n">lastName</span> <span class="p">=</span> <span class="n">lastName</span>
+          <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+      <span class="p">}</span>
+      
+      <span class="k">constructor</span><span class="p">(</span><span class="n">age</span><span class="p">:</span> <span class="n">Int</span><span class="p">)</span> <span class="p">:</span> <span class="k">this</span><span class="p">()</span> <span class="p">{</span>
+          <span class="k">this</span><span class="p">.</span><span class="n">age</span> <span class="p">=</span> <span class="n">age</span>
+      <span class="p">}</span>
+
+      <span class="c1">//Member functions - Methods
+</span><span class="c1"></span>      <span class="k">fun</span> <span class="nf">stateAge</span><span class="p">()</span> <span class="p">{</span>
+          <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$firstName</span><span class="s2">・</span><span class="si">$lastName</span><span class="se">\&#39;</span><span class="s2">s age is </span><span class="si">$age</span><span class="s2">&#34;</span><span class="p">)</span>
+      <span class="p">}</span>
+
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-4-lateinit--getter-setter"><a href="#6-4-lateinit--getter-setter" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-4-lateinit--getter-setter" class="headings">6-4 Lateinit &amp; Getter Setter</a></h3>
+<ul>
+<li>Be careful before you have initialized lateinit variables</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">myCar</span> <span class="p">=</span> <span class="n">Car</span><span class="p">()</span>
+      <span class="n">myCar</span><span class="p">.</span><span class="n">owner</span> <span class="c1">//UninitializedPropertyAccessException
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="k">class</span> <span class="nc">Car</span><span class="p">()</span> <span class="p">{</span>
+      <span class="c1">//I will initialize it later on!
+</span><span class="c1"></span>      <span class="k">lateinit</span> <span class="k">var</span> <span class="py">owner</span> <span class="p">:</span> <span class="n">String</span>
+
+      <span class="c1">//↓Invoke this will solve the error
+</span><span class="c1"></span>      <span class="c1">//init {
+</span><span class="c1"></span>      <span class="c1">//  this.owner = &#34;laoWong&#34;
+</span><span class="c1"></span>      <span class="c1">//}
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>Getter</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">myCar</span> <span class="p">=</span> <span class="n">Car</span><span class="p">()</span>
+      <span class="n">print</span><span class="p">(</span><span class="s2">&#34;the brand is: </span><span class="si">${myCar.brand}</span><span class="s2">&#34;</span><span class="p">)</span><span class="c1">//the brand is: bmw
+</span><span class="c1"></span>  <span class="p">}</span>
+
+  <span class="k">class</span> <span class="nc">Car</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">brand</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="s2">&#34;BMW&#34;</span>
+          <span class="c1">// custom getter
+</span><span class="c1"></span>          <span class="k">get</span><span class="p">()</span> <span class="p">{</span>
+              <span class="k">return</span> <span class="k">field</span><span class="p">.</span><span class="n">lowercase</span><span class="p">()</span>
+          <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>Actually kotlin is generating getter/setter for us</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">maxSpeed</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">250</span>
+      <span class="c1">//↓Auto generated, no need to write
+</span><span class="c1"></span>      <span class="k">get</span><span class="p">()</span> <span class="p">=</span> <span class="k">field</span>
+      <span class="k">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">field</span> <span class="p">=</span> <span class="n">value</span>
+      <span class="p">}</span>
+  <span class="c1">//Can access like this:
+</span><span class="c1"></span>  <span class="n">myCar</span><span class="p">.</span><span class="n">maxSpeed</span> <span class="p">=</span> <span class="m">200</span> <span class="c1">//set
+</span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;maxSpeed is: </span><span class="si">${myCar.maxSpeed}</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">//get
+</span></code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>Custom setter</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">maxSpeed</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">250</span>
+     <span class="k">set</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">value</span> <span class="p">&gt;</span> <span class="m">0</span><span class="p">)</span> <span class="n">value</span> <span class="k">else</span> <span class="k">throw</span> <span class="n">IllegalArgumentException</span><span class="p">(</span><span class="s2">&#34;Max speed cannot be less than 0&#34;</span><span class="p">)</span>
+    <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>Private setter
+<ul>
+<li>getter's accessibility should be the same as the property's accessibility. (no need to explicitly make a private getter)</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">maxSpeed</span> <span class="p">:</span> <span class="n">Int</span> <span class="p">=</span> <span class="m">250</span>
+     <span class="k">private</span> <span class="k">set</span> <span class="c1">//cannot be accessed from outside of the class
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-5-data-class"><a href="#6-5-data-class" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-5-data-class" class="headings">6-5 Data class</a></h3>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">//Data class must have at least 1 primary constructor parameter
+</span><span class="c1"></span>  <span class="c1">//Data class cannot be abstract/open/sealed/inner classes
+</span><span class="c1"></span>  <span class="k">data</span> <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="k">val</span> <span class="py">id</span><span class="p">:</span> <span class="n">Long</span><span class="p">,</span> <span class="k">var</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">)</span>
+  <span class="k">class</span> <span class="nc">Person</span><span class="p">(</span><span class="k">val</span> <span class="py">id</span> <span class="p">:</span> <span class="n">Long</span><span class="p">,</span> <span class="k">var</span> <span class="py">name</span> <span class="p">:</span> <span class="n">String</span><span class="p">)</span>
+
+  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">val</span> <span class="py">user1</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s2">&#34;Wong&#34;</span><span class="p">)</span>
+      <span class="n">user1</span><span class="p">.</span><span class="n">name</span> <span class="p">=</span> <span class="s2">&#34;Li&#34;</span>
+      <span class="k">val</span> <span class="py">user2</span> <span class="p">=</span> <span class="n">User</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="s2">&#34;Li&#34;</span><span class="p">)</span>
+
+      <span class="c1">//Equality
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">user1</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="n">user2</span><span class="p">))</span> <span class="c1">//true
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">user1</span> <span class="o">==</span> <span class="n">user2</span><span class="p">)</span> <span class="c1">//true
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">user1</span> <span class="o">===</span> <span class="n">user2</span><span class="p">)</span> <span class="c1">//false
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">user1</span><span class="p">)</span> <span class="c1">//User(id=1, name=Li); called toString() method
+</span><span class="c1"></span>
+      <span class="k">val</span> <span class="py">person1</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="s2">&#34;Wong&#34;</span><span class="p">)</span>
+      <span class="k">val</span> <span class="py">person2</span> <span class="p">=</span> <span class="n">Person</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="s2">&#34;Wong&#34;</span><span class="p">)</span>
+      <span class="n">println</span><span class="p">(</span><span class="n">person1</span> <span class="o">==</span> <span class="n">person2</span><span class="p">)</span> <span class="c1">//false
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">person1</span><span class="p">.</span><span class="n">equals</span><span class="p">(</span><span class="n">person2</span><span class="p">))</span> <span class="c1">//false
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">person1</span> <span class="o">===</span> <span class="n">person2</span><span class="p">)</span> <span class="c1">//false
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">person1</span><span class="p">)</span> <span class="c1">//com.codelab.kotlinbasics.Person@3b6eb2ec
+</span><span class="c1"></span>
+      <span class="c1">//Copy
+</span><span class="c1"></span>      <span class="k">val</span> <span class="py">updatedUser</span> <span class="p">=</span> <span class="n">user1</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="n">name</span> <span class="p">=</span> <span class="s2">&#34;Zhang&#34;</span><span class="p">)</span>
+      <span class="n">println</span><span class="p">(</span><span class="n">updatedUser</span><span class="p">)</span> <span class="c1">//User(id=1, name=Zhang)
+</span><span class="c1"></span>
+      <span class="c1">//Print component
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="n">updatedUser</span><span class="p">.</span><span class="n">component1</span><span class="p">())</span> <span class="c1">//print 1
+</span><span class="c1"></span>
+      <span class="c1">//Separate primary constructor parameters
+</span><span class="c1"></span>      <span class="k">val</span> <span class="err">(</span><span class="py">id</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span> <span class="p">=</span> <span class="n">updatedUser</span>
+      <span class="n">println</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$id</span><span class="s2"> , </span><span class="si">$name</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">//1 , Zhang
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-6-inheritance"><a href="#6-6-inheritance" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-6-inheritance" class="headings">6-6 Inheritance</a></h3>
+<ul>
+<li>All classes and content are <code>final</code> by default, which means <code>non heritable</code></li>
+<li>Add <code>open</code> keyword to make a class heritable</li>
+<li>★Implemented <strong>Decorator pattern</strong> in Kotlin:</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">open</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Beverage</span> <span class="p">{</span>
+      <span class="c1">//properties
+</span><span class="c1"></span>      <span class="k">open</span> <span class="k">var</span> <span class="py">description</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="s2">&#34;Unknown Beverage&#34;</span>
+
+      <span class="c1">//methods
+</span><span class="c1"></span>      <span class="k">abstract</span> <span class="k">fun</span> <span class="nf">cost</span><span class="p">():</span> <span class="n">Double</span>
+  <span class="p">}</span>
+
+  <span class="cm">/*-------------------------*/</span>
+  <span class="c1">//components
+</span><span class="c1"></span>  <span class="k">open</span> <span class="k">class</span> <span class="nc">DarkRoast</span> <span class="p">:</span> <span class="n">Beverage</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">init</span> <span class="p">{</span>
+          <span class="k">super</span><span class="p">.</span><span class="n">description</span> <span class="p">=</span> <span class="s2">&#34;DarkRoast&#34;</span>
+      <span class="p">}</span>
+
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">cost</span><span class="p">():</span> <span class="n">Double</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="m">1.99</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="cm">/*-------------------------*/</span>
+  <span class="c1">//Condiment Decorators
+</span><span class="c1"></span>  <span class="k">open</span> <span class="k">abstract</span> <span class="k">class</span> <span class="nc">CondimentDecorator</span> <span class="p">:</span> <span class="n">Beverage</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">lateinit</span> <span class="k">var</span> <span class="py">beverage</span><span class="p">:</span> <span class="n">Beverage</span>
+      <span class="c1">//properties can also be abstract or open
+</span><span class="c1"></span>      <span class="c1">//This is for compulsory inheritance(override)
+</span><span class="c1"></span>      <span class="k">abstract</span> <span class="k">override</span> <span class="k">var</span> <span class="py">description</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span>
+  <span class="p">}</span>
+
+  <span class="cm">/*-------------------------*/</span>
+  <span class="c1">//Decorators
+</span><span class="c1"></span>  <span class="k">class</span> <span class="nc">Milk</span><span class="p">(</span><span class="n">beverage</span><span class="p">:</span> <span class="n">Beverage</span><span class="p">)</span> <span class="p">:</span> <span class="n">CondimentDecorator</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">init</span> <span class="p">{</span>
+          <span class="k">super</span><span class="p">.</span><span class="n">beverage</span> <span class="p">=</span> <span class="n">beverage</span>
+      <span class="p">}</span>
+
+      <span class="k">override</span> <span class="k">var</span> <span class="py">description</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="n">beverage</span><span class="p">.</span><span class="n">description</span> <span class="p">+</span> <span class="s2">&#34;, Milk&#34;</span>
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">cost</span><span class="p">():</span> <span class="n">Double</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="m">0.10</span> <span class="p">+</span> <span class="k">super</span><span class="p">.</span><span class="n">beverage</span><span class="p">.</span><span class="n">cost</span><span class="p">()</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">class</span> <span class="nc">Mocha</span><span class="p">(</span><span class="n">beverage</span><span class="p">:</span> <span class="n">Beverage</span><span class="p">)</span> <span class="p">:</span> <span class="n">CondimentDecorator</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">init</span> <span class="p">{</span>
+          <span class="k">super</span><span class="p">.</span><span class="n">beverage</span> <span class="p">=</span> <span class="n">beverage</span>
+      <span class="p">}</span>
+
+      <span class="k">override</span> <span class="k">var</span> <span class="py">description</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="n">beverage</span><span class="p">.</span><span class="n">description</span> <span class="p">+</span> <span class="s2">&#34;, Mocha&#34;</span>
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">cost</span><span class="p">():</span> <span class="n">Double</span> <span class="p">{</span>
+          <span class="k">return</span> <span class="m">0.20</span> <span class="p">+</span> <span class="k">super</span><span class="p">.</span><span class="n">beverage</span><span class="p">.</span><span class="n">cost</span><span class="p">()</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">df</span><span class="p">:</span> <span class="n">DecimalFormat</span> <span class="p">=</span> <span class="n">DecimalFormat</span><span class="p">(</span><span class="s2">&#34;#.##&#34;</span><span class="p">)</span>
+      <span class="n">df</span><span class="p">.</span><span class="n">roundingMode</span> <span class="p">=</span> <span class="n">RoundingMode</span><span class="p">.</span><span class="n">DOWN</span>
+
+      <span class="c1">//java: Beverage order = new DarkRoast()
+</span><span class="c1"></span>      <span class="k">var</span> <span class="py">order</span> <span class="p">=</span> <span class="n">DarkRoast</span><span class="p">()</span> <span class="k">as</span> <span class="n">Beverage</span>
+      <span class="n">order</span> <span class="p">=</span> <span class="n">Milk</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+      <span class="n">order</span> <span class="p">=</span> <span class="n">Mocha</span><span class="p">(</span><span class="n">order</span><span class="p">)</span>
+
+      <span class="n">println</span><span class="p">(</span><span class="n">order</span><span class="p">.</span><span class="n">description</span> <span class="p">+</span> <span class="s2">&#34; $&#34;</span> <span class="p">+</span> <span class="n">df</span><span class="p">.</span><span class="n">format</span><span class="p">(</span><span class="n">order</span><span class="p">.</span><span class="n">cost</span><span class="p">()))</span>
+      <span class="c1">//DarkRoast, Milk, Mocha $2.29
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-7-interface"><a href="#6-7-interface" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-7-interface" class="headings">6-7 Interface</a></h3>
+<ul>
+<li>An interface is a contract that a class may choose to sign</li>
+<li>Implementing an interface make a class obliged to implements its <strong>variables</strong> and functions</li>
+<li>Interfaces can implements from other interfaces</li>
+<li>Multiple implementation is allowed</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">interface</span> <span class="nc">Runnable</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">threadName</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span>
+      <span class="k">fun</span> <span class="nf">onDoingTask</span><span class="p">()</span>
+      <span class="k">fun</span> <span class="nf">onSuccess</span><span class="p">()</span> <span class="p">:</span> <span class="n">String</span>
+      <span class="k">fun</span> <span class="nf">onFailure</span><span class="p">()</span> <span class="p">{</span>
+          <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Error occurred&#34;</span><span class="p">)</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="c1">//implements properties in primary constructor
+</span><span class="c1"></span>  <span class="k">open</span> <span class="k">class</span> <span class="nc">Task</span><span class="p">(</span><span class="k">override</span> <span class="k">var</span> <span class="py">threadName</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="s2">&#34;ordinary worker&#34;</span><span class="p">)</span> <span class="p">:</span><span class="n">Runnable</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">isSucceed</span> <span class="p">=</span> <span class="k">true</span>
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">onDoingTask</span><span class="p">()</span> <span class="p">{</span>
+          <span class="k">if</span> <span class="p">(</span><span class="n">isSucceed</span><span class="p">)</span> <span class="n">onSuccess</span><span class="p">()</span> <span class="k">else</span> <span class="n">onFailure</span><span class="p">()</span>
+      <span class="p">}</span>
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">onSuccess</span><span class="p">()</span> <span class="p">:</span> <span class="n">String</span> <span class="p">{</span>
+          <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Succeed on thread: </span><span class="si">$threadName</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">return</span> <span class="s2">&#34;OK&#34;</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">class</span> <span class="nc">BigTask</span> <span class="p">:</span> <span class="n">Task</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">override</span> <span class="k">var</span> <span class="py">threadName</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="s2">&#34;big worker&#34;</span>
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">onSuccess</span><span class="p">():</span> <span class="n">String</span> <span class="p">{</span>
+          <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Succeed on thread: </span><span class="si">$threadName</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">return</span> <span class="s2">&#34;Big OK&#34;</span>
+      <span class="p">}</span>
+
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">onFailure</span><span class="p">()</span> <span class="p">{</span>
+          <span class="k">super</span><span class="p">.</span><span class="n">onFailure</span><span class="p">()</span>
+          <span class="n">println</span><span class="p">(</span><span class="s2">&#34;on </span><span class="si">$threadName</span><span class="s2">&#34;</span><span class="p">)</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">myBigTask</span> <span class="p">=</span> <span class="n">BigTask</span><span class="p">()</span>
+      <span class="n">myBigTask</span><span class="p">.</span><span class="n">onDoingTask</span><span class="p">()</span> <span class="c1">//Succeed on thread: big worker(called method in child class)
+</span><span class="c1"></span>
+      <span class="k">var</span> <span class="py">myTask</span> <span class="p">=</span> <span class="n">Task</span><span class="p">()</span>
+      <span class="n">myTask</span><span class="p">.</span><span class="n">onDoingTask</span><span class="p">()</span> <span class="c1">//Succeed on thread: ordinary worker
+</span><span class="c1"></span><span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-8-abstract-class"><a href="#6-8-abstract-class" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-8-abstract-class" class="headings">6-8 Abstract class</a></h3>
+<ul>
+<li>You cannot create objects of an abstract class. However you can inherit subclasses from an abstract class</li>
+<li>The members of an abstract class are non-abstract unless you explicitly use the abstract keyword</li>
+<li>You don't need to annotate abstract classes or functions with <code>open</code></li>
+<li>You can override a non-abstract open member with an abstract one.</li>
+<li>Different from interface:
+<ul>
+<li>Interface cannot hold <code>states</code>(fields, constructors..) but abstract classes can</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">abstract</span> <span class="k">class</span> <span class="nc">Mammal</span><span class="p">(</span>
+      <span class="k">private</span> <span class="k">val</span> <span class="py">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="k">private</span> <span class="k">val</span> <span class="py">origin</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span>
+      <span class="k">private</span> <span class="k">val</span> <span class="py">weight</span><span class="p">:</span> <span class="n">Double</span>
+  <span class="p">)</span> <span class="p">{</span>
+      <span class="c1">//Non-abstract properties
+</span><span class="c1"></span>      <span class="c1">// Must be overridden
+</span><span class="c1"></span>      <span class="k">abstract</span> <span class="k">var</span> <span class="py">maxSpeed</span><span class="p">:</span> <span class="n">Double</span>
+
+      <span class="c1">// Must be overridden
+</span><span class="c1"></span>      <span class="k">abstract</span> <span class="k">fun</span> <span class="nf">run</span><span class="p">()</span>
+      <span class="k">abstract</span> <span class="k">fun</span> <span class="nf">breath</span><span class="p">()</span>
+  <span class="p">}</span>
+
+  <span class="k">class</span> <span class="nc">Human</span><span class="p">(</span><span class="k">override</span> <span class="k">var</span> <span class="py">maxSpeed</span><span class="p">:</span> <span class="n">Double</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">origin</span><span class="p">:</span> <span class="n">String</span><span class="p">,</span> <span class="n">weight</span><span class="p">:</span> <span class="n">Double</span><span class="p">)</span> <span class="p">:</span>
+      <span class="n">Mammal</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">origin</span><span class="p">,</span> <span class="n">weight</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">run</span><span class="p">()</span> <span class="p">{</span>
+          <span class="c1">//
+</span><span class="c1"></span>      <span class="p">}</span>
+
+      <span class="k">override</span> <span class="k">fun</span> <span class="nf">breath</span><span class="p">()</span> <span class="p">{</span>
+          <span class="c1">//
+</span><span class="c1"></span>      <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">laoWong</span> <span class="p">=</span> <span class="n">Human</span><span class="p">(</span><span class="m">30.0</span><span class="p">,</span> <span class="s2">&#34;laoWong&#34;</span><span class="p">,</span> <span class="s2">&#34;HZ&#34;</span><span class="p">,</span> <span class="m">80.0</span><span class="p">)</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="6-9-type-casting"><a href="#6-9-type-casting" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:6-9-type-casting" class="headings">6-9 Type casting</a></h3>
+<ul>
+<li>List</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">val</span> <span class="py">stringList</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;laoWong&#34;</span><span class="p">,</span> <span class="s2">&#34;laoChung&#34;</span><span class="p">,</span> <span class="s2">&#34;laoChen&#34;</span><span class="p">)</span>
+  <span class="k">val</span> <span class="py">mixedTypeList</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">Any</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;laoWong&#34;</span><span class="p">,</span> <span class="m">123</span><span class="p">,</span> <span class="m">2.34</span><span class="p">,</span> <span class="sc">&#39;a&#39;</span><span class="p">)</span>
+
+  <span class="k">for</span><span class="p">(</span><span class="n">value</span> <span class="k">in</span> <span class="n">mixedTypeList</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">when</span> <span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="p">{</span>
+          <span class="k">is</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Int value: </span><span class="si">$value</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">is</span> <span class="n">Double</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Double value: </span><span class="si">$value</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">is</span> <span class="n">Char</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Char value: </span><span class="si">$value</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">is</span> <span class="n">String</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;String value: </span><span class="si">$value</span><span class="s2">&#34;</span><span class="p">)</span>
+          <span class="k">else</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Unknown type&#34;</span><span class="p">)</span>
+          <span class="c1">//String value: laoWong
+</span><span class="c1"></span>          <span class="c1">//Int value: 123
+</span><span class="c1"></span>          <span class="c1">//Double value: 2.34
+</span><span class="c1"></span>          <span class="c1">//Char value: a
+</span><span class="c1"></span>      <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>Smart cast</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">val</span> <span class="py">obj1</span><span class="p">:</span> <span class="n">Any</span> <span class="p">=</span> <span class="s2">&#34;Word&#34;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">obj1</span> <span class="o">!is</span> <span class="n">String</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">println</span><span class="p">(</span><span class="s2">&#34;It&#39;s not a String&#34;</span><span class="p">)</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="c1">//obj1 is automatically cast to a String in this scope
+</span><span class="c1"></span>      <span class="n">println</span><span class="p">(</span><span class="s2">&#34;Found a String od length </span><span class="si">${obj1.length}</span><span class="s2">&#34;</span><span class="p">)</span><span class="c1">//Found a String od length 4
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li>Explicit unsafe casting using <code>as</code></li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">val</span> <span class="py">str1</span><span class="p">:</span> <span class="n">String</span> <span class="p">=</span> <span class="n">obj1</span> <span class="k">as</span> <span class="n">String</span>
+  <span class="n">println</span><span class="p">(</span><span class="n">str1</span><span class="p">.</span><span class="n">length</span><span class="p">)</span><span class="c1">//4 (will work only when obj1 is s String)
+</span><span class="c1"></span>
+  <span class="k">val</span> <span class="py">obj2</span><span class="p">:</span> <span class="n">Any</span> <span class="p">=</span> <span class="m">123</span>
+  <span class="k">val</span> <span class="py">str2</span><span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="n">obj2</span> <span class="k">as</span><span class="p">?</span> <span class="n">String</span>
+  <span class="n">println</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span><span class="c1">//print null
+</span></code></pre></td></tr></table></div>
+</div>
+</div><h2 id="7-advanced"><a href="#7-advanced" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-advanced" class="headings">7. Advanced</a></h2>
+<h3 id="7-1-arraylists"><a href="#7-1-arraylists" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-1-arraylists" class="headings">7-1 ArrayLists</a></h3>
+<ul>
+<li>used to create dynamic arrays</li>
+<li>the size of an arrayList can be increased or decreased according to your requirement</li>
+<li>provides both <code>read and write</code> functionalities</li>
+<li>follows the sequence of insertion order</li>
+<li><code>non synchronized</code>, may contain duplicate elements</li>
+<li>Constructors
+<ul>
+<li>ArrayList<E>()</li>
+<li>ArrayList(capacity: Int)</li>
+<li>ArrayList(elements: Collection<E>) (filled with the elements of a collection)</li>
+</ul>
+</li>
+<li>Functions
+<ul>
+<li>add(element: E)</li>
+<li>clear()</li>
+<li>get(index: Int)</li>
+<li>remove(element: E)</li>
+</ul>
+</li>
+<li>Code</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="c1">//this &#39;val&#39; means we can&#39;t reassign the object but we can change the content of it
+</span><span class="c1"></span>  <span class="k">val</span> <span class="py">list</span><span class="p">:</span> <span class="n">List</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">listOf</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">,</span> <span class="s2">&#34;b&#34;</span><span class="p">,</span> <span class="s2">&#34;c&#34;</span><span class="p">,</span> <span class="s2">&#34;d&#34;</span><span class="p">,</span> <span class="s2">&#34;d&#34;</span><span class="p">)</span>
+  <span class="k">val</span> <span class="py">arrayList</span> <span class="p">=</span> <span class="n">ArrayList</span><span class="p">(</span><span class="n">list</span><span class="p">)</span> <span class="c1">//fill with a collection(list)
+</span><span class="c1"></span>
+  <span class="n">arrayList</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;e&#34;</span><span class="p">)</span>
+  <span class="n">arrayList</span><span class="p">.</span><span class="n">remove</span><span class="p">(</span><span class="s2">&#34;b&#34;</span><span class="p">)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="k">in</span> <span class="n">arrayList</span><span class="p">)</span> <span class="p">{</span>
+      <span class="k">var</span> <span class="py">index</span> <span class="p">=</span> <span class="n">arrayList</span><span class="p">.</span><span class="n">indexOf</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+      <span class="k">var</span> <span class="py">value</span> <span class="p">=</span> <span class="n">arrayList</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+      <span class="n">println</span><span class="p">(</span><span class="s2">&#34;The element with index </span><span class="si">$index</span><span class="s2"> is: </span><span class="si">$i</span><span class="s2">, </span><span class="se">\n</span><span class="s2">should be the same as </span><span class="si">$value</span><span class="s2">&#34;</span><span class="p">)</span>
+  <span class="p">}</span>
+  <span class="n">arrayList</span><span class="p">.</span><span class="n">clear</span><span class="p">()</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><p>add list to arrayList</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">val</span> <span class="py">arrayList</span> <span class="p">=</span> <span class="n">ArrayList</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;(</span><span class="m">5</span><span class="p">)</span>
+  <span class="k">var</span> <span class="py">list</span> <span class="p">=</span> <span class="n">mutableListOf</span><span class="p">&lt;</span><span class="n">String</span><span class="p">&gt;()</span>
+
+  <span class="n">list</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;1&#34;</span><span class="p">)</span>
+  <span class="n">list</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="s2">&#34;2&#34;</span><span class="p">)</span>
+
+  <span class="n">arrayList</span><span class="p">.</span><span class="n">addAll</span><span class="p">(</span><span class="n">list</span><span class="p">)</span>
+  <span class="n">println</span><span class="p">(</span><span class="n">arrayList</span><span class="p">)</span><span class="c1">//[1, 2]
+</span></code></pre></td></tr></table></div>
+</div>
+</div><p>Iterator</p>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">itr</span> <span class="p">=</span> <span class="n">arrayList</span><span class="p">.</span><span class="n">iterator</span><span class="p">()</span>
+  <span class="k">while</span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="n">hasNext</span><span class="p">()){</span>
+      <span class="n">print</span><span class="p">(</span><span class="n">itr</span><span class="p">.</span><span class="n">next</span><span class="p">())</span> <span class="c1">//print 12 (using the same arrayList as above)
+</span><span class="c1"></span>  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="7-2-lambda-expressions"><a href="#7-2-lambda-expressions" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-2-lambda-expressions" class="headings">7-2 Lambda expressions</a></h3>
+<ul>
+<li>Lambda is a function which has no name.</li>
+<li>Lambda and anonymous functions are <code>function literals</code>(functions that are not declared, but passed immediately as an expression)</li>
+<li>Lambda is defined with curly braces {} which takes variables as a parameter(if any) and a body of a function</li>
+<li>the body of a function is written after the variable(is any) followed vy <code>-&gt;</code> operator(lambda operator)</li>
+<li>Syntax: { variable(s) -&gt; body_of_lambda }</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">val</span> <span class="py">lambda</span><span class="p">:</span> <span class="p">(</span><span class="n">Int</span><span class="p">,</span> <span class="n">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Int</span> <span class="p">=</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">a</span> <span class="p">+</span> <span class="n">b</span> <span class="p">}</span>
+  <span class="k">val</span> <span class="py">lambda2</span> <span class="p">=</span> <span class="p">{</span> <span class="n">a</span><span class="p">:</span> <span class="n">Int</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">Int</span> <span class="o">-&gt;</span> <span class="n">println</span><span class="p">(</span><span class="n">a</span> <span class="p">+</span> <span class="n">b</span><span class="p">)</span> <span class="p">}</span>
+
+  <span class="k">var</span> <span class="py">result</span> <span class="p">=</span> <span class="n">lambda</span><span class="p">.</span><span class="n">invoke</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+  <span class="k">var</span> <span class="py">result2</span> <span class="p">=</span> <span class="n">lambda2</span><span class="p">(</span><span class="m">3</span><span class="p">,</span> <span class="m">5</span><span class="p">)</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><h3 id="7-3-visibility-modifier"><a href="#7-3-visibility-modifier" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-3-visibility-modifier" class="headings">7-3 Visibility modifier</a></h3>
+<ul>
+<li>4 types: <code>public</code>,<code>private</code>,<code>protected</code>,<code>internal</code>
+<ul>
+<li><strong>public</strong>
+<ul>
+<li>Is accessible from everywhere in the project</li>
+<li>It's a <strong>default modifier</strong> in kotlin.</li>
+<li>All public declarations can be placed at the top of the file</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">public</span> <span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
+    <span class="k">class</span> <span class="nc">Demo</span><span class="p">{</span>       
+    <span class="p">}</span>
+
+    <span class="k">public</span> <span class="k">fun</span> <span class="nf">hello</span><span class="p">()</span>
+    <span class="k">fun</span> <span class="nf">demo</span><span class="p">()</span>
+
+    <span class="k">public</span> <span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="m">5</span>
+    <span class="k">val</span> <span class="py">y</span> <span class="p">=</span> <span class="m">10</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li><strong>private</strong>
+<ul>
+<li>Allows the element to be accessible only <strong>within the block in which properties, fields, etc. are declared</strong></li>
+<li>A private package can be accessible within that specific file</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">private</span> <span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span> <span class="c1">//Accessible within the same source file
+</span><span class="c1"></span>    <span class="k">private</span> <span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="m">1</span> <span class="c1">//Accessible within class Example
+</span><span class="c1"></span>    <span class="k">private</span> <span class="n">doSomething</span><span class="p">()</span> <span class="p">{</span> <span class="c1">//Accessible within class Example
+</span><span class="c1"></span>    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li><strong>Internal</strong>
+<ul>
+<li>Makes the field visible only inside the module in which it is implemented</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">class</span> <span class="nc">Outer</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="py">example</span> <span class="p">=</span> <span class="n">Example</span><span class="p">()</span><span class="c1">//error: public example exposes this internal Example
+</span><span class="c1"></span>                          <span class="c1">//make example internal or Outer class internal will solve the problem
+</span><span class="c1"></span>    <span class="k">internal</span> <span class="k">class</span> <span class="nc">Example</span> <span class="p">{</span>
+        <span class="k">internal</span> <span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="m">5</span> <span class="c1">//Basicly can&#39;t be accessed out of Outer class
+</span><span class="c1"></span>        <span class="k">internal</span> <span class="k">fun</span> <span class="nf">getValue</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div><ul>
+<li><strong>protected</strong>
+<ul>
+<li>Allows visibility to its class or subclasses only</li>
+<li>When overridden in subclasses is also <code>protected</code> unless it's explicitly changed</li>
+<li><strong>CANNOT be declared at top level</strong> -&gt; packaged cannot be protected</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">open</span> <span class="k">class</span> <span class="nc">Base</span> <span class="p">{</span>
+    <span class="k">protected</span> <span class="k">val</span> <span class="py">i</span> <span class="p">=</span> <span class="m">0</span>
+    <span class="k">open</span> <span class="k">protected</span> <span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="m">5</span>
+  <span class="p">}</span>
+
+  <span class="k">class</span> <span class="nc">Derived</span><span class="p">:</span> <span class="n">Base</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">fun</span> <span class="nf">getValue</span><span class="p">:</span> <span class="n">Int</span> <span class="p">{</span>
+      <span class="k">return</span> <span class="n">i</span>
+    <span class="p">}</span>
+    <span class="k">override</span> <span class="k">val</span> <span class="py">x</span> <span class="p">=</span> <span class="m">6</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div></li>
+</ul>
+<h3 id="7-4-nested-and-inner-class"><a href="#7-4-nested-and-inner-class" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-4-nested-and-inner-class" class="headings">7-4 Nested and Inner class</a></h3>
+<ul>
+<li>Nested class: a class which is created inside another class
+<ul>
+<li><code>static</code> by default</li>
+<li>cannot access the data members of outer classes(one way accessibility)</li>
+</ul>
+</li>
+<li>Inner class: a class which is created inside another class with keyword inner
+<ul>
+<li>Nested class + inner mark =&gt; inner class</li>
+<li>Cannot be declared inside interface or <strong>non-inner nested classes</strong></li>
+<li>Advantage over nested class: it's able to access members of its outer class <span style="background-color: yellow">even it is private</span></li>
+<li>An inner class <span style="background-color: yellow">keeps an reference</span> to its outer class</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<div class="table-container"><table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+      <span class="n">Outer</span><span class="p">().</span><span class="n">Inner</span><span class="p">().</span><span class="n">printOut</span><span class="p">()</span>
+  <span class="p">}</span>
+  <span class="k">class</span> <span class="nc">Outer</span> <span class="p">{</span>
+      <span class="k">private</span> <span class="k">val</span> <span class="py">out</span> <span class="p">=</span> <span class="s2">&#34;out&#34;</span>
+      <span class="k">inner</span> <span class="k">class</span> <span class="nc">Inner</span> <span class="p">{</span>
+          <span class="k">fun</span> <span class="nf">printOut</span><span class="p">()</span> <span class="p">{</span>
+              <span class="n">print</span><span class="p">(</span><span class="k">out</span><span class="p">)</span>
+          <span class="p">}</span>
+      <span class="p">}</span>
+  <span class="p">}</span>
+</code></pre></td></tr></table></div>
+</div>
+</div></li>
+</ul>
+<h3 id="7-5-safe-cast-and-unsafe-cast-operator"><a href="#7-5-safe-cast-and-unsafe-cast-operator" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-5-safe-cast-and-unsafe-cast-operator" class="headings">7-5 Safe cast and Unsafe cast operator</a></h3>
+<ul>
+<li><code>as?</code> returns null if casting is not possible rather than throwing a ClassCastException
+(see <a href="#6-9-type-casting">6-9 Type casting</a>)</li>
+</ul>
+<h3 id="7-6-exception-handling"><a href="#7-6-exception-handling" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:7-6-exception-handling" class="headings">7-6 Exception handling</a></h3>
+<ul>
+<li><code>try-catch-finally</code></li>
+<li>Unchecked Exception
+<ul>
+<li>Thrown due to mistakes in our code</li>
+<li>Extends the <strong>RuntimeException</strong> class
+<ul>
+<li>ArithmeticException, SecurityException, ArrayOutOfBoundException, NPE...</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Checked Exception
+<ul>
+<li>Checked at compile time</li>
+<li>Extends <strong>Throwable</strong> class
+<ul>
+<li>IOException, SQLException...</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+
+            
+    
+    
+        <ul class="post-copyright">
+            <li class="copyright-item author"><span class="copyright-item-text">作者</span>：<a href="https://rikucherry1993.me/" class="p-author h-card" target="_blank" rel="noopener">rikucherry</a></li>
+            
+                
+                
+                
+                
+                <li class="copyright-item link"><span class="copyright-item-text">链接</span>：<a href="/posts/2021-07-06kotlin-1/" target="_blank" rel="noopener">https://rikucherry1993.me/posts/2021-07-06kotlin-1/</a></li>
+            
+            <li class="copyright-item license"><span class="copyright-item-text">许可</span>：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></li>
+            
+        </ul>
+    
+
+
+
+        </article>
+
+        
+
+        
+    <div class="updated-badge-container">
+        <span title="Updated @ 2021-07-10 12:55:28 JST" style="cursor:help">
+
+<svg xmlns="http://www.w3.org/2000/svg" width="130" height="20" class="updated-badge"><linearGradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#bbb" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></linearGradient><clipPath id="a"><rect width="130" height="20" rx="3" fill="#fff"/></clipPath><g clip-path="url(#a)"><path class="updated-badge-left" d="M0 0h55v20H0z"/><path class="updated-badge-right" d="M55 0h75v20H55z"/><path fill="url(#b)" d="M0 0h130v20H0z"/></g><g fill="#fff" text-anchor="middle" font-size="110"><text x="285" y="150" fill="#010101" fill-opacity=".3" textLength="450" transform="scale(.1)">updated</text><text x="285" y="140" textLength="450" transform="scale(.1)">updated</text><text x="915" y="150" fill="#010101" fill-opacity=".3" textLength="650" transform="scale(.1)">2021-07-10</text><text x="915" y="140" textLength="650" transform="scale(.1)">2021-07-10</text></g></svg>
+        </span></div>
+
+
+
+        
+
+
+        <div class="post-share">
+
+        
+
+        <div class="share-items">
+
+            
+                <div class="share-item twitter">
+                    
+                    <a href="https://twitter.com/share?url=https://rikucherry1993.me/posts/2021-07-06kotlin-1/&amp;text=Android%20Basics:%20Kotlin%281%29&amp;hashtags=Android,Kotlin,&amp;via=-" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item facebook">
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://rikucherry1993.me/posts/2021-07-06kotlin-1/&amp;hashtag=%23Android" title="分享到「Facebook」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon facebook-icon"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item linkedin">
+                    
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rikucherry1993.me/posts/2021-07-06kotlin-1/&amp;title=Android%20Basics:%20Kotlin%281%29&amp;summary=1.%20Variables%201-1%20%27val%27%20and%20%27var%27%20var%20is%20mutable,%20can%20be%20changed%20during%20execution%20val%20is%20immutable,%20cannot%20be%20changed%20once%20initialized%201%202%203%204%205%206%20//OK%20var%20myName%20=%20%22Cherry%22%20myName%20=%20%22newName%22%20//NG%20val%20myName%20=%20%22Cherry%22%20myName%e2%80%a6%e2%80%a6&amp;source=Rikucherry%27s%20blog" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                </div>
+            
+
+            
+
+            
+                <div class="share-item weibo">
+                    
+                    <a href="https://service.weibo.com/share/share.php?&amp;url=https://rikucherry1993.me/posts/2021-07-06kotlin-1/&amp;title=Android%20Basics:%20Kotlin%281%29&amp;pic=https://rikucherry1993.me/icons/apple-touch-icon.png&amp;searchPic=false" title="分享到「新浪微博」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon weibo-icon"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a>
+                </div>
+            
+
+            
+                <div class="share-item douban">
+                    
+                    <a href="https://www.douban.com/share/service?href=https://rikucherry1993.me/posts/2021-07-06kotlin-1/&amp;name=Android%20Basics:%20Kotlin%281%29&amp;text=1.%20Variables%201-1%20%27val%27%20and%20%27var%27%20var%20is%20mutable,%20can%20be%20changed%20during%20execution%20val%20is%20immutable,%20cannot%20be%20changed%20once%20initialized%201%202%203%204%205%206%20//OK%20var%20myName%20=%20%22Cherry%22%20myName%20=%20%22newName%22%20//NG%20val%20myName%20=%20%22Cherry%22%20myName%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                </div>
+            
+
+            
+
+            
+
+            
+                <div class="share-item qrcode">
+                    <div class="qrcode-container" title="通过「二维码」"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon qrcode-icon"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg><div id="qrcode-img"></div>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+
+<script>
+    var typeNumber = 0;
+    var errorCorrectionLevel = 'L';
+    var qr = qrcode(typeNumber, errorCorrectionLevel);
+    qr.addData('https:\/\/rikucherry1993.me\/posts\/2021-07-06kotlin-1\/');
+    qr.make();
+    document.getElementById('qrcode-img').innerHTML = qr.createImgTag();
+</script>
+
+                </div>
+            
+
+        </div>
+
+    </div>
+
+
+
+
+        
+    
+    
+        <div class="related-posts">
+            <h2 class="related-title">相关文章：<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon related-icon"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"/></svg></h2>
+            <ul class="related-list">
+                
+                    <li class="related-item">
+                        <a href="/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/" class="related-link">Android应用基础 嵌套的RecyclerView</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" class="related-link">Android应用基础 简易后台计时器的安装方法</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2021-06-13flutter-3/" class="related-link">Flutter Basics: Dart(3)</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2021-06-06flutter-2/" class="related-link">Flutter Basics: Dart(2)</a>
+                    </li>
+                
+                    <li class="related-item">
+                        <a href="/posts/2021-05-30flutter-1/" class="related-link">Flutter Basics: Dart(1)</a>
+                    </li>
+                
+            </ul>
+        </div>
+    
+
+
+
+        
+    
+        <div class="post-tags">
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/android/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Android</a>
+                
+            
+                
+                
+                
+                
+                    
+                    <a href="/tags/kotlin/" rel="tag" class="post-tags-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon tag-icon"><path d="M0 252.118V48C0 21.49 21.49 0 48 0h204.118a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.745 18.745-49.137 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118zM112 64c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48z"/></svg>Kotlin</a>
+                
+            
+        </div>
+    
+
+
+
+        
+
+
+        
+
+
+        
+    
+        
+        
+    
+    
+    
+    
+        <ul class="post-nav">
+            
+            
+                <li class="post-nav-next">
+                    <a href="/posts/2021-06-13flutter-3/" rel="next">Flutter Basics: Dart(3) &gt;</a>
+                </li>
+            
+        </ul>
+    
+
+
+
+        
+    
+
+        
+
+        
+
+        
+
+        
+            <div id="utterances"></div>
+        
+
+        
+    
+
+
+
+    </div>
+</main>
+
+
+            
+    <div id="back-to-top" class="back-to-top">
+        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon arrow-up"><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg></a>
+    </div>
+
+
+            
+    <footer id="footer" class="footer">
+        <div class="footer-inner">
+            <div class="site-info">©&nbsp;2021–2021&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon footer-icon"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>&nbsp;rikucherry</div><div class="site-copyright"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></div>
+                <div class="busuanzi-site-uv-and-pv">
+                    <span id="busuanzi_container_site_uv">本站访客数&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon busuanzi-site-uv"><path d="M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"/></svg>&nbsp;<span id="busuanzi_value_site_uv"></span></span>&nbsp;|&nbsp;<span id="busuanzi_container_site_pv">本站访问量&nbsp;<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="icon busuanzi-site-pv"><path d="M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z"/></svg>&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                </div>
+
+            
+    
+        <ul class="socials"><li class="socials-item">
+                    <a href="/rss.xml" target="_blank" rel="external noopener" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+                </li><li class="socials-item">
+                    <a href="https://github.com/rikucherry1993" target="_blank" rel="external noopener" title="GitHub"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon social-icon"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+                </li></ul>
+    
+
+
+
+            
+        </div>
+    </footer>
+
+
+        </div>
+        
+
+        
+
+
+
+
+
+
+    
+
+        
+
+        
+
+        
+            <script>
+    function loadComments() {
+        (function() {
+            var utterances = document.getElementById("utterances");
+            var script = document.createElement('script');
+            script.src = 'https://utteranc.es/client.js';
+            script.async = true;
+            script.crossOrigin = 'anonymous';
+            script.setAttribute('repo', 'rikucherry1993\/rikucherry1993.github.io');
+            script.setAttribute('issue-term', 'title');
+            const isDark = getCurrentTheme() === 'dark';
+        if (isDark) {
+            script.setAttribute('theme', 'photon-dark');
+        } else {
+            script.setAttribute('theme', 'github-light');
+        }
+            
+                script.setAttribute('label', 'utterances');
+            
+            utterances.appendChild(script);
+        })();
+    }
+</script>
+        
+
+        
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@latest/dist/medium-zoom.min.js"></script>
+
+<script>
+    mediumZoom(document.querySelectorAll('div.post-body img'), {
+        background: 'hsla(var(--color-bg-h), var(--color-bg-s), var(--color-bg-l), 0.95)'
+    })
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/instant.page@5.1.0/instantpage.min.js" type="module" defer></script>
+
+
+
+
+    
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+
+
+    </body>
+</html>
