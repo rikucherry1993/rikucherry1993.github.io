@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Rikucherry&#39;s blog</title>
     <subtitle type="html"></subtitle>
-    <updated>2021-07-14T16:18:32&#43;09:00</updated>
+    <updated>2021-07-16T01:31:24&#43;09:00</updated>
     <id>https://rikucherry1993.me/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />
@@ -20,7 +20,7 @@
             <title type="text">《数据结构与算法分析》读书笔记（1）</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2021-07-14T14:48:55&#43;09:00</updated>
+            <updated>2021-07-16T01:30:32&#43;09:00</updated>
             <published>2021-07-14T03:00:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -133,6 +133,27 @@ f(x)\stackrel{调用}{\longrightarrow} f(x-1) \stackrel{调用}{\longrightarrow}
 f(x)\leftarrow f(x-1) \leftarrow ... f(2) \stackrel{计算}{\longleftarrow} f(1) \stackrel{计算}{\longleftarrow} f(0)  \quad \hookleftarrow【归】
 \end{aligned}
 $$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;14-15-泛型&#34;&gt;1.4-1.5 泛型&lt;/h3&gt;
+&lt;h4 id=&#34;java5之前实现泛型构件&#34;&gt;java5之前实现泛型构件&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;用Object表示泛型，问题是8种基本类型不适用。&lt;/li&gt;
+&lt;li&gt;用接口表示泛型，如Comparable接口保证所有实现该接口的类型可以使用ComparaTo比较大小，包括基本类型的包装类。但无法拓展的final类等不适用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;泛型&#34;&gt;泛型&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;类声明中传入的类型参数为泛型时， 保证了类内部使用它时类型一致。将用Object表示泛型时可能引起的运行时错误提前到编译时。&lt;/li&gt;
+&lt;li&gt;自动装箱/拆箱简化了基本类型和包装类之间繁琐的类型转换。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;通配符&lt;/strong&gt;解决了泛型数组的协变性。java中数组是协变的（即数组型参数可以接受具有IS-A关系的其他类的数组）而泛型集合不是。&lt;code&gt;Collection&amp;lt;? extends Super&amp;gt;&lt;/code&gt;解决了这点。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型限界&lt;/strong&gt;：可指定泛型方法类型参数尖括号内类型的性质，如&lt;code&gt;T extends Interface&amp;lt;? super T&amp;gt;&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;类型擦除&lt;/strong&gt;：编译器在编译时将泛型类转化为非泛型类（原始类）的过程，生成与程序员使用泛型前差不多的代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;练习&#34;&gt;【练习】&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;Plan&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1～2章：顺序阅读+Blog笔记&lt;/li&gt;
+&lt;li&gt;3章～： 先刷题后查找&lt;/li&gt;
 &lt;/ul&gt;
 </content>
             
