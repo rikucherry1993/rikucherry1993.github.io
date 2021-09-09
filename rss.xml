@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Thu, 09 Sep 2021 16:19:03 &#43;0900</lastBuildDate>
+        <lastBuildDate>Thu, 09 Sep 2021 16:26:03 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -43,7 +43,7 @@
 &lt;/ul&gt;
 &lt;h3 id=&#34;1-委托模式与mixin&#34;&gt;1. 委托模式与&lt;code&gt;mixin&lt;/code&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;委托模式&lt;/code&gt;即是委托类将某种处理/请求全权交给被委托类处理，自身只是包含被委托类的实例引用，或者实现被委托类的接口方法。调用者看来是委托类在完成请求，而&lt;strong&gt;实际工作的则是被委托类&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;这么做出了满足具体的业务需求外，也符合设计模式中&lt;code&gt;用组合代替继承&lt;/code&gt;的原则，解耦了类之间is-a的继承关系。之前学习&lt;code&gt;Dart&lt;/code&gt;时遇到的&lt;code&gt;mixin&lt;/code&gt;关键字就是体现了这种原则。&lt;/p&gt;
+&lt;p&gt;这么做除了满足具体的业务需求外，也符合设计模式中&lt;code&gt;用组合代替继承&lt;/code&gt;的原则，解耦了类之间is-a的继承关系。之前学习&lt;code&gt;Dart&lt;/code&gt;时遇到的&lt;code&gt;mixin&lt;/code&gt;关键字就是体现了这种原则。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Dart: mixin&lt;/li&gt;
 &lt;/ul&gt;
