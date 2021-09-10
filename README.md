@@ -2,7 +2,7 @@
    <a href="https://img.shields.io/badge/framework-Hugo-blue">
       <img src="https://img.shields.io/badge/framework-Hugo-blue" alt="Hugo Theme Badge"">
    </a>
-   <a href="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-brightgreen">
+   <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">
       <img src="https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-brightgreen" alt="CC BY-NC-SA 4.0 License Badge">
    </a>
 </p>
