@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 10 Sep 2021 17:37:34 &#43;0900</lastBuildDate>
+        <lastBuildDate>Fri, 10 Sep 2021 17:41:13 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -92,7 +92,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;System.out.println是谁&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;System.out.println是谁&lt;/strong&gt;&lt;br&gt;
 常用的&lt;code&gt;System.out.prinln&lt;/code&gt;中，&lt;code&gt;System&lt;/code&gt;是包&lt;code&gt;java.lang&lt;/code&gt;下的final类。&lt;code&gt;out&lt;/code&gt;则是该类中的标准输出流的静态变量。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -114,7 +114,7 @@
 &lt;/div&gt;&lt;p&gt;那么作为返回类型的&lt;code&gt;Outputter&lt;/code&gt;是什么呢？是一个接口，有且只有一个抽象方法，因此是一个&lt;strong&gt;函数式接口&lt;/strong&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;从匿名函数到lambda再到方法引用&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;从匿名函数到lambda再到方法引用&lt;/strong&gt;&lt;br&gt;
 将接口的实现赋值给接口类型的变量，在java8之前，我们可以用匿名函数来实现：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
