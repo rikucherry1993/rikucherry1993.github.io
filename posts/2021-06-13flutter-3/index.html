@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.83.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#16171d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>Flutter Basics: Dart(3) | Rikucherry&#39;s blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.c895b180744685ea8806df43157fbd3633a010c6be06746387117a0b9027ddff.css"/>
+    <link rel="stylesheet" href="/css/meme.min.ee89c607bd398a7e175de8f3fda2eaf2887f9d671c983fbda7424521e43944eb.css"/>
 
     
     
@@ -297,11 +297,11 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;initial&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">String</span> <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;initial&#39;</span><span class="p">;</span>
 <span class="kd">final</span> <span class="n">list</span> <span class="o">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">,</span><span class="m">3</span><span class="p">];</span>
 </code></pre></td></tr></table></div>
 </div>
@@ -311,7 +311,7 @@
 <p><strong>constructor with initial value of fields</strong></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -324,7 +324,7 @@
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span> <span class="n">myClass</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="s1">&#39;initial&#39;</span><span class="p">);</span>
   <span class="c1">//&#34;new&#34; keyword is redundant
 </span><span class="c1"></span><span class="p">}</span>
@@ -340,7 +340,7 @@
 </div><p><strong>constructor with named parameters</strong></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -350,7 +350,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span> <span class="n">myClass</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="nl">someField:</span> <span class="s1">&#39;initial&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -363,7 +363,7 @@
 </div><p><strong>constructor with lazy initialization</strong></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -378,7 +378,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span> <span class="n">myClass</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="nl">firstName:</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="nl">lastName:</span> <span class="s1">&#39;Lu&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -396,7 +396,7 @@
 </div><p><strong>★constructor with a initializer list</strong></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -412,7 +412,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span> <span class="n">myClass</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="nl">firstName:</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="nl">lastName:</span> <span class="s1">&#39;Lu&#39;</span><span class="p">);</span>
 <span class="p">}</span>
 
@@ -431,7 +431,7 @@
 </div><p><a id="const"></a><strong>★const constructor</strong></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -446,7 +446,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span> <span class="n">myClass1</span> <span class="o">=</span> <span class="kd">const</span> <span class="n">MyClass</span><span class="p">(</span><span class="s1">&#39;Cherry&#39;</span><span class="p">);</span>
   <span class="n">MyClass</span> <span class="n">myClass2</span> <span class="o">=</span> <span class="kd">const</span> <span class="n">MyClass</span><span class="p">(</span><span class="s1">&#39;Cherry&#39;</span><span class="p">);</span>
   <span class="c1">//const constructor make sure the object can be instantiated only once
@@ -465,7 +465,7 @@
 <p>Nothing special~</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -480,7 +480,7 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span> <span class="n">myClass</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">(</span><span class="s1">&#39;Cherry&#39;</span><span class="p">);</span>
   <span class="n">print</span><span class="p">(</span><span class="n">myClass</span><span class="p">.</span><span class="n">getName</span><span class="p">());</span>
 <span class="p">}</span>
@@ -498,7 +498,7 @@
 </div><h4 id="3-1-3-static-members"><a href="#3-1-3-static-members" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-1-3-static-members" class="headings">3-1-3 Static Members</a></h4>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -509,7 +509,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">int</span> <span class="n">myAge</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">.</span><span class="n">age</span><span class="p">;</span>
   <span class="n">MyClass</span><span class="p">.</span><span class="n">method</span><span class="p">();</span>
 <span class="p">}</span>
@@ -529,7 +529,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -549,7 +549,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">MyClass</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="m">2</span><span class="p">);</span>
   <span class="kd">final</span> <span class="n">myClass</span> <span class="o">=</span> <span class="n">MyClass</span><span class="p">.</span><span class="n">namedConstructor</span><span class="p">(</span><span class="nl">public:</span> <span class="m">1</span><span class="p">,</span> <span class="nl">private:</span> <span class="m">2</span><span class="p">);</span>
   <span class="n">myClass</span><span class="p">.</span><span class="n">_private</span><span class="p">;</span> <span class="c1">//This is fine! There&#39;s no class private fields!
@@ -574,13 +574,13 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">NonInstantiable</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">NonInstantiable</span> <span class="p">{</span>
 <span class="c1">//unaccessible from outside of the class
 </span><span class="c1"></span><span class="n">NonInstantiable</span><span class="p">.</span><span class="n">_</span><span class="p">();</span>
 <span class="n">NonInstantiable</span><span class="p">.</span><span class="n">_namedConstructor</span><span class="p">();</span>
@@ -591,10 +591,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">_privateMethod</span><span class="p">(){</span> <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">_privateMethod</span><span class="p">(){</span> <span class="p">}</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><h4 id="3-1-5-properties"><a href="#3-1-5-properties" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-1-5-properties" class="headings">3-1-5 Properties</a></h4>
@@ -602,7 +602,7 @@
 <li>Properties are like some nice-looking methods which are doing <strong>lighter work</strong> than normal methods.
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -640,7 +640,7 @@
 </span><span class="lnt">36
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nl">firstName:</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="nl">lastName:</span> <span class="s1">&#39;Lu&#39;</span><span class="p">,</span> <span class="nl">email:</span> <span class="s1">&#39;c@l.com&#39;</span><span class="p">);</span>
   <span class="kd">final</span> <span class="n">user2</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nl">firstName:</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="nl">lastName:</span> <span class="s1">&#39;Lu&#39;</span><span class="p">,</span> <span class="nl">email:</span> <span class="s1">&#39;whdgsuf&#39;</span><span class="p">);</span>
 
@@ -689,7 +689,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -705,7 +705,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">override</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">override</span>
 <span class="kt">bool</span> <span class="kd">operator</span> <span class="o">==</span><span class="p">(</span><span class="kt">Object</span> <span class="n">other</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">//this: operator on the left side, other: right side
 </span><span class="c1"></span>  <span class="c1">//identical: check referential equality
@@ -730,7 +730,7 @@
 <li>Extending a class
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -751,7 +751,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="kt">String</span> <span class="n">_firstName</span><span class="p">;</span>
   <span class="kd">final</span> <span class="kt">String</span> <span class="n">_lastName</span><span class="p">;</span>
 
@@ -776,11 +776,11 @@
 <li>Overriding properties
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">override</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">override</span>
 <span class="kt">String</span> <span class="kd">get</span> <span class="n">fullName</span> <span class="o">=&gt;</span> <span class="s1">&#39;Admin: </span><span class="si">${</span><span class="k">super</span><span class="p">.</span><span class="n">fullName</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table></div>
 </div>
@@ -788,14 +788,14 @@
 <li>Overriding methods
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">override</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">override</span>
 <span class="kt">void</span> <span class="n">signOut</span><span class="p">()</span> <span class="p">{</span>
   <span class="n">print</span><span class="p">(</span><span class="s1">&#39;Performing admin-specific sign out steps&#39;</span><span class="p">);</span>
   <span class="k">super</span><span class="p">.</span><span class="n">signOut</span><span class="p">();</span> <span class="c1">//how to be precautious at missing the super call??
@@ -810,11 +810,11 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">mustCallSuper</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">mustCallSuper</span>
 <span class="kt">void</span> <span class="n">signOut</span><span class="p">()</span> <span class="p">{</span><span class="n">print</span><span class="p">(</span><span class="s1">&#39;Signing out...&#39;</span><span class="p">);}</span>
 </code></pre></td></tr></table></div>
 </div>
@@ -825,7 +825,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -841,7 +841,7 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">admin</span> <span class="o">=</span> <span class="n">Admin</span><span class="p">(</span><span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="s1">&#39;Lu&#39;</span><span class="p">);</span>
   <span class="c1">//By casting, the special fields defined only in Admin class
 </span><span class="c1"></span>  <span class="c1">//can not be accessed anymore.
@@ -866,7 +866,7 @@
 <li>Normal constructor is only able to return an instance of the current class
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -877,7 +877,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//inside of the previous User class
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//inside of the previous User class
 </span><span class="c1"></span><span class="kd">factory</span> <span class="n">User</span><span class="p">.</span><span class="n">admin</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="n">Admin</span><span class="p">(</span><span class="s1">&#39;Cherry&#39;</span><span class="p">,</span> <span class="s1">&#39;Lu&#39;</span><span class="p">);</span>
 <span class="p">}</span>
@@ -904,7 +904,7 @@
 <li>By <code>implementing</code> a regular class, we are actually implementing the implicit interface --<strong>the overall class members without implementations</strong>, of the class.
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -930,7 +930,7 @@
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="kt">String</span> <span class="n">_name</span><span class="p">;</span>
 
   <span class="n">User</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="n">_name</span><span class="p">);</span>
@@ -960,10 +960,10 @@
 <li>The implementation classes can always be cast into the 'interface class'
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Admin</span><span class="p">()</span> <span class="o">as</span> <span class="n">User</span><span class="p">;</span><span class="c1">//unnecessary
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Admin</span><span class="p">()</span> <span class="o">as</span> <span class="n">User</span><span class="p">;</span><span class="c1">//unnecessary
 </span></code></pre></td></tr></table></div>
 </div>
 </div></li>
@@ -972,7 +972,7 @@
 <h3 id="3-3-generics"><a href="#3-3-generics" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-3-generics" class="headings">3-3 Generics</a></h3>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -990,7 +990,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span><span class="c1">//generics in class
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">DataReader</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="p">{</span><span class="c1">//generics in class
 </span><span class="c1"></span>  <span class="n">T</span> <span class="n">readData</span><span class="p">();</span> <span class="c1">//generic return type
 </span><span class="c1"></span>  <span class="kt">void</span> <span class="n">myMethod</span><span class="p">(</span><span class="n">T</span> <span class="n">arg</span><span class="p">);</span> <span class="c1">//generic arguments
 </span><span class="c1"></span><span class="p">}</span>
@@ -1016,7 +1016,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1038,7 +1038,7 @@
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">mixin</span> <span class="n">Action</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">mixin</span> <span class="n">Action</span> <span class="p">{</span>
   <span class="kt">void</span> <span class="n">run</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">print</span><span class="p">(</span><span class="s2">&#34;I&#39;m running&#34;</span><span class="p">);</span>
   <span class="p">}</span>
@@ -1063,7 +1063,7 @@
 </div><p>Call method:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1072,7 +1072,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">rabbit</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Animal</span><span class="p">();</span>
   <span class="kd">final</span> <span class="n">alphaRun</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Robert</span><span class="p">();</span>
 
@@ -1088,7 +1088,7 @@
 <p>extends method:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1100,7 +1100,7 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">.</span><span class="n">duplicate</span><span class="p">();</span>
   <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="c1">//hellohello
 </span><span class="c1"></span><span class="p">}</span>
@@ -1115,7 +1115,7 @@
 </div><p>extends property</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1125,7 +1125,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;hello&#39;</span><span class="p">.</span><span class="n">duplicated</span><span class="p">;</span>
   <span class="n">print</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="c1">//hellohello
 </span><span class="c1"></span><span class="p">}</span>
@@ -1142,14 +1142,14 @@
 <p>file1.dart: has a part named file2:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part</span> <span class="s1">&#39;file2.dart&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part</span> <span class="s1">&#39;file2.dart&#39;</span>
 <span class="c1">//...
 </span><span class="c1"></span><span class="kd">class</span> <span class="nc">_privatePackageClass</span> <span class="p">{</span>
   <span class="c1">//...
@@ -1159,10 +1159,10 @@
 </div><p>file2.dart: is a part of file1.dart</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part of</span> <span class="s1">&#39;file1.dart&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part of</span> <span class="s1">&#39;file1.dart&#39;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>now it's possible to access file1's private class from file2.</p>
@@ -1178,7 +1178,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1196,7 +1196,7 @@
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">immutable</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">immutable</span>
 <span class="kd">class</span> <span class="nc">User</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="kt">String</span> <span class="n">name</span><span class="p">;</span>
 
@@ -1217,7 +1217,7 @@
 </div><p>output:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1227,7 +1227,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">User</span> <span class="n">user1</span> <span class="o">=</span> <span class="kd">const</span> <span class="n">User</span><span class="p">(</span><span class="nl">name:</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">);</span>
   <span class="n">User</span> <span class="n">userUpdated</span> <span class="o">=</span> <span class="n">user1</span><span class="p">.</span><span class="n">copyWith</span><span class="p">(</span><span class="nl">name:</span> <span class="s1">&#39;Lu&#39;</span><span class="p">);</span>
 
@@ -1253,7 +1253,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1264,7 +1264,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">freezed</span> <span class="c1">//annotation
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">freezed</span> <span class="c1">//annotation
 </span><span class="c1"></span><span class="kd">class</span> <span class="nc">User</span> <span class="kd">with</span> <span class="n">_$User</span> <span class="p">{</span>
   <span class="c1">//only called by freezed generated class
 </span><span class="c1"></span>  <span class="kd">const</span> <span class="n">User</span><span class="p">.</span><span class="n">_</span><span class="p">();</span>
@@ -1280,10 +1280,10 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part</span> <span class="s1">&#39;target_file_name.dart&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part</span> <span class="s1">&#39;target_file_name.dart&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -1291,10 +1291,10 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">dart run build_runner build --delete-conflicting-outputs
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dart run build_runner build --delete-conflicting-outputs
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -1302,7 +1302,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1315,7 +1315,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="n">userOrigin</span> <span class="o">=</span> <span class="n">User</span><span class="p">(</span><span class="nl">name:</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">);</span>
   <span class="kd">final</span> <span class="n">userCopy</span> <span class="o">=</span> <span class="n">userOrigin</span><span class="p">.</span><span class="n">copyWith</span><span class="p">(</span><span class="nl">name:</span> <span class="s1">&#39;CC&#39;</span><span class="p">);</span>
   <span class="kd">final</span> <span class="n">userNull</span> <span class="o">=</span> <span class="n">userOrigin</span><span class="p">.</span><span class="n">copyWith</span><span class="p">(</span><span class="nl">name:</span> <span class="kc">null</span><span class="p">);</span>
@@ -1341,7 +1341,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 <li>Original Union: Checking what the type of an object actually is may not be exhaustive
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1349,7 +1349,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart">  <span class="c1">//what-already-know: object is an instance of superClass which is extended by subClass1, subClass2...
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart">  <span class="c1">//what-already-know: object is an instance of superClass which is extended by subClass1, subClass2...
 </span><span class="c1"></span>  <span class="k">if</span> <span class="p">(</span><span class="n">object</span> <span class="k">is</span> <span class="n">subClass1</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">//
 </span><span class="c1"></span>  <span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">object</span> <span class="k">is</span> <span class="n">subClass2</span><span class="p">)</span> <span class="p">{</span>
@@ -1365,7 +1365,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1375,7 +1375,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">freezed</span> <span class="c1">//annotation
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="err">@</span><span class="n">freezed</span> <span class="c1">//annotation
 </span><span class="c1"></span><span class="kd">class</span> <span class="nc">Result</span> <span class="kd">with</span> <span class="n">_$Result</span> <span class="p">{</span>
   <span class="kd">const</span> <span class="n">Result</span><span class="p">.</span><span class="n">_</span><span class="p">();</span>
   <span class="c1">//In the case of Union , there are always multiple classes so every factory for them must a name
@@ -1390,10 +1390,10 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part</span> <span class="s1">&#39;target_file_name.dart&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="k">part</span> <span class="s1">&#39;target_file_name.dart&#39;</span><span class="p">;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -1401,10 +1401,10 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">dart run build_runner build --delete-conflicting-outputs
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">dart run build_runner build --delete-conflicting-outputs
 </code></pre></td></tr></table></div>
 </div>
 </div><ul>
@@ -1412,7 +1412,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1429,7 +1429,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">//This result is actually returned by our api so
 </span><span class="c1"></span>  <span class="c1">//we don&#39;t know what exactly it is.
 </span><span class="c1"></span>  <span class="kd">const</span> <span class="n">actualResult</span> <span class="o">=</span> <span class="n">Result</span><span class="p">.</span><span class="n">success</span><span class="p">(</span><span class="m">200</span><span class="p">);</span>
@@ -1451,14 +1451,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">print</span><span class="p">(</span><span class="n">actualResult</span><span class="p">.</span><span class="n">maybeWhen</span><span class="p">(</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">print</span><span class="p">(</span><span class="n">actualResult</span><span class="p">.</span><span class="n">maybeWhen</span><span class="p">(</span>
   <span class="nl">orElse:</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="c1">//when it&#39;s not a Failure do this
 </span><span class="c1"></span>  <span class="nl">failure:</span> <span class="p">(</span><span class="n">errorMessage</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">return</span> <span class="s1">&#39;An error occurred. ErrorMessage: </span><span class="si">$</span><span class="n">errorMessage</span><span class="s1">&#39;</span><span class="p">;</span>
@@ -1470,7 +1470,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1482,7 +1482,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//TResult map&lt;TResult extends Object?&gt;({required TResult Function
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//TResult map&lt;TResult extends Object?&gt;({required TResult Function
 </span><span class="c1">//(_Success) success, required TResult Function(_Failure) failure})
 </span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">actualResult</span><span class="p">.</span><span class="n">map</span><span class="p">(</span>
       <span class="nl">success:</span> <span class="p">(</span><span class="n">_success</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//
@@ -1501,7 +1501,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 <li>try-catch-finally
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1523,7 +1523,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//catch all
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//catch all
 </span><span class="c1"></span><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
     <span class="kd">final</span> <span class="n">myInt</span> <span class="o">=</span> <span class="kt">int</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;abcdefg&#39;</span><span class="p">);</span>
@@ -1549,7 +1549,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 <li>dart can throw anything as an exception to crash the app but don't do this!
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1558,7 +1558,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="p">...</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="p">...</span>
 <span class="k">throw</span> <span class="s1">&#39;a fake exception&#39;</span> <span class="c1">//don&#39;t do this!
 </span><span class="c1"></span><span class="k">throw</span> <span class="n">MyCustomException</span><span class="p">;</span> <span class="c1">//correct.
 </span><span class="c1"></span>
@@ -1579,7 +1579,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1592,7 +1592,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//need &#39;http&#39; library
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//need &#39;http&#39; library
 </span><span class="c1"></span><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
   <span class="k">try</span> <span class="p">{</span>
     <span class="kd">final</span> <span class="n">result</span> <span class="o">=</span> <span class="kd">await</span> <span class="n">Client</span><span class="p">().</span><span class="kd">get</span><span class="p">(</span>
@@ -1610,7 +1610,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1620,7 +1620,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="n">Client</span><span class="p">()</span>
       <span class="p">.</span><span class="kd">get</span><span class="p">(</span>
         <span class="n">Uri</span><span class="p">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;https://jsonplaceholder.typicode.com/posts&#39;</span><span class="p">),</span>
@@ -1637,7 +1637,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 <li>listen to periodic stream
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -1648,7 +1648,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">periodStream</span> <span class="o">=</span> <span class="n">Stream</span><span class="p">.</span><span class="n">periodic</span><span class="p">(</span><span class="kd">const</span> <span class="n">Duration</span><span class="p">(</span><span class="nl">seconds:</span> <span class="m">1</span><span class="p">));</span>
   <span class="kd">final</span> <span class="n">subscription</span> <span class="o">=</span> <span class="n">periodStream</span><span class="p">.</span><span class="n">listen</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">print</span><span class="p">(</span><span class="s1">&#39;A second has passed&#39;</span><span class="p">);</span>
@@ -1663,7 +1663,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 <li>Stream Generators and Operators
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1686,7 +1686,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="kd">async</span> <span class="p">{</span>
   <span class="n">createMessageStream</span><span class="p">().</span><span class="n">listen</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">print</span><span class="p">(</span><span class="n">event</span><span class="p">));</span>
   <span class="c1">//console output:
 </span><span class="c1"></span>  <span class="c1">//Message1...
@@ -1713,7 +1713,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 <li>Stream is like a collection of async objects that alive in the streams over a period of time.
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -1730,7 +1730,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//1.use map on it(just like using it on a collection)
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//1.use map on it(just like using it on a collection)
 </span><span class="c1"></span><span class="n">createMessageStream</span><span class="p">()</span>
     <span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">message</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">message</span><span class="p">.</span><span class="n">toUpperCase</span><span class="p">())</span>
     <span class="p">.</span><span class="n">listen</span><span class="p">((</span><span class="n">event</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">print</span><span class="p">(</span><span class="n">event</span><span class="p">));</span>

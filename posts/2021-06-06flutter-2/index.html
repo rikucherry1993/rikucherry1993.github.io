@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.83.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#16171d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>Flutter Basics: Dart(2) | Rikucherry&#39;s blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.c895b180744685ea8806df43157fbd3633a010c6be06746387117a0b9027ddff.css"/>
+    <link rel="stylesheet" href="/css/meme.min.ee89c607bd398a7e175de8f3fda2eaf2887f9d671c983fbda7424521e43944eb.css"/>
 
     
     
@@ -261,7 +261,7 @@
 <li>Function scope
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -281,7 +281,7 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart">  <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart">  <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">String</span> <span class="n">nestedFunction</span><span class="p">()</span> <span class="p">{</span>
       <span class="k">return</span> <span class="s1">&#39;nested level&#39;</span><span class="p">;</span>
     <span class="p">}</span>
@@ -304,7 +304,7 @@
 </div><ul>
 <li>output</li>
 </ul>
-<pre><code class="language-log" data-lang="log">  top level
+<pre tabindex="0"><code class="language-log" data-lang="log">  top level
   nested level
   top level
 </code></pre></li>
@@ -316,12 +316,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">String</span> <span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//arguments passed in
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="kt">String</span> <span class="n">z</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//arguments passed in
 </span><span class="c1"></span>  <span class="n">function</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1.5</span><span class="p">,</span> <span class="s1">&#39;called&#39;</span><span class="p">);</span><span class="c1">//use parameters
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></td></tr></table></div>
@@ -331,14 +331,14 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//z is optional, should be nullable or defined a default value
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="c1">//z is optional, should be nullable or defined a default value
 </span><span class="c1"></span><span class="kt">void</span> <span class="n">function</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">,</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span> <span class="p">[</span><span class="kt">String</span> <span class="n">z</span> <span class="o">=</span> <span class="s1">&#39;default&#39;</span><span class="p">])</span> <span class="p">{</span> 
   <span class="n">function</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1.5</span><span class="p">);</span>
   <span class="n">function</span><span class="p">(</span><span class="m">1</span><span class="p">,</span> <span class="m">1.5</span><span class="p">,</span> <span class="s1">&#39;optional&#39;</span><span class="p">);</span>
@@ -350,7 +350,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -359,7 +359,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">({</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">({</span>
     <span class="kt">int</span><span class="o">?</span> <span class="n">x</span><span class="p">,</span>
     <span class="kt">double</span><span class="o">?</span> <span class="n">y</span><span class="p">,</span>
     <span class="kt">String</span><span class="o">?</span> <span class="n">z</span> 
@@ -373,7 +373,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -382,7 +382,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">({</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">({</span>
     <span class="n">required</span> <span class="kt">int</span> <span class="n">x</span><span class="p">,</span>
     <span class="n">required</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span>
     <span class="n">required</span> <span class="kt">String</span> <span class="n">z</span> 
@@ -396,7 +396,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -405,7 +405,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">(</span><span class="kt">int</span> <span class="n">positional</span><span class="p">,</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">function</span><span class="p">(</span><span class="kt">int</span> <span class="n">positional</span><span class="p">,</span> <span class="p">{</span>
    <span class="kt">int</span><span class="err">？</span><span class="n">x</span><span class="p">,</span>
    <span class="n">required</span> <span class="kt">double</span> <span class="n">y</span><span class="p">,</span>
    <span class="n">required</span> <span class="kt">String</span> <span class="n">z</span> 
@@ -421,7 +421,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -433,7 +433,7 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="c1">//(x) {return x + 5;} is an anonymous function
 </span><span class="c1"></span>  <span class="c1">//twicePlusFive is also a function
 </span><span class="c1"></span>  <span class="kd">final</span> <span class="n">twicePlusFive</span> <span class="o">=</span> <span class="n">twice</span><span class="p">((</span><span class="n">x</span><span class="p">)</span> <span class="p">{</span><span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="m">5</span><span class="p">;});</span>
@@ -450,7 +450,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -460,7 +460,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">twicePlusFive</span> <span class="o">=</span> <span class="n">twice</span><span class="p">((</span><span class="n">x</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="o">+</span> <span class="m">5</span><span class="p">);</span>
   <span class="n">print</span><span class="p">(</span><span class="n">twicePlusFive</span><span class="p">(</span><span class="m">3</span><span class="p">));</span> <span class="c1">//output is 13.
 </span><span class="c1"></span><span class="p">}</span>
@@ -480,13 +480,13 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span> <span class="c1">//dart has no arrays but only lists
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">List</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">myList</span> <span class="o">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span> <span class="c1">//dart has no arrays but only lists
 </span><span class="c1"></span><span class="kd">final</span> <span class="n">inferList</span> <span class="o">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span> <span class="c1">//will be inferred as List&lt;int&gt;
 </span><span class="c1"></span><span class="kd">final</span> <span class="n">inferList2</span> <span class="o">=</span> <span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="s1">&#39;text&#39;</span><span class="p">];</span> <span class="c1">//will be inferred as List&lt;Object&gt;
 </span><span class="c1"></span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">[</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">];</span> <span class="c1">//no variable assignment
@@ -497,11 +497,11 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">myList</span><span class="p">.</span><span class="n">length</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">myList</span><span class="p">.</span><span class="n">length</span><span class="p">;</span>
 <span class="kd">final</span> <span class="n">firstElement</span> <span class="o">=</span> <span class="n">myList</span><span class="p">[</span><span class="m">0</span><span class="p">];</span>
 </code></pre></td></tr></table></div>
 </div>
@@ -512,14 +512,14 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt">dynamic</span><span class="o">&gt;</span> <span class="n">myMap</span> <span class="o">=</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt">dynamic</span><span class="o">&gt;</span> <span class="n">myMap</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s1">&#39;name&#39;</span><span class="o">:</span> <span class="s1">&#39;riku&#39;</span><span class="p">,</span>
   <span class="s1">&#39;age&#39;</span><span class="o">:</span> <span class="m">0</span><span class="p">,</span>
   <span class="s1">&#39;is Chinese&#39;</span><span class="o">:</span> <span class="kc">true</span>
@@ -531,10 +531,10 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">final</span> <span class="n">name</span> <span class="o">=</span> <span class="n">myMap</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="kd">final</span> <span class="n">name</span> <span class="o">=</span> <span class="n">myMap</span><span class="p">[</span><span class="s1">&#39;name&#39;</span><span class="p">];</span>
 </code></pre></td></tr></table></div>
 </div>
 </div></li>
@@ -544,12 +544,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">mySet</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">};</span> <span class="c1">//a set can&#39;t contains duplicated values
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="n">Set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">mySet</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">};</span> <span class="c1">//a set can&#39;t contains duplicated values
 </span><span class="c1"></span><span class="n">Set</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">dupSet</span> <span class="o">=</span> <span class="p">{</span><span class="m">1</span><span class="p">,</span> <span class="m">2</span><span class="p">,</span> <span class="m">3</span><span class="p">,</span> <span class="m">3</span><span class="p">};</span>
 <span class="n">print</span><span class="p">(</span><span class="n">dupSet</span><span class="p">.</span><span class="n">length</span><span class="p">);</span> <span class="c1">//output is 3
 </span></code></pre></td></tr></table></div>
@@ -561,13 +561,13 @@
 <li>map
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kd">final</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Riku&#39;</span><span class="p">,</span> <span class="s1">&#39;CC&#39;</span><span class="p">,</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kd">final</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Riku&#39;</span><span class="p">,</span> <span class="s1">&#39;CC&#39;</span><span class="p">,</span> <span class="s1">&#39;Cherry&#39;</span><span class="p">];</span>
 <span class="kd">final</span> <span class="n">nameLengths</span> <span class="o">=</span> <span class="n">names</span><span class="p">.</span><span class="n">map</span><span class="p">((</span><span class="n">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">length</span><span class="p">).</span><span class="n">toList</span><span class="p">();</span>
 <span class="c1">//will return a &#39;Literable&lt;int&gt;&#39; if it&#39;s without &#39;toList&#39;
 </span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">nameLengths</span><span class="p">[</span><span class="m">1</span><span class="p">]);</span><span class="c1">//2
@@ -577,7 +577,7 @@
 <li>where, forEach
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -586,7 +586,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kd">final</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Riku&#39;</span><span class="p">,</span> <span class="s1">&#39;CC&#39;</span><span class="p">,</span> <span class="s1">&#39;Ch&#39;</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kd">final</span> <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Riku&#39;</span><span class="p">,</span> <span class="s1">&#39;CC&#39;</span><span class="p">,</span> <span class="s1">&#39;Ch&#39;</span><span class="p">];</span>
 <span class="kd">final</span> <span class="n">nameFiltered</span> <span class="o">=</span> <span class="n">names</span><span class="p">.</span><span class="n">where</span><span class="p">((</span><span class="n">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">e</span><span class="p">.</span><span class="n">length</span> <span class="o">==</span> <span class="m">2</span><span class="p">).</span><span class="n">toList</span><span class="p">();</span>
 <span class="c1">//direct print
 </span><span class="c1"></span><span class="n">print</span><span class="p">(</span><span class="n">nameFiltered</span><span class="p">);</span><span class="c1">//[CC, Ch] 
@@ -602,14 +602,14 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kt">bool</span> <span class="n">isSignedIn</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kt">bool</span> <span class="n">isSignedIn</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
   <span class="kd">final</span> <span class="n">dynamicList</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span>
     <span class="s1">&#39;This is a fake content.&#39;</span><span class="p">,</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">isSignedIn</span><span class="p">)</span> <span class="s1">&#39;Sign In&#39;</span> <span class="k">else</span> <span class="s1">&#39;Sign out&#39;</span>
@@ -621,13 +621,13 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kd">final</span> <span class="n">dynamicList</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kd">final</span> <span class="n">dynamicList</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span>
     <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="m">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="n">i</span><span class="p">.</span><span class="n">toString</span><span class="p">(),</span>
     <span class="k">for</span> <span class="p">(</span><span class="kd">final</span> <span class="n">number</span> <span class="k">in</span> <span class="p">[</span><span class="m">6</span><span class="p">,</span> <span class="m">7</span><span class="p">,</span> <span class="m">8</span><span class="p">])</span> <span class="n">number</span><span class="p">.</span><span class="n">toString</span><span class="p">()</span>
   <span class="p">];</span>
@@ -638,7 +638,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -648,7 +648,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kd">final</span> <span class="n">list1</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span><span class="s1">&#39;e1&#39;</span><span class="p">,</span> <span class="s1">&#39;e2&#39;</span><span class="p">];</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart"><span class="kd">final</span> <span class="n">list1</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span><span class="s1">&#39;e1&#39;</span><span class="p">,</span> <span class="s1">&#39;e2&#39;</span><span class="p">];</span>
 <span class="kd">final</span> <span class="n">list2</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span><span class="s1">&#39;e3&#39;</span><span class="p">,</span> <span class="s1">&#39;e4&#39;</span><span class="p">];</span>
 <span class="kd">final</span> <span class="n">concatList</span> <span class="o">=</span> <span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">[</span>
   <span class="p">...</span><span class="n">list1</span><span class="p">,</span>
@@ -665,7 +665,7 @@
 <li>enums
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -675,7 +675,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart"><span class="n">enum</span> <span class="n">AccountType</span> <span class="p">{</span> <span class="n">free</span><span class="p">,</span> <span class="n">premium</span><span class="p">,</span> <span class="n">vip</span> <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart"><span class="n">enum</span> <span class="n">AccountType</span> <span class="p">{</span> <span class="n">free</span><span class="p">,</span> <span class="n">premium</span><span class="p">,</span> <span class="n">vip</span> <span class="p">}</span>
 
 <span class="kt">void</span> <span class="n">main</span><span class="p">(</span><span class="n">List</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span> <span class="n">arguments</span><span class="p">)</span> <span class="p">{</span>
   <span class="kd">final</span> <span class="n">userAccountType</span> <span class="o">=</span> <span class="n">AccountType</span><span class="p">.</span><span class="n">free</span><span class="p">;</span>
@@ -692,14 +692,14 @@
 <li>dependencies/dev_dependencies
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="c">#Is packaged into your app when it&#39;s built for publishing</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">dependencies</span><span class="p">:</span><span class="w"> </span><span class="c">#Is packaged into your app when it&#39;s built for publishing</span><span class="w">
 </span><span class="w"></span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l">^1.7.0</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="nt">dev_dependencies</span><span class="p">:</span><span class="w"> </span><span class="c">#Is not a part of your code</span><span class="w">

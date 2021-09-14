@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.83.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#16171d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>Android应用基础 简易后台计时器的安装方法 | Rikucherry&#39;s blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.c895b180744685ea8806df43157fbd3633a010c6be06746387117a0b9027ddff.css"/>
+    <link rel="stylesheet" href="/css/meme.min.ee89c607bd398a7e175de8f3fda2eaf2887f9d671c983fbda7424521e43944eb.css"/>
 
     
     
@@ -300,7 +300,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -373,7 +373,7 @@
 </span><span class="lnt">71
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">        <span class="c1">//字段定义
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">        <span class="c1">//字段定义
 </span><span class="c1"></span>        <span class="kd">private</span> <span class="kd">final</span> <span class="kt">long</span> <span class="n">initialTimeMilli</span> <span class="o">=</span> <span class="n">60_000</span><span class="o">;</span> <span class="c1">//计时器时长总量（毫秒）
 </span><span class="c1"></span>        <span class="kd">private</span> <span class="kt">long</span> <span class="n">remainTimeMilli</span> <span class="o">=</span> <span class="n">initialTimeMilli</span><span class="o">;</span> <span class="c1">//剩余时间总量
 </span><span class="c1"></span>        <span class="kd">private</span> <span class="kd">enum</span> <span class="n">STATE</span> <span class="o">{</span> <span class="c1">//枚举计时器可能出现的状态，便于管理
@@ -460,7 +460,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -514,7 +514,7 @@
 </span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">      <span class="nd">@Override</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">      <span class="nd">@Override</span>
       <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">//...
 </span><span class="c1"></span>        <span class="c1">//在onCreate中加入动态注册广播接收器的代码
@@ -573,7 +573,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -606,7 +606,7 @@
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">      <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimerExpiredReceiver</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">      <span class="kd">public</span> <span class="kd">class</span> <span class="nc">TimerExpiredReceiver</span> <span class="kd">extends</span> <span class="n">BroadcastReceiver</span> <span class="o">{</span>
 
           <span class="nd">@Override</span>
           <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onReceive</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">Intent</span> <span class="n">intent</span><span class="o">)</span> <span class="o">{</span>
@@ -650,7 +650,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -697,7 +697,7 @@
 </span><span class="lnt">45
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java">        <span class="nd">@Override</span>
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java">        <span class="nd">@Override</span>
         <span class="kd">protected</span> <span class="kt">void</span> <span class="nf">onResume</span><span class="o">()</span> <span class="o">{</span>
             <span class="kd">super</span><span class="o">.</span><span class="na">onResume</span><span class="o">();</span>
             <span class="c1">// 获取上次离开时的剩余时间，设置提醒的时间以及当前时间

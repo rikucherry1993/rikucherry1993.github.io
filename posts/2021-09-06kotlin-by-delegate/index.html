@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.83.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#16171d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>Kotlin中的委托 - Delegation | Rikucherry&#39;s blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.c895b180744685ea8806df43157fbd3633a010c6be06746387117a0b9027ddff.css"/>
+    <link rel="stylesheet" href="/css/meme.min.ee89c607bd398a7e175de8f3fda2eaf2887f9d671c983fbda7424521e43944eb.css"/>
 
     
     
@@ -54,13 +54,13 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-09-06T14:49:00+09:00",
-        "dateModified": "2021-09-09T16:25:36+09:00",
+        "dateModified": "2021-09-14T23:12:39+09:00",
         "url": "https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/",
         "headline": "Kotlin中的委托 - Delegation",
         "description": "在线测试kotlin代码: https://play.kotlinlang.org/ 1. 委托模式与mixin 委托模式即是委托类将某种处理/请求……",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
-        "wordCount":  2165 ,
+        "wordCount":  2104 ,
         "image": "https://rikucherry1993.me/icons/apple-touch-icon.png",
         "author": {
             "@type": "Person",
@@ -103,7 +103,7 @@
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://rikucherry1993.me/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-09-06T14:49:00&#43;09:00" />
-    <meta property="article:modified_time" content="2021-09-09T16:25:36&#43;09:00" />
+    <meta property="article:modified_time" content="2021-09-14T23:12:39&#43;09:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -217,7 +217,7 @@
     
     
         
-        <time datetime="2021-09-09T16:25:36&#43;09:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.9.9</time>
+        <time datetime="2021-09-14T23:12:39&#43;09:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2021.9.14</time>
     
     
     
@@ -231,7 +231,7 @@
     
     
         
-        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2165</span>
+        <span class="post-meta-item wordcount"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon post-meta-icon"><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;2104</span>
     
     
         
@@ -271,7 +271,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -288,7 +288,7 @@
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-dart" data-lang="dart">  <span class="n">mixin</span> <span class="n">Delegate</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart">  <span class="n">mixin</span> <span class="n">Delegate</span> <span class="p">{</span>
     <span class="kt">void</span> <span class="n">onTaskDone</span><span class="p">()</span> <span class="p">{</span>
       <span class="n">print</span><span class="p">(</span><span class="s2">&#34;delegate finished works&#34;</span><span class="p">);</span>
     <span class="p">}</span>
@@ -318,7 +318,7 @@
 <li><strong>语法</strong>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -326,7 +326,7 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">class</span> <span class="nc">Worker</span><span class="p">(</span><span class="n">impl</span><span class="p">:</span> <span class="n">DelegateInterface</span><span class="p">):</span> <span class="n">DelegateInterface</span> <span class="k">by</span> <span class="n">impl</span><span class="p">{}</span> 
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">class</span> <span class="nc">Worker</span><span class="p">(</span><span class="n">impl</span><span class="p">:</span> <span class="n">DelegateInterface</span><span class="p">):</span> <span class="n">DelegateInterface</span> <span class="k">by</span> <span class="n">impl</span><span class="p">{}</span> 
   <span class="c1">//Call
 </span><span class="c1"></span>  <span class="k">fun</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">val</span> <span class="py">impl</span> <span class="p">=</span> <span class="n">DelegateInterfaceImpl</span><span class="p">()</span> 
@@ -339,7 +339,7 @@
 实现接口需要实现接口中所有的方法，哪怕并非全部必要。应用委托，我们可以先实现一个拥有所有接口方法的委托类，再在当前类中<strong>选择性地重写需要的方法</strong>。
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -367,7 +367,7 @@
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">interface</span> <span class="nc">DelegateInterface</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">interface</span> <span class="nc">DelegateInterface</span> <span class="p">{</span>
     <span class="k">fun</span> <span class="nf">methodA</span><span class="p">()</span>
     <span class="k">fun</span> <span class="nf">methodB</span><span class="p">()</span>
   <span class="p">}</span> 
@@ -403,10 +403,10 @@
 <p><strong>语法</strong></p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span><span class="p">/</span><span class="k">var</span> <span class="err">&lt;属性名&gt;: &lt;类型&gt; </span><span class="py">by</span> <span class="p">&lt;</span><span class="err">表达式</span><span class="p">&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span><span class="p">/</span><span class="k">var</span> <span class="err">&lt;属性名&gt;: &lt;类型&gt; </span><span class="py">by</span> <span class="p">&lt;</span><span class="err">表达式</span><span class="p">&gt;</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>属性委托本质上是把<code>get( )</code>/<code>set( )</code>方法委托给委托类的<code>getValue()</code>/<code>setValue()</code>方法。对于<code>var</code>(可变)属性，委托类<strong>必须提供<code>setValue</code>方法</strong>，不然会报错。</p>
@@ -417,7 +417,7 @@ kotlin标准库提供了生产<code>Lazy</code>,<code>Observable</code>等特殊
 下面的例子描述了委托给自定义的类，和调用标准委托<code>by lazy</code>的用法：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -450,7 +450,7 @@ kotlin标准库提供了生产<code>Lazy</code>,<code>Observable</code>等特殊
 </span><span class="lnt">31
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">import</span> <span class="nn">kotlin.reflect.KProperty</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">import</span> <span class="nn">kotlin.reflect.KProperty</span>
 
 <span class="k">class</span> <span class="nc">test</span><span class="p">()</span> <span class="p">{</span>
     <span class="c1">//can be var or val; if var, should provide setValue method
@@ -484,7 +484,7 @@ kotlin标准库提供了生产<code>Lazy</code>,<code>Observable</code>等特殊
 </code></pre></td></tr></table></div>
 </div>
 </div><h4 id="console-output"><a href="#console-output" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:console-output" class="headings">console output</a></h4>
-<pre><code class="language-log" data-lang="log">1. test@7ef20235, thank you for delegating 'deleProperty' to me!
+<pre tabindex="0"><code class="language-log" data-lang="log">1. test@7ef20235, thank you for delegating 'deleProperty' to me!
 executed only once
 2. lazy initialized
 3. lazy initialized
@@ -496,17 +496,17 @@ new value has been assigned to 'deleProperty' in test@7ef20235.
 <code>by lazy</code>中的<code>lazy</code>实际是一个生产<code>Lazy&lt;T&gt;</code>对象的工厂方法。它的源码如下：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">public</span> <span class="k">actual</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">lazy</span><span class="p">(</span><span class="n">initializer</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">):</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">SynchronizedLazyImpl</span><span class="p">(</span><span class="n">initializer</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">public</span> <span class="k">actual</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">lazy</span><span class="p">(</span><span class="n">initializer</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">):</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span> <span class="n">SynchronizedLazyImpl</span><span class="p">(</span><span class="n">initializer</span><span class="p">)</span>
 </code></pre></td></tr></table></div>
 </div>
 </div><p>该方法接收lambda表达式，调用<code>SynchronizedLazyImpl</code>方法后，返回<code>Lazy&lt;T&gt;</code>对象，这个<code>Lazy&lt;T&gt;</code>就是被委托的对象。而<code>SynchronizedLazyImpl</code>的执行是<strong>同步锁</strong>的。如果不需要同步锁，可以传入<code>LazyThreadSafetyMode</code>线程模式来实现不同的初始化模式。
 传入线程模式时的方法源码：</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -514,7 +514,7 @@ new value has been assigned to 'deleProperty' in test@7ef20235.
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">public</span> <span class="k">actual</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">lazy</span><span class="p">(</span><span class="n">mode</span><span class="p">:</span> <span class="n">LazyThreadSafetyMode</span><span class="p">,</span> <span class="n">initializer</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">):</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">public</span> <span class="k">actual</span> <span class="k">fun</span> <span class="p">&lt;</span><span class="nc">T</span><span class="p">&gt;</span> <span class="nf">lazy</span><span class="p">(</span><span class="n">mode</span><span class="p">:</span> <span class="n">LazyThreadSafetyMode</span><span class="p">,</span> <span class="n">initializer</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">):</span> <span class="n">Lazy</span><span class="p">&lt;</span><span class="n">T</span><span class="p">&gt;</span> <span class="p">=</span>
   <span class="k">when</span> <span class="p">(</span><span class="n">mode</span><span class="p">)</span> <span class="p">{</span>
       <span class="n">LazyThreadSafetyMode</span><span class="p">.</span><span class="n">SYNCHRONIZED</span> <span class="o">-&gt;</span> <span class="n">SynchronizedLazyImpl</span><span class="p">(</span><span class="n">initializer</span><span class="p">)</span>
       <span class="n">LazyThreadSafetyMode</span><span class="p">.</span><span class="n">PUBLICATION</span> <span class="o">-&gt;</span> <span class="n">SafePublicationLazyImpl</span><span class="p">(</span><span class="n">initializer</span><span class="p">)</span>
@@ -531,17 +531,17 @@ new value has been assigned to 'deleProperty' in test@7ef20235.
 </li>
 <li>
 <p><strong>应用场景</strong><br>
-除了lazy以外，安卓标准库还有很多实现了Lazy接口的其他方法，比如可以像这样把viewModel属性委托给<code>Fragment.viewModels</code>方法生产的对象:</p>
+除了lazy以外，安卓标准库还有实现了Lazy接口的其他方法，比如可以像这样把viewModel属性委托给<code>Fragment.viewModels</code>方法生产的对象:</p>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">viewModel</span> <span class="k">by</span> <span class="n">viewModels</span><span class="p">&lt;</span><span class="n">MyViewModel</span><span class="p">&gt;</span> <span class="p">{</span> <span class="n">viewModelFactoryProvider</span> <span class="p">}</span>
+<pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin"><span class="k">val</span> <span class="py">viewModel</span> <span class="k">by</span> <span class="n">viewModels</span><span class="p">&lt;</span><span class="n">MyViewModel</span><span class="p">&gt;</span> <span class="p">{</span> <span class="n">myFactoryProvider</span> <span class="p">}</span>
 </code></pre></td></tr></table></div>
 </div>
-</div><p>这个看起来有点难理解，其实和上面lazy的原理是一样的。<code>viewModels</code>方法返回<code>Lazy&lt;VM&gt;</code>对象，该对象实现了Lazy接口。这里的lambda表达式主要内容就是获得生产viewModel的工厂的返回值，用它来<strong>延迟</strong>初始化viewModel。
-其中的<code>viewModelFactoryProvider</code>代表的是参数<code>factoryProducer: (() -&gt; Factory)</code>（kotlin中lambda表达式是最后一个参数的时候可以写到参数括号的外面），这个参数就是用来生产viewModel的工厂本厂啦。</p>
+</div><p>这个看起来有点难理解，其实和上面lazy的原理是一样的。<code>viewModels</code>方法返回<code>Lazy&lt;VM&gt;</code>对象，该对象实现Lazy接口。这里的lambda表达式主要内容就是获得生产viewModel的工厂的返回值，用它来<strong>延迟</strong>初始化viewModel。
+其中的<code>myFactoryProvider</code>代表的是参数<code>factoryProducer: (() -&gt; Factory)</code>（kotlin中lambda表达式是最后一个参数的时候可以写到参数括号的外面），这个参数就是用来生产viewModel的工厂本厂啦。</p>
 </li>
 </ul>
 <h3 id="3-总结"><a href="#3-总结" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:3-总结" class="headings">3. 总结</a></h3>
@@ -551,7 +551,6 @@ new value has been assigned to 'deleProperty' in test@7ef20235.
 <li>委托接口实现可以减少实现类对接口方法的不必要的实现。</li>
 <li>委托属性读写提供<code>getValue/setValue</code>方法来替代属性原有的<code>get/set</code>方法。
 标准库的lazy方法实现了<code>Lazy接口</code>。它提供的getValue方法使得只有第一次调用属性get方法时执行初始化代码块，后续调用则直接返回已初始化的值。</li>
-<li>除了lazy方法以外，<code>viewModels</code>方法也实现了Lazy接口，用于延迟初始化viewModel.</li>
 </ul>
 
             </div>

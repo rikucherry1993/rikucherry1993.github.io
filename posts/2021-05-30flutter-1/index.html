@@ -3,7 +3,7 @@
     <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article#">
     <meta charset="UTF-8" />
 
-    <meta name="generator" content="Hugo 0.83.1" /><meta name="theme-color" content="#16171d" />
+    <meta name="generator" content="Hugo 0.88.1" /><meta name="theme-color" content="#16171d" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no" />
@@ -14,7 +14,7 @@
 
     <title>Flutter Basics: Dart(1) | Rikucherry&#39;s blog</title>
 
-    <link rel="stylesheet" href="/css/meme.min.c895b180744685ea8806df43157fbd3633a010c6be06746387117a0b9027ddff.css"/>
+    <link rel="stylesheet" href="/css/meme.min.ee89c607bd398a7e175de8f3fda2eaf2887f9d671c983fbda7424521e43944eb.css"/>
 
     
     
@@ -273,11 +273,11 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span><span class="nt">sdk</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;&gt;=2.12.0 &lt;3.0.0&#39;</span><span class="w">
 </span></code></pre></td></tr></table></div>
 </div>
@@ -290,7 +290,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -313,7 +313,7 @@
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//String
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//String
 </span><span class="c1"></span>    <span class="kt">String</span> <span class="n">myString</span> <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span><span class="p">;</span>
     <span class="n">myString</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s1">&#39;He&#39;</span><span class="p">);</span> <span class="c1">// Returns &#39;true&#39;
 </span><span class="c1"></span>
@@ -341,7 +341,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -352,7 +352,7 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//Infer &#39;var&#39; gonna be String
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//Infer &#39;var&#39; gonna be String
 </span><span class="c1"></span>    <span class="kd">var</span> <span class="n">myStringVar</span> <span class="o">=</span> <span class="s1">&#39;initial&#39;</span><span class="p">;</span>
     <span class="n">myString</span> <span class="o">=</span> <span class="s1">&#39;modified&#39;</span><span class="p">;</span>
     <span class="c1">//myStringVar = 5; 
@@ -368,7 +368,7 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -377,7 +377,7 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//Should use explicit type annotation but not dynamic
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//Should use explicit type annotation but not dynamic
 </span><span class="c1"></span>    <span class="c1">//if the variable is not initialized immediately
 </span><span class="c1"></span>    <span class="kt">dynamic</span> <span class="n">myString</span><span class="p">;</span>
     <span class="n">myString</span> <span class="o">=</span> <span class="s1">&#39;Init&#39;</span>
@@ -396,13 +396,13 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//avoid run-time errors, check null on compile time
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//avoid run-time errors, check null on compile time
 </span><span class="c1"></span>    <span class="kt">String</span><span class="o">?</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">null</span>
     <span class="c1">//nullable.length; //compile error
 </span><span class="c1"></span>    <span class="n">print</span><span class="p">(</span><span class="n">nullable</span><span class="o">?</span><span class="p">.</span><span class="n">length</span><span class="p">);</span> <span class="c1">//correct, will print out &#34;null&#34;
@@ -413,12 +413,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//avoid run-time errors, check null on compile time
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">    <span class="c1">//avoid run-time errors, check null on compile time
 </span><span class="c1"></span>    <span class="kt">String</span><span class="o">?</span> <span class="n">nullable</span> <span class="o">=</span> <span class="kc">null</span>
     <span class="n">print</span><span class="p">(</span><span class="n">nullable</span><span class="o">!</span><span class="p">.</span><span class="n">length</span><span class="p">);</span> <span class="c1">//run-time error
 </span></code></pre></td></tr></table></div>
@@ -433,12 +433,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kt">int</span> <span class="n">result</span><span class="p">;</span>
   <span class="kt">double</span> <span class="n">resultDouble</span> <span class="o">=</span> <span class="m">5</span> <span class="o">/</span> <span class="m">2</span><span class="p">;</span>
   <span class="n">result</span> <span class="o">=</span> <span class="m">5</span> <span class="o">~/</span> <span class="m">2</span><span class="p">;</span> <span class="c1">//=2; can&#39;t assign 5/2 to an int directly 
 </span></code></pre></td></tr></table></div>
@@ -461,12 +461,12 @@
 </ul>
 <div class="highlight"><div class="chroma">
 <div class="table-container"><table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kt">String</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;-debug&#39;</span><span class="p">;</span>
+<pre tabindex="0" class="chroma"><code class="language-Dart" data-lang="Dart">  <span class="kt">String</span> <span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;-debug&#39;</span><span class="p">;</span>
   <span class="kt">String</span> <span class="n">myString</span> <span class="o">=</span> <span class="s1">&#39;Application</span><span class="si">$</span><span class="n">suffix</span><span class="s1">&#39;</span><span class="p">;</span><span class="c1">//Application-debug
 </span><span class="c1"></span>  <span class="kt">String</span> <span class="n">myCalResult</span> <span class="o">=</span> <span class="s1">&#39;result is: </span><span class="si">${</span><span class="m">1</span> <span class="o">+</span> <span class="m">2</span> <span class="o">/</span> <span class="m">5</span> <span class="o">+</span> <span class="m">3</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">;</span><span class="c1">//result is: 4.4
 </span></code></pre></td></tr></table></div>
