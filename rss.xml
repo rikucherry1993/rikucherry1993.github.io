@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 05 Dec 2021 19:03:45 &#43;0900</lastBuildDate>
+        <lastBuildDate>Tue, 14 Dec 2021 23:20:40 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
@@ -39,7 +39,7 @@
                 <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
                 
                     <description>&lt;h2 id=&#34;1-what-is-a-coroutine&#34;&gt;1. What is a coroutine?&lt;/h2&gt;
-&lt;h3 id=&#34;1-1-how-it-differences-from-a-thread&#34;&gt;1-1 How it differences from a Thread?&lt;/h3&gt;
+&lt;h3 id=&#34;1-1-how-it-different-from-a-thread&#34;&gt;1-1 How it different from a Thread?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Executed inside of a thread.&lt;/li&gt;
 &lt;li&gt;Suspendable&lt;/li&gt;
@@ -88,7 +88,7 @@
   &lt;span class=&#34;n&#34;&gt;delay01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt; 
   &lt;span class=&#34;n&#34;&gt;delay01&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
   &lt;span class=&#34;n&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;something&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//will reach here after 6 sec.
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;with&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Context&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Dispatchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;n&#34;&gt;withContext&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;Dispatchers&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
     &lt;span class=&#34;n&#34;&gt;textView&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;text&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;result&amp;#34;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;//will go back to main thread
 &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;  &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
 &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
@@ -125,7 +125,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;2-3-jobs-waiting-cancellation&#34;&gt;2-3. Jobs, Waiting, Cancellation&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Launch a coroutine will actually retuen a &lt;code&gt;Job&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Launch a coroutine will actually return a &lt;code&gt;Job&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;Use &lt;code&gt;Job.cancel()&lt;/code&gt; to cancel a job.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
