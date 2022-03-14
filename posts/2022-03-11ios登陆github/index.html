@@ -275,7 +275,7 @@
   </ol>
 </nav><div class="post-body e-content">
                 <p>   最近由于工作需要，干了1个多月的iOS开发。虽说与安卓开发之间没有到隔行如隔山的地步，但正因为声明式UI、State管理那一套以及Swift和Kotlin本身的似像非像，刚开始接触特别容易搞混。还有用惯了JetBrains家的IDE以后再用Xcode...感觉十分酸爽。</p>
-<center><img src="https://rikucherry1993.me/https://i.postimg.cc/0jcmNBcL/wukong.gif" style="zoom:70%"/></center>
+<center><img src="https://i.postimg.cc/0jcmNBcL/wukong.gif" style="zoom:70%"/></center>
 <p>   总之我想把实际动手做的内容总结出来，以便以后打算继续学iOS时回来参考。 <br>
    这一篇先简单总结一下如何用<code>Form认证</code>的方式，从应用发送POST请求登录网站，并利用session管理，从<code>WebView</code>显示登录后网站内容的方法。顺便提一下SwiftUI以及iOS中MVVM架构的简单实现方法。Demo应用以登录GitHub为例。</p>
 <h2 id="demo效果"><a href="#demo效果" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:demo效果" class="headings">Demo效果</a></h2>
@@ -289,9 +289,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="https://rikucherry1993.me/https://i.postimg.cc/BvTvNqh5/github-browser-1.png" style="zoom:40%"/></td>
-<td style="text-align:center"><img src="https://rikucherry1993.me/https://i.postimg.cc/2y68znCT/github-browser-2.png" style="zoom:40%"/></td>
-<td style="text-align:left"><img src="https://rikucherry1993.me/https://i.postimg.cc/zvcD33BN/github-browser-3.png" style="zoom:40%"/></td>
+<td style="text-align:center"><img src="https://i.postimg.cc/BvTvNqh5/github-browser-1.png" style="zoom:40%"/></td>
+<td style="text-align:center"><img src="https://i.postimg.cc/2y68znCT/github-browser-2.png" style="zoom:40%"/></td>
+<td style="text-align:left"><img src="https://i.postimg.cc/zvcD33BN/github-browser-3.png" style="zoom:40%"/></td>
 </tr>
 </tbody>
 </table></div>
@@ -305,9 +305,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center"><img src="https://rikucherry1993.me/https://i.postimg.cc/ZqtRr9LK/github-browser-4.png" style="zoom:40%"/></td>
-<td style="text-align:center"><img src="https://rikucherry1993.me/https://i.postimg.cc/QdWC9g1y/github-browser-5.png" style="zoom:40%"/></td>
-<td style="text-align:left"><img src="https://rikucherry1993.me/https://i.postimg.cc/W3S1L5ch/github-browser-6.png" style="zoom:40%"/></td>
+<td style="text-align:center"><img src="https://i.postimg.cc/ZqtRr9LK/github-browser-4.png" style="zoom:40%"/></td>
+<td style="text-align:center"><img src="https://i.postimg.cc/QdWC9g1y/github-browser-5.png" style="zoom:40%"/></td>
+<td style="text-align:left"><img src="https://i.postimg.cc/W3S1L5ch/github-browser-6.png" style="zoom:40%"/></td>
 </tr>
 </tbody>
 </table></div>
@@ -691,7 +691,7 @@
 </div><h3 id="发送表单form数据"><a href="#发送表单form数据" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:发送表单form数据" class="headings">发送表单(Form)数据</a></h3>
 <p>   应用的整体架构和画面切换方式确定了，接着就是把网络请求的部分填上。由于实际项目中的服务端不提供OAuth等形式的认证接口，这里避开GitHub提供的接口，而是尝试从登录页面获取Form表单，用<code>发送表单</code>的形式进行认证。 <br>
    首先打开“https://github.com/login ”，用浏览器自带的inspector找到Form信息。</p>
-<center><img src="https://rikucherry1993.me/https://i.postimg.cc/zXTpvfRQ/2022-03-14-10-46-17.png" style="zoom:70%"/></center>
+<center><img src="https://i.postimg.cc/zXTpvfRQ/2022-03-14-10-46-17.png" style="zoom:70%"/></center>
 <p>   通过读取上述Form包含的信息和实际登录时发送的请求报文，理解整个认证流程并不困难。但已经有人询问过相关做法，可以直接参考：<a href="https://stackoverflow.com/questions/38537963/how-can-i-use-post-from-requests-module-to-login-to-github/56205242#56205242" target="_blank" rel="noopener">How can I use post from requests module to login to github</a></p>
 <h4 id="用python进行轻量测试"><a href="#用python进行轻量测试" class="anchor-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon anchor-icon"><path d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"/></svg></a><a href="#contents:用python进行轻量测试" class="headings">用Python进行轻量测试</a></h4>
 <p>   登录GitHub时，除了用户名密码，在表单的<code>hidden</code>元素中还发送了一个<code>authenticity_code</code>，应该是用来标记session的值。因此在正式发送表单前需要先从页面中提取这个code的值。我们先用python写一个轻量的程序来测试登录流程，这里用到了<code>BeautifulSoup</code>来解析html，获取<code>authenticity_code</code>。</p>
