@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Rikucherry&#39;s blog</title>
     <subtitle type="html"></subtitle>
-    <updated>2022-03-14T17:45:50&#43;09:00</updated>
+    <updated>2022-03-14T17:55:58&#43;09:00</updated>
     <id>https://rikucherry1993.me/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />
@@ -6674,7 +6674,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Android应用基础 嵌套的RecyclerView</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/" />
             <id>https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/</id>
-            <updated>2021-06-06T18:58:35&#43;09:00</updated>
+            <updated>2022-03-14T17:55:44&#43;09:00</updated>
             <published>2021-05-23T22:40:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
