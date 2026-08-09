@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Rikucherry&#39;s blog</title>
     <subtitle type="html"></subtitle>
-    <updated>2024-02-25T15:30:26&#43;09:00</updated>
+    <updated>2026-08-09T19:18:15&#43;09:00</updated>
     <id>https://rikucherry1993.me/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />
@@ -17,10 +17,78 @@
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
     <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator>
         <entry>
+            <title type="text">Snap Closet开通安卓版内测</title>
+            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/" />
+            <id>https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/</id>
+            <updated>2026-08-09T19:17:32&#43;09:00</updated>
+            <published>2026-08-09T19:12:00&#43;09:00</published>
+            <author>
+                    <name>rikucherry</name>
+                    <uri>https://rikucherry1993.me/</uri>
+                    <email>rikucherry0522@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：Snap Closet 的安卓版内测现……</summary>
+            
+                <content type="html">&lt;p&gt;  好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：&lt;strong&gt;Snap Closet 的安卓版内测现已开放！&lt;/strong&gt; iOS 版即将上线 App Store，安卓版则先以内测的形式和大家见面。如果你是安卓用户，并且想抢先体验，欢迎按下面的方式报名参加内测。&lt;/p&gt;
+&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260809/android-beta-steps.png&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+&lt;p&gt;  图中的参与步骤用文字整理如下：&lt;/p&gt;
+&lt;h2 id=&#34;内测参与步骤&#34;&gt;内测参与步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;访问 Snap Closet 产品中文页：&lt;a href=&#34;https://snap-closet.com/zh&#34;&gt;https://snap-closet.com/zh&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;点击标题旁的「安卓内测入口」，填写问卷即可参与（问卷中有具体规则和内测专属福利说明哦）。&lt;/li&gt;
+&lt;li&gt;名额有限，满员即止。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;  期待你的参与和反馈！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;备注：本次内测仅面向可登陆 Google Play 商店下载应用的安卓用户。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/categories/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91/" term="个人开发" label="个人开发" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/tags/snap-closet/" term="Snap Closet" label="Snap Closet" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/tags/%E5%86%85%E6%B5%8B/" term="内测" label="内测" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+        <entry>
             <title type="text">用Form认证方式从iOS应用登录和浏览GitHub</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/" />
             <id>https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/</id>
-            <updated>2022-03-14T17:45:37&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2022-03-11T17:58:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -1049,7 +1117,7 @@
             <title type="text">Android Basics: Kotlin(2) - Coroutine</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-12-05kotlin-2/" />
             <id>https://rikucherry1993.me/posts/2021-12-05kotlin-2/</id>
-            <updated>2021-12-14T23:20:25&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-12-05T12:07:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -1354,7 +1422,7 @@
             <title type="text">System.out::println</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-09-10sysout/" />
             <id>https://rikucherry1993.me/posts/2021-09-10sysout/</id>
-            <updated>2021-09-10T17:41:09&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-09-10T16:53:05&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -1528,7 +1596,7 @@
             <title type="text">Kotlin中的委托 - Delegation</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/" />
             <id>https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/</id>
-            <updated>2021-09-14T23:12:39&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-09-06T14:49:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -1875,7 +1943,7 @@ new value has been assigned to &#39;deleProperty&#39; in test@7ef20235.
             <title type="text">《Java核心技术 卷1》读书笔记（2）- 并发</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2021-07-20T23:34:29&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-07-19T12:46:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -2291,7 +2359,7 @@ new value has been assigned to &#39;deleProperty&#39; in test@7ef20235.
             <title type="text">《数据结构与算法分析》读书笔记（1）</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2021-07-19T18:38:51&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-07-14T03:00:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -2484,7 +2552,7 @@ $$&lt;/li&gt;
             <title type="text">Android Basics: Kotlin(1)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/" />
             <id>https://rikucherry1993.me/posts/2021-07-06kotlin-1/</id>
-            <updated>2021-07-10T12:55:28&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-07-06T08:03:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -4033,7 +4101,7 @@ $$&lt;/li&gt;
             <title type="text">Flutter Basics: Dart(3)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-06-13flutter-3/" />
             <id>https://rikucherry1993.me/posts/2021-06-13flutter-3/</id>
-            <updated>2021-06-27T20:05:33&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-06-13T16:36:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -5550,7 +5618,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Flutter Basics: Dart(2)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-06-06flutter-2/" />
             <id>https://rikucherry1993.me/posts/2021-06-06flutter-2/</id>
-            <updated>2021-06-17T21:45:22&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-06-06T13:25:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -6064,7 +6132,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Flutter Basics: Dart(1)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-05-30flutter-1/" />
             <id>https://rikucherry1993.me/posts/2021-05-30flutter-1/</id>
-            <updated>2021-06-17T21:45:25&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-05-30T15:04:29&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -6346,7 +6414,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">《Java核心技术 卷1》读书笔记（1）</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2021-06-13T10:25:39&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-05-25T12:24:22&#43;00:00</published>
             <author>
                     <name>rikucherry</name>
@@ -6674,7 +6742,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Android应用基础 嵌套的RecyclerView</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/" />
             <id>https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/</id>
-            <updated>2022-03-14T17:55:44&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-05-23T22:40:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -7006,7 +7074,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Android应用基础 简易后台计时器的安装方法</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" />
             <id>https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/</id>
-            <updated>2021-05-29T21:46:12&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-05-20T02:41:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
@@ -7561,7 +7629,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Hello World</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/hello-world/" />
             <id>https://rikucherry1993.me/posts/hello-world/</id>
-            <updated>2021-05-29T21:46:12&#43;09:00</updated>
+            <updated>2026-08-09T18:32:44&#43;09:00</updated>
             <published>2021-05-07T00:25:43&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
