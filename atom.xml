@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Rikucherry&#39;s blog</title>
     <subtitle type="html"></subtitle>
-    <updated>2026-08-09T19:18:15&#43;09:00</updated>
+    <updated>2026-08-21T20:25:31&#43;09:00</updated>
     <id>https://rikucherry1993.me/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />
@@ -20,16 +20,19 @@
             <title type="text">Snap Closet开通安卓版内测</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/" />
             <id>https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/</id>
-            <updated>2026-08-09T19:17:32&#43;09:00</updated>
+            <updated>2026-08-20T21:38:07&#43;09:00</updated>
             <published>2026-08-09T19:12:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：Snap Closet 的安卓版内测现……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">更新（2026-08-20）：本次安卓内测招募已经结束，感谢大家的踊跃参与！后续动态……</summary>
             
-                <content type="html">&lt;p&gt;  好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：&lt;strong&gt;Snap Closet 的安卓版内测现已开放！&lt;/strong&gt; iOS 版即将上线 App Store，安卓版则先以内测的形式和大家见面。如果你是安卓用户，并且想抢先体验，欢迎按下面的方式报名参加内测。&lt;/p&gt;
+                <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;更新（2026-08-20）：本次安卓内测招募已经结束，感谢大家的踊跃参与！后续动态请关注博客和产品页。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：&lt;strong&gt;Snap Closet 的安卓版内测现已开放！&lt;/strong&gt; iOS 版即将上线 App Store，安卓版则先以内测的形式和大家见面。如果你是安卓用户，并且想抢先体验，欢迎按下面的方式报名参加内测。&lt;/p&gt;
 &lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260809/android-beta-steps.png&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
 &lt;p&gt;  图中的参与步骤用文字整理如下：&lt;/p&gt;
 &lt;h2 id=&#34;内测参与步骤&#34;&gt;内测参与步骤&lt;/h2&gt;
