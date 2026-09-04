@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Rikucherry&#39;s blog</title>
+        <link>https://rikucherry1993.me/en/</link>
+        <description></description>
+        <generator>Hugo 0.88.1 https://gohugo.io/</generator>
+        
+            <language>en</language>
+        
+        
+            <managingEditor>rikucherry0522@gmail.com (rikucherry)</managingEditor>
+        
+        
+            <webMaster>rikucherry0522@gmail.com (rikucherry)</webMaster>
+        
+        
+            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+        
+        <lastBuildDate>Fri, 04 Sep 2026 15:09:28 &#43;0900</lastBuildDate>
+        
+            <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/en/rss.xml" />
+        
+        
+            <item>
+                <title>Snap Closet Android Beta Is Now Open</title>
+                <link>https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/</link>
+                <guid isPermaLink="true">https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/</guid>
+                <pubDate>Sun, 09 Aug 2026 19:12:00 &#43;0900</pubDate>
+                
+                    <author>rikucherry0522@gmail.com (rikucherry)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was machine-translated from the Chinese original.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Update (2026-08-20): This Android beta recruitment has ended. Thank you all for your enthusiastic participation! For future updates, please follow the blog and product page.&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  Long time no see! The blog has been quiet for a while, and this time I&#39;m back to share great news with you: &lt;strong&gt;Snap Closet&#39;s Android beta is now open!&lt;/strong&gt; The iOS version is coming soon to the App Store, while the Android version is launching first through beta testing. If you&#39;re an Android user and want to experience it first, feel free to sign up for the beta using the steps below.&lt;/p&gt;
+&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260809/android-beta-steps.png&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+&lt;p&gt;  The participation steps from the image are organized in text below:&lt;/p&gt;
+&lt;h2 id=&#34;android-beta-participation-steps&#34;&gt;Android Beta Participation Steps&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Visit the Snap Closet product page: &lt;a href=&#34;https://snap-closet.com/&#34;&gt;https://snap-closet.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Click the &amp;quot;Android Beta Entry&amp;quot; button next to the title, fill out the form to participate (the form contains specific rules and exclusive beta benefits information).&lt;/li&gt;
+&lt;li&gt;Limited spots available, first come first served.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;  Looking forward to your participation and feedback!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: This beta is only available to Android users who can access and download apps from the Google Play Store.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/categories/indie-dev/">Indie Dev</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/snap-closet/">Snap Closet</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/android/">Android</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/beta/">Beta</category>
+                                
+                            
+                        
+                    
+                
+            </item>
+        
+    </channel>
+</rss>

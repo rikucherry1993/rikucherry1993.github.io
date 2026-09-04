@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
+    <title type="text">Rikucherry&#39;s blog</title>
+    <subtitle type="html"></subtitle>
+    <updated>2026-09-04T15:09:28&#43;09:00</updated>
+    <id>https://rikucherry1993.me/ja/</id>
+    <link rel="alternate" type="text/html" href="https://rikucherry1993.me/ja/" />
+    <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/ja/atom.xml" />
+    <author>
+            <name>rikucherry</name>
+            <uri>https://rikucherry1993.me/ja/</uri>
+            
+                <email>rikucherry0522@gmail.com</email>
+            </author>
+    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</rights>
+    <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator>
+        <entry>
+            <title type="text">Snap Closet Android版ベータテスト開始</title>
+            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/" />
+            <id>https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/</id>
+            <updated>2026-09-04T13:49:03&#43;09:00</updated>
+            <published>2026-08-09T19:12:00&#43;09:00</published>
+            <author>
+                    <name>rikucherry</name>
+                    <uri>https://rikucherry1993.me/</uri>
+                    <email>rikucherry0522@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</rights><summary type="html">この記事は中国語の原文を機械翻訳したものです。 アップデート（2026-08-20）：…</summary>
+            
+                <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;この記事は中国語の原文を機械翻訳したものです。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;アップデート（2026-08-20）：今回のAndroidベータテスト募集は終了いたしました。ご参加いただきありがとうございました！今後の情報はブログと製品ページをご覧ください。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  お久しぶりです！ブログはしばらく更新がありませんでしたが、今回は皆様に素晴らしいニュースをお知らせしに戻ってきました：&lt;strong&gt;Snap ClosetのAndroidベータテストがオープンしました！&lt;/strong&gt; iOS版はまもなくApp Storeにリリースされ、Android版はまずベータテストの形式で皆様の前に登場します。Androidユーザーでいち早く体験したい方は、下記の方法でベータテストに申し込んでください。&lt;/p&gt;
+&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260809/android-beta-steps.png&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+&lt;p&gt;  画像の参加ステップを以下にテキストで整理しました：&lt;/p&gt;
+&lt;h2 id=&#34;androidベータテスト参加ステップ&#34;&gt;Androidベータテスト参加ステップ&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Snap Closetの日本語製品ページにアクセスしてください：&lt;a href=&#34;https://snap-closet.com/ja&#34;&gt;https://snap-closet.com/ja&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;タイトルの横の「Androidベータテスト入口」をクリックして、アンケートに記入すればご参加いただけます（アンケートに具体的なルールとベータテスト専用の特典説明があります）。&lt;/li&gt;
+&lt;li&gt;枠は限定です。満員になり次第終了します。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;  皆様のご参加とフィードバックをお待ちしています！&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注記：本ベータテストはGoogle PlayストアからアプリをダウンロードできるAndroidユーザーのみを対象としています。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/categories/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/" term="個人開発" label="個人開発" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/snap-closet/" term="Snap Closet" label="Snap Closet" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/android/" term="Android" label="Android" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/%E3%83%99%E3%83%BC%E3%82%BF%E3%83%86%E3%82%B9%E3%83%88/" term="ベータテスト" label="ベータテスト" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
+</feed>
