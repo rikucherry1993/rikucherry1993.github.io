@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://rikucherry1993.me/ja/tags/android/</loc>
-    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
+    <loc>https://rikucherry1993.me/ja/tags/ai/</loc>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://rikucherry1993.me/tags/android/"
+                href="https://rikucherry1993.me/tags/ai/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://rikucherry1993.me/en/tags/android/"
+                href="https://rikucherry1993.me/en/tags/ai/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://rikucherry1993.me/ja/tags/android/"
+                href="https://rikucherry1993.me/ja/tags/ai/"
                 />
   </url><url>
     <loc>https://rikucherry1993.me/ja/categories/</loc>
-    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -38,8 +38,26 @@
                 href="https://rikucherry1993.me/ja/categories/"
                 />
   </url><url>
+    <loc>https://rikucherry1993.me/ja/tags/revenuecat/</loc>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/tags/revenuecat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/tags/revenuecat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/tags/revenuecat/"
+                />
+  </url><url>
     <loc>https://rikucherry1993.me/ja/</loc>
-    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -56,8 +74,26 @@
                 href="https://rikucherry1993.me/ja/"
                 />
   </url><url>
+    <loc>https://rikucherry1993.me/ja/tags/shipaton/</loc>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/tags/shipaton/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/tags/shipaton/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/tags/shipaton/"
+                />
+  </url><url>
     <loc>https://rikucherry1993.me/ja/tags/snap-closet/</loc>
-    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -72,6 +108,63 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://rikucherry1993.me/ja/tags/snap-closet/"
+                />
+  </url><url>
+    <loc>https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/</loc>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/"
+                />
+  </url><url>
+    <loc>https://rikucherry1993.me/ja/tags/</loc>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/tags/"
+                />
+  </url><url>
+    <loc>https://rikucherry1993.me/ja/categories/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/</loc>
+    <lastmod>2026-09-04T21:36:46+09:00</lastmod>
+  </url><url>
+    <loc>https://rikucherry1993.me/ja/tags/android/</loc>
+    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/tags/android/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/tags/android/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/tags/android/"
                 />
   </url><url>
     <loc>https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/</loc>
@@ -92,28 +185,7 @@
                 href="https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/"
                 />
   </url><url>
-    <loc>https://rikucherry1993.me/ja/tags/</loc>
-    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://rikucherry1993.me/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rikucherry1993.me/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://rikucherry1993.me/ja/tags/"
-                />
-  </url><url>
     <loc>https://rikucherry1993.me/ja/tags/%E3%83%99%E3%83%BC%E3%82%BF%E3%83%86%E3%82%B9%E3%83%88/</loc>
-    <lastmod>2026-09-04T13:49:03+09:00</lastmod>
-  </url><url>
-    <loc>https://rikucherry1993.me/ja/categories/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/</loc>
     <lastmod>2026-09-04T13:49:03+09:00</lastmod>
   </url><url>
     <loc>https://rikucherry1993.me/ja/posts/</loc>

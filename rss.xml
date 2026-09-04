@@ -23,10 +23,96 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Fri, 04 Sep 2026 15:09:27 &#43;0900</lastBuildDate>
+        <lastBuildDate>Fri, 04 Sep 2026 21:36:46 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         
+        
+            <item>
+                <title>Snap Closet全面上架！终于报名了Shipaton</title>
+                <link>https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/</link>
+                <guid isPermaLink="true">https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/</guid>
+                <pubDate>Fri, 04 Sep 2026 21:03:00 &#43;0900</pubDate>
+                
+                    <author>rikucherry0522@gmail.com (rikucherry)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
+                
+                    <description>&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+&lt;p&gt;  上一篇还在招安卓内测，这次可以正式宣布：&lt;strong&gt;Snap Closet 全面上架了！&lt;/strong&gt; iOS 版已经在 App Store 上线，安卓版也结束内测和大家见面，四种语言全部本地化完毕。顺便做了一件拖了很久的事：报名了 RevenueCat 主办的 Shipaton。趁这个机会，简单聊聊这个项目。&lt;/p&gt;
+&lt;h2 id=&#34;差点夭折的项目&#34;&gt;差点夭折的项目&lt;/h2&gt;
+&lt;p&gt;  Snap Closet 最初是两年前做给自己的工具。衣服明明不少，翻来覆去穿的总是那几件，总觉得缺点什么。当时的 AI 模型识别和分类衣服照片已经出乎意料地准，所以我很确定&amp;quot;自动化的衣橱管理&amp;quot;是可行的。然后项目就停在那了：技术上撞墙，工作上没时间。&lt;/p&gt;
+&lt;p&gt;  今年让它复活的不只是更强的模型，而是一个更好的问题。每天和 LLM 打交道，我一直在想：把什么工作交给 AI，对普通人的帮助最大？人脑连几百件私人物品都记不住，日常生活却要求我们同时处理无数琐碎细节。管理衣服这种事对 AI 来说轻而易举，而我们却大多把模型拿来闲聊。这个错位本身就是答案：应该把大脑装不下的东西，原封不动地交给 AI。&lt;/p&gt;
+&lt;p&gt;  方向就这样定了：用最少的精力，建一个真正有用的个人数据库。衣服只是第一步。&lt;/p&gt;
+&lt;h2 id=&#34;它能做什么&#34;&gt;它能做什么&lt;/h2&gt;
+&lt;p&gt;  它能做的简单来说就两件事。第一件是替我记住自己有哪些衣服。把衣服、包、鞋子和配饰拍下来批量传上去，AI 会认出每一件是什么，自动打好标签，慢慢就攒出一份完整的清单。有了这份清单，很多以前靠记忆和直觉的事情都有了依据。比如逛街时看到心动的单品，先拍一张，让 app 查查家里是不是已经有差不多的，能和哪些已有的衣服搭。再比如隔一段时间让它给整个衣橱做一次体检，看看哪些季节和场合的衣服够了、缺哪一类、哪些东西一直没穿过可以考虑处理掉。&lt;/p&gt;
+&lt;p&gt;  第二件是穿搭。前一天晚上把要穿的几件挂进试衣间，早上就不用对着衣柜发呆；搭好的组合可以存到日历上。用户还能在模特工坊里抽一个虚拟形象，把自己真实的衣服穿到这个迷你版的自己身上看效果；不想用虚拟形象的话，也可以自己穿上拍张照打卡。&lt;/p&gt;
+&lt;h2 id=&#34;是怎么做出来的&#34;&gt;是怎么做出来的&lt;/h2&gt;
+&lt;p&gt;  第一次动手是两年前，做法很老实：Flutter 写客户端，设计和任务管理照搬公司里用惯的 Figma 和 Atlassian。一个人做了半年，进度停在 40% 左右，然后就是前面说的那段停滞。&lt;/p&gt;
+&lt;p&gt;  今年重新捡起来的时候，我没有接着原来的流程走，而是先把工作方式整个换掉。日常已经离不开 LLM，那就干脆把工作区围绕它重建：凡是会重复做的事，都想办法变成一个可以交给 agent 的工具。设计这一块，我自己写了一个 &lt;a href=&#34;https://github.com/rikucherry1993/mobile-design-system-skill&#34;&gt;mobile-design-system Skill&lt;/a&gt;，它取代了 Figma，把 app 的整个设计系统重写了一遍；新页面和流程则交给 &lt;a href=&#34;https://github.com/rikucherry1993/app-flow-design&#34;&gt;app-flow-design&lt;/a&gt; 从零到一地出方案。后端也没有再手搭，统计、feature flag、强制更新、分开的 dev 和 prod 环境，这些都是让 agent 直接操作 CLI 一步步建起来的。项目的所有背景知识就放在几个 markdown 文件里，换一个 agent 也能马上接着干。&lt;/p&gt;
+&lt;p&gt;  这么做下来，从重新开工到 App Store 上架花了三个月，官网、UI 翻新和基础设施重建都包含在内；后来的虚拟试穿功能，从想法到上线只用了一周。&lt;/p&gt;
+&lt;h2 id=&#34;学到的东西&#34;&gt;学到的东西&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;和 AI 一起编程，而不是在 AI 旁边编程。&lt;/strong&gt; 丢掉大团队的那套流程，用轻量 markdown / html 写成的人机协作协议，比重型工具好用得多。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Show, don&#39;t tell。&lt;/strong&gt; 有了多模态模型，一张图比一段文字更能传达设计意图。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;别太早放弃。&lt;/strong&gt; 两年前勉强可行的端上 ML，被平台的进步悄悄解决了。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;定价是门学问。&lt;/strong&gt; 在成本和消费心理之间找平衡，需要认真的调研和市场验证。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;聊天不是答案。&lt;/strong&gt; 追求好的 UX 是永恒的课题，怎样让 AI 嵌入到好的 UX 当中才是新问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;链接&#34;&gt;链接&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;App Store：&lt;a href=&#34;https://apps.apple.com/app/id6792299911&#34;&gt;Snap Closet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Play：&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.rikucherry.snapcloset&#34;&gt;Snap Closet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;官网：&lt;a href=&#34;https://snap-closet.com&#34;&gt;snap-closet.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  如果你也在做自己的 app，或者对 Snap Closet 有任何想法，欢迎来聊〜&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/categories/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91/">个人开发</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/snap-closet/">Snap Closet</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/shipaton/">Shipaton</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/revenuecat/">RevenueCat</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/tags/ai/">AI</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Snap Closet开通安卓版内测</title>

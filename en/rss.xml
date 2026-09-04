@@ -23,10 +23,99 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
         
-        <lastBuildDate>Fri, 04 Sep 2026 15:09:28 &#43;0900</lastBuildDate>
+        <lastBuildDate>Fri, 04 Sep 2026 21:36:46 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/en/rss.xml" />
         
+        
+            <item>
+                <title>Snap Closet Is Fully Launched, and I Finally Entered Shipaton</title>
+                <link>https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/</link>
+                <guid isPermaLink="true">https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/</guid>
+                <pubDate>Fri, 04 Sep 2026 21:03:00 &#43;0900</pubDate>
+                
+                    <author>rikucherry0522@gmail.com (rikucherry)</author>
+                
+                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright>
+                
+                    <description>&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;This post was machine-translated from the Chinese original.&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+&lt;p&gt;  In the last post, I was still recruiting Android beta testers. This time, I can officially announce: &lt;strong&gt;Snap Closet is now fully launched!&lt;/strong&gt; The iOS version is live on the App Store, the Android version has completed its beta and is ready for everyone, and all four languages are fully localized. While I&#39;m at it, I finally did something I&#39;ve been putting off for a while: signing up for Shipaton hosted by RevenueCat. Let me take this opportunity to talk a bit about this project.&lt;/p&gt;
+&lt;h2 id=&#34;a-project-that-nearly-died&#34;&gt;A Project That Nearly Died&lt;/h2&gt;
+&lt;p&gt;  Snap Closet was originally a tool I made for myself two years ago. I had plenty of clothes, but I kept wearing the same few pieces over and over, always feeling like something was missing. Back then, AI models were already surprisingly good at recognizing and categorizing photos of clothes, so I was confident that &amp;quot;automated closet management&amp;quot; was feasible. Then the project just stalled there: I hit a wall technically, and work didn&#39;t leave me time.&lt;/p&gt;
+&lt;p&gt;  What brought it back to life this year wasn&#39;t just stronger models, but a better question. Working with LLMs every day, I kept thinking: what work, handed to AI, benefits an ordinary person the most? Our brains can&#39;t even remember a few hundred personal items, yet daily life demands we juggle countless trivial details simultaneously. Managing clothes is a breeze for AI, yet most people use these models just for chatting. This misalignment itself is the answer: put the things your brain can&#39;t hold directly into AI&#39;s hands, unchanged.&lt;/p&gt;
+&lt;p&gt;  The direction was set: with minimal effort, build a truly useful personal database. Clothes are just the first step.&lt;/p&gt;
+&lt;h2 id=&#34;what-it-can-do&#34;&gt;What It Can Do&lt;/h2&gt;
+&lt;p&gt;  In simple terms, it does two things. First, it remembers what clothes I own. Take photos of clothes, bags, shoes, and accessories and batch-upload them—the AI recognizes what each item is, auto-tags them, and gradually builds a complete inventory. With this list, many things that used to rely on memory and intuition now have a foundation. For example, when you spot something tempting while shopping, snap a photo and let the app check if you already have something similar at home and what it could match with. Or let it do a closet checkup every so often to see what seasons and occasions have enough clothes, what types are missing, and what hasn&#39;t been worn and could be considered for disposal.&lt;/p&gt;
+&lt;p&gt;  Second is outfit coordination. Hang the pieces you want to wear into the Fitting Room the night before, and you won&#39;t stare blankly at your closet in the morning; matched outfits can be saved to your calendar. Users can also draw an avatar in the Model Atelier and see how their real clothes look on this mini version of themselves; if you don&#39;t want to use an avatar, you can put the outfit on and check in with a photo.&lt;/p&gt;
+&lt;h2 id=&#34;how-it-was-made&#34;&gt;How It Was Made&lt;/h2&gt;
+&lt;p&gt;  The first attempt two years ago was straightforward: Flutter for the client, design and task management copied from what I used at work—Figma and Atlassian. Working solo, I got to about 40% progress in half a year, then hit the stall I mentioned earlier.&lt;/p&gt;
+&lt;p&gt;  When I picked it up again this year, I didn&#39;t continue the old workflow. Instead, I completely changed how I work. Since I can&#39;t live without LLMs anymore, I rebuilt my work process around them: anything I&#39;d do repeatedly, I&#39;d turn into a tool I could hand to an agent. For design, I wrote my own &lt;a href=&#34;https://github.com/rikucherry1993/mobile-design-system-skill&#34;&gt;mobile-design-system Skill&lt;/a&gt;, which replaced Figma and completely rewrote the app&#39;s design system; new pages and flows went to &lt;a href=&#34;https://github.com/rikucherry1993/app-flow-design&#34;&gt;app-flow-design&lt;/a&gt; to generate solutions from scratch. The backend wasn&#39;t hand-built either—analytics, feature flags, forced updates, separate dev and prod environments, all built step-by-step by having agents operate the CLI. All the project&#39;s background knowledge lives in a few markdown files, so another agent can pick it up immediately.&lt;/p&gt;
+&lt;p&gt;  This way, from restarting to App Store launch took three months, including the website, UI refresh, and infrastructure rebuilds; the virtual try-on feature that came later took just one week from idea to launch.&lt;/p&gt;
+&lt;h2 id=&#34;what-i-learned&#34;&gt;What I Learned&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Program with AI, not beside it.&lt;/strong&gt; Ditch the heavyweight team processes; lightweight markdown/html collaboration protocols beat heavy tools by a mile.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Show, don&#39;t tell.&lt;/strong&gt; With multimodal models, a picture conveys design intent better than words.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Don&#39;t give up too early.&lt;/strong&gt; Edge ML that was barely feasible two years ago has been quietly solved by platform progress.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pricing is a discipline.&lt;/strong&gt; Balancing cost against consumer psychology takes real research and market validation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Chatting isn&#39;t the answer.&lt;/strong&gt; Good UX is an eternal pursuit; how to embed AI into it is the new question.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;App Store: &lt;a href=&#34;https://apps.apple.com/app/id6792299911&#34;&gt;Snap Closet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Play: &lt;a href=&#34;https://play.google.com/store/apps/details?id=com.rikucherry.snapcloset&#34;&gt;Snap Closet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Website: &lt;a href=&#34;https://snap-closet.com&#34;&gt;snap-closet.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  If you&#39;re also building your own app or have any thoughts about Snap Closet, feel free to chat~&lt;/p&gt;
+</description>
+                
+                
+                
+                
+                
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/categories/indie-dev/">Indie Dev</category>
+                                
+                            
+                        
+                    
+                        
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/snap-closet/">Snap Closet</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/shipaton/">Shipaton</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/revenuecat/">RevenueCat</category>
+                                
+                            
+                                
+                                
+                                
+                                    <category domain="https://rikucherry1993.me/en/tags/ai/">AI</category>
+                                
+                            
+                        
+                    
+                
+            </item>
         
             <item>
                 <title>Snap Closet Android Beta Is Now Open</title>

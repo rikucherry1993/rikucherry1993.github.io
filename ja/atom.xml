@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ja">
     <title type="text">Rikucherry&#39;s blog</title>
     <subtitle type="html"></subtitle>
-    <updated>2026-09-04T15:09:28&#43;09:00</updated>
+    <updated>2026-09-04T21:36:46&#43;09:00</updated>
     <id>https://rikucherry1993.me/ja/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/ja/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/ja/atom.xml" />
@@ -16,6 +16,98 @@
             </author>
     <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</rights>
     <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator>
+        <entry>
+            <title type="text">Snap Closet 全プラットフォームでリリース！ついに Shipaton に参加</title>
+            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/" />
+            <id>https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/</id>
+            <updated>2026-09-04T21:36:46&#43;09:00</updated>
+            <published>2026-09-04T21:03:00&#43;09:00</published>
+            <author>
+                    <name>rikucherry</name>
+                    <uri>https://rikucherry1993.me/</uri>
+                    <email>rikucherry0522@gmail.com</email>
+                    </author>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</rights><summary type="html">この記事は中国語の原文を機械翻訳したものです。 前回はまだ Android ベータテスターを募集してい…</summary>
+            
+                <content type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;この記事は中国語の原文を機械翻訳したものです。&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+&lt;p&gt;  前回はまだ Android ベータテスターを募集していましたが、今回は正式に発表できます：&lt;strong&gt;Snap Closet が全プラットフォームでリリースされました！&lt;/strong&gt; iOS 版は App Store で公開され、Android 版もベータテストを終了して登場しました。4言語すべてが完全にローカライズされています。ついでに、ずっと先延ばしにしていたことも片付けました：RevenueCat が主催する Shipaton への参加登録です。この機会に、このプロジェクトについて簡単に話したいと思います。&lt;/p&gt;
+&lt;h2 id=&#34;消滅しかけたプロジェクト&#34;&gt;消滅しかけたプロジェクト&lt;/h2&gt;
+&lt;p&gt;  Snap Closet は、もともと 2 年前に自分用に作ったツールです。服はたくさんあるのに、ついつい同じ数枚ばかり着てしまって、何か足りない気がしていました。当時の AI モデルは、服の写真を認識・分類する精度が驚くほど高かったので、「自動化されたクローゼット管理」は実現可能だと確信していました。でもプロジェクトはそこで止まってしまいました：技術的に壁に当たり、仕事が忙しくて時間がなかったのです。&lt;/p&gt;
+&lt;p&gt;  今年、プロジェクトを復活させたのは、より強いモデルだけではなく、もっと良い問題に気づいたからです。毎日 LLM と向き合っていて、いつも考えていました：AI にどんな仕事を任せれば、普通の人にとって最も役に立つのか？人間の脳は数百件の個人的な物さえ覚えきれないのに、日常生活は無数の細々とした詳細を同時に処理することを要求します。服の管理は AI にとって簡単ですが、ほとんどの人はこのモデルをおしゃべり相手にしているだけです。この矛盾そのものが答えです：脳に入りきらないものを、そのまま AI に委ねるべきだ。&lt;/p&gt;
+&lt;p&gt;  こうして方針が決まりました：最小限の努力で、本当に有用な個人データベースを構築すること。衣服はその最初のステップに過ぎません。&lt;/p&gt;
+&lt;h2 id=&#34;何ができるのか&#34;&gt;何ができるのか&lt;/h2&gt;
+&lt;p&gt;  簡単に言うと、2 つのことができます。1 つ目は、自分がどんな服を持っているかを記憶してくれることです。服、バッグ、靴、アクセサリーを写真に撮ってまとめてアップロードすると、AI は各アイテムが何かを認識し、自動的にタグを付け、少しずつ完全な在庫リストを作成します。このリストがあれば、以前は記憶と直感に頼っていた多くのことが、根拠に基づいて判断できるようになります。例えば、買い物中に素敵なアイテムを見かけたら、写真を撮って、アプリで家に似たような服がないか確認し、どんな服と合わせられるかチェックできます。あるいは、定期的にクローゼット診断をして、どのシーズンと場面の服が十分か、どのタイプが足りないか、どれが着られていないので処分を検討できるか確認できます。&lt;/p&gt;
+&lt;p&gt;  2 つ目はコーディネートです。前夜にフィッティングルームに着たい服を何枚かハンガーにかけておけば、朝クローゼットの前でぼんやりすることはありません。コーディネートしたセットはカレンダーに保存できます。ユーザーはモデルアトリエでアバターを 1 体引いて、自分の実際の服をこのミニ版の自分に着せて仕上がりを確認することもできます。アバターを使いたくない場合は、自分で着て写真を撮ってチェックインすることもできます。&lt;/p&gt;
+&lt;h2 id=&#34;どのように作られたか&#34;&gt;どのように作られたか&lt;/h2&gt;
+&lt;p&gt;  2 年前の最初の試みは、非常にシンプルでした：クライアントは Flutter で書き、デザインとタスク管理は仕事で使い慣れていた Figma と Atlassian をコピーしました。1 人で半年ほど作業して、進捗は約 40% で止まり、その後が先ほど述べた停滞期でした。&lt;/p&gt;
+&lt;p&gt;  今年改めて取り組み始めた時、元のワークフローを続けるのではなく、仕事のやり方そのものを変えてしまいました。もう LLM 抜きでは仕事にならないのだから、思い切って作業環境を LLM 中心に作り直しました。繰り返しやることは何でも、agent に任せられるツールに変えていきます。デザイン面では、自分で &lt;a href=&#34;https://github.com/rikucherry1993/mobile-design-system-skill&#34;&gt;mobile-design-system Skill&lt;/a&gt; を書き、Figma に取って代わり、アプリの設計システム全体を書き直しました。新しいページとフローは &lt;a href=&#34;https://github.com/rikucherry1993/app-flow-design&#34;&gt;app-flow-design&lt;/a&gt; に任せて、ゼロから設計案を出してもらいました。バックエンドも手作りはせず、アナリティクス、feature flag、強制更新、分かれた dev と prod 環境などは、すべて agent に CLI を操作させて段階的に構築させました。プロジェクトの背景知識はすべて数個の markdown ファイルに置かれているので、別の agent でもすぐに続けられます。&lt;/p&gt;
+&lt;p&gt;  こうやって進めると、再開から App Store でのリリースまで 3 ヶ月かかりました。ウェブサイト、UI 刷新、インフラ再構築すべて含まれています。その後のバーチャル試着機能は、アイデアからリリースまで 1 週間で完成しました。&lt;/p&gt;
+&lt;h2 id=&#34;学んだこと&#34;&gt;学んだこと&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;AI のそばでプログラミングするのではなく、AI と一緒にプログラミングする。&lt;/strong&gt; 大規模チームのワークフローを捨て、軽量な markdown/html で書かれた人間と機械の協働プロトコルは重厚なツールよりずっと使いやすいです。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Show, don&#39;t tell。&lt;/strong&gt; マルチモーダルモデルがあれば、一枚の画像は言葉よりもデザインの意図をはるかに良く伝えることができます。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;早々に諦めない。&lt;/strong&gt; 2 年前はかろうじて実現可能だったエッジ ML が、プラットフォームの進化によって静かに解決されていました。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;価格設定は学問である。&lt;/strong&gt; コストと消費心理のバランスを見つけるには、真摯な調査と市場検証が必要です。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;チャットは答えではない。&lt;/strong&gt; 良い UX を追求することは永遠のテーマですが、AI を良い UX にどう組み込むかは新しい問題です。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;リンク&#34;&gt;リンク&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;App Store：&lt;a href=&#34;https://apps.apple.com/app/id6792299911&#34;&gt;Snap Closet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Google Play：&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.rikucherry.snapcloset&#34;&gt;Snap Closet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;公式サイト：&lt;a href=&#34;https://snap-closet.com&#34;&gt;snap-closet.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;  あなたも自分のアプリを開発していたり、Snap Closet について何か考えがあれば、ぜひ話しかけてくださいね〜&lt;/p&gt;
+</content>
+            
+            
+            
+            
+            
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/categories/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/" term="個人開発" label="個人開発" />
+                            
+                        
+                    
+                
+                    
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/snap-closet/" term="Snap Closet" label="Snap Closet" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/shipaton/" term="Shipaton" label="Shipaton" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/revenuecat/" term="RevenueCat" label="RevenueCat" />
+                            
+                        
+                            
+                            
+                            
+                                <category scheme="https://rikucherry1993.me/ja/tags/ai/" term="AI" label="AI" />
+                            
+                        
+                    
+                
+            
+        </entry>
+    
         <entry>
             <title type="text">Snap Closet Android版ベータテスト開始</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/" />
