@@ -9,7 +9,7 @@
     <channel>
         <title>Rikucherry&#39;s blog</title>
         <link>https://rikucherry1993.me/</link>
-        <description></description>
+        <description>Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。</description>
         <generator>Hugo 0.88.1 https://gohugo.io/</generator>
         
             <language>zh-CN</language>
@@ -23,7 +23,7 @@
         
             <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</copyright>
         
-        <lastBuildDate>Sun, 06 Sep 2026 16:17:33 &#43;0900</lastBuildDate>
+        <lastBuildDate>Sun, 06 Sep 2026 16:50:54 &#43;0900</lastBuildDate>
         
             <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/rss.xml" />
         

@@ -1,0 +1,36 @@
+# Rikucherry's blog
+
+> Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。
+
+- Site: https://rikucherry1993.me/
+- Language: zh-CN
+- Author: rikucherry
+- License: CC BY-NC-SA 4.0
+- Sitemap: https://rikucherry1993.me/sitemap.xml
+- English edition: https://rikucherry1993.me/en/llms.txt
+- 日本語 edition: https://rikucherry1993.me/ja/llms.txt
+
+## Posts
+
+- [Snap Closet全面上架！终于报名了Shipaton](https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/) (2026-09-04): Snap Closet 全面上架 App Store 和 Google Play：衣橱管理与穿搭功能介绍、以 LLM 驱动的开发流程，以及报名 Shipaton 的经过和收获。
+- [Snap Closet开通安卓版内测](https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/) (2026-08-09): 记录 Snap Closet 安卓版内测的开放过程与报名方式，并介绍应用的核心功能。内测招募已于 2026-08-20 结束。
+- [用Form认证方式从iOS应用登录和浏览GitHub](https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/) (2022-03-11): 用 SwiftUI 和 MVVM 架构实现 iOS 应用的 Form 认证登录 GitHub：获取登录令牌、发送认证请求、管理 session，并在 WebView 中浏览认证后的页面。
+- [Android Basics: Kotlin(2) - Coroutine](https://rikucherry1993.me/posts/2021-12-05kotlin-2/) (2021-12-05): Kotlin 协程学习笔记（2）：协程与线程的区别、GlobalScope/runBlocking/lifecycleScope 的使用、suspend 函数、Job 取消以及 async/await 并发。
+- [System.out::println](https://rikucherry1993.me/posts/2021-09-10sysout/) (2021-09-10): Java 方法引用笔记：从匿名内部类到 Lambda 表达式再到方法引用的演进，结合 Dagger 中的示例理解函数式接口与 System.out::println。
+- [Kotlin中的委托 - Delegation](https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/) (2021-09-06): Kotlin 委托模式笔记：用接口委托减少样板代码、by 关键字用法、属性委托的读写、lazy 延迟初始化以及自定义委托类的写法。
+- [《Java核心技术 卷1》读书笔记（2）- 并发](https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/) (2021-07-19): 《Java核心技术 卷1》读书笔记（2）并发：线程生命周期、竞态条件、ReentrantLock、条件对象、synchronized、volatile 和线程安全集合。
+- [《数据结构与算法分析》读书笔记（1）](https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/) (2021-07-14): 《数据结构与算法分析》读书笔记（1）：指数、对数、级数与模运算的数学基础，递归的基本法则，以及 Java 泛型机制与类型擦除。
+- [Android Basics: Kotlin(1)](https://rikucherry1993.me/posts/2021-07-06kotlin-1/) (2021-07-06): Kotlin 基础语法学习笔记（1）：val/var 变量声明、基本数据类型、when 表达式、null 安全操作符、类定义、成员变量和方法、继承与接口实现。
+- [Flutter Basics: Dart(3)](https://rikucherry1993.me/posts/2021-06-13flutter-3/) (2021-06-13): Dart 语言基础学习笔记（3）：类的多种构造方式、继承与多态、抽象类、接口、泛型、mixin、扩展方法以及 Freezed 数据类。
+- [Flutter Basics: Dart(2)](https://rikucherry1993.me/posts/2021-06-06flutter-2/) (2021-06-06): Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。
+- [Flutter Basics: Dart(1)](https://rikucherry1993.me/posts/2021-05-30flutter-1/) (2021-05-30): Dart 语言基础学习笔记（1）：变量声明、基本数据类型、类型推断、空值安全操作符、运算符以及 if/switch/for 等控制流语法。
+- [《Java核心技术 卷1》读书笔记（1）](https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/) (2021-05-25): 《Java核心技术 卷1》读书笔记：类的继承与多态、Object 类的 equals/hashCode/toString、泛型数组列表、自动装箱拆箱、枚举和反射的核心要点。
+- [Android应用基础 嵌套的RecyclerView](https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/) (2021-05-23): 用 RecyclerView 配合 LinearLayout 动态添加 View 实现嵌套列表，以品类标题加菜品项目为例讲解数据结构设计和 adapter 绑定。
+- [Android应用基础 简易后台计时器的安装方法](https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/) (2021-05-20): 用 CountDownTimer、AlarmManager 和 BroadcastReceiver 实现安卓后台计时器，支持离开应用后继续计时并通过通知提醒，附完整实现思路。
+- [Hello World](https://rikucherry1993.me/posts/hello-world/) (2021-05-07): 用于测试和演示 Markdown 语法支持的示例页面，包含标题层级、列表、代码块、HTML 标签等多种内容格式的渲染效果。
+
+## Translations
+
+- Snap Closet全面上架！终于报名了Shipaton: [en](https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/) [ja](https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/)
+- Snap Closet开通安卓版内测: [en](https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/) [ja](https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/)
+

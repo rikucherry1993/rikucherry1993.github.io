@@ -3,8 +3,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Rikucherry&#39;s blog</title>
-    <subtitle type="html"></subtitle>
-    <updated>2026-09-06T16:17:33&#43;09:00</updated>
+    <subtitle type="html">Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。</subtitle>
+    <updated>2026-09-06T16:50:54&#43;09:00</updated>
     <id>https://rikucherry1993.me/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />
@@ -20,14 +20,14 @@
             <title type="text">Snap Closet全面上架！终于报名了Shipaton</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/" />
             <id>https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/</id>
-            <updated>2026-09-04T21:42:29&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2026-09-04T21:03:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">上一篇还在招安卓内测，这次可以正式宣布：Snap Closet 全面上架了！ iOS 版已经在 App Store 上线，安……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Snap Closet 全面上架 App Store 和 Google Play：衣橱管理与穿搭功能介绍、以 LLM 驱动的开发流程，以及报名 Shipaton 的经过和收获。</summary>
             
                 <content type="html">&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
 &lt;p&gt;  上一篇还在招安卓内测，这次可以正式宣布：&lt;strong&gt;Snap Closet 全面上架了！&lt;/strong&gt; iOS 版已经在 App Store 上线，安卓版也结束内测和大家见面，四种语言全部本地化完毕。顺便做了一件拖了很久的事：报名了 RevenueCat 主办的 Shipaton。趁这个机会，简单聊聊这个项目。&lt;/p&gt;
@@ -109,14 +109,14 @@
             <title type="text">Snap Closet开通安卓版内测</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/" />
             <id>https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/</id>
-            <updated>2026-08-20T21:38:07&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2026-08-09T19:12:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">更新（2026-08-20）：本次安卓内测招募已经结束，感谢大家的踊跃参与！后续动态……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">记录 Snap Closet 安卓版内测的开放过程与报名方式，并介绍应用的核心功能。内测招募已于 2026-08-20 结束。</summary>
             
                 <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;更新（2026-08-20）：本次安卓内测招募已经结束，感谢大家的踊跃参与！后续动态请关注博客和产品页。&lt;/strong&gt;&lt;/p&gt;
@@ -180,14 +180,14 @@
             <title type="text">用Form认证方式从iOS应用登录和浏览GitHub</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/" />
             <id>https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2022-03-11T17:58:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">最近由于工作需要，干了1个多月的iOS开发。虽说与安卓开发之间没有到隔行如隔山的地步……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用 SwiftUI 和 MVVM 架构实现 iOS 应用的 Form 认证登录 GitHub：获取登录令牌、发送认证请求、管理 session，并在 WebView 中浏览认证后的页面。</summary>
             
                 <content type="html">&lt;p&gt;   最近由于工作需要，干了1个多月的iOS开发。虽说与安卓开发之间没有到隔行如隔山的地步，但正因为声明式UI、State管理那一套以及Swift和Kotlin本身的似像非像，刚开始接触特别容易搞混。还有用惯了JetBrains家的IDE以后再用Xcode...感觉十分酸爽。&lt;/p&gt;
 &lt;center&gt;&lt;img src=&#34;https://i.postimg.cc/0jcmNBcL/wukong.gif&#34; style=&#34;zoom:70%&#34;/&gt;&lt;/center&gt;
@@ -1209,14 +1209,14 @@
             <title type="text">Android Basics: Kotlin(2) - Coroutine</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-12-05kotlin-2/" />
             <id>https://rikucherry1993.me/posts/2021-12-05kotlin-2/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-12-05T12:07:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">1. What is a coroutine? 1-1 How it different from a Thread? Executed inside of a thread. Suspendable Can easily change their context (the thread they&#39;re running in) 2. Launch a coroutine 2-1 Global scope Live as long as the application does.……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Kotlin 协程学习笔记（2）：协程与线程的区别、GlobalScope/runBlocking/lifecycleScope 的使用、suspend 函数、Job 取消以及 async/await 并发。</summary>
             
                 <content type="html">&lt;h2 id=&#34;1-what-is-a-coroutine&#34;&gt;1. What is a coroutine?&lt;/h2&gt;
 &lt;h3 id=&#34;1-1-how-it-different-from-a-thread&#34;&gt;1-1 How it different from a Thread?&lt;/h3&gt;
@@ -1514,14 +1514,14 @@
             <title type="text">System.out::println</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-09-10sysout/" />
             <id>https://rikucherry1993.me/posts/2021-09-10sysout/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-09-10T16:53:05&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">最近几天在学依赖注入框架Dagger。可能是因为总是查阅kotlin把java给忘了……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Java 方法引用笔记：从匿名内部类到 Lambda 表达式再到方法引用的演进，结合 Dagger 中的示例理解函数式接口与 System.out::println。</summary>
             
                 <content type="html">&lt;p&gt;最近几天在学依赖注入框架Dagger。可能是因为总是查阅kotlin把java给忘了，读实例代码的时候有时候反应不过来（比如&lt;code&gt;System.out::println&lt;/code&gt;的真正含义），不由得写点东西复习一下。。。&lt;/p&gt;
 &lt;h3 id=&#34;dagger示例代码&#34;&gt;Dagger示例代码&lt;/h3&gt;
@@ -1688,14 +1688,14 @@
             <title type="text">Kotlin中的委托 - Delegation</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/" />
             <id>https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-09-06T14:49:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">在线测试kotlin代码: https://play.kotlinlang.org/ 1. 委托模式与mixin 委托模式即是委托类将某种处理/请求……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Kotlin 委托模式笔记：用接口委托减少样板代码、by 关键字用法、属性委托的读写、lazy 延迟初始化以及自定义委托类的写法。</summary>
             
                 <content type="html">&lt;ul&gt;
 &lt;li&gt;在线测试kotlin代码: &lt;a href=&#34;https://play.kotlinlang.org/&#34;&gt;https://play.kotlinlang.org/&lt;/a&gt;&lt;/li&gt;
@@ -2035,14 +2035,14 @@ new value has been assigned to &#39;deleProperty&#39; in test@7ef20235.
             <title type="text">《Java核心技术 卷1》读书笔记（2）- 并发</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-07-19T12:46:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">｜第12章 并发 12.1 什么是线程 多线程和写多进程的区别？ 每个进程拥有一套完成变量，而线程共……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">《Java核心技术 卷1》读书笔记（2）并发：线程生命周期、竞态条件、ReentrantLock、条件对象、synchronized、volatile 和线程安全集合。</summary>
             
                 <content type="html">&lt;h2 id=&#34;第12章-并发&#34;&gt;｜第12章 并发&lt;/h2&gt;
 &lt;h3 id=&#34;121-什么是线程&#34;&gt;12.1 什么是线程&lt;/h3&gt;
@@ -2451,14 +2451,14 @@ new value has been assigned to &#39;deleProperty&#39; in test@7ef20235.
             <title type="text">《数据结构与算法分析》读书笔记（1）</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-07-14T03:00:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">｜第1章 引论 1.2 数学知识复习 1.2.1 指数 公式 $X^A X^B = X^{A+B}$ $\frac{X^A}{X^B} = X^{A-B}$ $(X^A)^B = X^{AB}$ $X^N + X^N = 2X^N \neq X^{2N}$ $2^N + 2^N = 2^{N+1}$ 1.2.2 对……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">《数据结构与算法分析》读书笔记（1）：指数、对数、级数与模运算的数学基础，递归的基本法则，以及 Java 泛型机制与类型擦除。</summary>
             
                 <content type="html">&lt;h2 id=&#34;第1章-引论&#34;&gt;｜第1章 引论&lt;/h2&gt;
 &lt;h3 id=&#34;12-数学知识复习&#34;&gt;1.2 数学知识复习&lt;/h3&gt;
@@ -2644,14 +2644,14 @@ $$&lt;/li&gt;
             <title type="text">Android Basics: Kotlin(1)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/" />
             <id>https://rikucherry1993.me/posts/2021-07-06kotlin-1/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-07-06T08:03:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">1. Variables 1-1 &#39;val&#39; and &#39;var&#39; var is mutable, can be changed during execution val is immutable, cannot be changed once initialized 1 2 3 4 5 6 //OK var myName = &amp;#34;Cherry&amp;#34; myName = &amp;#34;newName&amp;#34; //NG val myName = &amp;#34;Cherry&amp;#34; myName……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Kotlin 基础语法学习笔记（1）：val/var 变量声明、基本数据类型、when 表达式、null 安全操作符、类定义、成员变量和方法、继承与接口实现。</summary>
             
                 <content type="html">&lt;h2 id=&#34;1-variables&#34;&gt;1. Variables&lt;/h2&gt;
 &lt;h3 id=&#34;1-1-val-and-var&#34;&gt;1-1 &#39;val&#39; and &#39;var&#39;&lt;/h3&gt;
@@ -4193,14 +4193,14 @@ $$&lt;/li&gt;
             <title type="text">Flutter Basics: Dart(3)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-06-13flutter-3/" />
             <id>https://rikucherry1993.me/posts/2021-06-13flutter-3/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-06-13T16:36:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">3-1 Classes Dart is an OO language 3-1-1 Ways to initiate objects literal 1 2 String text = &amp;#39;initial&amp;#39;; final list = [1,2,3]; invoke a constructor constructor with initial value of fields 1 2 3 4 5 6 7 8 9 10……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Dart 语言基础学习笔记（3）：类的多种构造方式、继承与多态、抽象类、接口、泛型、mixin、扩展方法以及 Freezed 数据类。</summary>
             
                 <content type="html">&lt;h3 id=&#34;3-1-classes&#34;&gt;3-1 Classes&lt;/h3&gt;
 &lt;ul&gt;
@@ -5710,14 +5710,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Flutter Basics: Dart(2)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-06-06flutter-2/" />
             <id>https://rikucherry1993.me/posts/2021-06-06flutter-2/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-06-06T13:25:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">2-1 Functions Function scope 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 void main(List&amp;lt;String&amp;gt; arguments) { String nestedFunction() { return &amp;#39;nested level&amp;#39;; } print(topFunction()); //top level scope print(nestedFunction()); //only valid inside of……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。</summary>
             
                 <content type="html">&lt;h3 id=&#34;2-1-functions&#34;&gt;2-1 Functions&lt;/h3&gt;
 &lt;ul&gt;
@@ -6224,14 +6224,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Flutter Basics: Dart(1)</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-05-30flutter-1/" />
             <id>https://rikucherry1993.me/posts/2021-05-30flutter-1/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-05-30T15:04:29&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Targets Build a pure flutter&amp;amp;Console application Understand similarities and differences between Dart and other languages 1-1 Project set-up (VScode) F1 &amp;gt; dart: create new project &amp;gt; simple console application Every single dart app has a main method, run as soon as the……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Dart 语言基础学习笔记（1）：变量声明、基本数据类型、类型推断、空值安全操作符、运算符以及 if/switch/for 等控制流语法。</summary>
             
                 <content type="html">&lt;h3 id=&#34;targets&#34;&gt;Targets&lt;/h3&gt;
 &lt;ol&gt;
@@ -6506,14 +6506,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">《Java核心技术 卷1》读书笔记（1）</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
             <id>https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-05-25T12:24:22&#43;00:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">｜第5章 继承 5.1 类、超类和子类 p156 名称对应： 超类 - 子类； 基类 - 派生类（derived cl……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">《Java核心技术 卷1》读书笔记：类的继承与多态、Object 类的 equals/hashCode/toString、泛型数组列表、自动装箱拆箱、枚举和反射的核心要点。</summary>
             
                 <content type="html">&lt;h2 id=&#34;第5章-继承&#34;&gt;｜第5章 继承&lt;/h2&gt;
 &lt;h3 id=&#34;51-类超类和子类&#34;&gt;5.1 类、超类和子类&lt;/h3&gt;
@@ -6834,14 +6834,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Android应用基础 嵌套的RecyclerView</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/" />
             <id>https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2021-05-23T22:40:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">简介 使用ExpandableListView可以实现每一项都自带展开/关闭功能的列表……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用 RecyclerView 配合 LinearLayout 动态添加 View 实现嵌套列表，以品类标题加菜品项目为例讲解数据结构设计和 adapter 绑定。</summary>
             
                 <content type="html">&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;  使用&lt;a href=&#34;https://developer.android.com/reference/android/widget/ExpandableListView&#34;&gt;ExpandableListView&lt;/a&gt;可以实现每一项都自带展开/关闭功能的列表。但如果我们不需要展开/关闭的动态效果，只想让一般的&lt;code&gt;recyclerView&lt;/code&gt;每一项都显示一些子项该如何实现呢？分享一种在&lt;code&gt;LinearLayout&lt;/code&gt;中动态添加View的实现方法。&lt;/p&gt;
@@ -7166,14 +7166,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Android应用基础 简易后台计时器的安装方法</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" />
             <id>https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:22&#43;09:00</updated>
             <published>2021-05-20T02:41:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">分享一篇个人练习定时提醒和安卓系统广播时写的计时器应用的开发思路～ 功能概要 1.计时器……</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用 CountDownTimer、AlarmManager 和 BroadcastReceiver 实现安卓后台计时器，支持离开应用后继续计时并通过通知提醒，附完整实现思路。</summary>
             
                 <content type="html">&lt;p&gt;分享一篇个人练习定时提醒和安卓系统广播时写的计时器应用的开发思路～&lt;/p&gt;
 &lt;hr&gt;
@@ -7721,14 +7721,14 @@ Code generation for immutable classes that has a simple syntax/API without compr
             <title type="text">Hello World</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/hello-world/" />
             <id>https://rikucherry1993.me/posts/hello-world/</id>
-            <updated>2026-08-09T18:32:44&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2021-05-07T00:25:43&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Test Markdown title1  item1 itwm2  subitem1 subitem2    title2 1 2 3 4 5 6  public static void main(String args[]) { @Override void someMethod(){ // do something  } }    Huge title   big title   medium title   small title   tttttttttttttt</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用于测试和演示 Markdown 语法支持的示例页面，包含标题层级、列表、代码块、HTML 标签等多种内容格式的渲染效果。</summary>
             
                 <content type="html">&lt;h1 id=&#34;test-markdown&#34;&gt;Test Markdown&lt;/h1&gt;
 &lt;h2 id=&#34;title1&#34;&gt;title1&lt;/h2&gt;

@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&#43;Slab:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Sans&#43;SC:wght@100;400;500&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" media="print" onload="this.media='all'" />
         <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&#43;Slab:ital,wght@0,400;0,500;0,700;1,400;1,700&amp;family=Noto&#43;Sans&#43;SC:wght@100;400;500&amp;family=Source&#43;Code&#43;Pro:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" /></noscript>
 
-    <meta name="author" content="rikucherry" /><meta name="description" content="2-1 Functions Function scope 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 void main(List&lt;String&gt; arguments) { String nestedFunction() { return &#39;nested level&#39;; } print(topFunction()); //top level scope print(nestedFunction()); //only valid inside of……" />
+    <meta name="author" content="rikucherry" /><meta name="description" content="Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。" />
 
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#2a6df4" />
@@ -54,10 +54,10 @@
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "datePublished": "2021-06-06T13:25:00+09:00",
-        "dateModified": "2026-08-09T18:32:44+09:00",
+        "dateModified": "2026-09-06T16:48:22+09:00",
         "url": "https://rikucherry1993.me/posts/2021-06-06flutter-2/",
         "headline": "Flutter Basics: Dart(2)",
-        "description": "2-1 Functions Function scope 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 void main(List\u003cString\u003e arguments) { String nestedFunction() { return 'nested level'; } print(topFunction()); //top level scope print(nestedFunction()); //only valid inside of……",
+        "description": "Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。",
         "inLanguage" : "zh-CN",
         "articleSection": "posts",
         "wordCount":  722 ,
@@ -90,20 +90,19 @@
 
 <meta name="twitter:card" content="summary" />
 
-<meta name="twitter:site" content="@-" />
 
     
 
 
 
 <meta property="og:title" content="Flutter Basics: Dart(2)" />
-<meta property="og:description" content="2-1 Functions Function scope 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 void main(List&lt;String&gt; arguments) { String nestedFunction() { return &#39;nested level&#39;; } print(topFunction()); //top level scope print(nestedFunction()); //only valid inside of……" />
+<meta property="og:description" content="Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。" />
 <meta property="og:url" content="https://rikucherry1993.me/posts/2021-06-06flutter-2/" />
 <meta property="og:site_name" content="Rikucherry&#39;s blog" />
 <meta property="og:locale" content="zh" /><meta property="og:image" content="https://rikucherry1993.me/icons/apple-touch-icon.png" />
     <meta property="og:type" content="article" />
     <meta property="article:published_time" content="2021-06-06T13:25:00&#43;09:00" />
-    <meta property="article:modified_time" content="2026-08-09T18:32:44&#43;09:00" />
+    <meta property="article:modified_time" content="2026-09-06T16:48:22&#43;09:00" />
     
     <meta property="article:section" content="posts" />
 
@@ -113,6 +112,7 @@
     
 
     
+
 </head>
 
     <body>
@@ -216,8 +216,6 @@
             
 
             
-                
-            
 
             
                 
@@ -229,7 +227,7 @@
     
     
         
-        <time datetime="2026-08-09T18:32:44&#43;09:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2026.8.9</time>
+        <time datetime="2026-09-06T16:48:22&#43;09:00" class="post-meta-item modified dt-updated"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon post-meta-icon"><path d="M400 64h-48V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H160V12c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V160h352v298a6 6 0 0 1-6 6zm-52.849-200.65L198.842 404.519c-4.705 4.667-12.303 4.637-16.971-.068l-75.091-75.699c-4.667-4.705-4.637-12.303.068-16.971l22.719-22.536c4.705-4.667 12.303-4.637 16.97.069l44.104 44.461 111.072-110.181c4.705-4.667 12.303-4.637 16.971.068l22.536 22.718c4.667 4.705 4.636 12.303-.069 16.97z"/></svg>&nbsp;2026.9.6</time>
     
     
     
@@ -752,7 +750,7 @@
             
                 <div class="share-item twitter">
                     
-                    <a href="https://twitter.com/share?url=https://rikucherry1993.me/posts/2021-06-06flutter-2/&amp;text=Flutter%20Basics:%20Dart%282%29&amp;hashtags=flutter,Dart,&amp;via=-" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
+                    <a href="https://twitter.com/share?url=https://rikucherry1993.me/posts/2021-06-06flutter-2/&amp;text=Flutter%20Basics:%20Dart%282%29&amp;hashtags=flutter,Dart,&amp;via=" title="分享到「Twitter」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="icon twitter-icon"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a>
                 </div>
             
 
@@ -766,7 +764,7 @@
             
                 <div class="share-item linkedin">
                     
-                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rikucherry1993.me/posts/2021-06-06flutter-2/&amp;title=Flutter%20Basics:%20Dart%282%29&amp;summary=2-1%20Functions%20Function%20scope%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%20void%20main%28List%3cString%3e%20arguments%29%20%7b%20String%20nestedFunction%28%29%20%7b%20return%20%27nested%20level%27;%20%7d%20print%28topFunction%28%29%29;%20//top%20level%20scope%20print%28nestedFunction%28%29%29;%20//only%20valid%20inside%20of%e2%80%a6%e2%80%a6&amp;source=Rikucherry%27s%20blog" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://rikucherry1993.me/posts/2021-06-06flutter-2/&amp;title=Flutter%20Basics:%20Dart%282%29&amp;summary=Dart%20%e8%af%ad%e8%a8%80%e5%9f%ba%e7%a1%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%882%ef%bc%89%ef%bc%9a%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0%e7%b1%bb%e5%9e%8b%e4%b8%8e%e9%ab%98%e9%98%b6%e5%87%bd%e6%95%b0%e3%80%81List/Map/Set%20%e9%9b%86%e5%90%88%e5%ae%9a%e4%b9%89%e3%80%81map/where/forEach%20%e7%ad%89%e8%bd%ac%e6%8d%a2%e6%96%b9%e6%b3%95%e3%80%81%e6%9e%9a%e4%b8%be%e5%92%8c%20pub%20%e5%8c%85%e7%ae%a1%e7%90%86%e3%80%82&amp;source=Rikucherry%27s%20blog" title="分享到「LinkedIn」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon linkedin-icon"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
                 </div>
             
 
@@ -782,7 +780,7 @@
             
                 <div class="share-item douban">
                     
-                    <a href="https://www.douban.com/share/service?href=https://rikucherry1993.me/posts/2021-06-06flutter-2/&amp;name=Flutter%20Basics:%20Dart%282%29&amp;text=2-1%20Functions%20Function%20scope%201%202%203%204%205%206%207%208%209%2010%2011%2012%2013%2014%2015%2016%2017%2018%20void%20main%28List%3cString%3e%20arguments%29%20%7b%20String%20nestedFunction%28%29%20%7b%20return%20%27nested%20level%27;%20%7d%20print%28topFunction%28%29%29;%20//top%20level%20scope%20print%28nestedFunction%28%29%29;%20//only%20valid%20inside%20of%e2%80%a6%e2%80%a6" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+                    <a href="https://www.douban.com/share/service?href=https://rikucherry1993.me/posts/2021-06-06flutter-2/&amp;name=Flutter%20Basics:%20Dart%282%29&amp;text=Dart%20%e8%af%ad%e8%a8%80%e5%9f%ba%e7%a1%80%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0%ef%bc%882%ef%bc%89%ef%bc%9a%e5%87%bd%e6%95%b0%e5%8f%82%e6%95%b0%e7%b1%bb%e5%9e%8b%e4%b8%8e%e9%ab%98%e9%98%b6%e5%87%bd%e6%95%b0%e3%80%81List/Map/Set%20%e9%9b%86%e5%90%88%e5%ae%9a%e4%b9%89%e3%80%81map/where/forEach%20%e7%ad%89%e8%bd%ac%e6%8d%a2%e6%96%b9%e6%b3%95%e3%80%81%e6%9e%9a%e4%b8%be%e5%92%8c%20pub%20%e5%8c%85%e7%ae%a1%e7%90%86%e3%80%82" title="分享到「豆瓣」" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icon douban-icon"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
                 </div>
             
 

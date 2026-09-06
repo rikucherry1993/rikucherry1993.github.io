@@ -3,8 +3,8 @@
 
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title type="text">Rikucherry&#39;s blog</title>
-    <subtitle type="html"></subtitle>
-    <updated>2026-09-06T16:17:33&#43;09:00</updated>
+    <subtitle type="html">Rikucherry&#39;s blog: a Tokyo-based mobile developer&#39;s notes on Android, iOS, Flutter and Kotlin, book notes, and the indie-dev journey of the Snap Closet app.</subtitle>
+    <updated>2026-09-06T16:50:54&#43;09:00</updated>
     <id>https://rikucherry1993.me/en/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/en/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/en/atom.xml" />
@@ -20,15 +20,14 @@
             <title type="text">Snap Closet Is Fully Launched, and I Finally Entered Shipaton</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/" />
             <id>https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/</id>
-            <updated>2026-09-04T21:42:29&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2026-09-04T21:03:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This post was machine-translated from the Chinese original.
-   In the last post, I was still recruiting Android beta testers. This time, I can officially announce: Snap Closet is now fully launched! The iOS version is live on the App Store, the Android version has completed its beta and is ready for everyone, and all four languages are fully localized.</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Snap Closet is now live on the App Store and Google Play. An overview of its closet and outfit features, the LLM-driven development process, and what entering Shipaton was like.</summary>
             
                 <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;This post was machine-translated from the Chinese original.&lt;/em&gt;&lt;/p&gt;
@@ -113,16 +112,14 @@
             <title type="text">Snap Closet Android Beta Is Now Open</title>
             <link rel="alternate" type="text/html" href="https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/" />
             <id>https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/</id>
-            <updated>2026-09-04T13:49:03&#43;09:00</updated>
+            <updated>2026-09-06T16:48:54&#43;09:00</updated>
             <published>2026-08-09T19:12:00&#43;09:00</published>
             <author>
                     <name>rikucherry</name>
                     <uri>https://rikucherry1993.me/</uri>
                     <email>rikucherry0522@gmail.com</email>
                     </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">This post was machine-translated from the Chinese original.
-  Update (2026-08-20): This Android beta recruitment has ended. Thank you all for your enthusiastic participation! For future updates, please follow the blog and product page.
-  Long time no see! The blog has been quiet for a while, and this time I&#39;m back to share great news with you: Snap Closet&#39;s Android beta is now open!</summary>
+            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">How the Snap Closet Android beta was opened and how testers could sign up, with an overview of the app&#39;s core features. Beta recruitment closed on 2026-08-20.</summary>
             
                 <content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;This post was machine-translated from the Chinese original.&lt;/em&gt;&lt;/p&gt;
