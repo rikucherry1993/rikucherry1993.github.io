@@ -4,7 +4,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
     <title type="text">Rikucherry&#39;s blog</title>
     <subtitle type="html">Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。</subtitle>
-    <updated>2026-09-06T16:50:54&#43;09:00</updated>
+    <updated>2026-09-08T14:37:41&#43;09:00</updated>
     <id>https://rikucherry1993.me/</id>
     <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
     <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />

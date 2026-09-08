@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://rikucherry1993.me/en/links/</loc>
+    <lastmod>2026-09-08T14:08:52+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/links/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/links/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/links/"
+                />
+  </url><url>
+    <loc>https://rikucherry1993.me/en/</loc>
+    <lastmod>2026-09-08T14:08:52+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/"
+                />
+  </url><url>
     <loc>https://rikucherry1993.me/en/tags/ai/</loc>
     <lastmod>2026-09-06T16:48:54+09:00</lastmod>
     <xhtml:link
@@ -57,24 +93,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://rikucherry1993.me/en/tags/revenuecat/"
-                />
-  </url><url>
-    <loc>https://rikucherry1993.me/en/</loc>
-    <lastmod>2026-09-06T16:48:54+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://rikucherry1993.me/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://rikucherry1993.me/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://rikucherry1993.me/en/"
                 />
   </url><url>
     <loc>https://rikucherry1993.me/en/tags/shipaton/</loc>
