@@ -31,7 +31,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.8ecd0d6ea21313c12f1300c706a6f465ec6cfa8451543bdc66e91350625bdda5.css">
+<link rel="stylesheet" href="/artist/style.min.3b3b1c47fa12811c101637e99a96b7a5e16e1e558ecf24f2af46cb83449cb987.css">
 
 
 </head>
@@ -100,9 +100,19 @@
 <p>Note: This beta is only available to Android users who can access and download apps from the Google Play Store.</p>
 </blockquote>
 </article>
+
+
+
+
+
+<section class="post-share" aria-label="Share"><span class="share-label">Share</span><div class="share-links">
+<a class="icon-link" href="https://twitter.com/share?url=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-08-09snap-closet-android-beta%2F&amp;text=Snap&#43;Closet&#43;Android&#43;Beta&#43;Is&#43;Now&#43;Open" target="_blank" rel="noopener noreferrer" aria-label="Share on Twitter" title="Share on Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a><a class="icon-link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-08-09snap-closet-android-beta%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook" title="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a><a class="icon-link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-08-09snap-closet-android-beta%2F&amp;title=Snap&#43;Closet&#43;Android&#43;Beta&#43;Is&#43;Now&#43;Open" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a><a class="icon-link" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-08-09snap-closet-android-beta%2F&amp;title=Snap&#43;Closet&#43;Android&#43;Beta&#43;Is&#43;Now&#43;Open" target="_blank" rel="noopener noreferrer" aria-label="Share on Weibo" title="Share on Weibo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a><a class="icon-link" href="https://www.douban.com/share/service?href=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-08-09snap-closet-android-beta%2F&amp;name=Snap&#43;Closet&#43;Android&#43;Beta&#43;Is&#43;Now&#43;Open&amp;text=How&#43;the&#43;Snap&#43;Closet&#43;Android&#43;beta&#43;was&#43;opened&#43;and&#43;how&#43;testers&#43;could&#43;sign&#43;up%2C&#43;with&#43;an&#43;overview&#43;of&#43;the&#43;app%27s&#43;core&#43;features.&#43;Beta&#43;recruitment&#43;closed&#43;on&#43;2026-08-20." target="_blank" rel="noopener noreferrer" aria-label="Share on Douban" title="Share on Douban"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ui-icon" aria-hidden="true" focusable="false"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
+<details class="share-qr"><summary class="icon-link" aria-label="Share with QR code" title="Share with QR code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg></summary><div class="qr-panel"><div data-share-qr="https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/" data-alt="Share with QR code"></div><p>Scan to open this article</p></div></details>
+</div></section>
+
+
 <nav class="post-navigation" aria-label="Article navigation"><div><span>Previous article</span><a href="/en/posts/2026-09-04snap-closet-shipaton/">Snap Closet Is Fully Launched, and I Finally Entered Shipaton</a></div></nav>
 <section class="related-posts"><h2>More to read</h2><ul><li><a href="/en/posts/2026-09-04snap-closet-shipaton/">Snap Closet Is Fully Launched, and I Finally Entered Shipaton</a></li></ul></section>
-<section class="comments" data-repo="rikucherry1993/rikucherry1993.github.io" data-issue-term="title" data-label="utterances"><button class="product-download load-comments" type="button">Load comments</button><div class="comments-mount"></div></section>
 </div><aside class="article-margin">
 <nav class="toc" aria-label="On this page"><p>On this page</p><nav id="TableOfContents">
   <ol>
@@ -113,22 +123,41 @@
 
 <figure class="margin-illustration" aria-hidden="true">
 
+  
+
 
 <picture class="illustration">
-<source type="image/webp" srcset="/artist/margin-cosmos-paper-edge_huc76a76eaff727ef6b901401f3e116268_866026_768x0_resize_q90_h2_box_3.webp 768w, /artist/margin-cosmos-paper-edge_huc76a76eaff727ef6b901401f3e116268_866026_1254x0_resize_q90_h2_box_3.webp 1536w" sizes="250px">
+<source type="image/webp" srcset="/artist/margin-cosmos-paper-edge_huc76a76eaff727ef6b901401f3e116268_866026_768x0_resize_q90_h2_box_3.webp 768w, /artist/margin-cosmos-paper-edge_huc76a76eaff727ef6b901401f3e116268_866026_1254x0_resize_q90_h2_box_3.webp 1254w" sizes="250px">
 <img src="/artist/margin-cosmos-paper-edge.png" alt="" width="1254" height="1254" loading="lazy" decoding="async">
 </picture>
+
+
 </figure>
 </aside></div></main>
 <dialog class="image-viewer" aria-label="View image"><button type="button" class="viewer-close">Close image</button><img alt=""></dialog>
 
-<footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0</a></span></div><div>
+
+<footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">CC BY-NC-SA 4.0</a></span></div><div class="footer-links">
 <a href="/en/categories/">Categories</a>
 <a href="/en/tags/">Tags</a>
-<a href="/en/rss.xml">RSS</a>
+<nav class="footer-socials" aria-label="Social links">
+
+
+<a class="icon-link" href="/en/rss.xml" aria-label="RSS" title="RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ui-icon" aria-hidden="true" focusable="false"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"/></svg></a>
+
+
+<a class="icon-link" href="https://github.com/rikucherry1993" aria-label="GitHub" title="GitHub" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ui-icon" aria-hidden="true" focusable="false"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
+
+<a class="icon-link" href="https://www.linkedin.com/in/rikucherry/" aria-label="LinkedIn" title="LinkedIn" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
+</nav>
 </div></footer>
 
 
-<script src="/artist/site.min.3c092490f5db60ce86c750e5d17f1f06b230f15837cc9bdcdf1fa4012baf3f7d.js" defer></script>
+
+<script src="/artist/qrcode.min.901ae5961fc6c980c27f328eff07fddfa2354fe4f682542233baf5bc0700d5e0.js" defer></script>
+
+
+<script src="/artist/site.min.eebbea0e36bcccb1660c4d91e1ce0fe97ff5582cdea05e6c5cc08a649e52130f.js" defer></script>
 </body>
 </html>
