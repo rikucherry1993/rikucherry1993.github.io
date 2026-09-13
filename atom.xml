@@ -1,35 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
-    <title type="text">Rikucherry&#39;s blog</title>
-    <subtitle type="html">Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。</subtitle>
-    <updated>2026-09-08T15:58:06&#43;09:00</updated>
-    <id>https://rikucherry1993.me/</id>
-    <link rel="alternate" type="text/html" href="https://rikucherry1993.me/" />
-    <link rel="self" type="application/atom&#43;xml" href="https://rikucherry1993.me/atom.xml" />
-    <author>
-            <name>rikucherry</name>
-            <uri>https://rikucherry1993.me/</uri>
-            
-                <email>rikucherry0522@gmail.com</email>
-            </author>
-    <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights>
-    <generator uri="https://gohugo.io/" version="0.88.1">Hugo</generator>
-        <entry>
-            <title type="text">Snap Closet全面上架！终于报名了Shipaton</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/" />
-            <id>https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/</id>
-            <updated>2026-09-06T16:48:54&#43;09:00</updated>
-            <published>2026-09-04T21:03:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Snap Closet 全面上架 App Store 和 Google Play：衣橱管理与穿搭功能介绍、以 LLM 驱动的开发流程，以及报名 Shipaton 的经过和收获。</summary>
-            
-                <content type="html">&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><title>Rikucherry&#39;s blog</title><id>https://rikucherry1993.me/</id><updated>2026-09-14T00:38:26&#43;09:00</updated><link href="https://rikucherry1993.me/" rel="alternate"/>
+<link href="https://rikucherry1993.me/atom.xml" rel="self"/><author><name>rikucherry</name></author><rights>CC BY-NC-SA 4.0</rights>
+<entry><title>Snap Closet全面上架！终于报名了Shipaton</title><id>https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/</id><link href="https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/"/><published>2026-09-04T21:03:00&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
 &lt;p&gt;  上一篇还在招安卓内测，这次可以正式宣布：&lt;strong&gt;Snap Closet 全面上架了！&lt;/strong&gt; iOS 版已经在 App Store 上线，安卓版也结束内测和大家见面，四种语言全部本地化完毕。顺便做了一件拖了很久的事：报名了 RevenueCat 主办的 Shipaton。趁这个机会，简单聊聊这个项目。&lt;/p&gt;
 &lt;h2 id=&#34;差点夭折的项目&#34;&gt;差点夭折的项目&lt;/h2&gt;
 &lt;p&gt;  Snap Closet 最初是两年前做给自己的工具。衣服明明不少，翻来覆去穿的总是那几件，总觉得缺点什么。当时的 AI 模型识别和分类衣服照片已经出乎意料地准，所以我很确定&amp;quot;自动化的衣橱管理&amp;quot;是可行的。然后项目就停在那了：技术上撞墙，工作上没时间。&lt;/p&gt;
@@ -57,68 +29,7 @@
 &lt;li&gt;官网：&lt;a href=&#34;https://snap-closet.com&#34;&gt;snap-closet.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;  如果你也在做自己的 app，或者对 Snap Closet 有任何想法，欢迎来聊〜&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91/" term="个人开发" label="个人开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/snap-closet/" term="Snap Closet" label="Snap Closet" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/shipaton/" term="Shipaton" label="Shipaton" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/revenuecat/" term="RevenueCat" label="RevenueCat" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/ai/" term="AI" label="AI" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Snap Closet开通安卓版内测</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/" />
-            <id>https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/</id>
-            <updated>2026-09-06T16:48:54&#43;09:00</updated>
-            <published>2026-08-09T19:12:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">记录 Snap Closet 安卓版内测的开放过程与报名方式，并介绍应用的核心功能。内测招募已于 2026-08-20 结束。</summary>
-            
-                <content type="html">&lt;blockquote&gt;
+</content></entry><entry><title>Snap Closet开通安卓版内测</title><id>https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/</id><link href="https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/"/><published>2026-08-09T19:12:00&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;更新（2026-08-20）：本次安卓内测招募已经结束，感谢大家的踊跃参与！后续动态请关注博客和产品页。&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;  好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：&lt;strong&gt;Snap Closet 的安卓版内测现已开放！&lt;/strong&gt; iOS 版即将上线 App Store，安卓版则先以内测的形式和大家见面。如果你是安卓用户，并且想抢先体验，欢迎按下面的方式报名参加内测。&lt;/p&gt;
@@ -134,62 +45,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;备注：本次内测仅面向可登陆 Google Play 商店下载应用的安卓用户。&lt;/p&gt;
 &lt;/blockquote&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91/" term="个人开发" label="个人开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/snap-closet/" term="Snap Closet" label="Snap Closet" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/%E5%86%85%E6%B5%8B/" term="内测" label="内测" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">用Form认证方式从iOS应用登录和浏览GitHub</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/" />
-            <id>https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/</id>
-            <updated>2026-09-06T16:48:54&#43;09:00</updated>
-            <published>2022-03-11T17:58:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用 SwiftUI 和 MVVM 架构实现 iOS 应用的 Form 认证登录 GitHub：获取登录令牌、发送认证请求、管理 session，并在 WebView 中浏览认证后的页面。</summary>
-            
-                <content type="html">&lt;p&gt;   最近由于工作需要，干了1个多月的iOS开发。虽说与安卓开发之间没有到隔行如隔山的地步，但正因为声明式UI、State管理那一套以及Swift和Kotlin本身的似像非像，刚开始接触特别容易搞混。还有用惯了JetBrains家的IDE以后再用Xcode...感觉十分酸爽。&lt;/p&gt;
+</content></entry><entry><title>用Form认证方式从iOS应用登录和浏览GitHub</title><id>https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/</id><link href="https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/"/><published>2022-03-11T17:58:00&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;p&gt;   最近由于工作需要，干了1个多月的iOS开发。虽说与安卓开发之间没有到隔行如隔山的地步，但正因为声明式UI、State管理那一套以及Swift和Kotlin本身的似像非像，刚开始接触特别容易搞混。还有用惯了JetBrains家的IDE以后再用Xcode...感觉十分酸爽。&lt;/p&gt;
 &lt;center&gt;&lt;img src=&#34;https://i.postimg.cc/0jcmNBcL/wukong.gif&#34; style=&#34;zoom:70%&#34;/&gt;&lt;/center&gt;
 &lt;p&gt;   总之我想把实际动手做的内容总结出来，以便以后打算继续学iOS时回来参考。 &lt;br&gt;
    这一篇先简单总结一下如何用&lt;code&gt;Form认证&lt;/code&gt;的方式，从应用发送POST请求登录网站，并利用session管理，从&lt;code&gt;WebView&lt;/code&gt;显示登录后网站内容的方法。顺便提一下SwiftUI以及iOS中MVVM架构的简单实现方法。Demo应用以登录GitHub为例。&lt;/p&gt;
@@ -1151,74 +1007,7 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;完整代码&#34;&gt;完整代码&lt;/h3&gt;
 &lt;p&gt;&lt;a href=&#34;https://github.com/rikucherry1993/GithubBrowser&#34;&gt;https://github.com/rikucherry1993/GithubBrowser&lt;/a&gt;&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/ios%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" term="iOS应用开发" label="iOS应用开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/ios/" term="iOS" label="iOS" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/swift/" term="Swift" label="Swift" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/swiftui/" term="SwiftUI" label="SwiftUI" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/mvvm/" term="MVVM" label="MVVM" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Android Basics: Kotlin(2) - Coroutine</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-12-05kotlin-2/" />
-            <id>https://rikucherry1993.me/posts/2021-12-05kotlin-2/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-12-05T12:07:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Kotlin 协程学习笔记（2）：协程与线程的区别、GlobalScope/runBlocking/lifecycleScope 的使用、suspend 函数、Job 取消以及 async/await 并发。</summary>
-            
-                <content type="html">&lt;h2 id=&#34;1-what-is-a-coroutine&#34;&gt;1. What is a coroutine?&lt;/h2&gt;
+</content></entry><entry><title>Android Basics: Kotlin(2) - Coroutine</title><id>https://rikucherry1993.me/posts/2021-12-05kotlin-2/</id><link href="https://rikucherry1993.me/posts/2021-12-05kotlin-2/"/><published>2021-12-05T12:07:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h2 id=&#34;1-what-is-a-coroutine&#34;&gt;1. What is a coroutine?&lt;/h2&gt;
 &lt;h3 id=&#34;1-1-how-it-different-from-a-thread&#34;&gt;1-1 How it different from a Thread?&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Executed inside of a thread.&lt;/li&gt;
@@ -1468,62 +1257,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" term="安卓应用开发" label="安卓应用开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/kotlin/" term="Kotlin" label="Kotlin" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">System.out::println</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-09-10sysout/" />
-            <id>https://rikucherry1993.me/posts/2021-09-10sysout/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-09-10T16:53:05&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Java 方法引用笔记：从匿名内部类到 Lambda 表达式再到方法引用的演进，结合 Dagger 中的示例理解函数式接口与 System.out::println。</summary>
-            
-                <content type="html">&lt;p&gt;最近几天在学依赖注入框架Dagger。可能是因为总是查阅kotlin把java给忘了，读实例代码的时候有时候反应不过来（比如&lt;code&gt;System.out::println&lt;/code&gt;的真正含义），不由得写点东西复习一下。。。&lt;/p&gt;
+</content></entry><entry><title>System.out::println</title><id>https://rikucherry1993.me/posts/2021-09-10sysout/</id><link href="https://rikucherry1993.me/posts/2021-09-10sysout/"/><published>2021-09-10T16:53:05&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;p&gt;最近几天在学依赖注入框架Dagger。可能是因为总是查阅kotlin把java给忘了，读实例代码的时候有时候反应不过来（比如&lt;code&gt;System.out::println&lt;/code&gt;的真正含义），不由得写点东西复习一下。。。&lt;/p&gt;
 &lt;h3 id=&#34;dagger示例代码&#34;&gt;Dagger示例代码&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://dagger.dev/tutorial/05-abstraction-for-output&#34;&gt;网页链接&lt;/a&gt;&lt;/li&gt;
@@ -1642,62 +1376,7 @@
 &lt;p&gt;现在再回到开头的Dagger示例就可以很快反应过来，return中的方法引用表达式，确实可以获得Outputter类型的返回值。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%9D%82%E8%AE%B0%E9%9A%8F%E6%84%9F/" term="杂记随感" label="杂记随感" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java/" term="Java" label="Java" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java-basic/" term="Java basic" label="Java basic" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Kotlin中的委托 - Delegation</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/" />
-            <id>https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-09-06T14:49:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Kotlin 委托模式笔记：用接口委托减少样板代码、by 关键字用法、属性委托的读写、lazy 延迟初始化以及自定义委托类的写法。</summary>
-            
-                <content type="html">&lt;ul&gt;
+</content></entry><entry><title>Kotlin中的委托 - Delegation</title><id>https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/</id><link href="https://rikucherry1993.me/posts/2021-09-06kotlin-by-delegate/"/><published>2021-09-06T14:49:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;ul&gt;
 &lt;li&gt;在线测试kotlin代码: &lt;a href=&#34;https://play.kotlinlang.org/&#34;&gt;https://play.kotlinlang.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;1-委托模式与mixin&#34;&gt;1. 委托模式与&lt;code&gt;mixin&lt;/code&gt;&lt;/h3&gt;
@@ -1989,62 +1668,7 @@ new value has been assigned to &#39;deleProperty&#39; in test@7ef20235.
 &lt;li&gt;委托属性读写提供&lt;code&gt;getValue/setValue&lt;/code&gt;方法来替代属性原有的&lt;code&gt;get/set&lt;/code&gt;方法。
 标准库的lazy方法实现了&lt;code&gt;Lazy接口&lt;/code&gt;。它提供的getValue方法使得只有第一次调用属性get方法时执行初始化代码块，后续调用则直接返回已初始化的值。&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" term="安卓应用开发" label="安卓应用开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/kotlin/" term="Kotlin" label="Kotlin" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">《Java核心技术 卷1》读书笔记（2）- 并发</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
-            <id>https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-07-19T12:46:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">《Java核心技术 卷1》读书笔记（2）并发：线程生命周期、竞态条件、ReentrantLock、条件对象、synchronized、volatile 和线程安全集合。</summary>
-            
-                <content type="html">&lt;h2 id=&#34;第12章-并发&#34;&gt;｜第12章 并发&lt;/h2&gt;
+</content></entry><entry><title>《Java核心技术 卷1》读书笔记（2）- 并发</title><id>https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id><link href="https://rikucherry1993.me/posts/2021-07-19%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/><published>2021-07-19T12:46:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h2 id=&#34;第12章-并发&#34;&gt;｜第12章 并发&lt;/h2&gt;
 &lt;h3 id=&#34;121-什么是线程&#34;&gt;12.1 什么是线程&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;多线程和写多进程的区别？
@@ -2399,68 +2023,7 @@ new value has been assigned to &#39;deleProperty&#39; in test@7ef20235.
   &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" term="《Java核心技术》" label="《Java核心技术》" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java/" term="Java" label="Java" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java-basic/" term="Java basic" label="Java basic" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">《数据结构与算法分析》读书笔记（1）</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
-            <id>https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-07-14T03:00:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">《数据结构与算法分析》读书笔记（1）：指数、对数、级数与模运算的数学基础，递归的基本法则，以及 Java 泛型机制与类型擦除。</summary>
-            
-                <content type="html">&lt;h2 id=&#34;第1章-引论&#34;&gt;｜第1章 引论&lt;/h2&gt;
+&lt;/div&gt;</content></entry><entry><title>《数据结构与算法分析》读书笔记（1）</title><id>https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id><link href="https://rikucherry1993.me/posts/2021-07-14%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/><published>2021-07-14T03:00:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h2 id=&#34;第1章-引论&#34;&gt;｜第1章 引论&lt;/h2&gt;
 &lt;h3 id=&#34;12-数学知识复习&#34;&gt;1.2 数学知识复习&lt;/h3&gt;
 &lt;h4 id=&#34;121-指数&#34;&gt;1.2.1 指数&lt;/h4&gt;
 &lt;ul&gt;
@@ -2586,74 +2149,7 @@ $$&lt;/li&gt;
 &lt;li&gt;1～2章：顺序阅读+Blog笔记&lt;/li&gt;
 &lt;li&gt;3章～： 先刷题后查找&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-java%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/" term="《数据结构与算法分析 Java语言描述》" label="《数据结构与算法分析 Java语言描述》" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java/" term="Java" label="Java" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/algorithm/" term="algorithm" label="algorithm" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/data-structure/" term="data structure" label="data structure" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Android Basics: Kotlin(1)</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/" />
-            <id>https://rikucherry1993.me/posts/2021-07-06kotlin-1/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-07-06T08:03:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Kotlin 基础语法学习笔记（1）：val/var 变量声明、基本数据类型、when 表达式、null 安全操作符、类定义、成员变量和方法、继承与接口实现。</summary>
-            
-                <content type="html">&lt;h2 id=&#34;1-variables&#34;&gt;1. Variables&lt;/h2&gt;
+</content></entry><entry><title>Android Basics: Kotlin(1)</title><id>https://rikucherry1993.me/posts/2021-07-06kotlin-1/</id><link href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/"/><published>2021-07-06T08:03:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h2 id=&#34;1-variables&#34;&gt;1. Variables&lt;/h2&gt;
 &lt;h3 id=&#34;1-1-val-and-var&#34;&gt;1-1 &#39;val&#39; and &#39;var&#39;&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;var&lt;/code&gt; is mutable, can be changed during execution&lt;/li&gt;
@@ -4121,7 +3617,7 @@ $$&lt;/li&gt;
 &lt;h3 id=&#34;7-5-safe-cast-and-unsafe-cast-operator&#34;&gt;7-5 Safe cast and Unsafe cast operator&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;as?&lt;/code&gt; returns null if casting is not possible rather than throwing a ClassCastException
-(see &lt;a href=&#34;https://rikucherry1993.me/posts/2021-07-06kotlin-1/#6-9-type-casting&#34;&gt;6-9 Type casting&lt;/a&gt;)&lt;/li&gt;
+(see &lt;a href=&#34;#6-9-type-casting&#34;&gt;6-9 Type casting&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;7-6-exception-handling&#34;&gt;7-6 Exception handling&lt;/h3&gt;
 &lt;ul&gt;
@@ -4147,62 +3643,7 @@ $$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" term="安卓应用开发" label="安卓应用开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/kotlin/" term="Kotlin" label="Kotlin" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Flutter Basics: Dart(3)</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-06-13flutter-3/" />
-            <id>https://rikucherry1993.me/posts/2021-06-13flutter-3/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-06-13T16:36:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Dart 语言基础学习笔记（3）：类的多种构造方式、继承与多态、抽象类、接口、泛型、mixin、扩展方法以及 Freezed 数据类。</summary>
-            
-                <content type="html">&lt;h3 id=&#34;3-1-classes&#34;&gt;3-1 Classes&lt;/h3&gt;
+</content></entry><entry><title>Flutter Basics: Dart(3)</title><id>https://rikucherry1993.me/posts/2021-06-13flutter-3/</id><link href="https://rikucherry1993.me/posts/2021-06-13flutter-3/"/><published>2021-06-13T16:36:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h3 id=&#34;3-1-classes&#34;&gt;3-1 Classes&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Dart is an OO language&lt;/li&gt;
 &lt;/ul&gt;
@@ -4597,7 +4038,7 @@ $$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4 id=&#34;3-1-6-equality&#34;&gt;3-1-6 Equality&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Referential Equality&lt;/strong&gt;: E.g. Objects that are instantiated with a constant constructor will be referentially equal to each other &lt;a href=&#34;https://rikucherry1993.me/posts/2021-06-13flutter-3/#const&#34;&gt;[link: const constructor]&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Referential Equality&lt;/strong&gt;: E.g. Objects that are instantiated with a constant constructor will be referentially equal to each other &lt;a href=&#34;#const&#34;&gt;[link: const constructor]&lt;/a&gt;.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Value Equality&lt;/strong&gt;: Defined by overriding &lt;code&gt;equality&lt;/code&gt;(the behavior of equal operator &lt;code&gt;==&lt;/code&gt;), depending on if the specific fields are equal.
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;cmd+.&lt;/code&gt;-&amp;gt;&lt;code&gt;generate equality&lt;/code&gt; use extension &lt;code&gt;dart data class generator&lt;/code&gt;&lt;/li&gt;
@@ -5664,62 +5105,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/flutter/" term="Flutter" label="Flutter" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/flutter/" term="flutter" label="flutter" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/dart/" term="Dart" label="Dart" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Flutter Basics: Dart(2)</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-06-06flutter-2/" />
-            <id>https://rikucherry1993.me/posts/2021-06-06flutter-2/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-06-06T13:25:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。</summary>
-            
-                <content type="html">&lt;h3 id=&#34;2-1-functions&#34;&gt;2-1 Functions&lt;/h3&gt;
+</content></entry><entry><title>Flutter Basics: Dart(2)</title><id>https://rikucherry1993.me/posts/2021-06-06flutter-2/</id><link href="https://rikucherry1993.me/posts/2021-06-06flutter-2/"/><published>2021-06-06T13:25:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h3 id=&#34;2-1-functions&#34;&gt;2-1 Functions&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Function scope
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -6178,62 +5564,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/flutter/" term="Flutter" label="Flutter" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/flutter/" term="flutter" label="flutter" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/dart/" term="Dart" label="Dart" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Flutter Basics: Dart(1)</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-05-30flutter-1/" />
-            <id>https://rikucherry1993.me/posts/2021-05-30flutter-1/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-05-30T15:04:29&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">Dart 语言基础学习笔记（1）：变量声明、基本数据类型、类型推断、空值安全操作符、运算符以及 if/switch/for 等控制流语法。</summary>
-            
-                <content type="html">&lt;h3 id=&#34;targets&#34;&gt;Targets&lt;/h3&gt;
+</content></entry><entry><title>Flutter Basics: Dart(1)</title><id>https://rikucherry1993.me/posts/2021-05-30flutter-1/</id><link href="https://rikucherry1993.me/posts/2021-05-30flutter-1/"/><published>2021-05-30T15:04:29&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h3 id=&#34;targets&#34;&gt;Targets&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;Build a pure flutter&amp;amp;Console application&lt;/li&gt;
 &lt;li&gt;Understand similarities and differences between Dart and other languages&lt;/li&gt;
@@ -6460,62 +5791,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/flutter/" term="Flutter" label="Flutter" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/flutter/" term="flutter" label="flutter" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/dart/" term="Dart" label="Dart" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">《Java核心技术 卷1》读书笔记（1）</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" />
-            <id>https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-05-25T12:24:22&#43;00:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">《Java核心技术 卷1》读书笔记：类的继承与多态、Object 类的 equals/hashCode/toString、泛型数组列表、自动装箱拆箱、枚举和反射的核心要点。</summary>
-            
-                <content type="html">&lt;h2 id=&#34;第5章-继承&#34;&gt;｜第5章 继承&lt;/h2&gt;
+</content></entry><entry><title>《Java核心技术 卷1》读书笔记（1）</title><id>https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</id><link href="https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/><published>2021-05-25T12:24:22Z</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;h2 id=&#34;第5章-继承&#34;&gt;｜第5章 继承&lt;/h2&gt;
 &lt;h3 id=&#34;51-类超类和子类&#34;&gt;5.1 类、超类和子类&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;p156&lt;/code&gt;
@@ -6782,68 +6058,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;/div&gt;
 &lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" term="读书笔记" label="读书笔记" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/" term="《Java核心技术》" label="《Java核心技术》" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java/" term="Java" label="Java" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/java-basic/" term="Java basic" label="Java basic" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Android应用基础 嵌套的RecyclerView</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/" />
-            <id>https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/</id>
-            <updated>2026-09-06T16:48:54&#43;09:00</updated>
-            <published>2021-05-23T22:40:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用 RecyclerView 配合 LinearLayout 动态添加 View 实现嵌套列表，以品类标题加菜品项目为例讲解数据结构设计和 adapter 绑定。</summary>
-            
-                <content type="html">&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+</content></entry><entry><title>Android应用基础 嵌套的RecyclerView</title><id>https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/</id><link href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/"/><published>2021-05-23T22:40:00&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
 &lt;p&gt;  使用&lt;a href=&#34;https://developer.android.com/reference/android/widget/ExpandableListView&#34;&gt;ExpandableListView&lt;/a&gt;可以实现每一项都自带展开/关闭功能的列表。但如果我们不需要展开/关闭的动态效果，只想让一般的&lt;code&gt;recyclerView&lt;/code&gt;每一项都显示一些子项该如何实现呢？分享一种在&lt;code&gt;LinearLayout&lt;/code&gt;中动态添加View的实现方法。&lt;/p&gt;
 &lt;h2 id=&#34;确定数据结构&#34;&gt;确定数据结构&lt;/h2&gt;
 &lt;p&gt;   目标实现一个菜单画面，食物品类下嵌套具体餐点。效果如下：&lt;/p&gt;
@@ -7108,74 +6323,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;p&gt;   最后，以通常的方式向RecyclerView的Adapter传入&lt;code&gt;ParentItemEntity&lt;/code&gt;型的列表，再向列表传入一些数据就可以查看效果啦。&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" term="安卓应用开发" label="安卓应用开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/mobile-app/" term="mobile app" label="mobile app" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/recyclerview/" term="RecyclerView" label="RecyclerView" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/kotlin/" term="Kotlin" label="Kotlin" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Android应用基础 简易后台计时器的安装方法</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/" />
-            <id>https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/</id>
-            <updated>2026-09-06T16:48:22&#43;09:00</updated>
-            <published>2021-05-20T02:41:00&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用 CountDownTimer、AlarmManager 和 BroadcastReceiver 实现安卓后台计时器，支持离开应用后继续计时并通过通知提醒，附完整实现思路。</summary>
-            
-                <content type="html">&lt;p&gt;分享一篇个人练习定时提醒和安卓系统广播时写的计时器应用的开发思路～&lt;/p&gt;
+</content></entry><entry><title>Android应用基础 简易后台计时器的安装方法</title><id>https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/</id><link href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/"/><published>2021-05-20T02:41:00&#43;09:00</published><updated>2026-09-06T16:48:22&#43;09:00</updated><content type="html">&lt;p&gt;分享一篇个人练习定时提醒和安卓系统广播时写的计时器应用的开发思路～&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;功能概要&#34;&gt;功能概要&lt;/h2&gt;
 &lt;ul&gt;
@@ -7663,74 +6811,7 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;p&gt;   作为安卓应用开发的入门级小白，比较容易对Activity、Fragment类的布局或者UI的部分感兴趣，接触系统广播、services、contentProvider等等和os、系统架构交互的部分比较少，需要勤加练习。另外遇到逻辑分支多比较绕的情况，可以先写最基本的case再慢慢考虑其他的，比较不容易遗漏。&lt;br&gt;
 &lt;a href=&#34;https://github.com/rikucherry1993/BackgroundCountDownTimer&#34;&gt;完整代码：https://github.com/rikucherry1993/BackgroundCountDownTimer&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.youtube.com/watch?v=xtElLuzjA0U&#34;&gt;参考教程：https://www.youtube.com/watch?v=xtElLuzjA0U&lt;/a&gt;&lt;/p&gt;
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/" term="技术学习" label="技术学习" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/" term="安卓应用开发" label="安卓应用开发" />
-                            
-                        
-                    
-                
-                    
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/android/" term="Android" label="Android" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/mobile-app/" term="mobile app" label="mobile app" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/alarmmanager/" term="AlarmManager" label="AlarmManager" />
-                            
-                        
-                            
-                            
-                            
-                                <category scheme="https://rikucherry1993.me/tags/countdowntimer/" term="CountDownTimer" label="CountDownTimer" />
-                            
-                        
-                    
-                
-            
-        </entry>
-    
-        <entry>
-            <title type="text">Hello World</title>
-            <link rel="alternate" type="text/html" href="https://rikucherry1993.me/posts/hello-world/" />
-            <id>https://rikucherry1993.me/posts/hello-world/</id>
-            <updated>2026-09-06T16:48:54&#43;09:00</updated>
-            <published>2021-05-07T00:25:43&#43;09:00</published>
-            <author>
-                    <name>rikucherry</name>
-                    <uri>https://rikucherry1993.me/</uri>
-                    <email>rikucherry0522@gmail.com</email>
-                    </author>
-            <rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh)</rights><summary type="html">用于测试和演示 Markdown 语法支持的示例页面，包含标题层级、列表、代码块、HTML 标签等多种内容格式的渲染效果。</summary>
-            
-                <content type="html">&lt;h1 id=&#34;test-markdown&#34;&gt;Test Markdown&lt;/h1&gt;
+</content></entry><entry><title>Hello World</title><id>https://rikucherry1993.me/posts/hello-world/</id><link href="https://rikucherry1993.me/posts/hello-world/"/><published>2021-05-07T00:25:43&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;h1 id=&#34;test-markdown&#34;&gt;Test Markdown&lt;/h1&gt;
 &lt;h2 id=&#34;title1&#34;&gt;title1&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;item1&lt;/li&gt;
@@ -7766,18 +6847,5 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;h4&gt; small title &lt;/h4&gt;
 &lt;hr&gt;
 &lt;p&gt;tttttttttttttt&lt;/p&gt;    
-</content>
-            
-            
-            
-            
-            
-                
-                    
-                
-                    
-                
-            
-        </entry>
-    
+</content></entry>
 </feed>

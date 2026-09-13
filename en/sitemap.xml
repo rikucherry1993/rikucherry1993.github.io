@@ -21,7 +21,7 @@
                 />
   </url><url>
     <loc>https://rikucherry1993.me/en/</loc>
-    <lastmod>2026-09-08T15:53:13+09:00</lastmod>
+    <lastmod>2026-09-14T00:35:33+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
@@ -206,6 +206,24 @@
                 href="https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/"
                 />
   </url><url>
+    <loc>https://rikucherry1993.me/en/about/</loc>
+    <lastmod>2026-09-14T00:35:33+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/about/"
+                />
+  </url><url>
     <loc>https://rikucherry1993.me/en/posts/</loc>
     <lastmod>2026-09-04T13:36:56+09:00</lastmod>
     <xhtml:link
@@ -222,6 +240,24 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://rikucherry1993.me/en/posts/"
+                />
+  </url><url>
+    <loc>https://rikucherry1993.me/en/products/</loc>
+    <lastmod>2026-09-14T00:17:38+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://rikucherry1993.me/products/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://rikucherry1993.me/ja/products/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://rikucherry1993.me/en/products/"
                 />
   </url>
 </urlset>

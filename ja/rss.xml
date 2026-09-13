@@ -1,44 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-
-
-
-
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Rikucherry&#39;s blog</title>
-        <link>https://rikucherry1993.me/ja/</link>
-        <description>東京在住のモバイル開発者 Rikucherry のブログ。Android・iOS・Flutter・Kotlin の学習メモや実装のつまずき、技術書の読書メモ、個人開発アプリ Snap Closet のリリース記録。</description>
-        <generator>Hugo 0.88.1 https://gohugo.io/</generator>
-        
-            <language>ja</language>
-        
-        
-            <managingEditor>rikucherry0522@gmail.com (rikucherry)</managingEditor>
-        
-        
-            <webMaster>rikucherry0522@gmail.com (rikucherry)</webMaster>
-        
-        
-            <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</copyright>
-        
-        <lastBuildDate>Tue, 08 Sep 2026 15:58:06 &#43;0900</lastBuildDate>
-        
-            <atom:link rel="self" type="application/rss&#43;xml" href="https://rikucherry1993.me/ja/rss.xml" />
-        
-        
-            <item>
-                <title>Snap Closet 全プラットフォームでリリース！ついに Shipaton に参加</title>
-                <link>https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/</link>
-                <guid isPermaLink="true">https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/</guid>
-                <pubDate>Fri, 04 Sep 2026 21:03:00 &#43;0900</pubDate>
-                
-                    <author>rikucherry0522@gmail.com (rikucherry)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</copyright>
-                
-                    <description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>Rikucherry&#39;s blog</title><link>https://rikucherry1993.me/</link><description>東京在住のモバイル開発者 Rikucherry のブログ。Android・iOS・Flutter・Kotlin の学習メモや実装のつまずき、技術書の読書メモ、個人開発アプリ Snap Closet のリリース記録。</description><language>ja</language><copyright>CC BY-NC-SA 4.0</copyright>
+<atom:link href="https://rikucherry1993.me/ja/rss.xml" rel="self" type="application/rss+xml"/>
+<item><title>Snap Closet 全プラットフォームでリリース！ついに Shipaton に参加</title><link>https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/</link><guid isPermaLink="true">https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/</guid><pubDate>Fri, 04 Sep 2026 21:03:00 &#43;0900</pubDate><description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;この記事は中国語の原文を機械翻訳したものです。&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
@@ -69,65 +33,7 @@
 &lt;li&gt;公式サイト：&lt;a href=&#34;https://snap-closet.com&#34;&gt;snap-closet.com&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;  あなたも自分のアプリを開発していたり、Snap Closet について何か考えがあれば、ぜひ話しかけてくださいね〜&lt;/p&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/categories/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/">個人開発</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/snap-closet/">Snap Closet</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/shipaton/">Shipaton</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/revenuecat/">RevenueCat</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/ai/">AI</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-            <item>
-                <title>Snap Closet Android版ベータテスト開始</title>
-                <link>https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/</link>
-                <guid isPermaLink="true">https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/</guid>
-                <pubDate>Sun, 09 Aug 2026 19:12:00 &#43;0900</pubDate>
-                
-                    <author>rikucherry0522@gmail.com (rikucherry)</author>
-                
-                <copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.ja)</copyright>
-                
-                    <description>&lt;blockquote&gt;
+</description></item><item><title>Snap Closet Android版ベータテスト開始</title><link>https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/</link><guid isPermaLink="true">https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/</guid><pubDate>Sun, 09 Aug 2026 19:12:00 &#43;0900</pubDate><description>&lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;この記事は中国語の原文を機械翻訳したものです。&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
@@ -146,47 +52,5 @@
 &lt;blockquote&gt;
 &lt;p&gt;注記：本ベータテストはGoogle PlayストアからアプリをダウンロードできるAndroidユーザーのみを対象としています。&lt;/p&gt;
 &lt;/blockquote&gt;
-</description>
-                
-                
-                
-                
-                
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/categories/%E5%80%8B%E4%BA%BA%E9%96%8B%E7%99%BA/">個人開発</category>
-                                
-                            
-                        
-                    
-                        
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/snap-closet/">Snap Closet</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/android/">Android</category>
-                                
-                            
-                                
-                                
-                                
-                                    <category domain="https://rikucherry1993.me/ja/tags/%E3%83%99%E3%83%BC%E3%82%BF%E3%83%86%E3%82%B9%E3%83%88/">ベータテスト</category>
-                                
-                            
-                        
-                    
-                
-            </item>
-        
-    </channel>
-</rss>
+</description></item>
+</channel></rss>

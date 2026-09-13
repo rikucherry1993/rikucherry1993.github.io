@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN" data-language="zh">
+<head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Posts · Rikucherry&#39;s blog</title>
+
+<meta name="description" content="Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。">
+<link rel="canonical" href="https://rikucherry1993.me/posts/">
+
+
+    <link rel="alternate" hreflang="zh-CN" href="https://rikucherry1993.me/posts/" />
+    <link rel="alternate" hreflang="en" href="https://rikucherry1993.me/en/posts/" />
+    <link rel="alternate" hreflang="ja" href="https://rikucherry1993.me/ja/posts/" />
+    <link rel="alternate" hreflang="x-default" href="https://rikucherry1993.me/posts/" />
+
+<meta property="og:title" content="Posts">
+<meta property="og:description" content="Rikucherry 的个人博客：坐标东京的移动端开发者，记录 Android、iOS、Flutter、Kotlin 的学习笔记与实战踩坑、技术书籍读书笔记，以及独立开发 App Snap Closet 的上架历程。">
+<meta property="og:url" content="https://rikucherry1993.me/posts/">
+<meta property="og:site_name" content="Rikucherry&#39;s blog">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rikucherry1993.me/icons/android-chrome-512x512.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+
+
+<script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
+
+<link rel="stylesheet" href="/artist/style.min.8ecd0d6ea21313c12f1300c706a6f465ec6cfa8451543bdc66e91350625bdda5.css">
+
+
+</head>
+<body>
+
+<a class="skip-link" href="#main">跳到正文</a>
+
+<header class="site-header">
+<a class="brand" href="/">rikucherry</a>
+<nav class="site-nav" aria-label="Main navigation">
+
+
+<a href="/" aria-current="page">Blog</a>
+
+
+<a href="/about/">About</a>
+
+
+<a href="/products/">Products</a>
+
+
+<a href="/links/">Friends</a>
+
+</nav>
+<div class="header-controls"><nav class="language" aria-label="阅读语言">
+
+
+
+
+<a href="/posts/" lang="zh-CN" hreflang="zh-CN" aria-current="true" title="中文">ZH</a>
+
+
+
+<span aria-hidden="true">/</span>
+<a href="/en/posts/" lang="en" hreflang="en" title="English">EN</a>
+
+
+
+<span aria-hidden="true">/</span>
+<a href="/ja/posts/" lang="ja" hreflang="ja" title="日本語">JA</a>
+
+</nav><button class="theme-toggle" type="button" data-light="浅色" data-dark="深色" data-use-light="切换浅色模式" data-use-dark="切换深色模式" aria-label="切换深色模式">深色</button></div>
+</header>
+
+
+<main id="main"><section class="blog-hero"><div class="hero-copy">
+<h1>归档</h1><p>记录创造的过程，<br>也记录沿途的世界。</p></div>
+
+
+
+<picture class="illustration">
+<source type="image/webp" srcset="/artist/blog-paper-edge_hu53e61b3efbb7ae76a675f9ea7271bbf8_1464910_768x0_resize_q90_h2_box_3.webp 768w, /artist/blog-paper-edge_hu53e61b3efbb7ae76a675f9ea7271bbf8_1464910_1536x0_resize_q90_h2_box_3.webp 1536w" sizes="(max-width: 760px) 100vw, 830px">
+<img src="/artist/blog-paper-edge.png" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
+</picture>
+
+</section><section class="writing" aria-label="全部博文"><div class="filter-bar"><h2>全部博文</h2><nav class="filters" aria-label="Browse writing">
+<a class="filter" href="/posts/">归档</a><a class="filter" href="/categories/">分类</a><a class="filter" href="/tags/">标签</a>
+</nav></div>
+
+
+
+<article class="post-row"><time datetime="2021-06-06">2021.06.06</time><div>
+<h3><a href="/posts/2021-06-06flutter-2/">Flutter Basics: Dart(2)</a></h3>
+
+<p>Dart 语言基础学习笔记（2）：函数参数类型与高阶函数、List/Map/Set 集合定义、map/where/forEach 等转换方法、枚举和 pub 包管理。</p>
+<div class="tags"><a class="tag" href="/tags/flutter/">flutter</a><a class="tag" href="/tags/dart/">Dart</a></div>
+</div></article>
+
+<article class="post-row"><time datetime="2021-05-30">2021.05.30</time><div>
+<h3><a href="/posts/2021-05-30flutter-1/">Flutter Basics: Dart(1)</a></h3>
+
+<p>Dart 语言基础学习笔记（1）：变量声明、基本数据类型、类型推断、空值安全操作符、运算符以及 if/switch/for 等控制流语法。</p>
+<div class="tags"><a class="tag" href="/tags/flutter/">flutter</a><a class="tag" href="/tags/dart/">Dart</a></div>
+</div></article>
+
+<article class="post-row"><time datetime="2021-05-25">2021.05.25</time><div>
+<h3><a href="/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">《Java核心技术 卷1》读书笔记（1）</a></h3>
+
+<p>《Java核心技术 卷1》读书笔记：类的继承与多态、Object 类的 equals/hashCode/toString、泛型数组列表、自动装箱拆箱、枚举和反射的核心要点。</p>
+<div class="tags"><a class="tag" href="/tags/java/">Java</a><a class="tag" href="/tags/java-basic/">Java basic</a></div>
+</div></article>
+
+<article class="post-row"><time datetime="2021-05-23">2021.05.23</time><div>
+<h3><a href="/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/">Android应用基础 嵌套的RecyclerView</a></h3>
+
+<p>用 RecyclerView 配合 LinearLayout 动态添加 View 实现嵌套列表，以品类标题加菜品项目为例讲解数据结构设计和 adapter 绑定。</p>
+<div class="tags"><a class="tag" href="/tags/android/">Android</a><a class="tag" href="/tags/mobile-app/">mobile app</a><a class="tag" href="/tags/recyclerview/">RecyclerView</a><a class="tag" href="/tags/kotlin/">Kotlin</a></div>
+</div></article>
+
+<article class="post-row"><time datetime="2021-05-20">2021.05.20</time><div>
+<h3><a href="/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/">Android应用基础 简易后台计时器的安装方法</a></h3>
+
+<p>用 CountDownTimer、AlarmManager 和 BroadcastReceiver 实现安卓后台计时器，支持离开应用后继续计时并通过通知提醒，附完整实现思路。</p>
+<div class="tags"><a class="tag" href="/tags/android/">Android</a><a class="tag" href="/tags/mobile-app/">mobile app</a><a class="tag" href="/tags/alarmmanager/">AlarmManager</a><a class="tag" href="/tags/countdowntimer/">CountDownTimer</a></div>
+</div></article>
+
+<article class="post-row"><time datetime="2021-05-07">2021.05.07</time><div>
+<h3><a href="/posts/hello-world/">Hello World</a></h3>
+
+<p>用于测试和演示 Markdown 语法支持的示例页面，包含标题层级、列表、代码块、HTML 标签等多种内容格式的渲染效果。</p>
+<div class="tags"></div>
+</div></article>
+
+
+
+<nav class="pagination" aria-label="Pagination">
+<a class="drawn-link" rel="prev" href="/posts/">较新的文章</a>
+<div><a href="/posts/">1</a><a href="/posts/page/2/" aria-current="page">2</a></div>
+
+</nav>
+
+</section></main>
+
+<footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></span></div><div>
+<a href="/categories/">分类</a>
+<a href="/tags/">标签</a>
+<a href="/rss.xml">RSS</a>
+</div></footer>
+
+
+<script src="/artist/site.min.3c092490f5db60ce86c750e5d17f1f06b230f15837cc9bdcdf1fa4012baf3f7d.js" defer></script>
+</body>
+</html>
