@@ -31,7 +31,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.3b3b1c47fa12811c101637e99a96b7a5e16e1e558ecf24f2af46cb83449cb987.css">
+<link rel="stylesheet" href="/artist/style.min.be385ff66620fbd2fb99eb7e0635a50379503d9e5c88208ca70c029e16196e69.css">
 
 
 </head>
