@@ -27,11 +27,21 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.793610ea7868e17df952b523a7f2fc33969ca082968b3f1666c180928948c389.css">
+<link rel="stylesheet" href="/artist/style.min.2f4795f3a56870a39e0c66cde3baa17ae03bbfa54698a3850f66eb207e880861.css">
 
 
 </head>
 <body>
+
+<svg class="art-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<filter id="night-matte" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 -0.098039 0 1 0 0 -0.121569 0 0 1 0 -0.109804 0 0 0 1 0" result="above"/>
+<feColorMatrix in="SourceGraphic" type="matrix" values="-1 0 0 0 0.098039 0 -1 0 0 0.121569 0 0 -1 0 0.109804 0 0 0 1 0" result="below"/>
+<feBlend in="above" in2="below" mode="lighten" result="distance"/>
+<feColorMatrix in="distance" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 8 8 8 0 -0.5" result="matte"/>
+<feComposite in="SourceGraphic" in2="matte" operator="in"/>
+</filter></defs></svg>
+
 
 <a class="skip-link" href="#main">跳到正文</a>
 
@@ -98,7 +108,7 @@
 </div>
 </section>
 <section class="writing">
-<nav class="taxonomy-nav"><a class="drawn-link" href="/posts/">全部博文</a><a href="/categories/">分类</a><a href="/tags/">标签</a></nav>
+<nav class="taxonomy-nav"><a class="drawn-link" href="/">全部博文</a><a href="/categories/">分类</a><a href="/tags/">标签</a></nav>
 
 
 <article class="post-row"><time datetime="2026-09-04">2026.09.04</time><div>
@@ -114,8 +124,6 @@
 
 
 <footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></span></div><div class="footer-links">
-<a href="/categories/">分类</a>
-<a href="/tags/">标签</a>
 <nav class="footer-socials" aria-label="社交链接">
 
 
@@ -130,7 +138,6 @@
 </div></footer>
 
 
-
-<script src="/artist/site.min.eebbea0e36bcccb1660c4d91e1ce0fe97ff5582cdea05e6c5cc08a649e52130f.js" defer></script>
+<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
 </body>
 </html>

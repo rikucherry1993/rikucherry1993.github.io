@@ -27,11 +27,21 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.793610ea7868e17df952b523a7f2fc33969ca082968b3f1666c180928948c389.css">
+<link rel="stylesheet" href="/artist/style.min.2f4795f3a56870a39e0c66cde3baa17ae03bbfa54698a3850f66eb207e880861.css">
 
 
 </head>
 <body>
+
+<svg class="art-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<filter id="night-matte" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 -0.098039 0 1 0 0 -0.121569 0 0 1 0 -0.109804 0 0 0 1 0" result="above"/>
+<feColorMatrix in="SourceGraphic" type="matrix" values="-1 0 0 0 0.098039 0 -1 0 0 0.121569 0 0 -1 0 0.109804 0 0 0 1 0" result="below"/>
+<feBlend in="above" in2="below" mode="lighten" result="distance"/>
+<feColorMatrix in="distance" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 8 8 8 0 -0.5" result="matte"/>
+<feComposite in="SourceGraphic" in2="matte" operator="in"/>
+</filter></defs></svg>
+
 
 <a class="skip-link" href="#main">跳到正文</a>
 
@@ -73,7 +83,7 @@
 </header>
 
 
-<main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/posts/">全部博文</a><h1>Flutter Basics: Dart(1)</h1>
+<main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/">全部博文</a><h1>Flutter Basics: Dart(1)</h1>
 <div class="article-meta"><time datetime="2021-05-30">2021.05.30</time><a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a><a href="/categories/flutter/">Flutter</a></div>
 <div class="tags"><a class="tag" href="/tags/flutter/">flutter</a><a class="tag" href="/tags/dart/">Dart</a></div></header>
 <div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h3 id="targets">Targets</h3>
@@ -307,11 +317,9 @@
 
 
 
-
-
 <section class="post-share" aria-label="分享"><span class="share-label">分享</span><div class="share-links">
-<a class="icon-link" href="https://twitter.com/share?url=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F&amp;text=Flutter&#43;Basics%3A&#43;Dart%281%29" target="_blank" rel="noopener noreferrer" aria-label="分享到 Twitter" title="分享到 Twitter"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg></a><a class="icon-link" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F" target="_blank" rel="noopener noreferrer" aria-label="分享到 Facebook" title="分享到 Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg></a><a class="icon-link" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F&amp;title=Flutter&#43;Basics%3A&#43;Dart%281%29" target="_blank" rel="noopener noreferrer" aria-label="分享到 LinkedIn" title="分享到 LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a><a class="icon-link" href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F&amp;title=Flutter&#43;Basics%3A&#43;Dart%281%29" target="_blank" rel="noopener noreferrer" aria-label="分享到 Weibo" title="分享到 Weibo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M407 177.6c7.6-24-13.4-46.8-37.4-41.7-22 4.8-28.8-28.1-7.1-32.8 50.1-10.9 92.3 37.1 76.5 84.8-6.8 21.2-38.8 10.8-32-10.3zM214.8 446.7C108.5 446.7 0 395.3 0 310.4c0-44.3 28-95.4 76.3-143.7C176 67 279.5 65.8 249.9 161c-4 13.1 12.3 5.7 12.3 6 79.5-33.6 140.5-16.8 114 51.4-3.7 9.4 1.1 10.9 8.3 13.1 135.7 42.3 34.8 215.2-169.7 215.2zm143.7-146.3c-5.4-55.7-78.5-94-163.4-85.7-84.8 8.6-148.8 60.3-143.4 116s78.5 94 163.4 85.7c84.8-8.6 148.8-60.3 143.4-116zM347.9 35.1c-25.9 5.6-16.8 43.7 8.3 38.3 72.3-15.2 134.8 52.8 111.7 124-7.4 24.2 29.1 37 37.4 12 31.9-99.8-55.1-195.9-157.4-174.3zm-78.5 311c-17.1 38.8-66.8 60-109.1 46.3-40.8-13.1-58-53.4-40.3-89.7 17.7-35.4 63.1-55.4 103.4-45.1 42 10.8 63.1 50.2 46 88.5zm-86.3-30c-12.9-5.4-30 .3-38 12.9-8.3 12.9-4.3 28 8.6 34 13.1 6 30.8.3 39.1-12.9 8-13.1 3.7-28.3-9.7-34zm32.6-13.4c-5.1-1.7-11.4.6-14.3 5.4-2.9 5.1-1.4 10.6 3.7 12.9 5.1 2 11.7-.3 14.6-5.4 2.8-5.2 1.1-10.9-4-12.9z"/></svg></a><a class="icon-link" href="https://www.douban.com/share/service?href=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F&amp;name=Flutter&#43;Basics%3A&#43;Dart%281%29&amp;text=Dart&#43;%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%EF%BC%881%EF%BC%89%EF%BC%9A%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E%E3%80%81%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E3%80%81%E7%B1%BB%E5%9E%8B%E6%8E%A8%E6%96%AD%E3%80%81%E7%A9%BA%E5%80%BC%E5%AE%89%E5%85%A8%E6%93%8D%E4%BD%9C%E7%AC%A6%E3%80%81%E8%BF%90%E7%AE%97%E7%AC%A6%E4%BB%A5%E5%8F%8A&#43;if%2Fswitch%2Ffor&#43;%E7%AD%89%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E6%B3%95%E3%80%82" target="_blank" rel="noopener noreferrer" aria-label="分享到 Douban" title="分享到 Douban"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="ui-icon" aria-hidden="true" focusable="false"><path d="M.643.92v2.412h22.714V.92H.643zm1.974 4.926v9.42h18.764v-9.42H2.617zm2.72 2.408H18.69v4.605H5.338V8.254zm1.657 7.412l-2.512.938c1.037 1.461 1.87 2.825 2.512 4.091H0v2.385h24v-2.385h-6.678c.818-1.176 1.589-2.543 2.303-4.091l-2.73-.938a29.952 29.952 0 01-2.479 5.03h-4.75c-.786-1.962-1.677-3.641-2.672-5.03Z"/></svg></a>
-<details class="share-qr"><summary class="icon-link" aria-label="二维码分享" title="二维码分享"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M0 224h192V32H0v192zM64 96h64v64H64V96zm192-64v192h192V32H256zm128 128h-64V96h64v64zM0 480h192V288H0v192zm64-128h64v64H64v-64zm352-64h32v128h-96v-32h-32v96h-64V288h96v32h64v-32zm0 160h32v32h-32v-32zm-64 0h32v32h-32v-32z"/></svg></summary><div class="qr-panel"><div data-share-qr="https://rikucherry1993.me/posts/2021-05-30flutter-1/" data-alt="二维码分享"></div><p>扫码打开这篇文章</p></div></details>
+<a class="icon-link" href="https://x.com/intent/tweet?url=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F&amp;text=Flutter&#43;Basics%3A&#43;Dart%281%29" target="_blank" rel="noopener noreferrer" aria-label="分享到 X" title="分享到 X"><svg class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></a>
+<a class="icon-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frikucherry1993.me%2Fposts%2F2021-05-30flutter-1%2F" target="_blank" rel="noopener noreferrer" aria-label="分享到 LinkedIn" title="分享到 LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
 </div></section>
 
 
@@ -361,8 +369,6 @@
 
 
 <footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></span></div><div class="footer-links">
-<a href="/categories/">分类</a>
-<a href="/tags/">标签</a>
 <nav class="footer-socials" aria-label="社交链接">
 
 
@@ -377,10 +383,6 @@
 </div></footer>
 
 
-
-<script src="/artist/qrcode.min.901ae5961fc6c980c27f328eff07fddfa2354fe4f682542233baf5bc0700d5e0.js" defer></script>
-
-
-<script src="/artist/site.min.eebbea0e36bcccb1660c4d91e1ce0fe97ff5582cdea05e6c5cc08a649e52130f.js" defer></script>
+<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
 </body>
 </html>

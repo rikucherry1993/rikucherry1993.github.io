@@ -27,11 +27,21 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.793610ea7868e17df952b523a7f2fc33969ca082968b3f1666c180928948c389.css">
+<link rel="stylesheet" href="/artist/style.min.2f4795f3a56870a39e0c66cde3baa17ae03bbfa54698a3850f66eb207e880861.css">
 
 
 </head>
 <body>
+
+<svg class="art-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<filter id="night-matte" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 -0.098039 0 1 0 0 -0.121569 0 0 1 0 -0.109804 0 0 0 1 0" result="above"/>
+<feColorMatrix in="SourceGraphic" type="matrix" values="-1 0 0 0 0.098039 0 -1 0 0 0.121569 0 0 -1 0 0.109804 0 0 0 1 0" result="below"/>
+<feBlend in="above" in2="below" mode="lighten" result="distance"/>
+<feColorMatrix in="distance" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 8 8 8 0 -0.5" result="matte"/>
+<feComposite in="SourceGraphic" in2="matte" operator="in"/>
+</filter></defs></svg>
+
 
 <a class="skip-link" href="#main">跳到正文</a>
 
@@ -98,15 +108,13 @@
 </div>
 </section>
 <section class="writing">
-<nav class="taxonomy-nav"><a class="drawn-link" href="/posts/">全部博文</a><a href="/categories/">分类</a><a href="/tags/">标签</a></nav>
+<nav class="taxonomy-nav"><a class="drawn-link" href="/">全部博文</a><a href="/categories/">分类</a><a href="/tags/">标签</a></nav>
 <div class="term-list"><a class="term-entry" href="/categories/flutter/"><span class="">Flutter</span><span class="muted">3</span></a><a class="term-entry" href="/categories/ios%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"><span class="">iOS应用开发</span><span class="muted">1</span></a><a class="term-entry" href="/categories/java%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF/"><span class="">《Java核心技术》</span><span class="muted">2</span></a><a class="term-entry" href="/categories/%E4%B8%AA%E4%BA%BA%E5%BC%80%E5%8F%91/"><span class="">个人开发</span><span class="muted">2</span></a><a class="term-entry" href="/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/"><span class="">安卓应用开发</span><span class="muted">5</span></a><a class="term-entry" href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/"><span class="">技术学习</span><span class="muted">13</span></a><a class="term-entry" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95%E5%88%86%E6%9E%90-java%E8%AF%AD%E8%A8%80%E6%8F%8F%E8%BF%B0/"><span class="">《数据结构与算法分析 Java语言描述》</span><span class="muted">1</span></a><a class="term-entry" href="/categories/%E6%9D%82%E8%AE%B0%E9%9A%8F%E6%84%9F/"><span class="">杂记随感</span><span class="muted">1</span></a><a class="term-entry" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"><span class="">读书笔记</span><span class="muted">3</span></a></div>
 
 </section></main>
 
 
 <footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></span></div><div class="footer-links">
-<a href="/categories/">分类</a>
-<a href="/tags/">标签</a>
 <nav class="footer-socials" aria-label="社交链接">
 
 
@@ -121,7 +129,6 @@
 </div></footer>
 
 
-
-<script src="/artist/site.min.eebbea0e36bcccb1660c4d91e1ce0fe97ff5582cdea05e6c5cc08a649e52130f.js" defer></script>
+<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
 </body>
 </html>

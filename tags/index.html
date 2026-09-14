@@ -27,11 +27,21 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.793610ea7868e17df952b523a7f2fc33969ca082968b3f1666c180928948c389.css">
+<link rel="stylesheet" href="/artist/style.min.2f4795f3a56870a39e0c66cde3baa17ae03bbfa54698a3850f66eb207e880861.css">
 
 
 </head>
 <body>
+
+<svg class="art-filter-defs" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" focusable="false"><defs>
+<filter id="night-matte" color-interpolation-filters="sRGB" x="0" y="0" width="100%" height="100%">
+<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 -0.098039 0 1 0 0 -0.121569 0 0 1 0 -0.109804 0 0 0 1 0" result="above"/>
+<feColorMatrix in="SourceGraphic" type="matrix" values="-1 0 0 0 0.098039 0 -1 0 0 0.121569 0 0 -1 0 0.109804 0 0 0 1 0" result="below"/>
+<feBlend in="above" in2="below" mode="lighten" result="distance"/>
+<feColorMatrix in="distance" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 8 8 8 0 -0.5" result="matte"/>
+<feComposite in="SourceGraphic" in2="matte" operator="in"/>
+</filter></defs></svg>
+
 
 <a class="skip-link" href="#main">跳到正文</a>
 
@@ -98,15 +108,78 @@
 </div>
 </section>
 <section class="writing">
-<nav class="taxonomy-nav"><a class="drawn-link" href="/posts/">全部博文</a><a href="/categories/">分类</a><a href="/tags/">标签</a></nav>
-<div class="term-list"><a class="term-entry" href="/tags/ai/"><span class="tag">AI</span><span class="muted">1</span></a><a class="term-entry" href="/tags/alarmmanager/"><span class="tag">AlarmManager</span><span class="muted">1</span></a><a class="term-entry" href="/tags/algorithm/"><span class="tag">algorithm</span><span class="muted">1</span></a><a class="term-entry" href="/tags/android/"><span class="tag">Android</span><span class="muted">6</span></a><a class="term-entry" href="/tags/countdowntimer/"><span class="tag">CountDownTimer</span><span class="muted">1</span></a><a class="term-entry" href="/tags/dart/"><span class="tag">Dart</span><span class="muted">3</span></a><a class="term-entry" href="/tags/data-structure/"><span class="tag">data structure</span><span class="muted">1</span></a><a class="term-entry" href="/tags/flutter/"><span class="tag">flutter</span><span class="muted">3</span></a><a class="term-entry" href="/tags/ios/"><span class="tag">iOS</span><span class="muted">1</span></a><a class="term-entry" href="/tags/java/"><span class="tag">Java</span><span class="muted">4</span></a><a class="term-entry" href="/tags/java-basic/"><span class="tag">Java basic</span><span class="muted">3</span></a><a class="term-entry" href="/tags/kotlin/"><span class="tag">Kotlin</span><span class="muted">4</span></a><a class="term-entry" href="/tags/mobile-app/"><span class="tag">mobile app</span><span class="muted">2</span></a><a class="term-entry" href="/tags/mvvm/"><span class="tag">MVVM</span><span class="muted">1</span></a><a class="term-entry" href="/tags/recyclerview/"><span class="tag">RecyclerView</span><span class="muted">1</span></a><a class="term-entry" href="/tags/revenuecat/"><span class="tag">RevenueCat</span><span class="muted">1</span></a><a class="term-entry" href="/tags/shipaton/"><span class="tag">Shipaton</span><span class="muted">1</span></a><a class="term-entry" href="/tags/snap-closet/"><span class="tag">Snap Closet</span><span class="muted">2</span></a><a class="term-entry" href="/tags/swift/"><span class="tag">Swift</span><span class="muted">1</span></a><a class="term-entry" href="/tags/swiftui/"><span class="tag">SwiftUI</span><span class="muted">1</span></a><a class="term-entry" href="/tags/%E5%86%85%E6%B5%8B/"><span class="tag">内测</span><span class="muted">1</span></a></div>
+<nav class="taxonomy-nav"><a class="drawn-link" href="/">全部博文</a><a href="/categories/">分类</a><a href="/tags/">标签</a></nav>
+
+
+<div class="tag-cloud">
+
+<a class="cloud-weight-1" href="/tags/ai/">AI</a>
+
+
+<a class="cloud-weight-1" href="/tags/alarmmanager/">AlarmManager</a>
+
+
+<a class="cloud-weight-1" href="/tags/algorithm/">algorithm</a>
+
+
+<a class="cloud-weight-5" href="/tags/android/">Android</a>
+
+
+<a class="cloud-weight-1" href="/tags/countdowntimer/">CountDownTimer</a>
+
+
+<a class="cloud-weight-3" href="/tags/dart/">Dart</a>
+
+
+<a class="cloud-weight-1" href="/tags/data-structure/">data structure</a>
+
+
+<a class="cloud-weight-3" href="/tags/flutter/">flutter</a>
+
+
+<a class="cloud-weight-1" href="/tags/ios/">iOS</a>
+
+
+<a class="cloud-weight-4" href="/tags/java/">Java</a>
+
+
+<a class="cloud-weight-3" href="/tags/java-basic/">Java basic</a>
+
+
+<a class="cloud-weight-4" href="/tags/kotlin/">Kotlin</a>
+
+
+<a class="cloud-weight-2" href="/tags/mobile-app/">mobile app</a>
+
+
+<a class="cloud-weight-1" href="/tags/mvvm/">MVVM</a>
+
+
+<a class="cloud-weight-1" href="/tags/recyclerview/">RecyclerView</a>
+
+
+<a class="cloud-weight-1" href="/tags/revenuecat/">RevenueCat</a>
+
+
+<a class="cloud-weight-1" href="/tags/shipaton/">Shipaton</a>
+
+
+<a class="cloud-weight-2" href="/tags/snap-closet/">Snap Closet</a>
+
+
+<a class="cloud-weight-1" href="/tags/swift/">Swift</a>
+
+
+<a class="cloud-weight-1" href="/tags/swiftui/">SwiftUI</a>
+
+
+<a class="cloud-weight-1" href="/tags/%E5%86%85%E6%B5%8B/">内测</a>
+</div>
 
 </section></main>
 
 
 <footer class="site-footer"><div class="footer-copyright"><span>© 2026 rikucherry</span><span><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a></span></div><div class="footer-links">
-<a href="/categories/">分类</a>
-<a href="/tags/">标签</a>
 <nav class="footer-socials" aria-label="社交链接">
 
 
@@ -121,7 +194,6 @@
 </div></footer>
 
 
-
-<script src="/artist/site.min.eebbea0e36bcccb1660c4d91e1ce0fe97ff5582cdea05e6c5cc08a649e52130f.js" defer></script>
+<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
 </body>
 </html>
