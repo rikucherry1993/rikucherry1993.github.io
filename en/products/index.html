@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.be385ff66620fbd2fb99eb7e0635a50379503d9e5c88208ca70c029e16196e69.css">
+<link rel="stylesheet" href="/artist/style.min.793610ea7868e17df952b523a7f2fc33969ca082968b3f1666c180928948c389.css">
 
 
 </head>
@@ -75,16 +75,26 @@
 
 <main id="main" class="products-main"><section class="products-hero"><div class="products-intro"><h1>Products</h1><p>Small ideas, made into things<br>you can use every day.</p></div>
 
+<div class="illustration themed-art">
 
   
 
 
-<picture class="illustration">
+<picture class="art-day">
 <source type="image/webp" srcset="/artist/products-paper-edge_hu7354bd7d000b489c43437527932493fb_990782_768x0_resize_q90_h2_box_3.webp 768w, /artist/products-paper-edge_hu7354bd7d000b489c43437527932493fb_990782_1536x0_resize_q90_h2_box_3.webp 1536w" sizes="(max-width: 760px) 100vw, 650px">
 <img src="/artist/products-paper-edge.png" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
 </picture>
 
 
+
+
+
+<picture class="art-night">
+<source type="image/webp" srcset="/artist/products-night_hucfa907ed65ce067e66cbefcdc58adab3_1550729_768x0_resize_q90_h2_box_3.webp 768w, /artist/products-night_hucfa907ed65ce067e66cbefcdc58adab3_1550729_1536x0_resize_q90_h2_box_3.webp 1536w" sizes="(max-width: 760px) 100vw, 650px">
+<img src="/artist/products-night.png" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
+</picture>
+
+</div>
 </section>
 <section class="product-list" aria-label="Products">
 

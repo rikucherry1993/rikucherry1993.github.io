@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.be385ff66620fbd2fb99eb7e0635a50379503d9e5c88208ca70c029e16196e69.css">
+<link rel="stylesheet" href="/artist/style.min.793610ea7868e17df952b523a7f2fc33969ca082968b3f1666c180928948c389.css">
 
 
 </head>
@@ -76,16 +76,26 @@
 <main id="main"><section class="blog-hero"><div class="hero-copy">
 <h1>Blog</h1><p>Notes on making things,<br>and the world in between.</p></div>
 
+<div class="illustration themed-art">
 
   
 
 
-<picture class="illustration">
+<picture class="art-day">
 <source type="image/webp" srcset="/artist/blog-paper-edge_hu53e61b3efbb7ae76a675f9ea7271bbf8_1464910_768x0_resize_q90_h2_box_3.webp 768w, /artist/blog-paper-edge_hu53e61b3efbb7ae76a675f9ea7271bbf8_1464910_1536x0_resize_q90_h2_box_3.webp 1536w" sizes="(max-width: 760px) 100vw, 830px">
 <img src="/artist/blog-paper-edge.png" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
 </picture>
 
 
+
+
+
+<picture class="art-night">
+<source type="image/webp" srcset="/artist/blog-night_hu08fabe123d816144b261cd4746a8dba0_1748944_768x0_resize_q90_h2_box_3.webp 768w, /artist/blog-night_hu08fabe123d816144b261cd4746a8dba0_1748944_1536x0_resize_q90_h2_box_3.webp 1536w" sizes="(max-width: 760px) 100vw, 830px">
+<img src="/artist/blog-night.png" alt="" width="1536" height="1024" fetchpriority="high" decoding="async">
+</picture>
+
+</div>
 
 </section><section class="writing" aria-label="All writing"><div class="filter-bar"><h2>All writing</h2><nav class="filters" aria-label="Browse writing">
 <a class="filter" href="/en/posts/">Archive</a><a class="filter" href="/en/categories/">Categories</a><a class="filter" href="/en/tags/">Tags</a>
