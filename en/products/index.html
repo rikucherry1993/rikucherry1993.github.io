@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
+<link rel="stylesheet" href="/artist/style.min.363ca1efd2397588d29c04a1346c11890238181fd06402e503179fc17dd1e43e.css">
 
 
 </head>
@@ -110,19 +110,69 @@
 
 
 
-<article class="product-row product-row--stub" id="snap-closet"><div class="product-media product-media--placeholder"><span>Screenshot or icon</span></div><div class="product-details"><h2>Snap Closet</h2><p class="product-description">Product introduction to follow.</p><div class="product-downloads"><span class="product-download product-download--placeholder">Download link</span></div></div></article>
+<article class="product-row" id="snap-closet">
+
+<div class="product-media product-media--screenshots"><img src="/images/20260915/snap-closet.png" alt="Snap Closet app icon surrounded by garment icons" loading="lazy"></div>
+<div class="product-details"><div class="product-platforms"></div><h2>Snap Closet</h2>
+
+<p class="product-description">Snap Closet is a simple, practical digital wardrobe for people who love keeping things tidy and living well. Snap a photo of a garment and AI removes the background, sorts it into a category and tags it, with batch upload supported. It also suggests outfits and lets you try them on virtually.</p>
 
 
-<article class="product-row product-row--stub" id="bonsai"><div class="product-media product-media--placeholder"><span>Screenshot or icon</span></div><div class="product-details"><h2>Bonsai</h2><p class="product-description">Product introduction to follow.</p><div class="product-downloads"><span class="product-download product-download--placeholder">Download link</span></div></div></article>
+
+<p class="product-links"><a class="drawn-link" href="https://snap-closet.com/" target="_blank" rel="noopener noreferrer">snap-closet.com</a></p>
+</div></article>
 
 
-<article class="product-row product-row--stub" id="mobile-design-system-skill"><div class="product-media product-media--placeholder"><span>Screenshot or icon</span></div><div class="product-details"><h2>Mobile Design System Skill</h2><p class="product-description">Product introduction to follow.</p><div class="product-downloads"><span class="product-download product-download--placeholder">Download link</span></div></div></article>
+<article class="product-row" id="bonsai">
+
+<div class="product-media product-media--screenshots"><img src="/images/20260915/bonsai.png" alt="Bonsai app icon and wordmark surrounded by the bonsai mascot in its growth and mood states" loading="lazy"></div>
+<div class="product-details"><div class="product-platforms"></div><h2>Bonsai <span class="tag product-badge">Coming Soon</span></h2>
+
+<p class="product-description">“Fed by your life, tending it back.” A personal goal operating system, your AI second brain.</p>
+
+<p class="product-note">An early prototype won Best Design at the c0mpiled Hackathon.</p>
+
+<p class="product-links"><a class="drawn-link" href="https://www.compiled.sh/articles/gstack-x-gbrain-hackathon-2" target="_blank" rel="noopener noreferrer">Read the recap</a></p>
+</div></article>
 
 
-<article class="product-row product-row--stub" id="app-design-system-studio"><div class="product-media product-media--placeholder"><span>Screenshot or icon</span></div><div class="product-details"><h2>App Design System Studio</h2><p class="product-description">Product introduction to follow.</p><div class="product-downloads"><span class="product-download product-download--placeholder">Download link</span></div></div></article>
+<article class="product-row" id="mobile-design-system-skill">
+
+<div class="product-media product-media--screenshots"><img src="/images/20260915/mobile-design-system-skill.png" alt="Three example apps generated by the skill: Margin, Stride and Atrium" loading="lazy"></div>
+<div class="product-details"><div class="product-platforms"></div><h2>Mobile Design System Skill</h2>
+
+<p class="product-description">A Claude Code skill that generates a design system following each OS&#39;s native app design guidelines. Design tokens and components are managed in HTML: more glanceable than a design.md, lighter than a design tool. The design systems of Snap Closet and Bonsai were both created with this skill.</p>
 
 
-<article class="product-row product-row--stub" id="cherryfold"><div class="product-media product-media--placeholder"><span>Screenshot or icon</span></div><div class="product-details"><h2>cherryfold</h2><p class="product-description">Product introduction to follow.</p><div class="product-downloads"><span class="product-download product-download--placeholder">Download link</span></div></div></article>
+
+<p class="product-links"><a class="drawn-link" href="https://github.com/rikucherry1993/mobile-design-system-skill" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+</div></article>
+
+
+<article class="product-row" id="app-design-system-studio">
+
+<div class="product-media product-media--screenshots"><img src="/images/20260915/app-design-system-studio.png" alt="App Design System Studio title lettering on a dark starry background" loading="lazy"></div>
+<div class="product-details"><div class="product-platforms"></div><h2>App Design System Studio <span class="tag product-badge">Coming Soon</span></h2>
+
+<p class="product-description">An AI design assistant that works the way mobile engineering teams do, producing app design systems that are genuinely reusable.</p>
+
+
+
+<p class="product-links"><a class="drawn-link" href="https://www.xiaohongshu.com/discovery/item/6aa627e3000000002802dbf7?source=webshare&amp;xhsshare=pc_web&amp;xsec_token=ABi5OxfX8yNXe6zIeFKMwikYPDxuKBJiPDMcHle30C6v0=&amp;xsec_source=pc_share" target="_blank" rel="noopener noreferrer">Related post</a></p>
+</div></article>
+
+
+<article class="product-row" id="cherryfold">
+
+<div class="product-media product-media--screenshots"><img src="/images/20260915/cherryfold.png" alt="cherryfold running in a terminal: an outline of session steps beside collapsible blocks with copy buttons" loading="lazy"></div>
+<div class="product-details"><div class="product-platforms"></div><h2>cherryfold</h2>
+
+<p class="product-description">A TUI tool that folds long agent conversations, with full-text search and an outline overview.</p>
+
+
+
+<p class="product-links"><a class="drawn-link" href="https://github.com/rikucherry1993/cherryfold" target="_blank" rel="noopener noreferrer">GitHub</a></p>
+</div></article>
 </section></main>
 
 
