@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -88,7 +88,8 @@
 <div class="tags"><a class="tag" href="/tags/android/">Android</a><a class="tag" href="/tags/mobile-app/">mobile app</a><a class="tag" href="/tags/alarmmanager/">AlarmManager</a><a class="tag" href="/tags/countdowntimer/">CountDownTimer</a></div></header>
 <div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><p>分享一篇个人练习定时提醒和安卓系统广播时写的计时器应用的开发思路～</p>
 <hr>
-<h2 id="功能概要">功能概要</h2>
+<h2 id="功能概要"><a class="section-link" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/#%e5%8a%9f%e8%83%bd%e6%a6%82%e8%a6%81" aria-label="复制本节链接: 功能概要" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">功能概要</a>
+</h2>
 <ul>
 <li>1.计时器为秒单位倒计时</li>
 <li>2.按下主画面开始按钮触发计时器，按下重置按钮结束并重置计时器</li>
@@ -98,7 +99,8 @@
    b) 计时器结束前返回应用：继续计时，与始终打开应用的情况相同，只显示toast不推送通知。</li>
 </ul>
 <hr>
-<h2 id="确定布局">确定布局</h2>
+<h2 id="确定布局"><a class="section-link" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/#%e7%a1%ae%e5%ae%9a%e5%b8%83%e5%b1%80" aria-label="复制本节链接: 确定布局" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">确定布局</a>
+</h2>
 <ul>
 <li>
 <p>activity_main.xml</p>
@@ -111,7 +113,8 @@
 </li>
 </ul>
 <hr>
-<h2 id="安装主画面mainactivity">安装主画面(MainActivity)</h2>
+<h2 id="安装主画面mainactivity"><a class="section-link" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/#%e5%ae%89%e8%a3%85%e4%b8%bb%e7%94%bb%e9%9d%a2mainactivity" aria-label="复制本节链接: 安装主画面(MainActivity)" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">安装主画面(MainActivity)</a>
+</h2>
 <h3 id="一仅在前台运行">（一）仅在前台运行</h3>
 <p>   首先考虑最简单的情况，即用户从计时开始到结束始终停留在计时器应用。 这时只需要做三件事：</p>
 <ol>
@@ -570,11 +573,13 @@
 </code></pre></td></tr></table>
 </div>
 </div><hr>
-<h2 id="小结">小结</h2>
+<h2 id="小结"><a class="section-link" href="https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/#%e5%b0%8f%e7%bb%93" aria-label="复制本节链接: 小结" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">小结</a>
+</h2>
 <p>   作为安卓应用开发的入门级小白，比较容易对Activity、Fragment类的布局或者UI的部分感兴趣，接触系统广播、services、contentProvider等等和os、系统架构交互的部分比较少，需要勤加练习。另外遇到逻辑分支多比较绕的情况，可以先写最基本的case再慢慢考虑其他的，比较不容易遗漏。<br>
 <a href="https://github.com/rikucherry1993/BackgroundCountDownTimer">完整代码：https://github.com/rikucherry1993/BackgroundCountDownTimer</a><br>
 <a href="https://www.youtube.com/watch?v=xtElLuzjA0U">参考教程：https://www.youtube.com/watch?v=xtElLuzjA0U</a></p>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -648,6 +653,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

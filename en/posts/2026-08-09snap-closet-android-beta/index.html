@@ -31,7 +31,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -99,7 +99,8 @@
 <p>  Long time no see! The blog has been quiet for a while, and this time I'm back to share great news with you: <strong>Snap Closet's Android beta is now open!</strong> The iOS version is coming soon to the App Store, while the Android version is launching first through beta testing. If you're an Android user and want to experience it first, feel free to sign up for the beta using the steps below.</p>
 <center><img src="/images/20260809/android-beta-steps.png" style="zoom:50%"/></center>
 <p>  The participation steps from the image are organized in text below:</p>
-<h2 id="android-beta-participation-steps">Android Beta Participation Steps</h2>
+<h2 id="android-beta-participation-steps"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/#android-beta-participation-steps" aria-label="Copy link to this section: Android Beta Participation Steps" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">Android Beta Participation Steps</a>
+</h2>
 <ol>
 <li>Visit the Snap Closet product page: <a href="https://snap-closet.com/">https://snap-closet.com/</a></li>
 <li>Click the &quot;Android Beta Entry&quot; button next to the title, fill out the form to participate (the form contains specific rules and exclusive beta benefits information).</li>
@@ -110,6 +111,7 @@
 <p>Note: This beta is only available to Android users who can access and download apps from the Google Play Store.</p>
 </blockquote>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -170,6 +172,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

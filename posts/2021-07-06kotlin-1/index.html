@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -86,7 +86,8 @@
 <main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/">全部博文</a><h1>Android Basics: Kotlin(1)</h1>
 <div class="article-meta"><time datetime="2021-07-06">2021.07.06</time><a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a><a href="/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">安卓应用开发</a></div>
 <div class="tags"><a class="tag" href="/tags/android/">Android</a><a class="tag" href="/tags/kotlin/">Kotlin</a></div></header>
-<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="1-variables">1. Variables</h2>
+<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="1-variables"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#1-variables" aria-label="复制本节链接: 1. Variables" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">1. Variables</a>
+</h2>
 <h3 id="1-1-val-and-var">1-1 'val' and 'var'</h3>
 <ul>
 <li><code>var</code> is mutable, can be changed during execution</li>
@@ -190,7 +191,8 @@
 </span><span class="c1"></span>  <span class="n">print</span><span class="p">(</span><span class="s2">&#34;</span><span class="si">$firstChar</span><span class="s2"> </span><span class="si">$lastChar</span><span class="s2">&#34;</span><span class="p">)</span> <span class="c1">//H o
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="2-operators">2. Operators</h2>
+</div><h2 id="2-operators"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#2-operators" aria-label="复制本节链接: 2. Operators" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">2. Operators</a>
+</h2>
 <h3 id="2-1-arithmetic-operators">2-1 Arithmetic operators</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -222,7 +224,8 @@
 <ul>
 <li>--, ++ (before use or after use)</li>
 </ul>
-<h2 id="3-control-flows">3. Control flows</h2>
+<h2 id="3-control-flows"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#3-control-flows" aria-label="复制本节链接: 3. Control flows" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">3. Control flows</a>
+</h2>
 <h3 id="3-1-if-else-if-else-when">3-1 if-else if-else, when</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -391,7 +394,8 @@
 </span><span class="c1"></span>  <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="4-functions">4. Functions</h2>
+</div><h2 id="4-functions"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#4-functions" aria-label="复制本节链接: 4. Functions" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">4. Functions</a>
+</h2>
 <ul>
 <li>Difference between argument and parameter?</li>
 <li>Difference between method and function?
@@ -419,7 +423,8 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="5-nullable">5. Nullable</h2>
+</div><h2 id="5-nullable"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#5-nullable" aria-label="复制本节链接: 5. Nullable" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">5. Nullable</a>
+</h2>
 <h3 id="5-1-null-safe-operator">5-1 Null-safe operator</h3>
 <ul>
 <li><code>?</code></li>
@@ -493,7 +498,8 @@
 <pre tabindex="0" class="chroma"><code class="language-kotlin" data-lang="kotlin">  <span class="k">var</span> <span class="py">wifeAge</span> <span class="p">:</span> <span class="n">String</span><span class="p">?</span> <span class="p">=</span> <span class="n">user</span><span class="o">?.</span><span class="n">wife</span><span class="o">?.</span><span class="n">age</span> <span class="o">?:</span> <span class="s2">&#34;0&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="6-oop-in-kotlin">6. OOP in kotlin</h2>
+</div><h2 id="6-oop-in-kotlin"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#6-oop-in-kotlin" aria-label="复制本节链接: 6. OOP in kotlin" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">6. OOP in kotlin</a>
+</h2>
 <h3 id="6-1-class">6-1 Class</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1257,7 +1263,8 @@
   <span class="n">println</span><span class="p">(</span><span class="n">str2</span><span class="p">)</span><span class="c1">//print null
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="7-advanced">7. Advanced</h2>
+</div><h2 id="7-advanced"><a class="section-link" href="https://rikucherry1993.me/posts/2021-07-06kotlin-1/#7-advanced" aria-label="复制本节链接: 7. Advanced" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">7. Advanced</a>
+</h2>
 <h3 id="7-1-arraylists">7-1 ArrayLists</h3>
 <ul>
 <li>used to create dynamic arrays</li>
@@ -1581,6 +1588,7 @@
 </li>
 </ul>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -1696,6 +1704,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

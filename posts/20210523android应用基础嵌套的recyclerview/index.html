@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -86,9 +86,11 @@
 <main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/">全部博文</a><h1>Android应用基础 嵌套的RecyclerView</h1>
 <div class="article-meta"><time datetime="2021-05-23">2021.05.23</time><a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a><a href="/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">安卓应用开发</a></div>
 <div class="tags"><a class="tag" href="/tags/android/">Android</a><a class="tag" href="/tags/mobile-app/">mobile app</a><a class="tag" href="/tags/recyclerview/">RecyclerView</a><a class="tag" href="/tags/kotlin/">Kotlin</a></div></header>
-<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="简介">简介</h2>
+<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="简介"><a class="section-link" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/#%e7%ae%80%e4%bb%8b" aria-label="复制本节链接: 简介" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">简介</a>
+</h2>
 <p>  使用<a href="https://developer.android.com/reference/android/widget/ExpandableListView">ExpandableListView</a>可以实现每一项都自带展开/关闭功能的列表。但如果我们不需要展开/关闭的动态效果，只想让一般的<code>recyclerView</code>每一项都显示一些子项该如何实现呢？分享一种在<code>LinearLayout</code>中动态添加View的实现方法。</p>
-<h2 id="确定数据结构">确定数据结构</h2>
+<h2 id="确定数据结构"><a class="section-link" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/#%e7%a1%ae%e5%ae%9a%e6%95%b0%e6%8d%ae%e7%bb%93%e6%9e%84" aria-label="复制本节链接: 确定数据结构" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">确定数据结构</a>
+</h2>
 <p>   目标实现一个菜单画面，食物品类下嵌套具体餐点。效果如下：</p>
 <p>     <img src="/images/20210523/nested_recyclerview_mock.png" style="zoom:30%" /></p>
 <p>   品类标题和具体餐点分别需要一个DTO定义, <strong>前者包含后者</strong>：</p>
@@ -126,7 +128,8 @@
     <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="创建布局">创建布局</h2>
+</div><h2 id="创建布局"><a class="section-link" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/#%e5%88%9b%e5%bb%ba%e5%b8%83%e5%b1%80" aria-label="复制本节链接: 创建布局" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">创建布局</a>
+</h2>
 <p>   <code>RecyclerView</code>中的一个项目单元应该是“标题+若干菜品”，可以用一个固定的布局表示标题，而用一个空的<code>LinearLayout</code>表示该标题下菜品们的存放空间。之所以为空是由于菜品的数量未定。这里另外为每一道菜准备一个通用的布局，这样在读取数据集的时候就可以为菜品动态地添加相应数量的布局。</p>
 <ul>
 <li><code>RecyclerView</code>的项目单元（parent_item_layout.xml）<br>
@@ -270,7 +273,8 @@
     <span class="nt">&lt;/RelativeLayout&gt;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="用adapter绑定数据与视图">用adapter绑定数据与视图</h2>
+</div><h2 id="用adapter绑定数据与视图"><a class="section-link" href="https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/#%e7%94%a8adapter%e7%bb%91%e5%ae%9a%e6%95%b0%e6%8d%ae%e4%b8%8e%e8%a7%86%e5%9b%be" aria-label="复制本节链接: 用adapter绑定数据与视图" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">用adapter绑定数据与视图</a>
+</h2>
 <ul>
 <li>MainAdapter.kt</li>
 </ul>
@@ -352,6 +356,7 @@
 </div>
 </div><p>   最后，以通常的方式向RecyclerView的Adapter传入<code>ParentItemEntity</code>型的列表，再向列表传入一些数据就可以查看效果啦。</p>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -415,6 +420,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

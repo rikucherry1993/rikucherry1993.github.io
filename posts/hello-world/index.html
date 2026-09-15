@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -86,8 +86,10 @@
 <main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/">全部博文</a><h1>Hello World</h1>
 <div class="article-meta"><time datetime="2021-05-07">2021.05.07</time></div>
 <div class="tags"></div></header>
-<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="test-markdown">Test Markdown</h2>
-<h2 id="title1">title1</h2>
+<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="test-markdown"><a class="section-link" href="https://rikucherry1993.me/posts/hello-world/#test-markdown" aria-label="复制本节链接: Test Markdown" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">Test Markdown</a>
+</h2>
+<h2 id="title1"><a class="section-link" href="https://rikucherry1993.me/posts/hello-world/#title1" aria-label="复制本节链接: title1" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">title1</a>
+</h2>
 <ul>
 <li>item1</li>
 <li>itwm2
@@ -97,7 +99,8 @@
 </ul>
 </li>
 </ul>
-<h2 id="title2">title2</h2>
+<h2 id="title2"><a class="section-link" href="https://rikucherry1993.me/posts/hello-world/#title2" aria-label="复制本节链接: title2" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">title2</a>
+</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -116,13 +119,16 @@
   <span class="o">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2> Huge title </h2>
-<h2> big title </h2>
+</div><h2 id="section-73614ba838"><a class="section-link" href="https://rikucherry1993.me/posts/hello-world/#section-73614ba838" aria-label="复制本节链接:  Huge title " title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接"> Huge title </a>
+</h2>
+<h2 id="section-400b4982a0"><a class="section-link" href="https://rikucherry1993.me/posts/hello-world/#section-400b4982a0" aria-label="复制本节链接:  big title " title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接"> big title </a>
+</h2>
 <h3> medium title </h3>
 <h4> small title </h4>
 <hr>
 <p>tttttttttttttt</p>    
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -184,6 +190,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

@@ -31,7 +31,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -96,7 +96,8 @@
 <p>  好久不见！博客沉寂了许久，这次回来是想和大家分享一个好消息：<strong>Snap Closet 的安卓版内测现已开放！</strong> iOS 版即将上线 App Store，安卓版则先以内测的形式和大家见面。如果你是安卓用户，并且想抢先体验，欢迎按下面的方式报名参加内测。</p>
 <center><img src="/images/20260809/android-beta-steps.png" style="zoom:50%"/></center>
 <p>  图中的参与步骤用文字整理如下：</p>
-<h2 id="内测参与步骤">内测参与步骤</h2>
+<h2 id="内测参与步骤"><a class="section-link" href="https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/#%e5%86%85%e6%b5%8b%e5%8f%82%e4%b8%8e%e6%ad%a5%e9%aa%a4" aria-label="复制本节链接: 内测参与步骤" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">内测参与步骤</a>
+</h2>
 <ol>
 <li>访问 Snap Closet 产品中文页：<a href="https://snap-closet.com/zh">https://snap-closet.com/zh</a></li>
 <li>点击标题旁的「安卓内测入口」，填写问卷即可参与（问卷中有具体规则和内测专属福利说明哦）。</li>
@@ -107,6 +108,7 @@
 <p>备注：本次内测仅面向可登陆 Google Play 商店下载应用的安卓用户。</p>
 </blockquote>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -167,6 +169,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

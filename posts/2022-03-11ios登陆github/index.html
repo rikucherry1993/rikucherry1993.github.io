@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -90,7 +90,8 @@
 <center><img src="https://i.postimg.cc/0jcmNBcL/wukong.gif" style="zoom:70%"/></center>
 <p>   总之我想把实际动手做的内容总结出来，以便以后打算继续学iOS时回来参考。 <br>
    这一篇先简单总结一下如何用<code>Form认证</code>的方式，从应用发送POST请求登录网站，并利用session管理，从<code>WebView</code>显示登录后网站内容的方法。顺便提一下SwiftUI以及iOS中MVVM架构的简单实现方法。Demo应用以登录GitHub为例。</p>
-<h2 id="demo效果">Demo效果</h2>
+<h2 id="demo效果"><a class="section-link" href="https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/#demo%e6%95%88%e6%9e%9c" aria-label="复制本节链接: Demo效果" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">Demo效果</a>
+</h2>
 <table>
 <thead>
 <tr>
@@ -123,7 +124,8 @@
 </tr>
 </tbody>
 </table>
-<h2 id="实现">实现</h2>
+<h2 id="实现"><a class="section-link" href="https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/#%e5%ae%9e%e7%8e%b0" aria-label="复制本节链接: 实现" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">实现</a>
+</h2>
 <h3 id="项目架构">项目架构</h3>
 <p>  项目采用MVVM架构。 <br>
   View层包含两个画面，<code>LoginView</code>实现户名密码的输入框和登录按钮，<code>GithubView</code>实现登录成功后，用于浏览GitHub的WebView。 <br>
@@ -1049,6 +1051,7 @@
 </div><h3 id="完整代码">完整代码</h3>
 <p><a href="https://github.com/rikucherry1993/GithubBrowser">https://github.com/rikucherry1993/GithubBrowser</a></p>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -1134,6 +1137,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

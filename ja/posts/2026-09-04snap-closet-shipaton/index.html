@@ -31,7 +31,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -95,18 +95,22 @@
 </blockquote>
 <center><img src="/images/20260904/shipaton-cover.jpg" style="zoom:50%"/></center>
 <p>  前回はまだ Android ベータテスターを募集していましたが、今回は正式に発表できます：<strong>Snap Closet が全プラットフォームでリリースされました！</strong> iOS 版は App Store で公開され、Android 版もベータテストを終了して登場しました。4言語すべてが完全にローカライズされています。ついでに、ずっと先延ばしにしていたことも片付けました：RevenueCat が主催する Shipaton への参加登録です。この機会に、このプロジェクトについて簡単に話したいと思います。</p>
-<h2 id="消滅しかけたプロジェクト">消滅しかけたプロジェクト</h2>
+<h2 id="消滅しかけたプロジェクト"><a class="section-link" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/#%e6%b6%88%e6%bb%85%e3%81%97%e3%81%8b%e3%81%91%e3%81%9f%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88" aria-label="この節へのリンクをコピー: 消滅しかけたプロジェクト" title="この節へのリンクをコピー" data-section-link data-copied="リンクをコピーしました" data-copy-failed="コピーできませんでした。リンクのメニューからコピーしてください">消滅しかけたプロジェクト</a>
+</h2>
 <p>  Snap Closet は、もともと 2 年前に自分用に作ったツールです。服はたくさんあるのに、ついつい同じ数枚ばかり着てしまって、何か足りない気がしていました。当時の AI モデルは、服の写真を認識・分類する精度が驚くほど高かったので、「自動化されたクローゼット管理」は実現可能だと確信していました。でもプロジェクトはそこで止まってしまいました：技術的に壁に当たり、仕事が忙しくて時間がなかったのです。</p>
 <p>  今年、プロジェクトを復活させたのは、より強いモデルだけではなく、もっと良い問題に気づいたからです。毎日 LLM と向き合っていて、いつも考えていました：AI にどんな仕事を任せれば、普通の人にとって最も役に立つのか？人間の脳は数百件の個人的な物さえ覚えきれないのに、日常生活は無数の細々とした詳細を同時に処理することを要求します。服の管理は AI にとって簡単ですが、ほとんどの人はこのモデルをおしゃべり相手にしているだけです。この矛盾そのものが答えです：脳に入りきらないものを、そのまま AI に委ねるべきだ。</p>
 <p>  こうして方針が決まりました：最小限の努力で、本当に有用な個人データベースを構築すること。衣服はその最初のステップに過ぎません。</p>
-<h2 id="何ができるのか">何ができるのか</h2>
+<h2 id="何ができるのか"><a class="section-link" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/#%e4%bd%95%e3%81%8c%e3%81%a7%e3%81%8d%e3%82%8b%e3%81%ae%e3%81%8b" aria-label="この節へのリンクをコピー: 何ができるのか" title="この節へのリンクをコピー" data-section-link data-copied="リンクをコピーしました" data-copy-failed="コピーできませんでした。リンクのメニューからコピーしてください">何ができるのか</a>
+</h2>
 <p>  簡単に言うと、2 つのことができます。1 つ目は、自分がどんな服を持っているかを記憶してくれることです。服、バッグ、靴、アクセサリーを写真に撮ってまとめてアップロードすると、AI は各アイテムが何かを認識し、自動的にタグを付け、少しずつ完全な在庫リストを作成します。このリストがあれば、以前は記憶と直感に頼っていた多くのことが、根拠に基づいて判断できるようになります。例えば、買い物中に素敵なアイテムを見かけたら、写真を撮って、アプリで家に似たような服がないか確認し、どんな服と合わせられるかチェックできます。あるいは、定期的にクローゼット診断をして、どのシーズンと場面の服が十分か、どのタイプが足りないか、どれが着られていないので処分を検討できるか確認できます。</p>
 <p>  2 つ目はコーディネートです。前夜にフィッティングルームに着たい服を何枚かハンガーにかけておけば、朝クローゼットの前でぼんやりすることはありません。コーディネートしたセットはカレンダーに保存できます。ユーザーはモデルアトリエでアバターを 1 体引いて、自分の実際の服をこのミニ版の自分に着せて仕上がりを確認することもできます。アバターを使いたくない場合は、自分で着て写真を撮ってチェックインすることもできます。</p>
-<h2 id="どのように作られたか">どのように作られたか</h2>
+<h2 id="どのように作られたか"><a class="section-link" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/#%e3%81%a9%e3%81%ae%e3%82%88%e3%81%86%e3%81%ab%e4%bd%9c%e3%82%89%e3%82%8c%e3%81%9f%e3%81%8b" aria-label="この節へのリンクをコピー: どのように作られたか" title="この節へのリンクをコピー" data-section-link data-copied="リンクをコピーしました" data-copy-failed="コピーできませんでした。リンクのメニューからコピーしてください">どのように作られたか</a>
+</h2>
 <p>  2 年前の最初の試みは、非常にシンプルでした：クライアントは Flutter で書き、デザインとタスク管理は仕事で使い慣れていた Figma と Atlassian をコピーしました。1 人で半年ほど作業して、進捗は約 40% で止まり、その後が先ほど述べた停滞期でした。</p>
 <p>  今年改めて取り組み始めた時、元のワークフローを続けるのではなく、仕事のやり方そのものを変えてしまいました。もう LLM 抜きでは仕事にならないのだから、思い切って作業環境を LLM 中心に作り直しました。繰り返しやることは何でも、agent に任せられるツールに変えていきます。デザイン面では、自分で <a href="https://github.com/rikucherry1993/mobile-design-system-skill">mobile-design-system Skill</a> を書き、Figma に取って代わり、アプリの設計システム全体を書き直しました。新しいページとフローは <a href="https://github.com/rikucherry1993/app-flow-design">app-flow-design</a> に任せて、ゼロから設計案を出してもらいました。バックエンドも手作りはせず、アナリティクス、feature flag、強制更新、分かれた dev と prod 環境などは、すべて agent に CLI を操作させて段階的に構築させました。プロジェクトの背景知識はすべて数個の markdown ファイルに置かれているので、別の agent でもすぐに続けられます。</p>
 <p>  こうやって進めると、再開から App Store でのリリースまで 3 ヶ月かかりました。ウェブサイト、UI 刷新、インフラ再構築すべて含まれています。その後のバーチャル試着機能は、アイデアからリリースまで 1 週間で完成しました。</p>
-<h2 id="学んだこと">学んだこと</h2>
+<h2 id="学んだこと"><a class="section-link" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/#%e5%ad%a6%e3%82%93%e3%81%a0%e3%81%93%e3%81%a8" aria-label="この節へのリンクをコピー: 学んだこと" title="この節へのリンクをコピー" data-section-link data-copied="リンクをコピーしました" data-copy-failed="コピーできませんでした。リンクのメニューからコピーしてください">学んだこと</a>
+</h2>
 <ul>
 <li><strong>AI のそばでプログラミングするのではなく、AI と一緒にプログラミングする。</strong> 大規模チームのワークフローを捨て、軽量な markdown/html で書かれた人間と機械の協働プロトコルは重厚なツールよりずっと使いやすいです。</li>
 <li><strong>Show, don't tell。</strong> マルチモーダルモデルがあれば、一枚の画像は言葉よりもデザインの意図をはるかに良く伝えることができます。</li>
@@ -114,7 +118,8 @@
 <li><strong>価格設定は学問である。</strong> コストと消費心理のバランスを見つけるには、真摯な調査と市場検証が必要です。</li>
 <li><strong>チャットは答えではない。</strong> 良い UX を追求することは永遠のテーマですが、AI を良い UX にどう組み込むかは新しい問題です。</li>
 </ul>
-<h2 id="リンク">リンク</h2>
+<h2 id="リンク"><a class="section-link" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/#%e3%83%aa%e3%83%b3%e3%82%af" aria-label="この節へのリンクをコピー: リンク" title="この節へのリンクをコピー" data-section-link data-copied="リンクをコピーしました" data-copy-failed="コピーできませんでした。リンクのメニューからコピーしてください">リンク</a>
+</h2>
 <ul>
 <li>App Store：<a href="https://apps.apple.com/app/id6792299911">Snap Closet</a></li>
 <li>Google Play：<a href="https://play.google.com/store/apps/details?id=com.rikucherry.snapcloset">Snap Closet</a></li>
@@ -122,6 +127,7 @@
 </ul>
 <p>  あなたも自分のアプリを開発していたり、Snap Closet について何か考えがあれば、ぜひ話しかけてくださいね〜</p>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -186,6 +192,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>

@@ -27,7 +27,7 @@
 
 <script>(()=>{const c=document.documentElement,e=matchMedia('(prefers-color-scheme: dark)'),d=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!d(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}d(a)||(a=null);function b(){const b=a||(e.matches?'dark':'light');c.dataset.theme=b,c.style.colorScheme=b;const f=document.querySelector('.theme-toggle');f&&(f.textContent=f.dataset[b==='dark'?'light':'dark'],f.setAttribute('aria-label',f.dataset[b==='dark'?'useLight':'useDark']),f.setAttribute('aria-pressed',String(b==='dark'))),document.querySelectorAll('a[href]').forEach(c=>{const a=new URL(c.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;d(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',b),c.href=a.href)}),window.dispatchEvent(new Event('themechange'))}b(),e.addEventListener('change',()=>{a||b()}),document.addEventListener('DOMContentLoaded',()=>{b(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=c.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const d=new URL(location.href);d.searchParams.has('theme')&&(d.searchParams.set('theme',a),history.replaceState(null,'',d)),b()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.26f409bd319a35a0289af6d17fee262b655cf4e5744d2795663b8b23d0049c06.css">
+<link rel="stylesheet" href="/artist/style.min.60be8dbb41b428f9bed1f8ce0c7089b1191380bcdd8d39d1af7a4c26542b3969.css">
 
 
 </head>
@@ -86,14 +86,16 @@
 <main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/">全部博文</a><h1>Android Basics: Kotlin(2) - Coroutine</h1>
 <div class="article-meta"><time datetime="2021-12-05">2021.12.05</time><a href="/categories/%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0/">技术学习</a><a href="/categories/%E5%AE%89%E5%8D%93%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91/">安卓应用开发</a></div>
 <div class="tags"><a class="tag" href="/tags/android/">Android</a><a class="tag" href="/tags/kotlin/">Kotlin</a></div></header>
-<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="1-what-is-a-coroutine">1. What is a coroutine?</h2>
+<div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="复制代码" data-copied-label="已复制" data-copy-failed="请选择并复制代码"><h2 id="1-what-is-a-coroutine"><a class="section-link" href="https://rikucherry1993.me/posts/2021-12-05kotlin-2/#1-what-is-a-coroutine" aria-label="复制本节链接: 1. What is a coroutine?" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">1. What is a coroutine?</a>
+</h2>
 <h3 id="1-1-how-it-different-from-a-thread">1-1 How it different from a Thread?</h3>
 <ul>
 <li>Executed inside of a thread.</li>
 <li>Suspendable</li>
 <li>Can easily change their context (the thread they're running in)</li>
 </ul>
-<h2 id="2-launch-a-coroutine">2. Launch a coroutine</h2>
+<h2 id="2-launch-a-coroutine"><a class="section-link" href="https://rikucherry1993.me/posts/2021-12-05kotlin-2/#2-launch-a-coroutine" aria-label="复制本节链接: 2. Launch a coroutine" title="复制本节链接" data-section-link data-copied="链接已复制" data-copy-failed="复制失败，可右键复制链接">2. Launch a coroutine</a>
+</h2>
 <h3 id="2-1-global-scope">2-1 Global scope</h3>
 <ul>
 <li>Live as long as the application does. Will be destroyed after the execution is done.</li>
@@ -337,6 +339,7 @@
 </li>
 </ul>
 </article>
+<span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
@@ -410,6 +413,6 @@
 </div></footer>
 
 
-<script src="/artist/site.min.b4eb44923c9a0f8c31beb7243f738cf653741e23959f9ef4796dd3ee835d16e5.js" defer></script>
+<script src="/artist/site.min.29b33f20875f94aff312f9cf6da31304ca039821b2cc57ae46bb642e9b1d6ce0.js" defer></script>
 </body>
 </html>
