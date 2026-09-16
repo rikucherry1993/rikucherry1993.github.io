@@ -27,7 +27,6 @@
 - [《Java核心技术 卷1》读书笔记（1）](https://rikucherry1993.me/posts/2021-05-25%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/) (2021-05-25): 《Java核心技术 卷1》读书笔记：类的继承与多态、Object 类的 equals/hashCode/toString、泛型数组列表、自动装箱拆箱、枚举和反射的核心要点。
 - [Android应用基础 嵌套的RecyclerView](https://rikucherry1993.me/posts/20210523android%E5%BA%94%E7%94%A8%E5%9F%BA%E7%A1%80%E5%B5%8C%E5%A5%97%E7%9A%84recyclerview/) (2021-05-23): 用 RecyclerView 配合 LinearLayout 动态添加 View 实现嵌套列表，以品类标题加菜品项目为例讲解数据结构设计和 adapter 绑定。
 - [Android应用基础 简易后台计时器的安装方法](https://rikucherry1993.me/posts/20210520android-%E5%90%8E%E5%8F%B0%E8%AE%A1%E6%97%B6%E5%99%A8%E7%9A%84%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95/) (2021-05-20): 用 CountDownTimer、AlarmManager 和 BroadcastReceiver 实现安卓后台计时器，支持离开应用后继续计时并通过通知提醒，附完整实现思路。
-- [Hello World](https://rikucherry1993.me/posts/hello-world/) (2021-05-07): 用于测试和演示 Markdown 语法支持的示例页面，包含标题层级、列表、代码块、HTML 标签等多种内容格式的渲染效果。
 
 ## Translations
 

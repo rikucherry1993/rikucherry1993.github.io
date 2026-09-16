@@ -6812,41 +6812,5 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;p&gt;   作为安卓应用开发的入门级小白，比较容易对Activity、Fragment类的布局或者UI的部分感兴趣，接触系统广播、services、contentProvider等等和os、系统架构交互的部分比较少，需要勤加练习。另外遇到逻辑分支多比较绕的情况，可以先写最基本的case再慢慢考虑其他的，比较不容易遗漏。&lt;br&gt;
 &lt;a href=&#34;https://github.com/rikucherry1993/BackgroundCountDownTimer&#34;&gt;完整代码：https://github.com/rikucherry1993/BackgroundCountDownTimer&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.youtube.com/watch?v=xtElLuzjA0U&#34;&gt;参考教程：https://www.youtube.com/watch?v=xtElLuzjA0U&lt;/a&gt;&lt;/p&gt;
-</description></item><item><title>Hello World</title><link>https://rikucherry1993.me/posts/hello-world/</link><guid isPermaLink="true">https://rikucherry1993.me/posts/hello-world/</guid><pubDate>Fri, 07 May 2021 00:25:43 &#43;0900</pubDate><description>&lt;h1 id=&#34;test-markdown&#34;&gt;Test Markdown&lt;/h1&gt;
-&lt;h2 id=&#34;title1&#34;&gt;title1&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;item1&lt;/li&gt;
-&lt;li&gt;itwm2
-&lt;ul&gt;
-&lt;li&gt;subitem1&lt;/li&gt;
-&lt;li&gt;subitem2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;title2&#34;&gt;title2&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-      &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;someMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
-          &lt;span class=&#34;c1&#34;&gt;// do something
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h1&gt; Huge title &lt;/h1&gt;
-&lt;h2&gt; big title &lt;/h2&gt;
-&lt;h3&gt; medium title &lt;/h3&gt;
-&lt;h4&gt; small title &lt;/h4&gt;
-&lt;hr&gt;
-&lt;p&gt;tttttttttttttt&lt;/p&gt;    
 </description></item>
 </channel></rss>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><title>Rikucherry&#39;s blog</title><id>https://rikucherry1993.me/</id><updated>2026-09-14T23:55:02&#43;09:00</updated><link href="https://rikucherry1993.me/" rel="alternate"/>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN"><title>Rikucherry&#39;s blog</title><id>https://rikucherry1993.me/</id><updated>2026-09-16T18:02:48&#43;09:00</updated><link href="https://rikucherry1993.me/" rel="alternate"/>
 <link href="https://rikucherry1993.me/atom.xml" rel="self"/><author><name>rikucherry</name></author><rights>CC BY-NC-SA 4.0</rights>
 <entry><title>Snap Closet全面上架！终于报名了Shipaton</title><id>https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/</id><link href="https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/"/><published>2026-09-04T21:03:00&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;center&gt;&lt;img src=&#34;https://rikucherry1993.me/images/20260904/shipaton-cover.jpg&#34; style=&#34;zoom:50%&#34;/&gt;&lt;/center&gt;
 &lt;p&gt;  上一篇还在招安卓内测，这次可以正式宣布：&lt;strong&gt;Snap Closet 全面上架了！&lt;/strong&gt; iOS 版已经在 App Store 上线，安卓版也结束内测和大家见面，四种语言全部本地化完毕。顺便做了一件拖了很久的事：报名了 RevenueCat 主办的 Shipaton。趁这个机会，简单聊聊这个项目。&lt;/p&gt;
@@ -6811,41 +6811,5 @@ Code generation for immutable classes that has a simple syntax/API without compr
 &lt;p&gt;   作为安卓应用开发的入门级小白，比较容易对Activity、Fragment类的布局或者UI的部分感兴趣，接触系统广播、services、contentProvider等等和os、系统架构交互的部分比较少，需要勤加练习。另外遇到逻辑分支多比较绕的情况，可以先写最基本的case再慢慢考虑其他的，比较不容易遗漏。&lt;br&gt;
 &lt;a href=&#34;https://github.com/rikucherry1993/BackgroundCountDownTimer&#34;&gt;完整代码：https://github.com/rikucherry1993/BackgroundCountDownTimer&lt;/a&gt;&lt;br&gt;
 &lt;a href=&#34;https://www.youtube.com/watch?v=xtElLuzjA0U&#34;&gt;参考教程：https://www.youtube.com/watch?v=xtElLuzjA0U&lt;/a&gt;&lt;/p&gt;
-</content></entry><entry><title>Hello World</title><id>https://rikucherry1993.me/posts/hello-world/</id><link href="https://rikucherry1993.me/posts/hello-world/"/><published>2021-05-07T00:25:43&#43;09:00</published><updated>2026-09-06T16:48:54&#43;09:00</updated><content type="html">&lt;h1 id=&#34;test-markdown&#34;&gt;Test Markdown&lt;/h1&gt;
-&lt;h2 id=&#34;title1&#34;&gt;title1&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;item1&lt;/li&gt;
-&lt;li&gt;itwm2
-&lt;ul&gt;
-&lt;li&gt;subitem1&lt;/li&gt;
-&lt;li&gt;subitem2&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;title2&#34;&gt;title2&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;  &lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;kd&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[])&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
-      &lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;
-      &lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;someMethod&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(){&lt;/span&gt;
-          &lt;span class=&#34;c1&#34;&gt;// do something
-&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;&lt;h1&gt; Huge title &lt;/h1&gt;
-&lt;h2&gt; big title &lt;/h2&gt;
-&lt;h3&gt; medium title &lt;/h3&gt;
-&lt;h4&gt; small title &lt;/h4&gt;
-&lt;hr&gt;
-&lt;p&gt;tttttttttttttt&lt;/p&gt;    
 </content></entry>
 </feed>
