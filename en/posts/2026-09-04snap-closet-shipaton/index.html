@@ -2,9 +2,9 @@
 <html lang="en" data-language="en">
 <head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Snap Closet Is Fully Launched, and I Finally Entered Shipaton · Rikucherry&#39;s blog</title>
+<title>Snap Closet Is Live on iOS and Android! Reflections on Indie Development · Rikucherry&#39;s blog</title>
 
-<meta name="description" content="Snap Closet is now live on the App Store and Google Play. An overview of its closet and outfit features, the LLM-driven development process, and what entering Shipaton was like.">
+<meta name="description" content="How I took Snap Closet from a stalled project to an iOS and Android release with AI and a design-system Skill, while making everyday closet management simpler to use.">
 <link rel="canonical" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/">
 
 
@@ -13,8 +13,8 @@
     <link rel="alternate" hreflang="ja" href="https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/" />
     <link rel="alternate" hreflang="x-default" href="https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/" />
 
-<meta property="og:title" content="Snap Closet Is Fully Launched, and I Finally Entered Shipaton">
-<meta property="og:description" content="Snap Closet is now live on the App Store and Google Play. An overview of its closet and outfit features, the LLM-driven development process, and what entering Shipaton was like.">
+<meta property="og:title" content="Snap Closet Is Live on iOS and Android! Reflections on Indie Development">
+<meta property="og:description" content="How I took Snap Closet from a stalled project to an iOS and Android release with AI and a design-system Skill, while making everyday closet management simpler to use.">
 <meta property="og:url" content="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/">
 <meta property="og:site_name" content="Rikucherry&#39;s blog">
 <meta property="og:type" content="article">
@@ -23,7 +23,7 @@
 
 <meta property="article:published_time" content="2026-09-04T21:03:00&#43;09:00">
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"rikucherry"},"dateModified":"2026-09-06T16:48:54+09:00","datePublished":"2026-09-04T21:03:00+09:00","description":"Snap Closet is now live on the App Store and Google Play. An overview of its closet and outfit features, the LLM-driven development process, and what entering Shipaton was like.","headline":"Snap Closet Is Fully Launched, and I Finally Entered Shipaton","url":"https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"rikucherry"},"dateModified":"2026-09-19T00:00:00+09:00","datePublished":"2026-09-04T21:03:00+09:00","description":"How I took Snap Closet from a stalled project to an iOS and Android release with AI and a design-system Skill, while making everyday closet management simpler to use.","headline":"Snap Closet Is Live on iOS and Android! Reflections on Indie Development","url":"https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/"}</script>
 
 <link rel="icon" type="image/png" href="/icons/cherry.png">
 <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
@@ -87,52 +87,70 @@
 </header>
 
 
-<main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/en/">All writing</a><h1>Snap Closet Is Fully Launched, and I Finally Entered Shipaton</h1>
+<main id="main" class="article-main"><header class="article-heading"><a class="breadcrumb drawn-link" href="/en/">All writing</a><h1>Snap Closet Is Live on iOS and Android! Reflections on Indie Development</h1>
 <div class="article-meta"><time datetime="2026-09-04">2026.09.04</time><a href="/en/categories/indie-dev/">Indie Dev</a></div>
-<div class="tags"><a class="tag" href="/en/tags/snap-closet/">Snap Closet</a><a class="tag" href="/en/tags/shipaton/">Shipaton</a><a class="tag" href="/en/tags/revenuecat/">RevenueCat</a><a class="tag" href="/en/tags/ai/">AI</a></div></header>
+<div class="tags"><a class="tag" href="/en/tags/snap-closet/">Snap Closet</a><a class="tag" href="/en/tags/shipaton/">Shipaton</a><a class="tag" href="/en/tags/ai/">AI</a><a class="tag" href="/en/tags/design-system/">Design System</a><a class="tag" href="/en/tags/ux/">UX</a></div></header>
 <div class="article-layout"><div class="article-content"><article class="article-body prose" data-copy-label="Copy code" data-copied-label="Copied" data-copy-failed="Select and copy the code"><blockquote>
-<p><em>This post was machine-translated from the Chinese original.</em></p>
+<p><em>Translated from the Chinese original with AI assistance. Updated September 19, 2026.</em></p>
 </blockquote>
 <center><img src="/images/20260904/shipaton-cover.jpg" style="zoom:50%"/></center>
-<p>  In the last post, I was still recruiting Android beta testers. This time, I can officially announce: <strong>Snap Closet is now fully launched!</strong> The iOS version is live on the App Store, the Android version has completed its beta and is ready for everyone, and all four languages are fully localized. While I'm at it, I finally did something I've been putting off for a while: signing up for Shipaton hosted by RevenueCat. Let me take this opportunity to talk a bit about this project.</p>
-<h2 id="a-project-that-nearly-died"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#a-project-that-nearly-died" aria-label="Copy link to this section: A Project That Nearly Died" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">A Project That Nearly Died</a>
+<p>Snap Closet is finally live on both iOS and Android, and I've entered it in <a href="https://devpost.com/software/snap-closet">Shipaton</a>!</p>
+<p>When I started two years ago, it was still called Handy Closet. The reason for building it was simple: I had plenty of clothes but always felt like I was missing something. I kept wearing the same few pieces, then buying more of the same. I wanted to get that mess of clothes into something I could browse anywhere, and get useful outfit suggestions with a few taps. But coding everything the old-fashioned way was harder than I expected, and the project sat untouched for a year. With the improvements in AI models this year, I managed to tear it down and rebuild it in just two or three months. For me, that's quite an achievement.</p>
+<h2 id="indie-development-speed-comes-first"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#indie-development-speed-comes-first" aria-label="Copy link to this section: Indie development: speed comes first" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">Indie development: speed comes first</a>
 </h2>
-<p>  Snap Closet was originally a tool I made for myself two years ago. I had plenty of clothes, but I kept wearing the same few pieces over and over, always feeling like something was missing. Back then, AI models were already surprisingly good at recognizing and categorizing photos of clothes, so I was confident that &quot;automated closet management&quot; was feasible. Then the project just stalled there: I hit a wall technically, and work didn't leave me time.</p>
-<p>  What brought it back to life this year wasn't just stronger models, but a better question. Working with LLMs every day, I kept thinking: what work, handed to AI, benefits an ordinary person the most? Our brains can't even remember a few hundred personal items, yet daily life demands we juggle countless trivial details simultaneously. Managing clothes is a breeze for AI, yet most people use these models just for chatting. This misalignment itself is the answer: put the things your brain can't hold directly into AI's hands, unchanged.</p>
-<p>  The direction was set: with minimal effort, build a truly useful personal database. Clothes are just the first step.</p>
-<h2 id="what-it-can-do"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#what-it-can-do" aria-label="Copy link to this section: What It Can Do" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">What It Can Do</a>
+<p>At the start, I naturally copied the way we worked at my day job: Figma for design, Atlassian for task management. Even after work, I was creating tickets to guilt myself into doing more work. Six months of grinding away on my own, and I hadn't even reached 40%. I wasn't happy with how the app looked, and I couldn't find enough time outside work to fix it. So I shelved it.</p>
+<p>It wasn't until April or May this year, when models such as Fable and GPT-5.6 improved dramatically, that I thought about picking it up again. This time really did feel different. The output was so fast, and so good. With a little engineering discipline, and a habit of turning reusable workflows into scripts and Skills, AI could handle most of the day-to-day development with very little supervision.</p>
+<figure>
+  <img src="/images/20260904/snap-closet-figma-before.png" alt="Handy Closet screens and components designed manually in Figma before the redesign" loading="lazy" width="2312" height="1610" />
+  <figcaption>Before: screens, components, and interaction notes assembled manually in Figma.</figcaption>
+</figure>
+<figure>
+  <video src="/videos/20260904/snap-closet-design-system.mp4" poster="/images/20260904/snap-closet-design-system-poster.jpg" autoplay muted loop controls playsinline preload="metadata" width="1920" height="1178" aria-label="Scrolling through the HTML design system generated with the Skill">
+    <a href="/videos/20260904/snap-closet-design-system.mp4">Play the design-system walkthrough</a>
+  </video>
+  <figcaption>After: the HTML design system generated with the Skill, including design tokens and the component library (scrolling walkthrough).</figcaption>
+</figure>
+<p>For example, I wrote a <a href="https://github.com/rikucherry1993/mobile-design-system-skill">design-system Skill</a> to replace all that painstaking work in Figma. A few rounds of conversation later, the entire design system had been rewritten, and the parts already implemented had been updated to follow it. The layers I had defined for the project stayed intact, too: Design Tokens (named design values such as colors and spacing), Atomic Components (basic components such as buttons and input fields), and Composed Components (functional components assembled from those building blocks)<sup><a href="#reference-3">[3]</a><a href="#reference-4">[4]</a></sup>. Looking back at all the effort I'd spent learning how to add Properties and Variables in Figma, it was a sunk cost I should have been more willing to let go of.</p>
+<p>That effort wasn't entirely wasted, of course. The structure I'd built by hand must have saved me a lot of prompting about design principles and coding conventions. And the Skill's results depended on the combination of the model's capabilities, the quality of the prompts, and my own taste. That's something I'd like to write about another time. What I want to get at here is how much you have to unlearn when going from an individual contributor on a team to the product owner of your own codebase. A lot of polished intermediate work exists to explain things and get collaborators on the same page. When it's just you and an AI, the steps between providing input and reviewing output can be a black box. Communication between people and agents, and between agents themselves, needs a different interface. It should be extremely lightweight: a few Markdown or HTML documents, for example.</p>
+<p>With less time spent explaining and packaging work for other people, the satisfaction of getting something done feels less diluted. Running agents in parallel also cuts the wait between those moments. Those quick, steady little dopamine hits kept me going, and in less than three months the app was live on both platforms. I couldn't have imagined that pace before. Someone might ask, “What's the best vibe-coding workflow for an indie developer?” It's a worthwhile question, but we can't spend too long getting ready. The longer the run-up, the harder it is to keep going<sup><a href="#reference-1">[1]</a></sup>. More than asking how to do it well, I'd ask how to get it finished. Pick a good model, set aside all the talk of agents, harnesses, MCP, and Skills, and just use the chat box to move your plan forward faster than you could on your own. That first sense of accomplishment is a first step toward actually shipping.</p>
+<h2 id="user-experience-still-matters"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#user-experience-still-matters" aria-label="Copy link to this section: User experience still matters" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">User experience still matters</a>
 </h2>
-<p>  In simple terms, it does two things. First, it remembers what clothes I own. Take photos of clothes, bags, shoes, and accessories and batch-upload them—the AI recognizes what each item is, auto-tags them, and gradually builds a complete inventory. With this list, many things that used to rely on memory and intuition now have a foundation. For example, when you spot something tempting while shopping, snap a photo and let the app check if you already have something similar at home and what it could match with. Or let it do a closet checkup every so often to see what seasons and occasions have enough clothes, what types are missing, and what hasn't been worn and could be considered for disposal.</p>
-<p>  Second is outfit coordination. Hang the pieces you want to wear into the Fitting Room the night before, and you won't stare blankly at your closet in the morning; matched outfits can be saved to your calendar. Users can also draw an avatar in the Model Atelier and see how their real clothes look on this mini version of themselves; if you don't want to use an avatar, you can put the outfit on and check in with a photo.</p>
-<h2 id="how-it-was-made"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#how-it-was-made" aria-label="Copy link to this section: How It Was Made" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">How It Was Made</a>
-</h2>
-<p>  The first attempt two years ago was straightforward: Flutter for the client, design and task management copied from what I used at work—Figma and Atlassian. Working solo, I got to about 40% progress in half a year, then hit the stall I mentioned earlier.</p>
-<p>  When I picked it up again this year, I didn't continue the old workflow. Instead, I completely changed how I work. Since I can't live without LLMs anymore, I rebuilt my work process around them: anything I'd do repeatedly, I'd turn into a tool I could hand to an agent. For design, I wrote my own <a href="https://github.com/rikucherry1993/mobile-design-system-skill">mobile-design-system Skill</a>, which replaced Figma and completely rewrote the app's design system; new pages and flows went to <a href="https://github.com/rikucherry1993/app-flow-design">app-flow-design</a> to generate solutions from scratch. The backend wasn't hand-built either—analytics, feature flags, forced updates, separate dev and prod environments, all built step-by-step by having agents operate the CLI. All the project's background knowledge lives in a few markdown files, so another agent can pick it up immediately.</p>
-<p>  This way, from restarting to App Store launch took three months, including the website, UI refresh, and infrastructure rebuilds; the virtual try-on feature that came later took just one week from idea to launch.</p>
-<h2 id="what-i-learned"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#what-i-learned" aria-label="Copy link to this section: What I Learned" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">What I Learned</a>
-</h2>
+<p>“Snap” comes from “snapshot.” It suggests something quick and effortless, just a click of the camera. That's how I want Snap Closet to feel, so I've put a fair amount of thought into the details of the interface and the way its features work.</p>
 <ul>
-<li><strong>Program with AI, not beside it.</strong> Ditch the heavyweight team processes; lightweight markdown/html collaboration protocols beat heavy tools by a mile.</li>
-<li><strong>Show, don't tell.</strong> With multimodal models, a picture conveys design intent better than words.</li>
-<li><strong>Don't give up too early.</strong> Edge ML that was barely feasible two years ago has been quietly solved by platform progress.</li>
-<li><strong>Pricing is a discipline.</strong> Balancing cost against consumer psychology takes real research and market validation.</li>
-<li><strong>Chatting isn't the answer.</strong> Good UX is an eternal pursuit; how to embed AI into it is the new question.</li>
+<li>Take the shortest route. The button for adding clothes sits right in the middle of the bottom navigation, where it's easy to spot, with no menu to get through first. When someone decides to organize their closet, they can get straight to it. Instead of the clusters of categories and nested layouts you see in shopping apps, the home screen lays out the items directly. You can switch between two- and four-column grids to see more at once and quickly pick out a piece.</li>
+<li>Keep slow tasks out of the way. On-device models remove backgrounds and crop photos as they're taken. AI recognition and classification run in batches in the background, so you can keep uploading without waiting. Finished items appear on the home screen one by one.</li>
+<li>Offer choices instead of text boxes. Almost all the prompts sent to the models are assembled in the backend from simple actions: choosing an option, taking a photo, or uploading an image. Even in Ask your closet, where users ask AI for outfit ideas, I've given the chat box less space and added the option to use a reference image. The AI can work from the mood of that image, so users don't have to spend as much effort putting it into words.</li>
 </ul>
-<h2 id="links"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#links" aria-label="Copy link to this section: Links" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">Links</a>
+<p>I also want Snap Closet to feel friendly and lively. The colorful clothing icons, the card animations, the little transitions when you earn an achievement all give it some warmth. They're also a way of showing how much I care about it.</p>
+<p>I don't think chat is the final form of AI applications. Steve Krug's <a href="https://sensible.com/dont-make-me-think/"><em>Don't Make Me Think</em></a>[2] is still a UI and UX principle worth pursuing. Instead of asking users to compose a spell that will conjure up what they have in mind, I'd rather fit AI into things they already do and make those things much less work. That's what makes an application applicable. Organizing clothes, sorting them, figuring out outfits, deciding what to let go of: I already do these things myself. They're just tedious, inefficient, and easily pushed aside by things I have to do. I want to put my closet on my phone, with AI behind it making the whole routine easier and more enjoyable.</p>
+<h2 id="where-to-go-from-here"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#where-to-go-from-here" aria-label="Copy link to this section: Where to go from here" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">Where to go from here</a>
+</h2>
+<p>There are already plenty of digital closet apps, but each developer comes at the problem from a different angle. There are still many directions Snap Closet could take.</p>
+<p>The virtual try-on and credit system could lead to more playful or social features. Looking at the life of a garment, there might be ways to connect with other platforms when buying or selling clothes. Or I could keep focusing on organization, helping people make better use of what they already have. I'll keep exploring where this app goes next. That's an interesting part of the work, too.</p>
+<p>Whatever direction it takes, I want Snap Closet to stay simple and easy to use. The same goes for the other apps I plan to release: I want AI to help with the things people find difficult and make everyday life a little easier.</p>
+<h2 id="product-links"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#product-links" aria-label="Copy link to this section: Product links" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">Product links</a>
 </h2>
 <ul>
 <li>App Store: <a href="https://apps.apple.com/app/id6792299911">Snap Closet</a></li>
 <li>Google Play: <a href="https://play.google.com/store/apps/details?id=com.rikucherry.snapcloset">Snap Closet</a></li>
 <li>Website: <a href="https://snap-closet.com">snap-closet.com</a></li>
+<li>Shipaton entry: <a href="https://devpost.com/software/snap-closet">Snap Closet on Devpost</a></li>
 </ul>
-<p>  If you're also building your own app or have any thoughts about Snap Closet, feel free to chat~</p>
+<h2 id="references"><a class="section-link" href="https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/#references" aria-label="Copy link to this section: References" title="Copy link to this section" data-section-link data-copied="Link copied" data-copy-failed="Copy failed; use Copy Link from the context menu">References</a>
+</h2>
+<ol>
+<li><span id="reference-1"></span>Woolley, K., &amp; Fishbach, A. (2018). <em>It's about time: Earlier rewards increase intrinsic motivation.</em> Journal of Personality and Social Psychology, 114(6), 877–890. <a href="https://pubmed.ncbi.nlm.nih.gov/29771568/">Abstract</a> · <a href="https://doi.org/10.1037/pspa0000116">DOI</a>. The study examines reward timing and intrinsic motivation; the connection to indie development is my own reflection.</li>
+<li>Krug, S. (2014). <em>Don't Make Me Think, Revisited: A Common Sense Approach to Web (and Mobile) Usability</em> (3rd ed.). New Riders. <a href="https://sensible.com/dont-make-me-think/">The author's book page</a>.</li>
+<li><span id="reference-3"></span>Design Tokens Community Group. (2025). <em>Design Tokens Format Module 2025.10</em>. <a href="https://www.designtokens.org/TR/2025.10/format/">Specification</a>. The definition of a token follows this community specification, which is not a W3C Standard.</li>
+<li><span id="reference-4"></span>Frost, B. <em>Atomic Design</em>, Chapter 2: Atomic Design Methodology. <a href="https://atomicdesign.bradfrost.com/chapter-2/">Book chapter</a>. The book distinguishes Atoms, Molecules, Organisms, Templates, and Pages. The three layers described here are how I organized this project, rather than the book’s original hierarchy.</li>
+</ol>
 </article>
 <span class="section-copy-status" role="status" aria-live="polite"></span>
 
 
 
 <section class="post-share" aria-label="Share"><span class="share-label">Share</span><div class="share-links">
-<a class="icon-link" href="https://x.com/intent/tweet?url=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-09-04snap-closet-shipaton%2F&amp;text=Snap&#43;Closet&#43;Is&#43;Fully&#43;Launched%2C&#43;and&#43;I&#43;Finally&#43;Entered&#43;Shipaton" target="_blank" rel="noopener noreferrer" aria-label="Share on X" title="Share on X"><svg class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></a>
+<a class="icon-link" href="https://x.com/intent/tweet?url=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-09-04snap-closet-shipaton%2F&amp;text=Snap&#43;Closet&#43;Is&#43;Live&#43;on&#43;iOS&#43;and&#43;Android%21&#43;Reflections&#43;on&#43;Indie&#43;Development" target="_blank" rel="noopener noreferrer" aria-label="Share on X" title="Share on X"><svg class="ui-icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z"/></svg></a>
 <a class="icon-link" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Frikucherry1993.me%2Fen%2Fposts%2F2026-09-04snap-closet-shipaton%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn" title="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="ui-icon" aria-hidden="true" focusable="false"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a>
 </div></section>
 
@@ -142,11 +160,11 @@
 </div><aside class="article-margin">
 <nav class="toc" aria-label="On this page"><p>On this page</p><nav id="TableOfContents">
   <ol>
-    <li><a href="#a-project-that-nearly-died">A Project That Nearly Died</a></li>
-    <li><a href="#what-it-can-do">What It Can Do</a></li>
-    <li><a href="#how-it-was-made">How It Was Made</a></li>
-    <li><a href="#what-i-learned">What I Learned</a></li>
-    <li><a href="#links">Links</a></li>
+    <li><a href="#indie-development-speed-comes-first">Indie development: speed comes first</a></li>
+    <li><a href="#user-experience-still-matters">User experience still matters</a></li>
+    <li><a href="#where-to-go-from-here">Where to go from here</a></li>
+    <li><a href="#product-links">Product links</a></li>
+    <li><a href="#references">References</a></li>
   </ol>
 </nav></nav>
 

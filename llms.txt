@@ -12,7 +12,7 @@
 
 ## Posts
 
-- [Snap Closet全面上架！终于报名了Shipaton](https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/) (2026-09-04): Snap Closet 全面上架 App Store 和 Google Play：衣橱管理与穿搭功能介绍、以 LLM 驱动的开发流程，以及报名 Shipaton 的经过和收获。
+- [Snap Closet全面上线！聊聊独立开发感悟](https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/) (2026-09-04): Snap Closet 从搁置到 iOS、Android 双端上线：用 AI 和设计系统 Skill 缩短独立开发流程，让成果更快可见，同时打磨轻巧、易操作的衣橱管理体验。
 - [Snap Closet开通安卓版内测](https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/) (2026-08-09): 记录 Snap Closet 安卓版内测的开放过程与报名方式，并介绍应用的核心功能。内测招募已于 2026-08-20 结束。
 - [用Form认证方式从iOS应用登录和浏览GitHub](https://rikucherry1993.me/posts/2022-03-11ios%E7%99%BB%E9%99%86github/) (2022-03-11): 用 SwiftUI 和 MVVM 架构实现 iOS 应用的 Form 认证登录 GitHub：获取登录令牌、发送认证请求、管理 session，并在 WebView 中浏览认证后的页面。
 - [Android Basics: Kotlin(2) - Coroutine](https://rikucherry1993.me/posts/2021-12-05kotlin-2/) (2021-12-05): Kotlin 协程学习笔记（2）：协程与线程的区别、GlobalScope/runBlocking/lifecycleScope 的使用、suspend 函数、Job 取消以及 async/await 并发。
@@ -30,6 +30,6 @@
 
 ## Translations
 
-- Snap Closet全面上架！终于报名了Shipaton: [en](https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/) [ja](https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/)
+- Snap Closet全面上线！聊聊独立开发感悟: [en](https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/) [ja](https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/)
 - Snap Closet开通安卓版内测: [en](https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/) [ja](https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/)
 

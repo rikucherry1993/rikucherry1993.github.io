@@ -12,11 +12,11 @@
 
 ## Posts
 
-- [Snap Closet 全プラットフォームでリリース！ついに Shipaton に参加](https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/) (2026-09-04): Snap ClosetがApp StoreとGoogle Playで正式リリース。クローゼット管理とコーディネート機能、LLMを活用した開発の流れ、Shipatonに参加した経緯と学びを紹介。
+- [Snap Closet、iOS・Android 両方で公開！個人開発で感じたこと](https://rikucherry1993.me/ja/posts/2026-09-04snap-closet-shipaton/) (2026-09-04): 止まっていた Snap Closet の開発を再開し、iOS・Android の両方で公開。AI とデザインシステム Skill で開発を速めながら、服の整理が手軽になる使い心地を目指しました。
 - [Snap Closet Android版ベータテスト開始](https://rikucherry1993.me/ja/posts/2026-08-09snap-closet-android-beta/) (2026-08-09): Snap Closet Android版ベータテストの公開とその参加方法、アプリの主な機能を紹介。ベータテスターの募集は2026年8月20日に終了。
 
 ## Translations
 
-- Snap Closet 全プラットフォームでリリース！ついに Shipaton に参加: [zh-CN](https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/) [en](https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/)
+- Snap Closet、iOS・Android 両方で公開！個人開発で感じたこと: [zh-CN](https://rikucherry1993.me/posts/2026-09-04snap-closet%E5%85%A8%E9%9D%A2%E4%B8%8A%E6%9E%B6%E7%BB%88%E4%BA%8E%E6%8A%A5%E5%90%8D%E4%BA%86shipaton/) [en](https://rikucherry1993.me/en/posts/2026-09-04snap-closet-shipaton/)
 - Snap Closet Android版ベータテスト開始: [zh-CN](https://rikucherry1993.me/posts/2026-08-09snap-closet%E5%BC%80%E9%80%9A%E5%AE%89%E5%8D%93%E7%89%88%E5%86%85%E6%B5%8B/) [en](https://rikucherry1993.me/en/posts/2026-08-09snap-closet-android-beta/)
 
