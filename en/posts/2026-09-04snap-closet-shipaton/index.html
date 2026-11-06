@@ -31,7 +31,7 @@
 
 <script>(()=>{const b=document.documentElement,c=a=>['light','dark'].includes(a);let a=new URL(location.href).searchParams.get('theme');if(!c(a))try{a=localStorage.getItem('artist-theme')||localStorage.getItem('artist-preview-theme')}catch{}c(a)||(a='light');function d(){const d=a;b.dataset.theme=d,b.style.colorScheme=d;const e=document.querySelector('.theme-toggle');e&&(e.textContent=e.dataset[d==='dark'?'light':'dark'],e.setAttribute('aria-label',e.dataset[d==='dark'?'useLight':'useDark']),e.setAttribute('aria-pressed',String(d==='dark'))),document.querySelectorAll('a[href]').forEach(b=>{const a=new URL(b.href,location.href);if(a.origin!==location.origin||!a.pathname.endsWith('/'))return;c(new URL(location.href).searchParams.get('theme'))&&(a.searchParams.set('theme',d),b.href=a.href)}),window.dispatchEvent(new Event('themechange'))}d(),document.addEventListener('DOMContentLoaded',()=>{d(),document.querySelector('.theme-toggle')?.addEventListener('click',()=>{a=b.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('artist-theme',a)}catch{}const c=new URL(location.href);c.searchParams.has('theme')&&(c.searchParams.set('theme',a),history.replaceState(null,'',c)),d()})})})()</script>
 
-<link rel="stylesheet" href="/artist/style.min.698cc51a4d2ab8bb468b2e7a5db52e2139ec493cf19fffced7f18e908ff620a4.css">
+<link rel="stylesheet" href="/artist/style.min.a9395cb25aa0964338d8f93d988d3dfeabb82d4bed01c9a6d32a2e65e634fd42.css">
 
 
 </head>
@@ -61,6 +61,9 @@
 
 
 <a href="/en/products/">Products</a>
+
+
+<a href="/en/talks/">Talks</a>
 
 
 <a href="/en/links/">Friends</a>
