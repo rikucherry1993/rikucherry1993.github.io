@@ -2,14 +2,12 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI 创造价值，谁来捕获价值</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>AI 创造价值，谁来捕获价值（手机适配版）</title>
 <!--
-  Talk deck 2026-11-08 "AI 创造价值，谁来捕获价值" — same Paper & Ink system as
-  the previous deck (AI助手-Snap Closet 陆小P). 1280x720 slides, print to PDF.
-  Scroll view shows the speaker notes under each slide; Enter/P presents,
-  arrows flip, F fullscreen, N toggles notes in presentation mode, Esc exits.
-  Dashed boxes are placeholders for screenshots / videos still to come.
+  Portrait edition of the 2026-11-08 talk deck "AI 创造价值，谁来捕获价值".
+  420x860 pages, scaled to the screen, swipe/scroll vertically page by page.
+  Videos play while their page is on screen.
 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=block" rel="stylesheet">
 <style>
@@ -27,10 +25,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{background:#E3E6EB;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 body{font-family:var(--font-body);color:var(--primary)}
-@page{size:1280px 720px;margin:0}
-.slide{width:1280px;height:720px;background:var(--bg);position:relative;overflow:hidden;
-  page-break-after:always;break-after:page;margin:0 auto 24px}
-@media print{body{background:var(--bg)}.slide{margin:0}}
 
 /* type */
 .t-hero{font:700 50px/1.24 var(--font-body);letter-spacing:-.02em}
@@ -93,770 +87,469 @@ body{font-family:var(--font-body);color:var(--primary)}
 
 .pad{padding:64px 72px 0;position:relative;z-index:3}
 
-/* presentation mode: Enter/P to start, arrows to flip, F fullscreen, Esc exits */
-body.present{background:#0B0C0E;overflow:hidden}
-body.present .slide{display:none}
-body.present .slide.on{display:block;position:fixed;top:50%;left:50%;margin:0;
-  transform:translate(-50%,-50%) scale(var(--fit,1));transform-origin:center}
 
-/* --- additions for the 2026-11-08 deck --- */
-.notes{width:1280px;margin:-12px auto 36px;padding:16px 26px;background:#FFFDF6;
-  border:1px solid #EADFC2;border-radius:12px;font:400 15px/1.7 var(--font-body);color:#4A4436}
-.notes b{color:#2B2618}
-.notes .tag{display:inline-block;font:600 12px/1 var(--font-body);letter-spacing:.14em;color:#B8862F;margin-bottom:6px}
-@media print{.notes{display:none}}
-body.present .notes{display:none}
-body.present.show-notes .notes.on{display:block;position:fixed;left:0;right:0;bottom:0;margin:0;
-  width:auto;border-radius:0;max-height:34vh;overflow:auto;z-index:50}
-.ph--video{background:#1B1D21;color:#C9CDD3;border-color:#565B64}
-.ph--video .name{color:#E3E6EB}
-.ph svg{opacity:.7}
-.big{font:700 120px/1 var(--font-display)}
-.section-no{font:700 150px/1 var(--font-display);color:var(--muted-surface)}
-.bar-row{display:grid;grid-template-columns:300px 1fr 90px;gap:18px;align-items:center}
-.bar-track{height:30px;background:var(--surface-sunken);border-radius:999px;overflow:hidden}
+html,body{background:var(--bg);height:100%}
+body{overflow:hidden}
+.deck{height:100%;overflow-y:auto;scroll-snap-type:y mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.page{height:100vh;height:100svh;scroll-snap-align:start;scroll-snap-stop:always;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.canvas{width:420px;height:860px;flex:none;position:relative;transform:scale(var(--fit,1));transform-origin:center;background:var(--bg)}
+.pad{padding:58px 26px 0;position:relative;z-index:3}
+.site{position:absolute;top:22px;right:24px;font:500 11px/1 var(--font-body);letter-spacing:.08em;color:var(--subtle);z-index:8}
+.footer{position:absolute;left:24px;right:24px;bottom:20px;display:flex;justify-content:space-between;align-items:baseline;z-index:8}
+.footer .brand{font:600 18px/1 var(--font-display);color:var(--muted)}
+.footer .idx{font:400 11px/1 var(--font-body);color:var(--muted);letter-spacing:.2em}
+.t-hero{font:700 34px/1.3 var(--font-body);letter-spacing:-.02em}
+.t-title{font:700 25px/1.35 var(--font-body);letter-spacing:-.01em}
+.t-h4{font:700 18px/1.35 var(--font-body)}
+.t-body{font:400 16px/1.7 var(--font-body)}
+.t-body2{font:400 14px/1.65 var(--font-body);color:var(--muted)}
+.t-caption{font:400 12px/1.5 var(--font-body);color:var(--muted)}
+.t-overline{font:500 11px/1.4 var(--font-body);letter-spacing:.14em;text-transform:uppercase;color:var(--subtle)}
+.t-hand{font:600 22px/1.3 var(--font-display);color:var(--muted)}
+.t-hand--big{font:700 38px/1.1 var(--font-display)}
+.card{border-radius:16px}
+.well{border-radius:12px}
+.chip{padding:4px 12px;font-size:12px}
+.src{position:absolute;left:26px;right:26px;bottom:46px;font:400 10px/1.4 var(--font-body);color:var(--subtle);z-index:8}
+.phone{border-radius:16px;border:1px solid var(--border);object-fit:cover;object-position:top;display:block;background:#fff;box-shadow:0 8px 20px rgba(27,29,33,.12)}
+.shot{border-radius:12px;border:1px solid var(--border);object-fit:cover;display:block;background:#fff}
+.badge-new{display:inline-block;background:var(--rb-2);color:#fff;border-radius:999px;padding:2px 9px;font:700 11px/1.4 var(--font-body);vertical-align:middle}
+.big{font:700 96px/1 var(--font-display)}
+.section-no{font:700 110px/1 var(--font-display);color:var(--muted-surface)}
+.bar-row{display:grid;grid-template-columns:118px 1fr 50px;gap:10px;align-items:center}
+.bar-track{height:18px;background:var(--surface-sunken);border-radius:999px;overflow:hidden}
 .bar-fill{height:100%;border-radius:999px}
-.src{position:absolute;left:72px;bottom:58px;font:400 12.5px/1.4 var(--font-body);color:var(--subtle);z-index:8}
-.phone{border-radius:22px;border:1px solid var(--border);object-fit:cover;object-position:top;display:block;
-  background:#fff;box-shadow:0 10px 28px rgba(27,29,33,.12);position:relative;z-index:3}
-.badge-new{display:inline-block;background:var(--rb-2);color:#fff;border-radius:999px;
-  padding:3px 12px;font:700 13px/1.4 var(--font-body);letter-spacing:.08em;vertical-align:middle}
-.node{position:absolute;z-index:4;text-align:center}
-.quote{font:500 30px/1.6 var(--font-body);letter-spacing:-.01em}
-
-/* --- phone / narrow screens: reflow every slide into a scrolling page --- */
-@media (max-width: 900px){
-  html,body{background:var(--bg)}
-  #play{display:none}
-  .slide{width:auto;height:auto;margin:0;padding:30px 18px 64px;border-bottom:1px solid var(--border);overflow:hidden}
-  .slide .pad{padding:0}
-  .slide .site,.slide .sticker{display:none}
-  .slide .footer{left:18px;right:18px;bottom:20px}
-  .slide .footer .brand{font-size:18px}
-  .slide .src{position:static;margin-top:16px;font-size:11px}
-  .slide *{max-width:100%}
-  .slide svg{height:auto}
-  .slide [style*="display:flex"]:not(.rainbow):not(.m-row){flex-direction:column !important;align-items:stretch !important;gap:14px !important}
-  .slide [style*="grid-template-columns"]:not(.m-tbl):not(.m-keep):not(.bar-row){grid-template-columns:1fr !important}
-  .slide [style*="margin-top:"]{margin-top:14px !important}
-  .slide [style*="margin-left:"]{margin-left:0 !important}
-  .slide [style*="padding:0 120px"],.slide [style*="padding:0 96px"],.slide [style*="padding:0 72px"]{padding:0 !important}
-  .slide [style*="height:100%"]{height:auto !important;min-height:300px}
-  .slide [style*="transform:rotate"]{transform:none !important}
-  .slide img.phone,.slide img.shot,.slide video.phone{margin-left:auto !important;margin-right:auto !important}
-  .slide img.phone{width:200px !important;height:auto !important}
-  .slide img.shot{height:auto !important;width:100% !important}
-  .slide .frame-hand:has(video){width:230px !important;margin:0 auto}
-  .slide video.phone{height:auto !important}
-  .slide h1{font-size:34px !important}
-  .slide h2{font-size:28px !important;line-height:1.35 !important}
-  .t-hero{font-size:30px}.t-title{font-size:26px}.t-h4{font-size:19px !important}
-  .t-body{font-size:16px !important}.t-body2{font-size:15px !important}.t-caption{font-size:13px}
-  .t-hand{font-size:22px !important}.t-hand--big{font-size:36px !important}
-  .big{font-size:80px !important}.section-no{font-size:72px}.quote{font-size:20px !important}
-  .slide [style*="position:absolute"]{}
-  .bar-row{grid-template-columns:110px 1fr 54px !important;gap:10px}
-  .bar-row .num{font-size:24px !important}
-  .m-tbl{grid-template-columns:1.3fr 1fr 1fr .6fr !important}
-  .m-tbl .num{font-size:30px !important}.m-tbl .num span{font-size:14px !important}
-  .m-tbl .t-hand{font-size:20px !important}
-  .m-keep{grid-template-columns:repeat(3,1fr) !important;gap:8px !important}
-  .m-keep .card{height:auto !important;padding:10px !important}
-  .m-stairs,.m-loop,.m-tl{height:auto !important;width:auto !important}
-  .m-stairs>svg,.m-loop>svg,.m-tl>div:first-child{display:none}
-  .m-stairs>div,.m-loop>*,.m-tl>div{position:static !important;width:auto !important;margin:0 0 18px !important;transform:none !important}
-  .m-loop .node img{margin:0 auto;display:block}
-  .m-tl>div:last-child{display:block !important}
-  .m-fit{flex:none !important;margin:0 auto}
-  .m-row{gap:10px !important}
-  .m-phones{justify-content:center !important}
-  .m-phones>div{flex:1;min-width:0}
-  .slide .m-phones img.phone{width:100% !important;height:auto !important}
-  .slide .m-phones .t-caption{font-size:11px}
-  .slide span[style*="font:700 160px"]{display:none}
-  .slide .rainbow[style*="position:absolute"]{position:static !important;margin-top:24px}
-  .slide img.app-icon{width:110px !important;height:110px !important;margin-top:0 !important}
-  .slide img.shot[style*="height:390px"]{width:220px !important}
-  .slide [style*="height:120px"]{height:auto !important}
-  .slide [style*="height:120px"]>div{padding:10px 14px !important}
-  .card [style*="height:150px"]{height:auto !important}
-  .m-tbl .t-overline{font-size:11px;letter-spacing:0}
-  .m-tl>div{margin-bottom:12px !important}
-  .slide img[style*="width:900px"],.slide div[style*="width:900px"]{width:100% !important}
-  .card[style*="height:184px"]{height:auto !important}
-  .slide [style*="width:300px"],.slide [style*="width:250px"],.slide [style*="width:240px"],.slide [style*="width:230px"]{width:auto !important}
-}
+.num{font-family:var(--font-display);font-weight:700;line-height:1}
+.app-icon{border-radius:24%;border:1px solid var(--border);background:#fff;box-shadow:0 10px 26px rgba(27,29,33,.16)}
+.dots{position:fixed;right:6px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:5px;z-index:20}
+.dots i{width:4px;height:4px;border-radius:9px;background:var(--muted-surface);display:block}
+.dots i.on{background:var(--primary);height:12px}
+.hint{position:absolute;left:0;right:0;bottom:48px;text-align:center;font:500 12px/1 var(--font-body);color:var(--subtle);z-index:8;animation:bob 1.6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(5px)}}
+.col{display:flex;flex-direction:column}
+.row{display:flex}
 </style>
 </head>
 <body>
-<!-- ============ S1 ============ -->
-<div class="slide" id="s1">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:88px;left:60px;transform:rotate(-8deg)"><svg width="64" height="64" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div><div class="sticker" style="top:110px;right:150px;transform:rotate(8deg)"><svg width="48" height="48" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:64px;right:-74px;transform:rotate(10deg)"><svg width="280" height="280" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div><div class="sticker" style="bottom:130px;left:520px;transform:rotate(-6deg)"><svg width="92" height="92" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div style="display:flex;height:100%;align-items:center;padding:0 72px;gap:48px;position:relative;z-index:3">
-  <div style="flex:1.5">
-    <div class="t-overline">Snap Closet · Talk · 2026.11.08</div>
-    <h1 style="font:700 62px/1.2 var(--font-body);letter-spacing:-.02em;margin-top:18px">AI 创造价值，<br>谁来捕获价值</h1>
-    <p class="t-body" style="margin-top:40px">主讲人：陆小P</p>
+<div class="deck" id="deck">
+<section class="page" id="p1"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:70px;right:34px;transform:rotate(-8deg)"><svg width="46" height="46" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div><div class="sticker" style="bottom:60px;right:-46px;transform:rotate(10deg)"><svg width="150" height="150" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div><div class="sticker" style="bottom:150px;left:30px;transform:rotate(-6deg)"><svg width="54" height="54" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
+  <div class="t-overline">Snap Closet · Talk · 2026.11.08</div>
+  <h1 style="font:700 40px/1.3 var(--font-body);letter-spacing:-.02em;margin-top:16px">AI 创造价值，<br>谁来捕获价值</h1>
+  <p class="t-body" style="margin-top:22px">主讲人：陆小P</p>
+  <div style="display:flex;gap:18px;align-items:flex-end;margin-top:44px">
+    <img class="app-icon" src="asset/store-icon.png" style="width:128px;height:128px" alt="">
+    <img class="app-icon" src="asset/bonsai-icon.png" style="width:92px;height:92px" alt="">
   </div>
-  <div style="flex:1;display:flex;justify-content:center;align-items:center;gap:26px">
-    <img class="app-icon" src="asset/store-icon.png" style="width:220px;height:220px" alt="">
-    <img class="app-icon" src="asset/bonsai-icon.png" style="width:150px;height:150px;margin-top:120px" alt="">
-  </div>
+  <div class="rainbow" style="margin-top:22px"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;bottom:64px;z-index:3" class="rainbow"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">01 / 35</span></div>
+<div class="hint">向上滑动翻页 ↑</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">01 / 36</span></div>
+</div></section>
+<section class="page" id="p2"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">Intro</div><h2 class="t-title" style="margin-top:8px">关于我 &amp; 今天聊什么</h2><div class="card" style="margin-top:20px;padding:20px 22px">
+  <div style="display:flex;gap:16px;align-items:center">
+    <img src="asset/xhs头像.JPG" style="width:72px;height:72px;border-radius:999px;object-fit:cover;border:1px solid var(--border)" alt="">
+    <div><div class="t-h4">关于我</div><span class="chip" style="margin-top:6px">xhs@陆小P</span></div>
+  </div>
+  <div class="hairline" style="margin:14px 0"></div>
+  <ul class="t-body2" style="list-style:none;display:grid;gap:6px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-1);margin-top:10px"></span><span>软件工程师，主攻移动端</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-2);margin-top:10px"></span><span>Snap Closet 独立开发者</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>Bonsai 开发者之一</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-4);margin-top:10px"></span><span>业余：攀岩、吉他、小红书画画</span></li></ul>
 </div>
-<!-- ============ S2 ============ -->
-<div class="slide" id="s2">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:56px;right:160px;transform:rotate(-6deg)"><svg width="52" height="52" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:68px;right:-66px;transform:rotate(9deg)"><svg width="210" height="210" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div>
-  <div class="pad"><div class="t-overline">Intro</div><h2 class="t-title" style="margin-top:10px">关于我 &amp; 今天聊什么</h2><div style="display:flex;gap:32px;margin-top:34px">
-  <div class="card" style="flex:.9;padding:32px 38px">
-    <div style="display:flex;justify-content:space-between;align-items:flex-start">
-      <div class="t-h4">关于我</div>
-      <div style="display:flex;align-items:center;gap:14px;margin-top:-6px"><span class="chip">xhs@陆小P</span>
-      <img src="asset/xhs头像.JPG" style="width:96px;height:96px;border-radius:999px;object-fit:cover;border:1px solid var(--border)" alt=""></div>
-    </div>
-    <div class="hairline" style="margin:12px 0 18px"></div>
-    <ul class="t-body" style="list-style:none;display:grid;gap:12px">
-      <li>软件工程师，主攻移动端</li>
-      <li>Snap Closet 独立开发者</li>
-      <li>Bonsai 开发者之一</li>
-      <li>业余：攀岩、吉他、小红书画画</li>
-    </ul>
-  </div>
-  <div class="card" style="flex:1.1;padding:32px 38px">
-    <div class="t-h4">今天聊五件事</div>
-    <div class="hairline" style="margin:12px 0 16px"></div>
-    <div style="display:grid;gap:11px">
-      <div style="display:flex;gap:16px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-1);font-size:34px">1.</span><span class="t-body">Snap Closet 产品简介</span></div>
-      <div style="display:flex;gap:16px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-2);font-size:34px">2.</span><span class="t-body">我的时间都去哪了</span></div>
-      <div style="display:flex;gap:16px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-3);font-size:34px">3.</span><span class="t-body"><b>AI 创造的价值，谁捕获了</b></span></div>
-      <div style="display:flex;gap:16px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-4);font-size:34px">4.</span><span class="t-body">时间密度是怎么拉高的</span></div>
-      <div style="display:flex;gap:16px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-1);font-size:34px">5.</span><span class="t-body">个人做产品的五个想法</span></div>
-    </div>
-  </div>
+<div class="card" style="margin-top:14px;padding:18px 22px">
+  <div class="t-h4">今天聊五件事</div>
+  <div class="hairline" style="margin:12px 0"></div>
+  <div style="display:grid;gap:6px"><div style="display:flex;gap:12px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-1);font-size:26px">1.</span><span class="t-body">Snap Closet 产品简介</span></div><div style="display:flex;gap:12px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-2);font-size:26px">2.</span><span class="t-body">我的时间都去哪了</span></div><div style="display:flex;gap:12px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-3);font-size:26px">3.</span><span class="t-body"><b>AI 创造的价值，谁捕获了</b></span></div><div style="display:flex;gap:12px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-4);font-size:26px">4.</span><span class="t-body">时间密度是怎么拉高的</span></div><div style="display:flex;gap:12px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-1);font-size:26px">5.</span><span class="t-body">个人做产品的五个想法</span></div></div>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">02 / 35</span></div>
-</div>
-<!-- ============ S3 ============ -->
-<div class="slide" id="s3">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:220px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:70px;left:-60px;transform:rotate(-8deg)"><svg width="190" height="190" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div>
-  <div style="height:100%;display:flex;align-items:center;padding:0 96px;gap:56px;position:relative;z-index:3">
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">02 / 36</span></div>
+</div></section>
+<section class="page" id="p3"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:70px;right:-30px;transform:rotate(-8deg)"><svg width="120" height="120" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <div class="section-no">01</div>
-  <div><div class="t-overline">Part 1 · Product</div><h2 class="t-hero" style="margin-top:10px">Snap Closet 产品简介</h2>
-  <p class="t-body2" style="margin-top:14px"></p></div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">03 / 35</span></div>
-</div>
-<!-- ============ S4 ============ -->
-<div class="slide" id="s4">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:36px;right:230px;transform:rotate(7deg)"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M12 19h24l-2 22H14z" fill="#D9A441"/><path d="M19 19v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#B8862F" stroke-width="2.4"/></svg></div><div class="sticker" style="bottom:60px;right:-70px;transform:rotate(10deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div>
-  <div class="pad"><div class="t-overline">01 · Why</div><h2 class="t-title" style="margin-top:10px">拍照录入、AI 打标签——住在口袋里的电子衣橱</h2><div style="display:flex;gap:24px;margin-top:28px">
-  <div class="card" style="flex:1;padding:26px 28px"><div class="t-hand--big" style="color:var(--rb-1)">35,000</div>
-  <p class="t-body" style="margin-top:10px">成年人每天要做的决定数，「今天穿什么」往往是第一个</p></div>
-  <div class="card" style="flex:1;padding:26px 28px"><div class="t-hand--big" style="color:var(--rb-3)">80 / 20</div>
-  <p class="t-body" style="margin-top:10px">80% 的时间，只穿那 20% 的衣服</p></div>
-  <div class="card" style="flex:1;padding:26px 28px"><div class="t-hand--big" style="color:var(--rb-4)">3,680 h</div>
-  <p class="t-body" style="margin-top:10px">人一生花在「找东西」上的时间</p></div>
-</div>
-<p class="t-h4" style="margin-top:26px;text-align:center">一个「外接数据库」：记住我有什么、帮我搭配、给我购买建议</p>
-<div style="display:flex;gap:18px;justify-content:center;margin-top:22px">
-  <div class="well" style="padding:12px 28px;display:flex;align-items:baseline;gap:14px"><span class="t-hand--big" style="color:var(--rb-1);font-size:40px"><span style="font:500 18px var(--font-body);color:var(--muted);margin-right:4px">约</span>$200</span><span class="t-body2">8 月上线至今的收入</span></div>
-  <div class="well" style="padding:12px 28px;display:flex;align-items:baseline;gap:14px"><span class="t-hand--big" style="color:var(--rb-3);font-size:40px">360</span><span class="t-body2">注册用户</span></div>
-  <div style="align-self:center" class="t-caption">还没开始宣发</div>
-</div></div>
-  <div class="src">Pignatiello et al., 2020 · Pareto principle · esure survey, 2012</div>
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">04 / 35</span></div>
-</div>
-<!-- ============ S5 ============ -->
-<div class="slide" id="s5">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:240px;transform:rotate(7deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:-60px;right:400px;transform:rotate(-8deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div class="pad"><div class="t-overline">01 · 功能① Snap</div><h2 class="t-title" style="margin-top:10px">批量迅速导入：拍照 / 生活照 → 抠图 → AI 打标签</h2><div style="display:flex;gap:40px;margin-top:26px;align-items:flex-start;justify-content:center">
-  <div class="frame-hand" style="width:250px"><video class="phone" src="asset/closet-import-demo.mp4" style="width:100%;height:400px;object-fit:cover" autoplay muted loop playsinline></video></div>
-  <img class="phone" src="asset/store-02-import.png" style="width:186px;height:404px;margin-top:10px" alt="">
-  <div style="width:300px;margin-top:40px"><ul class="t-body" style="list-style:none;display:grid;gap:16px"><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-1);margin-top:13px"></span><span>拍照，或从生活照里一次拆出整套穿搭</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-2);margin-top:13px"></span><span>自动抠图，背景干净</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>AI 打上品类、颜色、季节、场合</span></li></ul></div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">05 / 35</span></div>
-</div>
-<!-- ============ S6 ============ -->
-<div class="slide" id="s6">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:60px;right:150px;transform:rotate(-6deg)"><svg width="50" height="50" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:70px;left:-66px;transform:rotate(9deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M18 6h2c0 2.2 1.8 4 4 4s4-1.8 4-4h2l2.5 13.5L38 40H10l5.5-20.5z" fill="#B65C3F"/><path d="M16 19.5h16" stroke="#8E4630" stroke-width="2"/></svg></div>
-  <div class="pad"><div class="t-overline">01 · 功能② Try-on</div><h2 class="t-title" style="margin-top:10px">试衣间：虚拟模特，现在还能真人试穿 <span class="badge-new">NEW</span></h2><div style="display:flex;gap:30px;margin-top:26px;align-items:flex-start;justify-content:center">
-  <img class="phone" src="asset/store-05-models.png" style="width:186px;height:404px;transform:rotate(-2deg)" alt="">
-  <div class="frame-hand" style="width:250px"><video class="phone" src="asset/tryon-last10.mp4" style="width:100%;height:400px;object-fit:cover" autoplay muted loop playsinline></video></div>
-  <img class="phone" src="asset/store-04-try-on.png" style="width:186px;height:404px;transform:rotate(2deg)" alt="">
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">06 / 35</span></div>
-</div>
-<!-- ============ S7 ============ -->
-<div class="slide" id="s7">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:40px;right:-90px;transform:rotate(-9deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M12.5 30a11.5 11.5 0 0 1 23 0z" fill="#D9A441"/><path d="M24 14.5V9M35 19l3.9-3.9M13 19l-3.9-3.9M40 26.5l5.3-1.4M8 26.5l-5.3-1.4" fill="none" stroke="#D9A441" stroke-width="2.6" stroke-linecap="round"/><path d="M7 30h34" fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round"/></svg></div>
-  <div class="pad"><div class="t-overline">01 · 功能③ Inspiration</div><h2 class="t-title" style="margin-top:10px">灵感页：刷到喜欢的穿搭，用自己的衣服搭出同款 <span class="badge-new">3.0</span></h2><div style="display:flex;gap:30px;margin-top:26px;align-items:flex-start;justify-content:center">
-  <img class="phone" src="asset/store-00-inspiration.png" style="width:200px;height:434px;transform:rotate(-2deg);margin-right:30px" alt="">
-  <div style="display:grid;gap:14px;width:300px;margin-top:20px">
-    <div class="card" style="padding:14px 16px"><div class="t-h4" style="font-size:18px">灵感剪贴板</div><p class="t-caption">相册、链接、其他 App 分享进来</p></div>
-    <div class="card" style="padding:14px 16px"><div class="t-h4" style="font-size:18px">问问衣橱</div><p class="t-caption">用一句话或一张图找搭配</p></div>
-    <div class="card" style="padding:14px 16px"><div class="t-h4" style="font-size:18px">衣橱诊断</div><p class="t-caption">缺什么、哪些可以断舍离</p></div>
+  <div class="t-overline" style="margin-top:18px">Part 1 · Product</div><h2 class="t-hero" style="margin-top:8px">Snap Closet<br>产品简介</h2>
   </div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">07 / 35</span></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">03 / 36</span></div>
+</div></section>
+<section class="page" id="p4"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">01 · Why</div><h2 class="t-title" style="margin-top:8px">拍照录入、AI 打标签<br>住在口袋里的电子衣橱</h2><div style="display:grid;gap:10px;margin-top:20px">
+  <div class="card" style="padding:14px 18px;display:flex;gap:14px;align-items:center"><div class="t-hand--big" style="color:var(--rb-1);font-size:30px;min-width:116px">35,000</div><p class="t-body2" style="color:var(--primary)">成年人每天要做的决定数，「今天穿什么」往往是第一个</p></div>
+  <div class="card" style="padding:14px 18px;display:flex;gap:14px;align-items:center"><div class="t-hand--big" style="color:var(--rb-3);font-size:30px;min-width:116px">80 / 20</div><p class="t-body2" style="color:var(--primary)">80% 的时间，只穿那 20% 的衣服</p></div>
+  <div class="card" style="padding:14px 18px;display:flex;gap:14px;align-items:center"><div class="t-hand--big" style="color:var(--rb-4);font-size:30px;min-width:116px">3,680 h</div><p class="t-body2" style="color:var(--primary)">人一生花在「找东西」上的时间</p></div>
 </div>
-<!-- ============ S8 ============ -->
-<div class="slide" id="s8">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:220px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:70px;left:-60px;transform:rotate(-8deg)"><svg width="190" height="190" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div>
-  <div class="pad"><div class="t-overline">01 · 功能④ Daily</div><h2 class="t-title" style="margin-top:10px">日常：穿搭日历打卡，和上周的自己不撞衫</h2><div style="display:flex;gap:22px;margin-top:28px;justify-content:center;align-items:flex-start">
-  <img class="shot" src="asset/我的真实使用截图（home）.PNG" style="width:180px;height:390px;transform:rotate(-2deg);object-position:top" alt="">
-  <img class="shot" src="asset/我的真实使用截图（穿搭日历）.PNG" style="width:180px;height:390px;margin-top:20px;object-position:top" alt="">
-  <img class="shot" src="asset/我的真实使用截图（穿搭分享）.PNG" style="width:180px;height:390px;transform:rotate(2deg);object-position:top" alt="">
-  <div style="width:300px;margin-left:20px;margin-top:40px">
-    <ul class="t-body" style="list-style:none;display:grid;gap:16px"><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-1);margin-top:13px"></span><span>睡前把明天的衣服选好</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-2);margin-top:13px"></span><span>打卡后会有意识地避免撞衫</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>衣橱诊断告诉你缺什么</span></li></ul>
-    <p class="t-hand" style="margin-top:28px">my real closet &#8599;</p>
-  </div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">08 / 35</span></div>
+<p class="t-h4" style="margin-top:22px;line-height:1.55">一个「外接数据库」：<br>记住我有什么、帮我搭配、给我购买建议</p>
+<div style="display:flex;gap:10px;margin-top:20px">
+  <div class="well" style="flex:1;padding:12px 16px"><div><span class="t-caption">约</span> <span class="t-hand--big" style="color:var(--rb-1);font-size:32px">$200</span></div><p class="t-caption">8 月上线至今的收入</p></div>
+  <div class="well" style="flex:1;padding:12px 16px"><div class="t-hand--big" style="color:var(--rb-3);font-size:32px">360</div><p class="t-caption">注册用户</p></div>
 </div>
-<!-- ============ S9 ============ -->
-<div class="slide" id="s9">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:260px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:72px;left:-62px;transform:rotate(7deg)"><svg width="230" height="230" viewBox="0 0 48 48"><path d="M9 34c0-7 2.5-13 5-13 4 0 8 7 15 9 5.5 1.6 10 2.6 10 5v3H9z" fill="#B65C3F"/><path d="M9 35.5h30v1.5a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 9 37z" fill="#2F3E5C"/></svg></div>
-  <div style="height:100%;display:flex;align-items:center;padding:0 96px;gap:56px;position:relative;z-index:3">
+<p class="t-caption" style="margin-top:8px">还没开始宣发</p></div><div class="src">Pignatiello et al., 2020 · Pareto principle · esure survey, 2012</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">04 / 36</span></div>
+</div></section>
+<section class="page" id="p5"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">01 · 功能① Snap</div><h2 class="t-title" style="margin-top:8px">批量迅速导入</h2><p class="t-body2" style="margin-top:4px">拍照 / 生活照 → 抠图 → AI 打标签</p>
+<div style="display:flex;justify-content:center;margin-top:18px"><video class="phone" src="asset/closet-import-demo.mp4" style="width:230px;height:500px;" muted loop playsinline preload="metadata"></video></div>
+<div style="margin-top:20px"><ul class="t-body2" style="list-style:none;display:grid;gap:4px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-1);margin-top:10px"></span><span>拍照，或从生活照里一次拆出整套穿搭</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-2);margin-top:10px"></span><span>自动抠图，背景干净</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>AI 打上品类、颜色、季节、场合</span></li></ul></div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">05 / 36</span></div>
+</div></section>
+<section class="page" id="p6"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">01 · 功能② Try-on</div><h2 class="t-title" style="margin-top:8px">试衣间：虚拟模特，<br>现在还能真人试穿 <span class="badge-new">NEW</span></h2><div style="display:flex;justify-content:center;margin-top:22px"><video class="phone" src="asset/tryon-last10.mp4" style="width:228px;height:466px;" muted loop playsinline preload="metadata"></video></div>
+<div style="display:flex;gap:14px;justify-content:center;margin-top:16px">
+  <img class="shot" src="asset/store-05-models.png" style="width:110px;height:110px;object-position:top" alt="">
+  <img class="shot" src="asset/store-04-try-on.png" style="width:110px;height:110px;object-position:top" alt="">
+</div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">06 / 36</span></div>
+</div></section>
+<section class="page" id="p7"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">01 · 功能③ Inspiration</div><h2 class="t-title" style="margin-top:8px">灵感页：刷到喜欢的穿搭，<br>用自己的衣服搭出同款 <span class="badge-new">3.0</span></h2><div style="display:flex;justify-content:center;margin-top:18px"><img class="phone" src="asset/store-00-inspiration.png" style="width:230px;height:500px;" alt=""></div>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:16px">
+  <div class="card" style="padding:10px 14px"><div class="t-h4" style="font-size:15px">灵感剪贴板</div><p class="t-caption">相册、链接、分享进来</p></div><div class="card" style="padding:10px 14px"><div class="t-h4" style="font-size:15px">问问衣橱</div><p class="t-caption">一句话或一张图</p></div><div class="card" style="padding:10px 14px"><div class="t-h4" style="font-size:15px">衣橱诊断</div><p class="t-caption">缺什么、断舍离</p></div>
+</div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">07 / 36</span></div>
+</div></section>
+<section class="page" id="p8"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">01 · 功能④ Daily</div><h2 class="t-title" style="margin-top:8px">日常：穿搭日历打卡，<br>和上周的自己不撞衫</h2><div style="display:flex;gap:8px;justify-content:center;margin-top:20px">
+  <img class="shot" src="asset/我的真实使用截图（home）.PNG" style="width:118px;height:256px;object-position:top" alt="">
+  <img class="shot" src="asset/我的真实使用截图（穿搭日历）.PNG" style="width:118px;height:256px;object-position:top" alt="">
+  <img class="shot" src="asset/我的真实使用截图（穿搭分享）.PNG" style="width:118px;height:256px;object-position:top" alt="">
+</div>
+<p class="t-hand" style="margin-top:10px;text-align:right;font-size:20px">my real closet &#8599;</p>
+<div style="margin-top:16px"><ul class="t-body" style="list-style:none;display:grid;gap:6px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-1);margin-top:10px"></span><span>睡前把明天的衣服选好</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-2);margin-top:10px"></span><span>打卡后会有意识地避免撞衫</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>衣橱诊断告诉你缺什么</span></li></ul></div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">08 / 36</span></div>
+</div></section>
+<section class="page" id="p9"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:70px;left:-36px;transform:rotate(7deg)"><svg width="130" height="130" viewBox="0 0 48 48"><path d="M9 34c0-7 2.5-13 5-13 4 0 8 7 15 9 5.5 1.6 10 2.6 10 5v3H9z" fill="#B65C3F"/><path d="M9 35.5h30v1.5a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 9 37z" fill="#2F3E5C"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <div class="section-no">02</div>
-  <div><div class="t-overline">Part 2 · Time</div><h2 class="t-hero" style="margin-top:10px">我的时间都去哪了</h2>
-  <p class="t-body2" style="margin-top:14px">做一个 App，远不止写一个 App</p></div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">09 / 35</span></div>
-</div>
-<!-- ============ S10 ============ -->
-<div class="slide" id="s10">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:260px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:72px;left:-62px;transform:rotate(7deg)"><svg width="230" height="230" viewBox="0 0 48 48"><path d="M9 34c0-7 2.5-13 5-13 4 0 8 7 15 9 5.5 1.6 10 2.6 10 5v3H9z" fill="#B65C3F"/><path d="M9 35.5h30v1.5a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 9 37z" fill="#2F3E5C"/></svg></div>
-  <div class="pad"><div class="t-overline">02 · More than code</div><h2 class="t-title" style="margin-top:10px">做一个 App ≫ 写一个 App</h2><div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px">
-  <div class="card" style="padding:16px 20px;display:flex;gap:18px;align-items:center;height:184px"><div style="width:240px;height:150px;flex:none;display:flex;align-items:center;justify-content:center"><img class="shot" src="asset/landing-zh.jpg" style="width:240px;height:150px;object-fit:cover;object-position:left top" alt=""></div><div><div class="t-h4" style="font-size:21px">Landing Page</div><p class="t-body2" style="font-size:16px;margin-top:4px">4 种语言，自己做、自己部署</p></div></div>
-  <div class="card" style="padding:16px 20px;display:flex;gap:18px;align-items:center;height:184px"><div style="width:240px;height:150px;flex:none;display:flex;align-items:center;justify-content:center"><div style="display:grid;gap:12px"><div style="display:flex;align-items:center;gap:10px;background:#1B1D21;color:#fff;border-radius:12px;padding:10px 16px;font:600 17px/1 var(--font-body)"><img src="asset/apple-white.svg" style="width:22px;height:22px" alt="">App Store</div><div style="display:flex;align-items:center;gap:10px;background:#1B1D21;color:#fff;border-radius:12px;padding:10px 16px;font:600 17px/1 var(--font-body)"><img src="asset/google-play.svg" style="width:22px;height:22px" alt="">Google Play</div></div></div><div><div class="t-h4" style="font-size:21px">iOS + Android 双端上架</div><p class="t-body2" style="font-size:16px;margin-top:4px">两边的审核、截图、文案</p></div></div>
-  <div class="card" style="padding:16px 20px;display:flex;gap:18px;align-items:center;height:184px"><div style="width:240px;height:150px;flex:none;display:flex;align-items:center;justify-content:center"><div class="m-row" style="display:flex;gap:12px"><div style="width:62px;height:62px;border-radius:16px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="asset/claude.png" style="width:40px;height:40px" alt=""></div><div style="width:62px;height:62px;border-radius:16px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="asset/openai.svg" style="width:38px;height:38px" alt=""></div><div style="width:62px;height:62px;border-radius:16px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="asset/muse.png" style="width:62px;height:62px;object-fit:cover" alt=""></div></div></div><div><div class="t-h4" style="font-size:21px">MCP 插件</div><p class="t-body2" style="font-size:16px;margin-top:4px">支持 Claude、ChatGPT 和 Muse</p></div></div>
-  <div class="card" style="padding:16px 28px;display:flex;align-items:center;height:184px"><div><div class="t-h4" style="font-size:21px">参加活动</div><p class="t-body2" style="font-size:16px;margin-top:4px">做 PPT、准备周边、参赛</p></div></div>
+  <div class="t-overline" style="margin-top:18px">Part 2 · Time</div><h2 class="t-hero" style="margin-top:8px">我的时间<br>都去哪了</h2>
+  <p class="t-body2" style="margin-top:12px">做一个 App，远不止写一个 App</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">09 / 36</span></div>
+</div></section>
+<section class="page" id="p10"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">02 · More than code</div><h2 class="t-title" style="margin-top:8px">做一个 App ≫ 写一个 App</h2><div style="display:grid;gap:10px;margin-top:20px">
+  <div class="card" style="padding:12px 14px;display:flex;gap:14px;align-items:center"><div style='width:150px;flex:none;display:flex;justify-content:center'><img class="shot" src="asset/landing-zh.jpg" style="width:150px;height:94px;object-position:left top" alt=""></div><div><div class="t-h4" style="font-size:16px">Landing Page</div><p class="t-caption" style="margin-top:2px">4 种语言，自己做、自己部署</p></div></div>
+  <div class="card" style="padding:12px 14px;display:flex;gap:14px;align-items:center"><div style='width:150px;flex:none;display:flex;justify-content:center'><div style="display:grid;gap:6px"><div style="display:flex;align-items:center;gap:8px;background:#1B1D21;color:#fff;border-radius:10px;padding:7px 12px;font:600 13px/1 var(--font-body)"><img src="asset/apple-white.svg" style="width:16px;height:16px" alt="">App Store</div><div style="display:flex;align-items:center;gap:8px;background:#1B1D21;color:#fff;border-radius:10px;padding:7px 12px;font:600 13px/1 var(--font-body)"><img src="asset/google-play.svg" style="width:16px;height:16px" alt="">Google Play</div></div></div><div><div class="t-h4" style="font-size:16px">iOS + Android<br>双端上架</div><p class="t-caption" style="margin-top:2px">两边的审核、截图、文案</p></div></div>
+  <div class="card" style="padding:12px 14px;display:flex;gap:14px;align-items:center"><div style='width:150px;flex:none;display:flex;justify-content:center'><div style="display:flex;gap:8px"><div style="width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="asset/claude.png" style="width:28px;height:28px" alt=""></div><div style="width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="asset/openai.svg" style="width:26px;height:26px" alt=""></div><div style="width:44px;height:44px;border-radius:12px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden"><img src="asset/muse.png" style="width:44px;height:44px;object-fit:cover" alt=""></div></div></div><div><div class="t-h4" style="font-size:16px">MCP 插件</div><p class="t-caption" style="margin-top:2px">支持 Claude、ChatGPT 和 Muse</p></div></div>
+  <div class="card" style="padding:12px 14px;display:flex;gap:14px;align-items:center"><div><div class="t-h4" style="font-size:16px">参加活动</div><p class="t-caption" style="margin-top:2px">做 PPT、准备周边、参赛</p></div></div>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">10 / 35</span></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">10 / 36</span></div>
+</div></section>
+<section class="page" id="p11"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">02 · My week</div><h2 class="t-title" style="margin-top:8px">我的一周</h2><div style="display:flex;flex-direction:column;height:400px;border-radius:16px;overflow:hidden;gap:3px;margin-top:20px">
+  <div style="flex:34;background:var(--primary);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 16px"><b style="font:700 16px/1.3 var(--font-body)">本职工作</b><span style="font:400 12px/1.4 var(--font-body);opacity:.9">安卓工程师</span></div>
+  <div style="flex:18;background:var(--rb-4);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 16px"><b style="font:700 16px/1.3 var(--font-body)">副业</b><span style="font:400 12px/1.4 var(--font-body);opacity:.9">AI 驱动全栈开发</span></div>
+  <div style="flex:14;background:var(--rb-1);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 16px"><b style="font:700 16px/1.3 var(--font-body)">Snap Closet</b><span style="font:400 12px/1.4 var(--font-body);opacity:.9">独立开发</span></div>
+  <div style="flex:14;background:var(--rb-3);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 16px"><b style="font:700 16px/1.3 var(--font-body)">Bonsai</b><span style="font:400 12px/1.4 var(--font-body);opacity:.9">独立开发</span></div>
+  <div style="flex:14;background:var(--rb-2);color:var(--primary);display:flex;flex-direction:column;justify-content:center;padding:0 16px"><b style="font:700 16px/1.3 var(--font-body)">兴趣爱好</b><span style="font:400 12px/1.4 var(--font-body);opacity:.9">攀岩、吉他等</span></div>
 </div>
-<!-- ============ S11 ============ -->
-<div class="slide" id="s11">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:36px;right:230px;transform:rotate(7deg)"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M12 19h24l-2 22H14z" fill="#D9A441"/><path d="M19 19v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#B8862F" stroke-width="2.4"/></svg></div><div class="sticker" style="bottom:60px;right:-70px;transform:rotate(10deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div>
-  <div class="pad"><div class="t-overline">02 · My week</div><h2 class="t-title" style="margin-top:10px">我的一周</h2><div style="margin-top:30px">
-  <div style="display:flex;height:120px;border-radius:18px;overflow:hidden;gap:4px">
-    <div style="flex:34;background:var(--primary);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 14px;min-width:0"><b style="font:700 18px/1.3 var(--font-body)">本职工作</b><span style="font:500 14px/1.35 var(--font-body);opacity:.9;margin-top:4px">安卓工程师</span></div>
-    <div style="flex:18;background:var(--rb-4);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 14px;min-width:0"><b style="font:700 18px/1.3 var(--font-body)">副业</b><span style="font:500 14px/1.35 var(--font-body);opacity:.9;margin-top:4px">AI 驱动全栈开发</span></div>
-    <div style="flex:14;background:var(--rb-1);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 14px;min-width:0"><b style="font:700 18px/1.3 var(--font-body)">Snap Closet</b><span style="font:500 14px/1.35 var(--font-body);opacity:.9;margin-top:4px">独立开发</span></div>
-    <div style="flex:14;background:var(--rb-3);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:0 14px;min-width:0"><b style="font:700 18px/1.3 var(--font-body)">Bonsai</b><span style="font:500 14px/1.35 var(--font-body);opacity:.9;margin-top:4px">独立开发</span></div>
-    <div style="flex:14;background:var(--rb-2);color:var(--primary);display:flex;flex-direction:column;justify-content:center;padding:0 14px;min-width:0"><b style="font:700 18px/1.3 var(--font-body)">兴趣爱好</b><span style="font:500 14px/1.35 var(--font-body);opacity:.9;margin-top:4px">攀岩、吉他等</span></div>
-  </div>
-  <p class="t-caption" style="margin-top:8px">色块宽度为示意</p>
-  <div style="display:flex;gap:28px;margin-top:20px;align-items:center">
-    <div style="flex:none;width:900px;margin:10px auto 0"><img class="shot" src="asset/github-contrib.png" style="width:900px;height:auto;display:block" alt=""></div>
-  </div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">11 / 35</span></div>
-</div>
-<!-- ============ S12 ============ -->
-<div class="slide" id="s12">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:240px;transform:rotate(7deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:-60px;right:400px;transform:rotate(-8deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:3">
+<p class="t-caption" style="margin-top:6px">色块高度为示意</p>
+<div style="margin-top:18px"><img class="shot" src="asset/github-contrib.png" style="width:368px;height:auto;" alt=""></div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">11 / 36</span></div>
+</div></section>
+<section class="page" id="p12"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:70px;right:30px;transform:rotate(-8deg)"><svg width="110" height="110" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <p class="t-overline">02 · Why bother</p>
-  <h2 style="font:700 76px/1.2 var(--font-body);margin-top:20px">何必把自己<br>搞得这么辛苦？</h2>
-</div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">12 / 35</span></div>
-</div>
-<!-- ============ S13 ============ -->
-<div class="slide" id="s13">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:40px;right:-90px;transform:rotate(-9deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M12.5 30a11.5 11.5 0 0 1 23 0z" fill="#D9A441"/><path d="M24 14.5V9M35 19l3.9-3.9M13 19l-3.9-3.9M40 26.5l5.3-1.4M8 26.5l-5.3-1.4" fill="none" stroke="#D9A441" stroke-width="2.6" stroke-linecap="round"/><path d="M7 30h34" fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round"/></svg></div>
-  <div style="height:100%;display:flex;align-items:center;padding:0 96px;gap:56px;position:relative;z-index:3">
+  <h2 style="font:700 40px/1.45 var(--font-body);margin-top:16px">何必把自己<br>搞得这么辛苦？</h2></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">12 / 36</span></div>
+</div></section>
+<section class="page" id="p13"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:60px;right:-30px;transform:rotate(-9deg)"><svg width="120" height="120" viewBox="0 0 48 48"><path d="M12.5 30a11.5 11.5 0 0 1 23 0z" fill="#D9A441"/><path d="M24 14.5V9M35 19l3.9-3.9M13 19l-3.9-3.9M40 26.5l5.3-1.4M8 26.5l-5.3-1.4" fill="none" stroke="#D9A441" stroke-width="2.6" stroke-linecap="round"/><path d="M7 30h34" fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <div class="section-no">03</div>
-  <div><div class="t-overline">Part 3 · Value</div><h2 class="t-hero" style="margin-top:10px">AI 创造的价值，谁捕获了</h2>
-  <p class="t-body2" style="margin-top:14px">从「公司里的时间」说起</p></div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">13 / 35</span></div>
+  <div class="t-overline" style="margin-top:18px">Part 3 · Value</div><h2 class="t-hero" style="margin-top:8px">AI 创造的价值，<br>谁捕获了</h2>
+  <p class="t-body2" style="margin-top:12px">从「公司里的时间」说起</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">13 / 36</span></div>
+</div></section>
+<section class="page" id="p14"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · At work</div><h2 class="t-title" style="margin-top:8px">在公司：<br>工作变快了，但没有变</h2><div style="display:grid;gap:18px;margin-top:26px">
+  <div class="bar-row"><span class="t-body2" style="color:var(--primary)">决策和执行变快了</span><div class="bar-track"><div class="bar-fill" style="width:81%;background:var(--success)"></div></div><span class="num" style="font-size:24px">81%</span></div>
+  <div class="bar-row"><span class="t-body2" style="color:var(--primary)">用 AI 深度改造业务</span><div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--rb-2)"></div></div><span class="num" style="font-size:24px">25%</span></div>
+  <div class="bar-row"><span class="t-body2" style="color:var(--primary)">决策权因 AI 明显改变</span><div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--rb-1)"></div></div><span class="num" style="font-size:24px">15%</span></div>
 </div>
-<!-- ============ S14 ============ -->
-<div class="slide" id="s14">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:40px;right:-90px;transform:rotate(-9deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M12.5 30a11.5 11.5 0 0 1 23 0z" fill="#D9A441"/><path d="M24 14.5V9M35 19l3.9-3.9M13 19l-3.9-3.9M40 26.5l5.3-1.4M8 26.5l-5.3-1.4" fill="none" stroke="#D9A441" stroke-width="2.6" stroke-linecap="round"/><path d="M7 30h34" fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round"/></svg></div>
-  <div class="pad"><div class="t-overline">03 · At work</div><h2 class="t-title" style="margin-top:10px">在公司：工作变快了，但没有变</h2><div style="display:flex;gap:40px;margin-top:30px;align-items:center">
-  <div style="flex:1.5;display:grid;gap:26px">
-    <div class="bar-row"><span class="t-body" style="font-size:19px">决策和执行变快了</span><div class="bar-track"><div class="bar-fill" style="width:81%;background:var(--success)"></div></div><span class="num" style="font-size:34px">81%</span></div>
-    <div class="bar-row"><span class="t-body" style="font-size:19px">用 AI 深度改造业务</span><div class="bar-track"><div class="bar-fill" style="width:25%;background:var(--rb-2)"></div></div><span class="num" style="font-size:34px">25%</span></div>
-    <div class="bar-row"><span class="t-body" style="font-size:19px">决策权因 AI 明显改变</span><div class="bar-track"><div class="bar-fill" style="width:15%;background:var(--rb-1)"></div></div><span class="num" style="font-size:34px">15%</span></div>
-    <p class="t-caption">德勤 2026 年 5–6 月调查，25 个国家 3,500 名企业管理者</p>
-  </div>
-  <div class="card" style="flex:1;padding:28px 30px">
-    <p class="t-hand t-hand--ink" style="font-size:32px">&ldquo;Work is faster,<br>not different.&rdquo;</p>
-    <div class="hairline" style="margin:16px 0"></div>
-    <p class="t-body2">工具都买了，但流程和分工没变。阻力不在 AI，在人和流程。</p>
-  </div>
-</div></div>
-  <div class="src">Deloitte AI Institute, State of AI in the Enterprise, 2026-10-29</div>
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">14 / 35</span></div>
+<p class="t-caption" style="margin-top:12px">受访的 3,500 名企业管理者中选这一项的比例（德勤，25 个国家）</p>
+<div class="card" style="margin-top:24px;padding:20px 22px">
+  <p class="t-hand t-hand--ink" style="font-size:28px">&ldquo;Work is faster,<br>not different.&rdquo;</p>
+  <div class="hairline" style="margin:12px 0"></div>
+  <p class="t-body2">工具都买了，但流程和分工没变。阻力不在 AI，在人和流程。</p>
+</div></div><div class="src">Deloitte AI Institute, State of AI in the Enterprise, 2026-10-29</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">14 / 36</span></div>
+</div></section>
+<section class="page" id="p15"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · Same person, two outputs</div><h2 class="t-title" style="margin-top:8px">同一个人，两种产能</h2><div style="display:grid;grid-template-columns:1fr 1fr 56px;padding:16px 16px 6px">
+  <span class="t-overline" style="letter-spacing:.04em">在公司<br>每周 40 小时</span><span class="t-overline" style="color:var(--rb-1);letter-spacing:.04em">自己的项目<br>碎片时间</span><span class="t-overline" style="text-align:right;letter-spacing:.04em">差距</span></div>
+<div style="display:grid;gap:8px">
+  <div class="card" style="padding:12px 16px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="t-h4" style="font-size:15px">Commit 总数</span><span class="t-caption">8/1 以来，含 Claude</span></div><div style="display:grid;grid-template-columns:1fr 1fr 56px;align-items:baseline;margin-top:4px"><span class="num" style="font-size:34px;color:var(--subtle)">159</span><span class="num" style="font-size:34px;color:var(--rb-1)">1,152</span><span class="t-hand t-hand--ink" style="font-size:24px;text-align:right">×7</span></div></div>
+  <div class="card" style="padding:12px 16px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="t-h4" style="font-size:15px">每周 Commit</span><span class="t-caption"></span></div><div style="display:grid;grid-template-columns:1fr 1fr 56px;align-items:baseline;margin-top:4px"><span class="num" style="font-size:34px;color:var(--subtle)">11</span><span class="num" style="font-size:34px;color:var(--rb-1)">83</span><span class="t-hand t-hand--ink" style="font-size:24px;text-align:right">×7</span></div></div>
+  <div class="card" style="padding:12px 16px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="t-h4" style="font-size:15px">Release 次数</span><span class="t-caption">Snap Closet 的 App Store 版本</span></div><div style="display:grid;grid-template-columns:1fr 1fr 56px;align-items:baseline;margin-top:4px"><span class="num" style="font-size:34px;color:var(--subtle)">7</span><span class="num" style="font-size:34px;color:var(--rb-1)">20</span><span class="t-hand t-hand--ink" style="font-size:24px;text-align:right">×3</span></div></div>
+  <div class="card" style="padding:12px 16px"><div style="display:flex;justify-content:space-between;align-items:baseline"><span class="t-h4" style="font-size:15px">PR 从开启到合并</span><span class="t-caption">平均值</span></div><div style="display:grid;grid-template-columns:1fr 1fr 56px;align-items:baseline;margin-top:4px"><span class="num" style="font-size:34px;color:var(--subtle)">3.1<span style="font:700 15px var(--font-body)"> 天</span></span><span class="num" style="font-size:34px;color:var(--rb-1)">3.1<span style="font:700 15px var(--font-body)"> 小时</span></span><span class="t-hand t-hand--ink" style="font-size:24px;text-align:right">×24</span></div></div>
 </div>
-<!-- ============ S15 ============ -->
-<div class="slide" id="s15">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:36px;right:230px;transform:rotate(-6deg)"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div class="pad"><div class="t-overline">03 · Same person, two outputs</div><h2 class="t-title" style="margin-top:10px">同一个人，两种产能</h2><div style="margin-top:22px">
-  <div class="m-tbl" style="display:grid;grid-template-columns:230px 1fr 1fr 150px;padding-bottom:8px">
-    <span></span><span class="t-overline" style="text-align:center">在公司 · 每周 40 小时</span>
-    <span class="t-overline" style="text-align:center;color:var(--rb-1)">自己的项目 · 碎片时间</span><span class="t-overline" style="text-align:center">差距</span></div>
-  <div class="m-tbl" style="display:grid;grid-template-columns:230px 1fr 1fr 150px;align-items:center;padding:14px 0;border-top:1.5px solid var(--hairline)">
-    <span class="t-h4" style="font-size:21px">Commit 总数<br><span class="t-caption">8/1 以来，含 Claude</span></span>
-    <span class="num" style="font-size:52px;color:var(--subtle);text-align:center">159</span>
-    <span class="num" style="font-size:52px;color:var(--rb-1);text-align:center">1,152</span>
-    <span class="t-hand t-hand--ink" style="font-size:34px;text-align:center">×7</span></div><div class="m-tbl" style="display:grid;grid-template-columns:230px 1fr 1fr 150px;align-items:center;padding:14px 0;border-top:1.5px solid var(--hairline)">
-    <span class="t-h4" style="font-size:21px">每周 Commit<br><span class="t-caption"></span></span>
-    <span class="num" style="font-size:52px;color:var(--subtle);text-align:center">11</span>
-    <span class="num" style="font-size:52px;color:var(--rb-1);text-align:center">83</span>
-    <span class="t-hand t-hand--ink" style="font-size:34px;text-align:center">×7</span></div><div class="m-tbl" style="display:grid;grid-template-columns:230px 1fr 1fr 150px;align-items:center;padding:14px 0;border-top:1.5px solid var(--hairline)">
-    <span class="t-h4" style="font-size:21px">Release 次数<br><span class="t-caption">Snap Closet 在 App Store 上的版本</span></span>
-    <span class="num" style="font-size:52px;color:var(--subtle);text-align:center">7</span>
-    <span class="num" style="font-size:52px;color:var(--rb-1);text-align:center">20</span>
-    <span class="t-hand t-hand--ink" style="font-size:34px;text-align:center">×3</span></div><div class="m-tbl" style="display:grid;grid-template-columns:230px 1fr 1fr 150px;align-items:center;padding:14px 0;border-top:1.5px solid var(--hairline)">
-    <span class="t-h4" style="font-size:21px">PR 从开启到合并<br><span class="t-caption">平均值</span></span>
-    <span class="num" style="font-size:52px;color:var(--subtle);text-align:center">3.1<span style="font:700 26px var(--font-body)"> 天</span></span>
-    <span class="num" style="font-size:52px;color:var(--rb-1);text-align:center">3.1<span style="font:700 26px var(--font-body)"> 小时</span></span>
-    <span class="t-hand t-hand--ink" style="font-size:34px;text-align:center">×24</span></div>
-</div>
-<p class="t-h4" style="text-align:center;margin-top:16px">投入时间最长的地方，产出反而最少</p></div>
-  <div class="src">统计区间 2026-08-01 至 2026-11-06（约 13.9 周）· 自己的项目含副业、Snap Closet、Bonsai 等 24 个仓库</div>
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">15 / 35</span></div>
-</div>
-<!-- ============ S16 ============ -->
-<div class="slide" id="s16">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:56px;right:160px;transform:rotate(-6deg)"><svg width="52" height="52" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:68px;right:-66px;transform:rotate(9deg)"><svg width="210" height="210" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div>
-  <div class="pad"><div class="t-overline">03 · Opportunity cost</div><h2 class="t-title" style="margin-top:10px">时间远没有被用起来</h2><div style="display:flex;gap:30px;margin-top:20px;align-items:center;justify-content:center">
-  <svg viewBox="0 0 520 420" width="520" height="420" style="flex:none">
-    <circle cx="230" cy="210" r="180" fill="#E3E6EB"/>
-    <circle cx="230" cy="250" r="56" fill="#565B64"/>
-    <text x="230" y="256" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="19" font-weight="700" fill="#fff">实际产出</text>
-    <text x="230" y="110" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="26" font-weight="700" fill="#82878F">机会成本</text>
-    <path d="M375 92 L440 40" stroke="#1B1D21" stroke-width="1.5" fill="none"/>
-    <text x="446" y="36" font-family="Noto Sans SC, PingFang SC" font-size="16" font-weight="600" fill="#1B1D21">总时间</text>
+<p class="t-h4" style="text-align:center;margin-top:18px">投入时间最长的地方，产出反而最少</p></div><div class="src">统计区间 2026-08-01 至 2026-11-06（约 13.9 周）· 自己的项目含副业、Snap Closet、Bonsai 等 24 个仓库</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">15 / 36</span></div>
+</div></section>
+<section class="page" id="p16"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · Opportunity cost</div><h2 class="t-title" style="margin-top:8px">时间远没有被用起来</h2><div style="display:flex;flex-direction:column;align-items:center;margin-top:8px">
+  <svg viewBox="0 0 400 300" width="368" height="276">
+    <circle cx="190" cy="150" r="140" fill="#E3E6EB"/>
+    <circle cx="190" cy="185" r="44" fill="#565B64"/>
+    <text x="190" y="190" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="15" font-weight="700" fill="#fff">实际产出</text>
+    <text x="190" y="82" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="20" font-weight="700" fill="#82878F">机会成本</text>
+    <path d="M300 62 L348 26" stroke="#1B1D21" stroke-width="1.3" fill="none"/>
+    <text x="352" y="24" font-family="Noto Sans SC, PingFang SC" font-size="13" font-weight="600" fill="#1B1D21">总时间</text>
   </svg>
-  <div class="t-hand--big" style="color:var(--rb-2)">vs</div>
-  <svg viewBox="0 0 440 420" width="440" height="420" style="flex:none">
-    <circle cx="210" cy="230" r="150" fill="#D9A441" opacity=".9"/>
-    <circle cx="210" cy="250" r="88" fill="#F4E6C6" stroke="#B8862F" stroke-width="2.5" stroke-dasharray="7 6"/>
-    <text x="210" y="257" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="19" font-weight="700" fill="#8A6420">碎片时间</text>
-    <text x="210" y="128" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="22" font-weight="700" fill="#fff">实际产出</text>
+  <p class="t-h4" style="margin-top:-2px">在公司</p><p class="t-caption">被公司占用的总时间很大，实际产出只有中间一小块</p>
+  <svg viewBox="0 0 300 220" width="260" height="190" style="margin-top:14px">
+    <circle cx="150" cy="110" r="104" fill="#D9A441" opacity=".9"/>
+    <circle cx="150" cy="126" r="58" fill="#F4E6C6" stroke="#B8862F" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="150" y="131" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="15" font-weight="700" fill="#8A6420">碎片时间</text>
+    <text x="150" y="46" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="16" font-weight="700" fill="#fff">实际产出</text>
   </svg>
-</div>
-<div style="display:flex;gap:30px;justify-content:center;margin-top:-6px">
-  <div style="width:520px;text-align:center"><p class="t-h4">在公司</p><p class="t-body2">被公司占用的总时间很大，实际产出只有中间一小块</p></div>
-  <div style="width:110px"></div>
-  <div style="width:440px;text-align:center"><p class="t-h4">碎片时间 + AI</p><p class="t-body2">总时间少得多，实际产出却比时间本身还大</p></div>
+  <p class="t-h4" style="margin-top:4px">碎片时间 + AI</p><p class="t-caption">总时间少得多，实际产出却比时间本身还大</p>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">16 / 35</span></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">16 / 36</span></div>
+</div></section>
+<section class="page" id="p17"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · Frontier</div><h2 class="t-title" style="margin-top:8px">模型已经在拓展<br>人类能力的边界</h2><div style="display:grid;gap:10px;margin-top:18px">
+  <div class="card" style="padding:12px 16px;border-left:5px solid var(--rb-2)"><p class="t-overline" style="color:var(--rb-2)">2026 · 1 月</p><p class="t-h4" style="font-size:15px;margin-top:2px">GPT-5.2 Pro + Aristotle</p><p class="t-body2" style="font-size:13px;margin-top:4px">研究者用 GPT-5.2 Pro 找到证明、Aristotle 做 Lean 形式化验证，解决 Erdős 问题 #728</p><p class="t-caption" style="margin-top:4px;font-size:11px">从此 AI 解 Erdős 问题开始成批出现</p></div>
+  <div class="card" style="padding:12px 16px;border-left:5px solid var(--rb-4)"><p class="t-overline" style="color:var(--rb-4)">2026 · 5 月</p><p class="t-h4" style="font-size:15px;margin-top:2px">OpenAI 通用推理模型</p><p class="t-body2" style="font-size:13px;margin-top:4px">Erdős 1946 年提出的平面单位距离猜想，被构造反例推翻</p><p class="t-caption" style="margin-top:4px;font-size:11px">「我会毫不犹豫地推荐它发表在《Annals of Mathematics》。」—— Timothy Gowers，菲尔兹奖得主</p></div>
+  <div class="card" style="padding:12px 16px;border-left:5px solid var(--rb-1)"><p class="t-overline" style="color:var(--rb-1)">2026 · 5 月</p><p class="t-h4" style="font-size:15px;margin-top:2px">Google DeepMind AlphaProof Nexus</p><p class="t-body2" style="font-size:13px;margin-top:4px">Gemini + Lean：353 个 Erdős 问题解决 9 个，其中两个悬而未决 56 年；另解决 44 个 OEIS 猜想</p><p class="t-caption" style="margin-top:4px;font-size:11px">证明全部由 Lean 机器验证</p></div>
 </div>
-<!-- ============ S17 ============ -->
-<div class="slide" id="s17">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:260px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:72px;left:-62px;transform:rotate(7deg)"><svg width="230" height="230" viewBox="0 0 48 48"><path d="M9 34c0-7 2.5-13 5-13 4 0 8 7 15 9 5.5 1.6 10 2.6 10 5v3H9z" fill="#B65C3F"/><path d="M9 35.5h30v1.5a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 9 37z" fill="#2F3E5C"/></svg></div>
-  <div class="pad"><div class="t-overline">03 · Frontier</div><h2 class="t-title" style="margin-top:10px">模型已经在拓展人类能力的边界</h2><div style="display:flex;gap:18px;margin-top:28px;align-items:stretch"><div class="card" style="flex:1;padding:22px 24px;border-top:6px solid var(--rb-2)"><p class="t-overline" style="color:var(--rb-2)">2026 · 1 月</p><p class="t-h4" style="font-size:20px;margin-top:6px">GPT-5.2 Pro + Aristotle</p><p class="t-body2" style="font-size:17px;margin-top:10px">研究者用 GPT-5.2 Pro 找到证明、Aristotle 做 Lean 形式化验证，解决 Erdős 问题 #728</p><p class="t-caption" style="margin-top:12px">从此 AI 解 Erdős 问题开始成批出现</p></div><div class="card" style="flex:1;padding:22px 24px;border-top:6px solid var(--rb-4)"><p class="t-overline" style="color:var(--rb-4)">2026 · 5 月</p><p class="t-h4" style="font-size:20px;margin-top:6px">OpenAI 通用推理模型</p><p class="t-body2" style="font-size:17px;margin-top:10px">Erdős 1946 年提出的平面单位距离猜想，被构造反例推翻</p><p class="t-caption" style="margin-top:12px">「我会毫不犹豫地推荐它发表在《Annals of Mathematics》。」—— Timothy Gowers，菲尔兹奖得主</p></div><div class="card" style="flex:1;padding:22px 24px;border-top:6px solid var(--rb-1)"><p class="t-overline" style="color:var(--rb-1)">2026 · 5 月</p><p class="t-h4" style="font-size:20px;margin-top:6px">Google DeepMind AlphaProof Nexus</p><p class="t-body2" style="font-size:17px;margin-top:10px">Gemini + Lean 证明器：353 个 Erdős 问题解决 9 个，其中两个悬而未决 56 年；另解决 44 个 OEIS 猜想</p><p class="t-caption" style="margin-top:12px">证明全部由 Lean 机器验证</p></div>
+<p class="t-h4" style="margin-top:18px;font-size:16px">「正在显著改变数学研究的方式。」<span class="t-caption"> —— Noga Alon</span></p></div><div class="src">The Neuron, 2026 · Singularity Hub, 2026-05-28 · Quanta Magazine, 2026-08-03</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">17 / 36</span></div>
+</div></section>
+<section class="page" id="p18"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · Walls are down</div><h2 class="t-title" style="margin-top:8px">技术栈的墙倒了</h2><div class="card" style="margin-top:20px;padding:16px 18px">
+  <p class="t-overline">以前</p>
+  <div style="display:flex;gap:6px;margin-top:10px"><div style="flex:1;padding:14px 0;text-align:center;font:700 16px var(--font-body);background:var(--surface-sunken);border-radius:10px">前端</div><div style="width:5px;background:var(--primary);border-radius:3px"></div><div style="flex:1;padding:14px 0;text-align:center;font:700 16px var(--font-body);background:var(--surface-sunken);border-radius:10px">后端</div><div style="width:5px;background:var(--primary);border-radius:3px"></div><div style="flex:1;padding:14px 0;text-align:center;font:700 16px var(--font-body);background:var(--surface-sunken);border-radius:10px">Infra</div></div>
+  <p class="t-body2" style="margin-top:12px">非科班 → 潜能录用 → Junior → Senior，很多年后才敢说自己是全栈</p>
 </div>
-<p class="t-h4" style="text-align:center;margin-top:30px">「正在显著改变数学研究的方式。」<span class="t-caption">—— Noga Alon</span></p></div>
-  <div class="src">The Neuron, 2026 · Singularity Hub, 2026-05-28 · Quanta Magazine, 2026-08-03</div>
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">17 / 35</span></div>
+<div class="card" style="margin-top:12px;padding:16px 18px;border:2px solid var(--rb-3)">
+  <p class="t-overline" style="color:var(--rb-3)">现在</p>
+  <div style="display:flex;margin-top:10px;background:#E7ECE2;border-radius:10px"><div style="flex:1;padding:14px 0;text-align:center;font:700 16px var(--font-body);">前端</div><div style="flex:1;padding:14px 0;text-align:center;font:700 16px var(--font-body);">后端</div><div style="flex:1;padding:14px 0;text-align:center;font:700 16px var(--font-body);">Infra</div></div>
+  <p class="t-body2" style="margin-top:12px">AI 把学习成本和门槛大大降低：移动端出身的我，副业在做后端 infra</p>
 </div>
-<!-- ============ S18 ============ -->
-<div class="slide" id="s18">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:36px;right:230px;transform:rotate(7deg)"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M12 19h24l-2 22H14z" fill="#D9A441"/><path d="M19 19v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#B8862F" stroke-width="2.4"/></svg></div><div class="sticker" style="bottom:60px;right:-70px;transform:rotate(10deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div>
-  <div class="pad"><div class="t-overline">03 · Walls are down</div><h2 class="t-title" style="margin-top:10px">技术栈的墙倒了</h2><div style="display:flex;gap:30px;margin-top:24px;align-items:stretch">
-  <div class="card" style="flex:1;padding:26px 30px">
-    <p class="t-overline">以前</p>
-    <div style="display:flex;gap:10px;margin-top:16px">
-      <div class="well" style="flex:1;padding:22px 0;text-align:center;font:700 20px var(--font-body)">前端</div>
-      <div style="width:8px;background:var(--primary);border-radius:4px"></div>
-      <div class="well" style="flex:1;padding:22px 0;text-align:center;font:700 20px var(--font-body)">后端</div>
-      <div style="width:8px;background:var(--primary);border-radius:4px"></div>
-      <div class="well" style="flex:1;padding:22px 0;text-align:center;font:700 20px var(--font-body)">Infra</div>
-    </div>
-    <p class="t-body2" style="margin-top:20px">非科班 → 潜能录用 → Junior → Senior，<br>很多年后才敢说自己是全栈</p>
-  </div>
-  <div class="card" style="flex:1;padding:26px 30px;border:2px solid var(--rb-3)">
-    <p class="t-overline" style="color:var(--rb-3)">现在</p>
-    <div style="display:flex;gap:0;margin-top:16px;background:#E7ECE2;border-radius:14px">
-      <div style="flex:1;padding:22px 0;text-align:center;font:700 20px var(--font-body)">前端</div>
-      <div style="flex:1;padding:22px 0;text-align:center;font:700 20px var(--font-body)">后端</div>
-      <div style="flex:1;padding:22px 0;text-align:center;font:700 20px var(--font-body)">Infra</div>
-    </div>
-    <p class="t-body2" style="margin-top:20px">AI 把学习成本和门槛大大降低：<br>移动端出身的我，副业在做后端 infra</p>
-  </div>
+<p class="t-h4" style="margin-top:24px;line-height:1.6">按能力范围、职责范围划分的职种，和它对应的薪酬，<br><span style="color:var(--rb-1)">还能反映你实际力所能及的范围吗？</span></p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">18 / 36</span></div>
+</div></section>
+<section class="page" id="p19"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · Who captures it</div><h2 class="t-title" style="margin-top:8px">AI 创造的价值，<br>谁捕获了？</h2><div style="margin-top:14px;display:flex;align-items:baseline;gap:10px"><span class="big" style="color:var(--rb-1);font-size:120px">29¢</span><span class="t-h4">/ 每 $1</span></div>
+<p class="t-body" style="margin-top:6px">AI 带来的每 1 美元产出增长，<br>劳动者只拿到约 29 美分</p>
+<p class="t-body2" style="margin-top:12px">AI 暴露度高的行业多出来的那部分产出（增加值）里，约 29% 变成了员工工资；而通常整体产出里约 60% 会变成工资。</p>
+<div style="margin-top:22px;display:grid;gap:12px">
+  <div class="bar-row" style="grid-template-columns:130px 1fr 46px"><span class="t-body2">平时的劳动收入份额</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--subtle)"></div></div><span class="num" style="font-size:22px">60%</span></div>
+  <div class="bar-row" style="grid-template-columns:130px 1fr 46px"><span class="t-body2">AI 带来的增长里</span><div class="bar-track"><div class="bar-fill" style="width:29%;background:var(--rb-1)"></div></div><span class="num" style="font-size:22px">29%</span></div>
 </div>
-<p class="t-h4" style="text-align:center;margin-top:34px;font-size:26px;line-height:1.6">按能力范围、职责范围划分的职种，和它对应的薪酬，<br><span style="color:var(--rb-1)">还能反映你实际力所能及的范围吗？</span></p></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">18 / 35</span></div>
+<p class="t-caption" style="margin-top:14px">美国按行业、按州的宏观数据，是跨行业的平均结论</p></div><div class="src">Johnston &amp; Makridis, “AI, Output, and Employment”, CESifo WP 12579, 2026 · ProMarket, 2026-05-21</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">19 / 36</span></div>
+</div></section>
+<section class="page" id="p20"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">03 · Who captures it</div><h2 class="t-title" style="margin-top:8px">所以，价值去哪了</h2><div style="display:grid;gap:12px;margin-top:22px">
+  <div class="card" style="padding:16px 18px;display:flex;gap:12px;align-items:flex-start"><span class="t-hand--big" style="color:var(--rb-1);font-size:30px;line-height:1">①</span><p class="t-body" style="font-size:15px">按时间计价的单价，越来越低于你实际能创造的价值</p></div>
+  <div class="card" style="padding:16px 18px;display:flex;gap:12px;align-items:flex-start"><span class="t-hand--big" style="color:var(--rb-4);font-size:30px;line-height:1">②</span><p class="t-body" style="font-size:15px">在公司提高的产能，局限在原来的岗位里，收益也没有分给你</p></div>
+  <div class="card" style="padding:16px 18px;display:flex;gap:12px;align-items:flex-start"><span class="t-hand--big" style="color:var(--rb-2);font-size:30px;line-height:1">③</span><p class="t-body" style="font-size:15px">公司之间也一样：<b style="color:var(--rb-1)">74%</b> 的 AI 经济价值，被前 20% 的公司拿走</p></div>
 </div>
-<!-- ============ S19 ============ -->
-<div class="slide" id="s19">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div>
-  <div class="pad"><div class="t-overline">03 · Who captures it</div><h2 class="t-title" style="margin-top:10px">AI 创造的价值，谁捕获了？</h2><div style="display:flex;gap:40px;margin-top:26px;align-items:center">
-  <div style="flex:1.1">
-    <div style="display:flex;align-items:baseline;gap:14px"><span class="big" style="color:var(--rb-1);font-size:150px">29¢</span><span class="t-h4">/ 每 $1</span></div>
-    <p class="t-body" style="margin-top:6px">AI 带来的每 1 美元产出增长，<br>劳动者只拿到约 29 美分</p>
-    <p class="t-caption" style="margin-top:8px;line-height:1.6">AI 暴露度高的行业多出来的那部分产出（增加值）里，<br>约 29% 变成了员工工资；而通常整体产出里约 60% 会变成工资。</p>
-    <div style="margin-top:22px;display:grid;gap:12px">
-      <div class="bar-row" style="grid-template-columns:200px 1fr 70px"><span class="t-body2">平时的劳动收入份额</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:var(--subtle)"></div></div><span class="num" style="font-size:26px">60%</span></div>
-      <div class="bar-row" style="grid-template-columns:200px 1fr 70px"><span class="t-body2">AI 带来的增长里</span><div class="bar-track"><div class="bar-fill" style="width:29%;background:var(--rb-1)"></div></div><span class="num" style="font-size:26px">29%</span></div>
-    </div>
-  </div>
-  <div style="flex:1;display:grid;gap:12px">
-    <div class="card" style="padding:14px 22px"><span class="t-hand--big" style="color:var(--rb-1);font-size:30px">①</span>
-    <p class="t-body" style="font-size:19px">按时间计价的单价，越来越低于你实际能创造的价值</p></div>
-    <div class="card" style="padding:14px 22px"><span class="t-hand--big" style="color:var(--rb-4);font-size:30px">②</span>
-    <p class="t-body" style="font-size:19px">在公司提高的产能，局限在原来的岗位里，收益也没有分给你</p></div>
-    <div class="card" style="padding:14px 22px"><span class="t-hand--big" style="color:var(--rb-2);font-size:30px">③</span>
-    <p class="t-body" style="font-size:19px">公司之间也一样：<b style="color:var(--rb-1)">74%</b> 的 AI 经济价值，被前 20% 的公司拿走</p></div>
-  </div>
-</div></div>
-  <div class="src">Johnston &amp; Makridis, “AI, Output, and Employment”, CESifo WP 12579, 2026 · ProMarket, 2026-05-21 · PwC 2026 AI Performance Study, 2026-04-13</div>
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">19 / 35</span></div>
-</div>
-<!-- ============ S20 ============ -->
-<div class="slide" id="s20">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:56px;right:160px;transform:rotate(-6deg)"><svg width="52" height="52" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:68px;right:-66px;transform:rotate(9deg)"><svg width="210" height="210" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div>
-  <div style="height:100%;display:flex;align-items:center;padding:0 96px;gap:56px;position:relative;z-index:3">
+<p class="t-h4" style="margin-top:28px">那为什么不自己做<br>那个「掌握它的人」？</p></div><div class="src">PwC 2026 AI Performance Study, 2026-04-13</div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">20 / 36</span></div>
+</div></section>
+<section class="page" id="p21"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:70px;right:-24px;transform:rotate(9deg)"><svg width="120" height="120" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <div class="section-no">04</div>
-  <div><div class="t-overline">Part 4 · How</div><h2 class="t-hero" style="margin-top:10px">时间密度是怎么拉高的</h2>
-  <p class="t-body2" style="margin-top:14px">把工作流交给面向 agent 的工具，人只做方向性决策</p></div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">20 / 35</span></div>
+  <div class="t-overline" style="margin-top:18px">Part 4 · How</div><h2 class="t-hero" style="margin-top:8px">时间密度是<br>怎么拉高的</h2>
+  <p class="t-body2" style="margin-top:12px">把工作流交给面向 agent 的工具，<br>人只做方向性决策</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">21 / 36</span></div>
+</div></section>
+<section class="page" id="p22"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">04 · Tools for humans vs agents</div><h2 class="t-title" style="margin-top:8px">公司的工具面向人，<br>独立开发的工具面向 agent</h2><p class="t-h4" style="font-size:15px;color:var(--muted);margin-top:16px">在公司：为了让人 follow 工作</p>
+<div style="display:flex;gap:8px;margin-top:8px">
+  <img class="shot" src="asset/古法功能设计：confluence.png" style="width:180px;height:104px;object-position:left top" alt="">
+  <img class="shot" src="asset/古法UI设计：手搓Figma.png" style="width:180px;height:104px;object-position:left top" alt="">
 </div>
-<!-- ============ S21 ============ -->
-<div class="slide" id="s21">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:40px;right:-90px;transform:rotate(-9deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M12.5 30a11.5 11.5 0 0 1 23 0z" fill="#D9A441"/><path d="M24 14.5V9M35 19l3.9-3.9M13 19l-3.9-3.9M40 26.5l5.3-1.4M8 26.5l-5.3-1.4" fill="none" stroke="#D9A441" stroke-width="2.6" stroke-linecap="round"/><path d="M7 30h34" fill="none" stroke="#B8862F" stroke-width="2" stroke-linecap="round"/></svg></div>
-  <div class="pad"><div class="t-overline">04 · Tools for humans vs agents</div><h2 class="t-title" style="margin-top:10px">公司的工具面向人，独立开发的工具面向 agent</h2><div style="display:flex;gap:26px;margin-top:24px">
-  <div style="flex:1">
-    <div class="t-h4" style="font-size:21px;color:var(--muted);margin-bottom:10px">在公司：为了让人 follow 工作</div>
-    <div style="display:flex;gap:10px">
-      <img class="shot" src="asset/古法功能设计：confluence.png" style="flex:1;min-width:0;height:200px;object-position:left top" alt="">
-      <img class="shot" src="asset/古法UI设计：手搓Figma.png" style="flex:1;min-width:0;height:200px;object-position:left top" alt="">
-    </div>
-    <div style="margin-top:16px"><ul class="t-body2" style="list-style:none;display:grid;gap:8px"><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--subtle);margin-top:13px"></span><span>Confluence / Figma / IDE</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--subtle);margin-top:13px"></span><span>PM 只做 PM，工程师只做工程师</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--subtle);margin-top:13px"></span><span>经验留在人脑子里</span></li></ul></div>
-  </div>
-  <div style="flex:1">
-    <div class="t-h4" style="font-size:21px;margin-bottom:10px">独立开发：为了让 agent 干活</div>
-    <img class="shot" src="asset/ds-plugin-stats.png" style="width:100%;height:auto;display:block" alt="">
-    <p class="t-caption" style="margin-top:6px">我的 Mobile Design System skill，已上架 Claude 官方插件目录，排名还在上升</p>
-    <div style="margin-top:16px"><ul class="t-body2" style="list-style:none;display:grid;gap:8px"><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>skill / plugin / harness</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>一个人，无限探索空间</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>经验沉淀成 skill，可复用、可自动化</span></li></ul></div>
-  </div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">21 / 35</span></div>
-</div>
-<!-- ============ S22 ============ -->
-<div class="slide" id="s22">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:220px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:70px;left:-60px;transform:rotate(-8deg)"><svg width="190" height="190" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div>
-  <div class="pad"><div class="t-overline">04 · What humans decide</div><h2 class="t-title" style="margin-top:10px">写代码这件事，人该决定什么</h2><div style="display:flex;gap:44px;margin-top:26px;align-items:center">
-  <svg viewBox="0 0 560 400" width="560" height="400" style="flex:none">
+<div style="margin-top:8px"><ul class="t-body2" style="list-style:none;display:grid;gap:0px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--subtle);margin-top:10px"></span><span>Confluence / Figma / IDE</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--subtle);margin-top:10px"></span><span>PM 只做 PM，工程师只做工程师</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--subtle);margin-top:10px"></span><span>经验留在人脑子里</span></li></ul></div>
+<p class="t-h4" style="font-size:15px;margin-top:16px">独立开发：为了让 agent 干活</p>
+<div style="margin-top:8px"><img class="shot" src="asset/ds-plugin-stats.png" style="width:368px;height:auto;" alt=""></div>
+<p class="t-caption" style="margin-top:4px">我的 Mobile Design System skill，已上架 Claude 官方插件目录，排名还在上升</p>
+<div style="margin-top:6px"><ul class="t-body2" style="list-style:none;display:grid;gap:0px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>skill / plugin / harness</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>一个人，无限探索空间</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>经验沉淀成 skill，可复用、可自动化</span></li></ul></div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">22 / 36</span></div>
+</div></section>
+<section class="page" id="p23"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">04 · What humans decide</div><h2 class="t-title" style="margin-top:8px">写代码这件事，<br>人该决定什么</h2><div style="display:flex;justify-content:center;margin-top:14px">
+  <svg viewBox="0 0 560 400" width="340" height="243">
     <polygon points="280,10 380,140 180,140" fill="#B65C3F"/>
     <polygon points="176,146 384,146 470,266 90,266" fill="#D9A441"/>
     <polygon points="86,272 474,272 556,392 4,392" fill="#E3E6EB"/>
-    <text x="280" y="105" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="24" font-weight="700" fill="#fff">方向</text>
-    <text x="280" y="215" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="24" font-weight="700" fill="#1B1D21">架构</text>
-    <text x="280" y="340" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="24" font-weight="700" fill="#565B64">细节</text>
+    <text x="280" y="105" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="28" font-weight="700" fill="#fff">方向</text>
+    <text x="280" y="215" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="28" font-weight="700" fill="#1B1D21">架构</text>
+    <text x="280" y="342" text-anchor="middle" font-family="Noto Sans SC, PingFang SC" font-size="28" font-weight="700" fill="#565B64">细节</text>
   </svg>
-  <div style="display:grid;gap:20px">
-    <div><p class="t-h4" style="font-size:21px;color:var(--rb-1)">方向 · 人来决定</p><p class="t-body2">要什么功能、flow 怎么跳、前后怎么接</p></div>
-    <div><p class="t-h4" style="font-size:21px;color:#B8862F">架构 · 懂工程的人拍板</p><p class="t-body2">用什么框架，跑在 AWS 还是 Cloudflare</p></div>
-    <div><p class="t-h4" style="font-size:21px;color:var(--muted)">细节 · 交给 agent 自主循环</p><p class="t-body2">代码、命名、结构，连 review 也是</p></div>
-  </div>
+</div>
+<div style="display:grid;gap:14px;margin-top:20px">
+  <div><p class="t-h4" style="font-size:16px;color:var(--rb-1)">方向 · 人来决定</p><p class="t-body2">要什么功能、flow 怎么跳、前后怎么接</p></div>
+  <div><p class="t-h4" style="font-size:16px;color:#B8862F">架构 · 懂工程的人拍板</p><p class="t-body2">用什么框架，跑在 AWS 还是 Cloudflare</p></div>
+  <div><p class="t-h4" style="font-size:16px;color:var(--muted)">细节 · 交给 agent 自主循环</p><p class="t-body2">代码、命名、结构，连 review 也是</p></div>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">22 / 35</span></div>
-</div>
-<!-- ============ S23 ============ -->
-<div class="slide" id="s23">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div>
-  <div class="pad"><div class="t-overline">04 · What I tried</div><h2 class="t-title" style="margin-top:10px">我试过的工作流</h2><div class="m-stairs" style="position:relative;height:450px;margin-top:4px">
-  <svg viewBox="0 0 1136 450" style="position:absolute;inset:0;width:100%;height:100%">
-    <path d="M0 448 H360 V392 H740 V336 H1136" fill="none" stroke="#1B1D21" stroke-width="3"/>
-  </svg><div style="position:absolute;left:10px;top:318px;width:340px"><div style="display:flex;gap:10px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-1);font-size:36px">①</span><span class="t-h4" style="font-size:21px">skill + 多窗口并行</span></div><p class="t-caption" style="margin:2px 0 8px">沉淀 skill，同时开多个窗口让 agent 并行干活</p><div class="m-row" style="display:flex;gap:16px;align-items:center"><img src="asset/cmux-icon.png" style="width:56px;height:56px;border-radius:14px;box-shadow:0 4px 12px rgba(27,29,33,.12)" alt=""><img src="asset/typeless-icon.png" style="width:56px;height:56px;border-radius:14px;box-shadow:0 4px 12px rgba(27,29,33,.12)" alt=""><span class="t-caption">cmux 多窗口<br>Typeless 语音输入</span></div></div><div style="position:absolute;left:380px;top:70px;width:340px"><div style="display:flex;gap:10px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-2);font-size:36px">②</span><span class="t-h4" style="font-size:21px">组织多个 agent</span></div><p class="t-caption" style="margin:2px 0 8px">让 agent 组成团队，分工、交接、review</p><img class="shot" src="asset/agent-team.jpg" style="width:300px;height:206px;object-fit:cover;object-position:top;display:block" alt=""><div class="m-row" style="display:flex;align-items:center;gap:8px;margin-top:8px"><span class="chip" style="background:#FFD700;color:#1B1D21;font-weight:700">Raft</span><span class="t-caption">也试过 raft.build</span></div></div><div style="position:absolute;left:760px;top:16px;width:370px"><div style="display:flex;gap:10px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-4);font-size:36px">③</span><span class="t-h4" style="font-size:21px">返璞归真</span></div><p class="t-caption" style="margin:2px 0 8px">回到模型厂商自己的 harness（Claude 的 Project、Artifact）</p><img class="shot" src="asset/claude-threads.png" style="width:350px;height:236px;object-fit:cover;object-position:top;display:block" alt=""></div></div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">23 / 35</span></div>
-</div>
-<!-- ============ S24 ============ -->
-<div class="slide" id="s24">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:260px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:72px;left:-62px;transform:rotate(7deg)"><svg width="230" height="230" viewBox="0 0 48 48"><path d="M9 34c0-7 2.5-13 5-13 4 0 8 7 15 9 5.5 1.6 10 2.6 10 5v3H9z" fill="#B65C3F"/><path d="M9 35.5h30v1.5a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 9 37z" fill="#2F3E5C"/></svg></div>
-  <div class="pad"><div class="t-overline">04 · Bonsai</div><h2 class="t-title" style="margin-top:10px">但还是要人兼顾多个 agent 窗口 → 用 Bonsai 让 AI 几乎全自主地做产品</h2><div style="display:flex;justify-content:center;margin-top:16px">
-  <div class="m-loop" style="position:relative;width:820px;height:440px;flex:none">
-    <svg viewBox="0 0 820 440" style="position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--rb-3);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round">
-      <path d="M300 80 Q170 120 160 250"/><path d="M148 236 l12 16 12 -14"/><path d="M288 68 l18 10 -14 14"/>
-      <path d="M520 80 Q650 120 660 250"/><path d="M648 238 l12 14 12 -16"/><path d="M532 68 l-18 10 14 14"/>
-    </svg>
-    <div class="card node" style="left:295px;top:10px;width:230px;padding:14px 18px"><div class="t-h4" style="font-size:20px">Bonsai Roots</div><p class="t-caption">Wiki · Source of truth</p></div>
-    <div class="card node" style="left:40px;top:262px;width:240px;padding:14px 18px"><div class="t-h4" style="font-size:20px">Bonsai Grow</div><p class="t-caption">project 的自主运行引擎</p></div>
-    <div class="card node" style="right:40px;top:262px;width:240px;padding:14px 18px"><div class="t-h4" style="font-size:20px">Push 通知</div><p class="t-caption">只推需要你决策的事</p></div>
-    <div class="node" style="left:345px;top:150px;width:130px"><img class="app-icon" src="asset/bonsai-icon.png" style="width:120px;height:120px" alt=""></div>
-    <p class="t-hand" style="position:absolute;left:0;right:0;top:392px;text-align:center;font-size:24px">你做决定，写回人和 AI 都能看懂的唯一数据源</p>
-  </div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">23 / 36</span></div>
+</div></section>
+<section class="page" id="p24"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">04 · What I tried</div><h2 class="t-title" style="margin-top:8px">我试过的工作流</h2><div style="margin-top:12px">
+  <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1.5px solid var(--hairline)"><div style="flex:1;min-width:0"><div style="display:flex;gap:8px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-1);font-size:28px">①</span><span class="t-h4" style="font-size:16px">skill + 多窗口并行</span></div><p class="t-caption" style="margin-top:2px">沉淀 skill，同时开多个窗口让 agent 并行干活<br>cmux 多窗口 · Typeless 语音输入</p></div><div style="flex:none"><div style="display:flex;gap:8px"><img src="asset/cmux-icon.png" style="width:40px;height:40px;border-radius:10px;box-shadow:0 3px 8px rgba(27,29,33,.12)" alt=""><img src="asset/typeless-icon.png" style="width:40px;height:40px;border-radius:10px;box-shadow:0 3px 8px rgba(27,29,33,.12)" alt=""></div></div></div>
+  <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1.5px solid var(--hairline)"><div style="flex:1;min-width:0"><div style="display:flex;gap:8px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-2);font-size:28px">②</span><span class="t-h4" style="font-size:16px">组织多个 agent</span></div><p class="t-caption" style="margin-top:2px">让 agent 组成团队，分工、交接、review<br><span class="chip" style="background:#FFD700;color:#1B1D21;font-weight:700;margin-top:6px">Raft</span> 也试过 raft.build</p></div><div style="flex:none"><img class="shot" src="asset/agent-team.jpg" style="width:150px;height:200px;object-position:top" alt=""></div></div>
+  <div style="display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1.5px solid var(--hairline)"><div style="flex:1;min-width:0"><div style="display:flex;gap:8px;align-items:baseline"><span class="t-hand--big" style="color:var(--rb-4);font-size:28px">③</span><span class="t-h4" style="font-size:16px">返璞归真</span></div><p class="t-caption" style="margin-top:2px">回到模型厂商自己的 harness<br>（Claude 的 Project、Artifact）</p></div><div style="flex:none"><img class="shot" src="asset/claude-threads.png" style="width:170px;height:190px;object-position:top" alt=""></div></div>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">24 / 35</span></div>
-</div>
-<!-- ============ S25 ============ -->
-<div class="slide" id="s25">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:36px;right:230px;transform:rotate(-6deg)"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div class="pad"><div class="t-overline">04 · Example</div><h2 class="t-title" style="margin-top:10px">实例：Snap Closet 3.0，从想法到双端上线不到一周</h2><div class="m-tl" style="position:relative;margin-top:24px;height:470px">
-  <div style="position:absolute;left:0;right:0;top:60px;height:4px;background:var(--primary);border-radius:2px"></div>
-  <div style="position:absolute;left:0px;top:44px;width:200px"><div style="width:36px;height:36px;border-radius:999px;background:var(--rb-1);border:4px solid var(--bg)"></div><p class="t-hand t-hand--ink" style="margin-top:10px;font-size:26px">11/1</p><p class="t-body2" style="font-size:16px;margin-top:2px">提出灵感页的想法，选定方案 A</p><span class="chip" style="margin-top:8px;font-size:13px;padding:3px 12px;background:var(--rb-1);color:#fff">人</span></div><div style="position:absolute;left:230px;top:44px;width:200px"><div style="width:36px;height:36px;border-radius:999px;background:var(--rb-2);border:4px solid var(--bg)"></div><p class="t-hand t-hand--ink" style="margin-top:10px;font-size:26px">11/1–2</p><p class="t-body2" style="font-size:16px;margin-top:2px">设计稿 → 后端、App、分享扩展并行开发</p><span class="chip" style="margin-top:8px;font-size:13px;padding:3px 12px;">AI</span></div><div style="position:absolute;left:460px;top:44px;width:200px"><div style="width:36px;height:36px;border-radius:999px;background:var(--rb-1);border:4px solid var(--bg)"></div><p class="t-hand t-hand--ink" style="margin-top:10px;font-size:26px">11/2</p><p class="t-body2" style="font-size:16px;margin-top:2px">在 dev 环境端到端验收</p><span class="chip" style="margin-top:8px;font-size:13px;padding:3px 12px;background:var(--rb-1);color:#fff">人</span></div><div style="position:absolute;left:690px;top:44px;width:200px"><div style="width:36px;height:36px;border-radius:999px;background:var(--rb-3);border:4px solid var(--bg)"></div><p class="t-hand t-hand--ink" style="margin-top:10px;font-size:26px">11/2–3</p><p class="t-body2" style="font-size:16px;margin-top:2px">上传商店、准备截图和文案</p><span class="chip" style="margin-top:8px;font-size:13px;padding:3px 12px;">AI</span></div><div style="position:absolute;left:920px;top:44px;width:200px"><div style="width:36px;height:36px;border-radius:999px;background:var(--rb-4);border:4px solid var(--bg)"></div><p class="t-hand t-hand--ink" style="margin-top:10px;font-size:26px">11/4</p><p class="t-body2" style="font-size:16px;margin-top:2px">iOS + Android 双端上线</p><span class="chip" style="margin-top:8px;font-size:13px;padding:3px 12px;">上线</span></div>
-  <div style="position:absolute;left:0;right:0;bottom:0;display:flex;gap:18px;justify-content:center"><img class="shot" src="asset/release-state.png" style="width:330px;height:auto;display:block;margin:0 auto" alt=""></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">24 / 36</span></div>
+</div></section>
+<section class="page" id="p25"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">04 · Bonsai</div><h2 class="t-title" style="margin-top:8px">还是要人兼顾多个 agent 窗口<br>→ 用 Bonsai 让 AI 几乎<br>全自主地做产品</h2><div style="position:relative;width:368px;height:420px;margin-top:14px">
+  <svg viewBox="0 0 368 420" style="position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--rb-3);stroke-width:3;stroke-linecap:round;stroke-linejoin:round">
+    <path d="M140 74 Q70 120 74 236"/><path d="M64 224 l10 14 10 -14"/><path d="M128 66 l16 6 -10 14"/>
+    <path d="M228 74 Q298 120 294 236"/><path d="M284 224 l10 14 10 -14"/><path d="M240 66 l-16 6 10 14"/>
+  </svg>
+  <div class="card" style="position:absolute;left:94px;top:0;width:180px;padding:10px 12px;text-align:center"><div class="t-h4" style="font-size:16px">Bonsai Roots</div><p class="t-caption">Wiki · Source of truth</p></div>
+  <div style="position:absolute;left:134px;top:120px"><img class="app-icon" src="asset/bonsai-icon.png" style="width:100px;height:100px" alt=""></div>
+  <div class="card" style="position:absolute;left:0;top:250px;width:170px;padding:10px 12px;text-align:center"><div class="t-h4" style="font-size:16px">Bonsai Grow</div><p class="t-caption">project 的自主运行引擎</p></div>
+  <div class="card" style="position:absolute;right:0;top:250px;width:170px;padding:10px 12px;text-align:center"><div class="t-h4" style="font-size:16px">Push 通知</div><p class="t-caption">只推需要你决策的事</p></div>
+  <p class="t-hand" style="position:absolute;left:0;right:0;top:350px;text-align:center;font-size:21px;line-height:1.4">你做决定，写回人和 AI<br>都能看懂的唯一数据源</p>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">25 / 35</span></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">25 / 36</span></div>
+</div></section>
+<section class="page" id="p26"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">04 · Example</div><h2 class="t-title" style="margin-top:8px">实例：Snap Closet 3.0<br>从想法到双端上线不到一周</h2><div style="position:relative;margin-top:18px">
+  <div style="position:absolute;left:7px;top:8px;bottom:20px;width:2px;background:var(--primary)"></div>
+  <div style="display:flex;gap:12px;align-items:flex-start;position:relative;padding-bottom:12px"><div style="width:16px;height:16px;border-radius:999px;background:var(--rb-1);border:3px solid var(--bg);flex:none;margin-top:4px;position:relative;z-index:2"></div><div style="flex:1"><span class="t-hand t-hand--ink" style="font-size:20px">11/1</span> <span class="chip" style="font-size:11px;padding:1px 8px;margin-left:4px;background:var(--rb-1);color:#fff">人</span><p class="t-body2" style="font-size:13px">提出灵感页的想法，选定方案 A</p></div></div><div style="display:flex;gap:12px;align-items:flex-start;position:relative;padding-bottom:12px"><div style="width:16px;height:16px;border-radius:999px;background:var(--rb-2);border:3px solid var(--bg);flex:none;margin-top:4px;position:relative;z-index:2"></div><div style="flex:1"><span class="t-hand t-hand--ink" style="font-size:20px">11/1–2</span> <span class="chip" style="font-size:11px;padding:1px 8px;margin-left:4px;">AI</span><p class="t-body2" style="font-size:13px">设计稿 → 后端、App、分享扩展并行开发</p></div></div><div style="display:flex;gap:12px;align-items:flex-start;position:relative;padding-bottom:12px"><div style="width:16px;height:16px;border-radius:999px;background:var(--rb-1);border:3px solid var(--bg);flex:none;margin-top:4px;position:relative;z-index:2"></div><div style="flex:1"><span class="t-hand t-hand--ink" style="font-size:20px">11/2</span> <span class="chip" style="font-size:11px;padding:1px 8px;margin-left:4px;background:var(--rb-1);color:#fff">人</span><p class="t-body2" style="font-size:13px">在 dev 环境端到端验收</p></div></div><div style="display:flex;gap:12px;align-items:flex-start;position:relative;padding-bottom:12px"><div style="width:16px;height:16px;border-radius:999px;background:var(--rb-3);border:3px solid var(--bg);flex:none;margin-top:4px;position:relative;z-index:2"></div><div style="flex:1"><span class="t-hand t-hand--ink" style="font-size:20px">11/2–3</span> <span class="chip" style="font-size:11px;padding:1px 8px;margin-left:4px;">AI</span><p class="t-body2" style="font-size:13px">上传商店、准备截图和文案</p></div></div><div style="display:flex;gap:12px;align-items:flex-start;position:relative;padding-bottom:12px"><div style="width:16px;height:16px;border-radius:999px;background:var(--rb-4);border:3px solid var(--bg);flex:none;margin-top:4px;position:relative;z-index:2"></div><div style="flex:1"><span class="t-hand t-hand--ink" style="font-size:20px">11/4</span> <span class="chip" style="font-size:11px;padding:1px 8px;margin-left:4px;">上线</span><p class="t-body2" style="font-size:13px">iOS + Android 双端上线</p></div></div>
 </div>
-<!-- ============ S26 ============ -->
-<div class="slide" id="s26">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:240px;transform:rotate(7deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:-60px;right:400px;transform:rotate(-8deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div class="pad"><div class="t-overline">04 · Product owner</div><h2 class="t-title" style="margin-top:10px">职种的壁垒消失了，你更像一个 Product Owner</h2><div style="display:flex;gap:40px;margin-top:40px;align-items:center;justify-content:center">
-  <div class="m-keep" style="display:grid;grid-template-columns:repeat(3,150px);gap:14px"><div class="card" style="height:150px;padding:16px;text-align:center;transform:rotate(-3deg)"><div style="width:30px;height:6px;border-radius:3px;background:var(--muted-surface);margin:0 auto 16px"></div><div style="width:50px;height:50px;border-radius:999px;background:var(--rb-1);margin:0 auto"></div><p class="t-h4" style="margin-top:12px;font-size:20px">PM</p></div><div class="card" style="height:150px;padding:16px;text-align:center;transform:rotate(2deg)"><div style="width:30px;height:6px;border-radius:3px;background:var(--muted-surface);margin:0 auto 16px"></div><div style="width:50px;height:50px;border-radius:999px;background:var(--rb-2);margin:0 auto"></div><p class="t-h4" style="margin-top:12px;font-size:20px">Designer</p></div><div class="card" style="height:150px;padding:16px;text-align:center;transform:rotate(-2deg)"><div style="width:30px;height:6px;border-radius:3px;background:var(--muted-surface);margin:0 auto 16px"></div><div style="width:50px;height:50px;border-radius:999px;background:var(--rb-3);margin:0 auto"></div><p class="t-h4" style="margin-top:12px;font-size:20px">Engineer</p></div><div class="card" style="height:150px;padding:16px;text-align:center;transform:rotate(3deg)"><div style="width:30px;height:6px;border-radius:3px;background:var(--muted-surface);margin:0 auto 16px"></div><div style="width:50px;height:50px;border-radius:999px;background:var(--rb-4);margin:0 auto"></div><p class="t-h4" style="margin-top:12px;font-size:20px">PjM</p></div><div class="card" style="height:150px;padding:16px;text-align:center;transform:rotate(-2deg)"><div style="width:30px;height:6px;border-radius:3px;background:var(--muted-surface);margin:0 auto 16px"></div><div style="width:50px;height:50px;border-radius:999px;background:var(--rb-1);margin:0 auto"></div><p class="t-h4" style="margin-top:12px;font-size:20px">PdM</p></div><div class="card" style="height:150px;padding:16px;text-align:center;transform:rotate(2deg)"><div style="width:30px;height:6px;border-radius:3px;background:var(--muted-surface);margin:0 auto 16px"></div><div style="width:50px;height:50px;border-radius:999px;background:var(--rb-2);margin:0 auto"></div><p class="t-h4" style="margin-top:12px;font-size:20px">QA</p></div>
-  </div>
-  <svg width="70" height="54" viewBox="0 0 48 48" style="fill:none;stroke:var(--rb-1);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M8 24h30"/><path d="M30 14l10 10-10 10"/></svg>
-  <div class="card" style="width:240px;height:300px;padding:24px;text-align:center;border:3px solid var(--primary)">
-    <div style="width:46px;height:8px;border-radius:4px;background:var(--primary);margin:0 auto 30px"></div>
-    <img src="asset/xhs头像.JPG" style="width:96px;height:96px;border-radius:999px;object-fit:cover" alt="">
-    <p class="t-h4" style="margin-top:18px">Owner</p><p class="t-caption">主动权回到自己手上</p>
-  </div>
+<div style="margin-top:6px"><img class="shot" src="asset/release-state.png" style="width:368px;height:auto;" alt=""></div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">26 / 36</span></div>
+</div></section>
+<section class="page" id="p27"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">04 · Product owner</div><h2 class="t-title" style="margin-top:8px">职种的壁垒消失了，<br>你更像一个 Product Owner</h2><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:22px"><div class="card" style="padding:10px 6px;text-align:center"><div style="width:30px;height:30px;border-radius:999px;background:var(--rb-1);margin:0 auto"></div><p class="t-h4" style="margin-top:6px;font-size:14px">PM</p></div><div class="card" style="padding:10px 6px;text-align:center"><div style="width:30px;height:30px;border-radius:999px;background:var(--rb-2);margin:0 auto"></div><p class="t-h4" style="margin-top:6px;font-size:14px">Designer</p></div><div class="card" style="padding:10px 6px;text-align:center"><div style="width:30px;height:30px;border-radius:999px;background:var(--rb-3);margin:0 auto"></div><p class="t-h4" style="margin-top:6px;font-size:14px">Engineer</p></div><div class="card" style="padding:10px 6px;text-align:center"><div style="width:30px;height:30px;border-radius:999px;background:var(--rb-4);margin:0 auto"></div><p class="t-h4" style="margin-top:6px;font-size:14px">PjM</p></div><div class="card" style="padding:10px 6px;text-align:center"><div style="width:30px;height:30px;border-radius:999px;background:var(--rb-1);margin:0 auto"></div><p class="t-h4" style="margin-top:6px;font-size:14px">PdM</p></div><div class="card" style="padding:10px 6px;text-align:center"><div style="width:30px;height:30px;border-radius:999px;background:var(--rb-2);margin:0 auto"></div><p class="t-h4" style="margin-top:6px;font-size:14px">QA</p></div></div>
+<div style="text-align:center;margin:12px 0"><svg width="40" height="40" viewBox="0 0 48 48" style="fill:none;stroke:var(--rb-1);stroke-width:3;stroke-linecap:round;stroke-linejoin:round"><path d="M24 8v30"/><path d="M14 30l10 10 10-10"/></svg></div>
+<div class="card" style="width:220px;margin:0 auto;padding:20px;text-align:center;border:3px solid var(--primary)">
+  <div style="width:40px;height:6px;border-radius:3px;background:var(--primary);margin:0 auto 18px"></div>
+  <img src="asset/xhs头像.JPG" style="width:80px;height:80px;border-radius:999px;object-fit:cover" alt="">
+  <p class="t-h4" style="margin-top:12px">Owner</p><p class="t-caption">主动权回到自己手上</p>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">26 / 35</span></div>
-</div>
-<!-- ============ S27 ============ -->
-<div class="slide" id="s27">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:36px;right:230px;transform:rotate(7deg)"><svg width="44" height="44" viewBox="0 0 48 48"><path d="M12 19h24l-2 22H14z" fill="#D9A441"/><path d="M19 19v-5a5 5 0 0 1 10 0v5" fill="none" stroke="#B8862F" stroke-width="2.4"/></svg></div><div class="sticker" style="bottom:60px;right:-70px;transform:rotate(10deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div>
-  <div style="height:100%;display:flex;align-items:center;padding:0 96px;gap:56px;position:relative;z-index:3">
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">27 / 36</span></div>
+</div></section>
+<section class="page" id="p28"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:60px;right:-30px;transform:rotate(10deg)"><svg width="130" height="130" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <div class="section-no">05</div>
-  <div><div class="t-overline">Part 5 · Indie</div><h2 class="t-hero" style="margin-top:10px">个人做产品的五个想法</h2>
-  <p class="t-body2" style="margin-top:14px">一个还在上班的人，为什么依然积极</p></div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">27 / 35</span></div>
-</div>
-<!-- ============ S28 ============ -->
-<div class="slide" id="s28">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:60px;right:150px;transform:rotate(-6deg)"><svg width="50" height="50" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:70px;left:-66px;transform:rotate(9deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M18 6h2c0 2.2 1.8 4 4 4s4-1.8 4-4h2l2.5 13.5L38 40H10l5.5-20.5z" fill="#B65C3F"/><path d="M16 19.5h16" stroke="#8E4630" stroke-width="2"/></svg></div>
-  <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:3;padding:0 120px">
+  <div class="t-overline" style="margin-top:18px">Part 5 · Indie</div><h2 class="t-hero" style="margin-top:8px">个人做产品的<br>五个想法</h2>
+  <p class="t-body2" style="margin-top:12px">一个还在上班的人，为什么依然积极</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">28 / 36</span></div>
+</div></section>
+<section class="page" id="p29"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="bottom:70px;left:-24px;transform:rotate(9deg)"><svg width="110" height="110" viewBox="0 0 48 48"><path d="M18 6h2c0 2.2 1.8 4 4 4s4-1.8 4-4h2l2.5 13.5L38 40H10l5.5-20.5z" fill="#B65C3F"/><path d="M16 19.5h16" stroke="#8E4630" stroke-width="2"/></svg></div><div style="height:100%;display:flex;flex-direction:column;justify-content:center;padding:0 30px;position:relative;z-index:3">
   <p class="t-overline">05 · A fair worry</p>
-  <h2 style="font:700 50px/1.4 var(--font-body);margin-top:20px">模型厂这么卷，AI 抹平了信息差和能力差，<br>独立开发还值得投入吗？</h2>
+  <h2 style="font:700 30px/1.45 var(--font-body);margin-top:16px">模型厂这么卷，<br>AI 抹平了信息差<br>和能力差，<br>独立开发还值得<br>投入吗？</h2></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">29 / 36</span></div>
+</div></section>
+<section class="page" id="p30"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">05 · ① Hamlet</div><h2 class="t-title" style="margin-top:8px">① 一千个人眼中<br>有一千个哈姆雷特</h2><div style="display:flex;justify-content:center;margin-top:16px"><video class="phone" src="asset/inspiration-scroll.mp4" style="width:220px;height:478px;" muted loop playsinline preload="metadata"></video></div>
+<p class="t-caption" style="text-align:center;margin-top:8px">在 App Store 搜 closet，怎么划都划不完</p>
+<p class="t-hand--big" style="color:var(--rb-1);margin-top:14px;font-size:32px">几百个电子衣橱</p>
+<p class="t-h4" style="margin-top:4px">几百种用户动线</p>
+<p class="t-body2" style="margin-top:6px">就算思路撞了，每个人想象的用户动线、想做的东西，完全不同</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">30 / 36</span></div>
+</div></section>
+<section class="page" id="p31"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">05 · ② Two mindsets</div><h2 class="t-title" style="margin-top:8px">② 大厂和独立团队，<br>是两种思路</h2><div class="card" style="margin-top:20px;padding:18px 20px">
+  <p class="t-h4">大厂</p><div class="hairline" style="margin:10px 0 12px"></div>
+  <ul class="t-body" style="list-style:none;display:grid;gap:4px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--subtle);margin-top:10px"></span><span>内部决定一件事要很久</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--subtle);margin-top:10px"></span><span>有既有 partner，没法保持中立</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--subtle);margin-top:10px"></span><span>用哪家模型、跑在哪朵云上，都有立场</span></li></ul>
 </div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">28 / 35</span></div>
-</div>
-<!-- ============ S29 ============ -->
-<div class="slide" id="s29">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:220px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:70px;left:-60px;transform:rotate(-8deg)"><svg width="190" height="190" viewBox="0 0 48 48"><path d="M15 8l-8 5 3 6 3-1.5V40h22V17.5L38 19l3-6-8-5c-1.5 2.5-4 4-9 4s-7.5-1.5-9-4z" fill="#B65C3F"/></svg></div>
-  <div class="pad"><div class="t-overline">05 · ① Hamlet</div><h2 class="t-title" style="margin-top:10px">① 一千个人眼中有一千个哈姆雷特</h2><div style="display:flex;gap:36px;margin-top:30px;align-items:center"><div class="frame-hand" style="width:220px;flex:none;margin-left:120px"><video class="phone" src="asset/inspiration-scroll.mp4" style="width:100%;height:420px;object-fit:cover" autoplay muted loop playsinline></video></div>
-  <div style="flex:1">
-    <p class="t-hand--big" style="color:var(--rb-1)">几百个电子衣橱</p>
-    <p class="t-h4" style="margin-top:10px">几百种用户动线</p>
-    <p class="t-body2" style="margin-top:20px">就算思路撞了，每个人想象的用户动线、想做的东西，完全不同</p>
-    <p class="t-caption" style="margin-top:14px">← 在 App Store 搜 closet，怎么划都划不完</p>
-  </div>
+<div class="card" style="margin-top:12px;padding:18px 20px;border:2px solid var(--rb-3)">
+  <p class="t-h4" style="color:var(--rb-3)">独立团队</p><div class="hairline" style="margin:10px 0 12px"></div>
+  <ul class="t-body" style="list-style:none;display:grid;gap:4px"><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>对用户来说 Claude 和 GPT 是一样的，哪个好用用哪个</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>云也随便选</span></li><li style="display:flex;gap:10px"><span style="flex:none;width:8px;height:8px;border-radius:9px;background:var(--rb-3);margin-top:10px"></span><span>起始的本金实力也许有限，但想法可以天马行空，很快做出原型</span></li></ul>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">29 / 35</span></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">31 / 36</span></div>
+</div></section>
+<section class="page" id="p32"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">05 · ③ Don't fear</div><h2 class="t-title" style="margin-top:8px">③ 不要担心大厂先做出来</h2><div style="position:relative;margin-top:40px">
+  <span style="position:absolute;top:-40px;left:-6px;font:700 110px/1 var(--font-display);color:var(--muted-surface)">&ldquo;</span>
+  <p style="position:relative;font:500 26px/1.6 var(--font-body)">不要担心自己做的东西，<br>会被大厂提前做出来。</p>
 </div>
-<!-- ============ S30 ============ -->
-<div class="slide" id="s30">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:56px;right:160px;transform:rotate(-6deg)"><svg width="52" height="52" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:68px;right:-66px;transform:rotate(9deg)"><svg width="210" height="210" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div>
-  <div class="pad"><div class="t-overline">05 · ② Two mindsets</div><h2 class="t-title" style="margin-top:10px">② 大厂和独立团队，是两种思路</h2><div style="display:flex;gap:28px;margin-top:30px">
-  <div class="card" style="flex:1;padding:28px 32px">
-    <p class="t-h4">大厂</p><div class="hairline" style="margin:12px 0 18px"></div><ul class="t-body" style="list-style:none;display:grid;gap:14px"><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--subtle);margin-top:13px"></span><span>内部决定一件事要很久</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--subtle);margin-top:13px"></span><span>有既有 partner，没法保持中立</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--subtle);margin-top:13px"></span><span>用哪家模型、跑在哪朵云上，都有立场</span></li></ul>
-  </div>
-  <div class="card" style="flex:1;padding:28px 32px;border:2px solid var(--rb-3)">
-    <p class="t-h4" style="color:var(--rb-3)">独立团队</p><div class="hairline" style="margin:12px 0 18px"></div><ul class="t-body" style="list-style:none;display:grid;gap:14px"><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>对用户来说 Claude 和 GPT 是一样的，哪个好用用哪个</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>云也随便选</span></li><li class="m-row" style="display:flex;gap:14px"><span style="flex:none;width:11px;height:11px;border-radius:999px;background:var(--rb-3);margin-top:13px"></span><span>起始的本金实力也许有限，但想法可以天马行空，很快做出原型</span></li></ul>
-  </div>
+<div style="display:grid;gap:12px;margin-top:34px">
+  <div class="card" style="padding:16px 20px"><p class="t-h4" style="font-size:17px">思路不一样</p><p class="t-body2">你看到的问题和大厂看到的不同</p></div>
+  <div class="card" style="padding:16px 20px"><p class="t-h4" style="font-size:17px">大厂替你教育用户</p><p class="t-body2">受众越多，市场越成熟，是好事</p></div>
 </div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">30 / 35</span></div>
-</div>
-<!-- ============ S31 ============ -->
-<div class="slide" id="s31">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:260px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:72px;left:-62px;transform:rotate(7deg)"><svg width="230" height="230" viewBox="0 0 48 48"><path d="M9 34c0-7 2.5-13 5-13 4 0 8 7 15 9 5.5 1.6 10 2.6 10 5v3H9z" fill="#B65C3F"/><path d="M9 35.5h30v1.5a2.5 2.5 0 0 1-2.5 2.5h-25A2.5 2.5 0 0 1 9 37z" fill="#2F3E5C"/></svg></div>
-  <div class="pad"><div class="t-overline">05 · ③ Don't fear</div><h2 class="t-title" style="margin-top:10px">③ 不要担心大厂先做出来</h2><div style="display:flex;gap:40px;margin-top:40px;align-items:center">
-  <div style="flex:1.2;position:relative">
-    <span style="position:absolute;top:-60px;left:-20px;font:700 160px/1 var(--font-display);color:var(--muted-surface)">&ldquo;</span>
-    <p class="quote" style="position:relative;font-size:36px">不要担心自己做的东西，<br>会被大厂提前做出来。</p>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">32 / 36</span></div>
+</div></section>
+<section class="page" id="p33"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">05 · ④ Ride their traffic</div><h2 class="t-title" style="margin-top:8px">④ 反过来，<br>借大厂产品的流量入口</h2><div style="margin-top:16px">
+  <p class="t-caption">传统入口</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:6px"><div class="card" style="padding:8px 6px;text-align:center;font:600 13px/1.2 var(--font-body)">App Store</div><div class="card" style="padding:8px 6px;text-align:center;font:600 13px/1.2 var(--font-body)">Google Play</div></div>
+  <div style="display:flex;align-items:center;justify-content:center;gap:14px;margin:10px 0">
+    <svg width="22" height="30" viewBox="0 0 22 30" style="fill:none;stroke:#82878F;stroke-width:2.5;stroke-linecap:round"><path d="M11 2v24M4 19l7 7 7-7"/></svg>
+    <img class="app-icon" src="asset/store-icon.png" style="width:64px;height:64px" alt="">
+    <svg width="22" height="30" viewBox="0 0 22 30" style="fill:none;stroke:#B65C3F;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:4 4"><path d="M11 2v24M4 19l7 7 7-7"/></svg>
+    <span class="t-hand" style="color:var(--rb-1)">MCP</span>
   </div>
-  <div style="flex:1;display:grid;gap:18px">
-    <div class="card" style="padding:22px 26px"><p class="t-h4" style="font-size:21px">思路不一样</p><p class="t-body2">你看到的问题和大厂看到的不同</p></div>
-    <div class="card" style="padding:22px 26px"><p class="t-h4" style="font-size:21px">大厂替你教育用户</p><p class="t-body2">受众越多，市场越成熟，是好事</p></div>
-  </div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">31 / 35</span></div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px"><div class="card" style="padding:8px 6px;text-align:center;font:600 13px/1.2 var(--font-body);border:2px solid var(--rb-1)">Muse</div><div class="card" style="padding:8px 6px;text-align:center;font:600 13px/1.2 var(--font-body);border:2px solid var(--rb-1)">Claude</div><div class="card" style="padding:8px 6px;text-align:center;font:600 13px/1.2 var(--font-body);border:2px solid var(--rb-1)">ChatGPT</div></div>
 </div>
-<!-- ============ S32 ============ -->
-<div class="slide" id="s32">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:250px;transform:rotate(8deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div>
-  <div class="pad"><div class="t-overline">05 · ④ Ride their traffic</div><h2 class="t-title" style="margin-top:10px">④ 反过来，借大厂产品的流量入口</h2><div style="display:flex;gap:30px;margin-top:20px;align-items:center">
-  <div class="m-fit" style="position:relative;width:660px;height:430px;flex:none;zoom:.84">
-    <svg viewBox="0 0 660 430" style="position:absolute;inset:0;width:100%;height:100%;fill:none;stroke-width:3;stroke-linecap:round">
-      <path d="M170 110 L285 200" stroke="#82878F"/><path d="M170 320 L285 230" stroke="#82878F"/>
-      <path d="M375 215 L490 70" stroke="#B65C3F" stroke-dasharray="8 7"/><path d="M375 215 L490 215" stroke="#B65C3F" stroke-dasharray="8 7"/><path d="M375 215 L490 360" stroke="#B65C3F" stroke-dasharray="8 7"/>
-    </svg>
-    <div class="node" style="left:265px;top:150px;width:130px"><img class="app-icon" src="asset/store-icon.png" style="width:120px;height:120px" alt=""></div>
-    <div class="card node" style="left:0;top:80px;width:170px;padding:12px">App Store</div>
-    <div class="card node" style="left:0;top:300px;width:170px;padding:12px">Google Play</div>
-    <div class="card node" style="right:0;top:40px;width:170px;padding:12px;border:2px solid var(--rb-1)">Muse</div>
-    <div class="card node" style="right:0;top:190px;width:170px;padding:12px;border:2px solid var(--rb-1)">Claude</div>
-    <div class="card node" style="right:0;top:330px;width:170px;padding:12px;border:2px solid var(--rb-1)">ChatGPT</div>
-    <p class="t-caption node" style="left:0;top:395px;width:170px">传统入口</p>
-    <p class="t-hand node" style="left:390px;top:270px;width:110px;color:var(--rb-1)">MCP</p>
-  </div>
-  <div class="m-row m-phones" style="flex:1;display:flex;gap:12px;justify-content:flex-end"><div style="text-align:center"><img class="phone" src="asset/muse-ootd-1.jpg" style="width:156px;height:338px;transform:rotate(-2deg)" alt=""><p class="t-caption" style="margin-top:8px">Muse · 每天早上推一套</p></div><div style="text-align:center"><img class="phone" src="asset/muse-ootd-3.jpg" style="width:156px;height:338px;transform:rotate(1deg)" alt=""><p class="t-caption" style="margin-top:8px">Muse</p></div><div style="text-align:center"><img class="phone" src="asset/agent-chat.jpg" style="width:156px;height:338px;transform:rotate(2deg)" alt=""><p class="t-caption" style="margin-top:8px">GPT / Claude</p></div></div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">32 / 35</span></div>
+<div style="display:flex;gap:8px;margin-top:16px"><div style="flex:1;text-align:center"><img class="phone" src="asset/muse-ootd-1.jpg" style="width:100%;height:230px" alt=""><p class="t-caption" style="margin-top:4px;font-size:11px">Muse · 每天早上推一套</p></div><div style="flex:1;text-align:center"><img class="phone" src="asset/muse-ootd-3.jpg" style="width:100%;height:230px" alt=""><p class="t-caption" style="margin-top:4px;font-size:11px">Muse</p></div><div style="flex:1;text-align:center"><img class="phone" src="asset/agent-chat.jpg" style="width:100%;height:230px" alt=""><p class="t-caption" style="margin-top:4px;font-size:11px">GPT / Claude</p></div></div></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">33 / 36</span></div>
+</div></section>
+<section class="page" id="p34"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">05 · ⑤ People first</div><h2 class="t-title" style="margin-top:8px">⑤ 以人为本：<br>让 Agent 迎合人，<br>而不是人迎合 Agent</h2><div style="display:grid;gap:12px;margin-top:22px">
+  <div class="card" style="padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><img class="app-icon" src="asset/store-icon.png" style="width:48px;height:48px;box-shadow:none;flex:none" alt="">
+    <div><p class="t-h4" style="font-size:17px">Snap Closet</p><p class="t-body2">省下手动管理的时间，和每天做决策的精力</p></div></div>
+  <div class="card" style="padding:18px 20px;display:flex;gap:14px;align-items:flex-start"><img class="app-icon" src="asset/bonsai-icon.png" style="width:48px;height:48px;box-shadow:none;flex:none" alt="">
+    <div><p class="t-h4" style="font-size:17px">Bonsai</p><p class="t-body2">人和 agent 共用一份都读得懂的 source of truth，人对 AI 有掌控感</p></div></div>
 </div>
-<!-- ============ S33 ============ -->
-<div class="slide" id="s33">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:40px;right:240px;transform:rotate(7deg)"><svg width="40" height="40" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:-60px;right:400px;transform:rotate(-8deg)"><svg width="200" height="200" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div>
-  <div class="pad"><div class="t-overline">05 · ⑤ People first</div><h2 class="t-title" style="margin-top:10px">⑤ 以人为本：让 Agent 迎合人，而不是人迎合 Agent</h2><div style="display:flex;gap:26px;margin-top:28px">
-  <div class="card" style="flex:1;padding:24px 26px"><img class="app-icon" src="asset/store-icon.png" style="width:56px;height:56px;box-shadow:none" alt="">
-    <p class="t-h4" style="font-size:21px;margin-top:12px">Snap Closet</p><p class="t-body2" style="font-size:17px;margin-top:6px">省下手动管理的时间，和每天做决策的精力</p></div>
-  <div class="card" style="flex:1;padding:24px 26px"><img class="app-icon" src="asset/bonsai-icon.png" style="width:56px;height:56px;box-shadow:none" alt="">
-    <p class="t-h4" style="font-size:21px;margin-top:12px">Bonsai</p><p class="t-body2" style="font-size:17px;margin-top:6px">人和 agent 共用一份都读得懂的 source of truth，人对 AI 有掌控感</p></div>
+<p class="t-h4" style="margin-top:30px;line-height:1.6">怎么简化人做决策的流程、<br>帮人真正省下时间，<br>是永远的课题</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">34 / 36</span></div>
+</div></section>
+<section class="page" id="p35"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:44px;right:30px;transform:rotate(8deg)"><svg width="26" height="26" viewBox="0 0 48 48"><path d="M24 6c1.8 8.4 4.6 12.4 13 15-8.4 2.6-11.2 6.6-13 15-1.8-8.4-4.6-12.4-13-15 8.4-2.6 11.2-6.6 13-15z" fill="#D9A441"/><circle cx="37.5" cy="10.5" r="3.4" fill="#D9A441"/></svg></div><div class="pad"><div class="t-overline">Wrap-up</div><h2 class="t-title" style="margin-top:8px">回到主题：<br>让自己成为捕获价值的人</h2><div style="position:relative;width:368px;height:360px;margin-top:16px">
+  <div class="card" style="position:absolute;top:0;left:104px;width:160px;padding:10px 12px;text-align:center;z-index:4"><div class="t-h4" style="font-size:15px">AI 提升产能</div><p class="t-caption">一个人 = 一支团队</p></div>
+  <div class="card" style="position:absolute;top:140px;right:0;width:160px;padding:10px 12px;text-align:center;z-index:4"><div class="t-h4" style="font-size:15px">做自己的产品</div><p class="t-caption">碎片时间也够</p></div>
+  <div class="card" style="position:absolute;bottom:0;left:104px;width:160px;padding:10px 12px;text-align:center;z-index:4"><div class="t-h4" style="font-size:15px">价值留在自己手里</div><p class="t-caption">收入、用户、能力</p></div>
+  <div class="card" style="position:absolute;top:140px;left:0;width:160px;padding:10px 12px;text-align:center;z-index:4"><div class="t-h4" style="font-size:15px">投入下一个想法</div><p class="t-caption">时间密度更高</p></div>
+  <svg viewBox="0 0 368 360" style="position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--rb-2);stroke-width:3;stroke-linecap:round">
+    <path d="M270 40 Q330 60 318 132"/><path d="M308 122 l10 12 10 -12"/>
+    <path d="M318 214 Q330 300 270 318"/><path d="M282 310 l-12 8 12 8"/>
+    <path d="M98 318 Q38 300 50 214"/><path d="M40 226 l10 -12 10 12"/>
+    <path d="M50 132 Q38 60 98 40"/><path d="M86 34 l12 6 -10 10"/>
+  </svg>
 </div>
-<p class="t-h4" style="text-align:center;margin-top:30px">怎么简化人做决策的流程、帮人真正省下时间，是永远的课题</p></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">33 / 35</span></div>
-</div>
-<!-- ============ S34 ============ -->
-<div class="slide" id="s34">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:60px;right:150px;transform:rotate(-6deg)"><svg width="50" height="50" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="bottom:70px;left:-66px;transform:rotate(9deg)"><svg width="220" height="220" viewBox="0 0 48 48"><path d="M18 6h2c0 2.2 1.8 4 4 4s4-1.8 4-4h2l2.5 13.5L38 40H10l5.5-20.5z" fill="#B65C3F"/><path d="M16 19.5h16" stroke="#8E4630" stroke-width="2"/></svg></div>
-  <div class="pad"><div class="t-overline">Wrap-up</div><h2 class="t-title" style="margin-top:10px">回到主题：让自己成为捕获价值的人</h2><div style="display:flex;gap:34px;margin-top:16px;align-items:center">
-  <div class="m-fit" style="flex:1.1;position:relative;height:430px;width:620px">
-    <div class="card" style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:250px;padding:16px 20px;text-align:center;z-index:4"><div class="t-h4" style="font-size:21px">AI 提升产能</div><p class="t-body2" style="font-size:15px">一个人 = 一支团队</p></div>
-    <div class="card" style="position:absolute;top:170px;right:0;width:230px;padding:16px 20px;text-align:center;z-index:4"><div class="t-h4" style="font-size:21px">做自己的产品</div><p class="t-body2" style="font-size:15px">碎片时间也够</p></div>
-    <div class="card" style="position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:250px;padding:16px 20px;text-align:center;z-index:4"><div class="t-h4" style="font-size:21px">价值留在自己手里</div><p class="t-body2" style="font-size:15px">收入、用户、能力</p></div>
-    <div class="card" style="position:absolute;top:170px;left:0;width:230px;padding:16px 20px;text-align:center;z-index:4"><div class="t-h4" style="font-size:21px">投入下一个想法</div><p class="t-body2" style="font-size:15px">时间密度更高</p></div>
-    <svg viewBox="0 0 620 430" style="position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:var(--rb-2);stroke-width:3.5;stroke-linecap:round">
-      <path d="M440 60 Q540 90 520 160"/><path d="M510 150 l10 14 10 -14"/>
-      <path d="M520 270 Q540 350 440 370"/><path d="M452 362 l-14 8 14 8"/>
-      <path d="M180 370 Q80 350 100 270"/><path d="M90 282 l10 -14 10 14"/>
-      <path d="M100 160 Q80 90 180 60"/><path d="M168 54 l14 6 -12 10"/>
-    </svg>
-  </div>
-  <div style="flex:1">
-    <p class="t-hand t-hand--big t-hand--ink" style="font-size:46px;line-height:1.35">让 AI 提升<br>自己的时间密度。</p>
-  </div>
-</div></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">34 / 35</span></div>
-</div>
-<!-- ============ S35 ============ -->
-<div class="slide" id="s35">
-  <div class="site">snap-closet.com</div>
-  <div class="sticker" style="top:96px;left:96px;transform:rotate(-7deg)"><svg width="92" height="92" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="top:130px;right:130px;transform:rotate(6deg)"><svg width="110" height="110" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div><div class="sticker" style="bottom:76px;left:-72px;transform:rotate(8deg)"><svg width="260" height="260" viewBox="0 0 48 48"><path d="M15 6h18l1.5 9L32 42h-7l-1-20-1 20h-7L13.5 15z" fill="#4A6285"/><path d="M15 11h18" stroke="#39506C" stroke-width="1.6"/></svg></div>
-  <div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;z-index:3">
-  <h2 class="t-title">感谢大家！</h2>
+<p class="t-hand t-hand--big t-hand--ink" style="font-size:38px;line-height:1.35;margin-top:28px">让 AI 提升<br>自己的时间密度。</p></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">35 / 36</span></div>
+</div></section>
+<section class="page" id="p36"><div class="canvas">
+  <div class="site">snap-closet.com</div><div class="sticker" style="top:80px;left:40px;transform:rotate(-7deg)"><svg width="60" height="60" viewBox="0 0 48 48"><path d="M11 27a13 13 0 0 1 26 0v1H11z" fill="#7C8C6D"/><path d="M11 28h30a3 3 0 0 1-2.4 4.4L11 31z" fill="#6A7A5C"/></svg></div><div class="sticker" style="top:96px;right:40px;transform:rotate(6deg)"><svg width="70" height="70" viewBox="0 0 48 48"><path d="M18 13.5L14 34l8.5 1.6 3.2-20.5z" fill="#D9A441"/><path d="M30 13.5l3.2 17.5-7.4 1.3-2.9-17z" fill="#C0912F"/><path d="M15 11c0-3 18-3 18 0 0 2.6-4 4.2-9 4.2S15 13.6 15 11z" fill="#D9A441"/></svg></div><div style="height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 30px;position:relative;z-index:3">
+  <h2 class="t-hero">感谢大家！</h2>
   <p class="t-body" style="margin-top:8px">欢迎下载试用 Snap Closet</p>
-  <div class="m-row" style="display:flex;gap:40px;margin-top:30px;align-items:flex-end">
-    <div><div class="frame-hand frame-hand--sm"><img src="asset/appstore-qr.svg" style="width:150px;height:150px;display:block" alt=""></div><p class="t-caption" style="margin-top:8px">App Store</p></div>
-    <div><div class="frame-hand frame-hand--sm"><img src="asset/play-qr.svg" style="width:150px;height:150px;display:block" alt=""></div><p class="t-caption" style="margin-top:8px">Google Play</p></div>
+  <div style="display:flex;gap:18px;margin-top:28px">
+    <div><div class="frame-hand frame-hand--sm"><img src="asset/appstore-qr.svg" style="width:130px;height:130px;display:block" alt=""></div><p class="t-caption" style="margin-top:6px">App Store</p></div>
+    <div><div class="frame-hand frame-hand--sm"><img src="asset/play-qr.svg" style="width:130px;height:130px;display:block" alt=""></div><p class="t-caption" style="margin-top:6px">Google Play</p></div>
   </div>
-  <p class="t-body2" style="margin-top:22px">snap-closet.com</p>
+  <a class="t-body2" href="https://snap-closet.com" style="margin-top:20px;color:var(--primary)">snap-closet.com</a>
+  <div class="rainbow" style="margin-top:28px;width:100%"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></div>
 </div>
-<div style="position:absolute;left:72px;right:72px;bottom:64px;z-index:3" class="rainbow"><span class="r1"></span><span class="r2"></span><span class="r3"></span><span class="r4"></span></div>
-  
-  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">35 / 35</span></div>
+  <div class="footer"><span class="brand">Snap Closet</span><span class="idx">36 / 36</span></div>
+</div></section>
 </div>
-<button id="play" title="播放（Enter / F 全屏）" style="position:fixed;right:24px;bottom:24px;z-index:60;border:0;border-radius:999px;padding:12px 22px;background:#1B1D21;color:#fff;font:600 15px/1 var(--font-body);cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.2)">&#9654; 播放</button>
-<style>body.present #play{display:none}@media print{#play{display:none}}</style>
+<div class="dots" id="dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
 <script>
 (function(){
-  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-  var notes = {}; document.querySelectorAll('.notes').forEach(function(n){ notes[n.dataset.for] = n; });
-  var i = 0;
-  function fit(){ document.body.style.setProperty('--fit', Math.min(innerWidth/1280, innerHeight/720)); }
-  function mark(){ document.querySelectorAll('.notes.on').forEach(function(n){ n.classList.remove('on'); });
-    var n = notes[slides[i].id]; if (n) n.classList.add('on'); }
-  function show(n){
-    slides[i].classList.remove('on');
-    i = Math.max(0, Math.min(slides.length-1, n));
-    slides[i].classList.add('on'); mark();
-    playCur();
+  var deck = document.getElementById('deck');
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var dots = Array.prototype.slice.call(document.querySelectorAll('#dots i'));
+  function fit(){
+    var h = deck.clientHeight, w = deck.clientWidth;
+    document.documentElement.style.setProperty('--fit', Math.min(w / 420, h / 860));
   }
-  function playCur(){
-    slides.forEach(function(s, k){ s.querySelectorAll('video').forEach(function(v){
-      if (k === i) { v.muted = true; v.currentTime = 0; var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); } else { v.pause(); } }); });
-  }
-  function start(){
-    var y = scrollY + innerHeight/2;
-    var n = slides.findIndex(function(s){ return s.offsetTop + s.offsetHeight > y; });
-    i = n < 0 ? 0 : n;
-    document.body.classList.add('present'); slides[i].classList.add('on'); mark(); fit(); playCur();
-  }
-  function stop(){ slides[i].classList.remove('on'); setTimeout(function(){ document.querySelectorAll('video').forEach(function(v){ v.play().catch(function(){}); }); }, 0); document.body.classList.remove('present'); slides[i].scrollIntoView({block:'center'}); }
-  addEventListener('resize', fit);
-  function mfit(){ document.querySelectorAll('.m-fit').forEach(function(el){
-    el.style.zoom = ''; if (innerWidth > 900) { if (el.dataset.z) el.style.zoom = el.dataset.z; return; }
-    var w = el.parentElement.clientWidth, nat = parseFloat(el.style.width) || el.scrollWidth;
-    el.style.zoom = Math.min(1, w / nat); }); }
-  document.querySelectorAll('.m-fit').forEach(function(el){ el.dataset.z = el.style.zoom || ''; });
-  mfit(); addEventListener('resize', mfit);
-  if ('IntersectionObserver' in window) {
-    var io = new IntersectionObserver(function(es){ es.forEach(function(e){
-      if (document.body.classList.contains('present')) return;
-      var v = e.target; if (e.isIntersecting) { v.muted = true; var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); } else v.pause(); }); }, {threshold: .3});
-    document.querySelectorAll('video').forEach(function(v){ io.observe(v); });
-  }
-  document.getElementById('play').addEventListener('click', function(){ start(); document.documentElement.requestFullscreen().catch(function(){}); });
-  document.addEventListener('click', function(e){ if (!document.body.classList.contains('present') || e.target.closest('video,button,a')) return; show(e.clientX < innerWidth/3 ? i-1 : i+1); });
+  fit(); addEventListener('resize', fit);
+  var cur = 0;
+  function mark(n){ cur = n; dots.forEach(function(d, k){ d.classList.toggle('on', k === n); }); }
+  mark(0);
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      var k = pages.indexOf(e.target);
+      e.target.querySelectorAll('video').forEach(function(v){
+        if (e.isIntersecting) { v.muted = true; v.currentTime = 0; var pr = v.play(); if (pr && pr.catch) pr.catch(function(){}); }
+        else v.pause();
+      });
+      if (e.isIntersecting) mark(k);
+    });
+  }, {root: deck, threshold: .6});
+  pages.forEach(function(p){ io.observe(p); });
+  function go(n){ n = Math.max(0, Math.min(pages.length - 1, n)); pages[n].scrollIntoView({behavior: 'smooth'}); }
   addEventListener('keydown', function(e){
-    if (e.target.tagName === 'VIDEO') return;
-    var p = document.body.classList.contains('present');
-    if (!p) { if (e.key === 'Enter' || e.key === 'p' || e.key === 'P') { start(); e.preventDefault(); }
-      else if (e.key === 'f' || e.key === 'F') { start(); document.documentElement.requestFullscreen(); e.preventDefault(); } return; }
-    if (e.key === 'Escape') { if (!document.fullscreenElement) stop(); return; }
-    if (e.key === 'f' || e.key === 'F') { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); return; }
-    if (e.key === 'n' || e.key === 'N') { document.body.classList.toggle('show-notes'); return; }
-    if (['ArrowRight','ArrowDown','PageDown',' '].indexOf(e.key) >= 0) { show(i+1); e.preventDefault(); }
-    else if (['ArrowLeft','ArrowUp','PageUp'].indexOf(e.key) >= 0) { show(i-1); e.preventDefault(); }
-    else if (e.key === 'Home') { show(0); } else if (e.key === 'End') { show(slides.length-1); }
+    if (['ArrowDown','ArrowRight','PageDown',' '].indexOf(e.key) >= 0) { go(cur + 1); e.preventDefault(); }
+    else if (['ArrowUp','ArrowLeft','PageUp'].indexOf(e.key) >= 0) { go(cur - 1); e.preventDefault(); }
   });
 })();
 </script>
